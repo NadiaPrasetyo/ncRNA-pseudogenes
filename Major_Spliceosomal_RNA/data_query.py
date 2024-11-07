@@ -116,4 +116,5 @@ def get_gene_locations(query):
 # get_gene_locations('RNU2')
 # get_gene_locations('RNU1-')
 get_gene_locations('RNU4-')
+# continue from 59
 
