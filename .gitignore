@@ -1,2 +1,4 @@
 hg38.phastCons30way.bw
 .venv/pyvenv.cfg
+*.pyc
+*/__pycache__/
