@@ -54,7 +54,10 @@ Processing RNU5B-4P with Transcript ID: ENST00000363508
 RNU5B-4P (ENST00000363508): Genomic Sequence (5:139,447,907-139,448,017)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A139447907-139448017
 ------
-No Ensembl Transcript IDs found for RNU5B-5P
+Processing RNU5B-5P with Transcript ID: not found
+RNU5B-5P (): Genomic Sequence (chr9:125,425,789-125,425,875)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=9%3A125425789-125425875
+------
 Processing RNU5B-6P with Transcript ID: ENST00000516765
 RNU5B-6P (ENST00000516765): Genomic Sequence (10:109,184,934-109,185,001)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A109184934-109185001
@@ -71,7 +74,10 @@ Processing RNU5E-1 with Transcript ID: ENST00000362477
 RNU5E-1 (ENST00000362477): Genomic Sequence (1:11,908,152-11,908,271)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A11908152-11908271
 ------
-No Ensembl Transcript IDs found for RNU5E-2P
+Processing RNU5E-2P with Transcript ID: not found
+RNU5E-2P (): Genomic Sequence (chr1:235,863,388-235,863,436)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A235863388-235863436
+------
 Processing RNU5E-3P with Transcript ID: ENST00000515913
 RNU5E-3P (ENST00000515913): Genomic Sequence (4:48,574,453-48,574,520)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=4%3A48574453-48574520
@@ -124,7 +130,10 @@ Processing RNU5F-4P with Transcript ID: ENST00000516581
 RNU5F-4P (ENST00000516581): Genomic Sequence (12:31,594,093-31,594,206)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=12%3A31594093-31594206
 ------
-No Ensembl Transcript IDs found for RNU5F-5P
+Processing RNU5F-5P with Transcript ID: not found
+RNU5F-5P (): Genomic Sequence (chr22:29,910,788-29,910,839)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=22%3A29910788-29910839
+------
 Processing RNU5F-6P with Transcript ID: ENST00000362979
 RNU5F-6P (ENST00000362979): Genomic Sequence (1:164,351,273-164,351,388)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A164351273-164351388

@@ -6,7 +6,10 @@ Processing RNU4-2 with Transcript ID: ENST00000365668
 RNU4-2 (ENST00000365668): Genomic Sequence (12:120,291,763-120,291,903)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=12%3A120291763-120291903
 ------
-No Ensembl Transcript IDs found for RNU4-3P
+Processing RNU4-3P with Transcript ID: not found
+RNU4-3P (): Genomic Sequence (chr18:36,264,737-36,264,938)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=13%3A36264737-36264938
+------
 Processing RNU4-4P with Transcript ID: ENST00000364588
 RNU4-4P (ENST00000364588): Genomic Sequence (3:172,796,429-172,796,558)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A172796429-172796558
@@ -71,7 +74,6 @@ Processing RNU4-18P with Transcript ID: ENST00000516751
 RNU4-18P (ENST00000516751): Genomic Sequence (6:131,642,818-131,642,966)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=6%3A131642818-131642966
 ------
-No Ensembl Transcript IDs found for RNU4-19P
 Processing RNU4-20P with Transcript ID: ENST00000365601
 RNU4-20P (ENST00000365601): Genomic Sequence (12:59,586,793-59,586,943)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=12%3A59586793-59586943

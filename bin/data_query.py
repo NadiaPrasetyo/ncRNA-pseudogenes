@@ -79,11 +79,11 @@ def get_gene_locations(query):
     # Loop through each gene symbol
     for gene_symbol in gene_symbols:
         # if the number in the gene symbol is more than 59, we will process it otherwise we will skip it
-        # substr_gene_symbol = gene_symbol[5:-1]
-        # if (substr_gene_symbol == ""):
-        #     continue
-        # if int(substr_gene_symbol) < 59:
-        #     continue        
+        substr_gene_symbol = gene_symbol[5:-1]
+        if (substr_gene_symbol == ""):
+            continue
+        if int(substr_gene_symbol) < 280:
+            continue        
         
         transcript_ids = fetch_ensembl_transcript_ids(gene_symbol)
         if not transcript_ids:
@@ -116,5 +116,6 @@ def get_gene_locations(query):
 # get_gene_locations('RNU2')
 # get_gene_locations('RNU1-')
 # get_gene_locations('RNU4-')
-get_gene_locations('RNU5')
+# get_gene_locations('RNU5')
+get_gene_locations('RNU6')
 
