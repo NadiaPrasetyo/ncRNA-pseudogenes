@@ -3,9 +3,9 @@ import pyBigWig
 import csv
 
 # Define the file path to your bigWig file
-bw_file = "/home/nadiaprasetyo/Documents/RNA-Pseudogenes/hg38.phastCons30way.bw"
-input_file = "/home/nadiaprasetyo/Documents/RNA-Pseudogenes/Major_Spliceosomal_RNA/RNU1_data.txt"  # Update with the path to your file containing the gene data
-output_file = "/home/nadiaprasetyo/Documents/RNA-Pseudogenes/Major_Spliceosomal_RNA/RNU1_cons.csv"  # Define the output file for CSV format
+bw_file = "/home/nadiaprasetyo/Documents/ncRNA-pseudogenes/hg38.phastCons30way.bw"
+input_file = "/home/nadiaprasetyo/Documents/ncRNA-pseudogenes/data/RNU6_data.txt"  # Update with the path to your file containing the gene data
+output_file = "/home/nadiaprasetyo/Documents/ncRNA-pseudogenes/data/RNU6_cons.csv"  # Define the output file for CSV format
 
 # Open the bigWig file
 bw = pyBigWig.open(bw_file)

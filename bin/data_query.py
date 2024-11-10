@@ -78,11 +78,11 @@ def get_gene_locations(query):
 
     # Loop through each gene symbol
     for gene_symbol in gene_symbols:
-        # if the number in the gene symbol is more than 500, we will process it otherwise we will skip it
+        # if the number in the gene symbol is more than a specified amount, we will process it otherwise we will skip it
         substr_gene_symbol = gene_symbol[5:-1]
         if (substr_gene_symbol == ""):
             continue
-        if int(substr_gene_symbol) < 500:
+        if int(substr_gene_symbol) < 665:
             continue        
         
         transcript_ids = fetch_ensembl_transcript_ids(gene_symbol)
