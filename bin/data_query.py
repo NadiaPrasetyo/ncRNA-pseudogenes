@@ -25,8 +25,7 @@ def search_hgnc_genes(query):
 def fetch_ensembl_transcript_ids(gene_symbol):
     server = biomart.BiomartServer('http://www.ensembl.org/biomart')
     dataset = server.datasets['hsapiens_gene_ensembl']
-        # Define the attributes to fetch (Ensembl transcript ID, External gene name, HGNC symbol, and HGNC status)
-    attributes = ['ensembl_transcript_id', 'external_gene_name', 'hgnc_symbol', 'hgnc_status']
+    attributes = ['ensembl_transcript_id', 'external_gene_name']
     response = dataset.search({
         'attributes': attributes,
         'filters': {
@@ -39,12 +38,8 @@ def fetch_ensembl_transcript_ids(gene_symbol):
         data = response.content.decode('utf-8')
         for line in data.split('\n'):
             if line:
-                # Split the line to extract the gene information
-                ensembl_transcript_id, external_gene_name, hgnc_symbol, hgnc_status = line.split('\t')
-                
-                # Check if the gene has an approved status
-                if hgnc_status == 'Approved':
-                    transcript_ids.append(ensembl_transcript_id)
+                ensembl_transcript_id, external_gene_name = line.split('\t')
+                transcript_ids.append(ensembl_transcript_id)
     except AttributeError:
         print("Error decoding response or no data found.")
         
