@@ -3,7 +3,7 @@ import pyBigWig
 import csv
 
 # Define the file path to your bigWig file
-bw_file = "hg38.phastCons30way.bw"
+bw_file = "data/hg38.phastCons30way.bw"
 input_file = "data/RNU5_data.txt"  # Update with the path to your file containing the gene data
 output_file = "data/RNU5_cons.csv"  # Define the output file for CSV format
 

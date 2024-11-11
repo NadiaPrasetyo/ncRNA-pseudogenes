@@ -82,7 +82,7 @@ def get_gene_locations(query):
         substr_gene_symbol = gene_symbol[5:-1]
         if (substr_gene_symbol == ""):
             continue
-        if int(substr_gene_symbol) < 845:
+        if int(substr_gene_symbol) < 896:
             continue        
         
         transcript_ids = fetch_ensembl_transcript_ids(gene_symbol)
