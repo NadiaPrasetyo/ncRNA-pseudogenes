@@ -2666,3 +2666,722 @@ Processing RNU6-665P with Transcript ID: ENST00000384639
 RNU6-665P (ENST00000384639): Genomic Sequence (8:47,667,771-47,667,877)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=8%3A47667771-47667877
 ------
+Processing RNU6-666P with Transcript ID: ENST00000363499
+RNU6-666P (ENST00000363499): Genomic Sequence (10:27,315,120-27,315,226)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A27315120-27315226
+------
+Processing RNU6-667P with Transcript ID: ENST00000517186
+RNU6-667P (ENST00000517186): Genomic Sequence (15:79,817,349-79,817,450)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=15%3A79817349-79817450
+------
+Processing RNU6-668P with Transcript ID: ENST00000364180
+RNU6-668P (ENST00000364180): Genomic Sequence (4:164,787,290-164,787,396)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=4%3A164787290-164787396
+------
+Processing RNU6-669P with Transcript ID: ENST00000365575
+RNU6-669P (ENST00000365575): Genomic Sequence (9:94,507,738-94,507,844)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=9%3A94507738-94507844
+------
+Processing RNU6-670P with Transcript ID: ENST00000364312
+RNU6-670P (ENST00000364312): Genomic Sequence (3:10,037,552-10,037,655)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A10037552-10037655
+------
+Processing RNU6-672P with Transcript ID: ENST00000383911
+RNU6-672P (ENST00000383911): Genomic Sequence (11:72,869,544-72,869,650)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=11%3A72869544-72869650
+------
+Processing RNU6-673P with Transcript ID: ENST00000365084
+RNU6-673P (ENST00000365084): Genomic Sequence (10:76,260,800-76,260,903)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A76260800-76260903
+------
+Processing RNU6-674P with Transcript ID: ENST00000709859
+RNU6-674P (ENST00000709859): Genomic Sequence (HSCHR2_6_CTG1:131,112-131,218)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=HSCHR2_6_CTG1%3A131112-131218
+------
+Processing RNU6-674P with Transcript ID: ENST00000363831
+RNU6-674P (ENST00000363831): Genomic Sequence (2:85,204,926-85,205,032)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A85204926-85205032
+------
+Processing RNU6-675P with Transcript ID: ENST00000384236
+RNU6-675P (ENST00000384236): Genomic Sequence (2:126,702,839-126,702,942)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A126702839-126702942
+------
+Processing RNU6-677P with Transcript ID: ENST00000516914
+RNU6-677P (ENST00000516914): Genomic Sequence (9:37,333,857-37,333,957)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=9%3A37333857-37333957
+------
+Processing RNU6-678P with Transcript ID: ENST00000516832
+RNU6-678P (ENST00000516832): Genomic Sequence (3:133,664,926-133,665,034)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A133664926-133665034
+------
+Processing RNU6-679P with Transcript ID: ENST00000391003
+RNU6-679P (ENST00000391003): Genomic Sequence (5:12,297,399-12,297,504)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A12297399-12297504
+------
+Processing RNU6-680P with Transcript ID: ENST00000384603
+RNU6-680P (ENST00000384603): Genomic Sequence (5:75,709,495-75,709,599)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A75709495-75709599
+------
+Processing RNU6-681P with Transcript ID: ENST00000364012
+RNU6-681P (ENST00000364012): Genomic Sequence (3:177,126,017-177,126,120)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A177126017-177126120
+------
+Processing RNU6-682P with Transcript ID: ENST00000644344
+RNU6-682P (ENST00000644344): Genomic Sequence (HG76_PATCH:4,456,053-4,456,158)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=HG76_PATCH%3A4456053-4456158
+------
+Processing RNU6-682P with Transcript ID: ENST00000363843
+RNU6-682P (ENST00000363843): Genomic Sequence (8:8,895,813-8,895,918)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=8%3A8895813-8895918
+------
+Processing RNU6-684P with Transcript ID: ENST00000410829
+RNU6-684P (ENST00000410829): Genomic Sequence (14:104,400,943-104,401,048)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=14%3A104400943-104401048
+------
+Processing RNU6-685P with Transcript ID: ENST00000517088
+RNU6-685P (ENST00000517088): Genomic Sequence (2:82,268,612-82,268,706)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A82268612-82268706
+------
+Processing RNU6-686P with Transcript ID: ENST00000364839
+RNU6-686P (ENST00000364839): Genomic Sequence (15:65,229,861-65,229,967)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=15%3A65229861-65229967
+------
+Processing RNU6-687P with Transcript ID: ENST00000516443
+RNU6-687P (ENST00000516443): Genomic Sequence (10:54,452,423-54,452,511)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A54452423-54452511
+------
+Processing RNU6-689P with Transcript ID: ENST00000384197
+RNU6-689P (ENST00000384197): Genomic Sequence (14:75,020,761-75,020,867)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=14%3A75020761-75020867
+------
+Processing RNU6-690P with Transcript ID: ENST00000365242
+RNU6-690P (ENST00000365242): Genomic Sequence (8:95,599,114-95,599,219)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=8%3A95599114-95599219
+------
+Processing RNU6-692P with Transcript ID: ENST00000384496
+RNU6-692P (ENST00000384496): Genomic Sequence (2:147,408,342-147,408,448)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A147408342-147408448
+------
+Processing RNU6-693P with Transcript ID: ENST00000516134
+RNU6-693P (ENST00000516134): Genomic Sequence (1:172,613,428-172,613,534)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A172613428-172613534
+------
+Processing RNU6-694P with Transcript ID: ENST00000364071
+RNU6-694P (ENST00000364071): Genomic Sequence (9:4,386,410-4,386,556)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=9%3A4386410-4386556
+------
+Processing RNU6-695P with Transcript ID: ENST00000391157
+RNU6-695P (ENST00000391157): Genomic Sequence (1:90,253,456-90,253,559)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A90253456-90253559
+------
+Processing RNU6-696P with Transcript ID: ENST00000390834
+RNU6-696P (ENST00000390834): Genomic Sequence (21:37,045,530-37,045,636)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=21%3A37045530-37045636
+------
+Processing RNU6-697P with Transcript ID: ENST00000363348
+RNU6-697P (ENST00000363348): Genomic Sequence (10:68,846,805-68,846,911)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A68846805-68846911
+------
+Processing RNU6-698P with Transcript ID: ENST00000363523
+RNU6-698P (ENST00000363523): Genomic Sequence (19:53,653,685-53,653,791)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=19%3A53653685-53653791
+------
+Processing RNU6-699P with Transcript ID: ENST00000517081
+RNU6-699P (ENST00000517081): Genomic Sequence (4:66,897,262-66,897,371)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=4%3A66897262-66897371
+------
+Processing RNU6-700P with Transcript ID: ENST00000391043
+RNU6-700P (ENST00000391043): Genomic Sequence (12:9,624,122-9,624,228)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=12%3A9624122-9624228
+------
+Processing RNU6-701P with Transcript ID: ENST00000384059
+RNU6-701P (ENST00000384059): Genomic Sequence (5:119,138,859-119,138,965)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A119138859-119138965
+------
+Processing RNU6-702P with Transcript ID: ENST00000364982
+RNU6-702P (ENST00000364982): Genomic Sequence (18:22,180,112-22,180,218)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=18%3A22180112-22180218
+------
+Processing RNU6-703P with Transcript ID: ENST00000516946
+RNU6-703P (ENST00000516946): Genomic Sequence (8:98,048,856-98,048,962)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=8%3A98048856-98048962
+------
+Processing RNU6-704P with Transcript ID: ENST00000364162
+RNU6-704P (ENST00000364162): Genomic Sequence (1:200,933,345-200,933,447)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A200933345-200933447
+------
+Processing RNU6-705P with Transcript ID: ENST00000410601
+RNU6-705P (ENST00000410601): Genomic Sequence (5:181,301,967-181,302,070)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A181301967-181302070
+------
+Processing RNU6-706P with Transcript ID: ENST00000517229
+RNU6-706P (ENST00000517229): Genomic Sequence (18:39,034,007-39,034,110)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=18%3A39034007-39034110
+------
+Processing RNU6-707P with Transcript ID: ENST00000364647
+RNU6-707P (ENST00000364647): Genomic Sequence (X:48,153,980-48,154,074)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=X%3A48153980-48154074
+------
+Processing RNU6-708P with Transcript ID: ENST00000384217
+RNU6-708P (ENST00000384217): Genomic Sequence (18:48,169,784-48,169,890)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=18%3A48169784-48169890
+------
+Processing RNU6-709P with Transcript ID: ENST00000517257
+RNU6-709P (ENST00000517257): Genomic Sequence (10:114,111,414-114,111,517)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A114111414-114111517
+------
+Processing RNU6-710P with Transcript ID: ENST00000410424
+RNU6-710P (ENST00000410424): Genomic Sequence (9:111,996,635-111,996,739)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=9%3A111996635-111996739
+------
+Processing RNU6-711P with Transcript ID: ENST00000517255
+RNU6-711P (ENST00000517255): Genomic Sequence (17:29,424,762-29,424,867)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=17%3A29424762-29424867
+------
+Processing RNU6-712P with Transcript ID: ENST00000410558
+RNU6-712P (ENST00000410558): Genomic Sequence (3:90,184,634-90,184,733)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A90184634-90184733
+------
+Processing RNU6-713P with Transcript ID: ENST00000384761
+RNU6-713P (ENST00000384761): Genomic Sequence (12:40,554,161-40,554,267)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=12%3A40554161-40554267
+------
+Processing RNU6-714P with Transcript ID: ENST00000516963
+RNU6-714P (ENST00000516963): Genomic Sequence (9:92,820,977-92,821,079)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=9%3A92820977-92821079
+------
+Processing RNU6-715P with Transcript ID: ENST00000365204
+RNU6-715P (ENST00000365204): Genomic Sequence (2:147,495,438-147,495,540)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A147495438-147495540
+------
+Processing RNU6-716P with Transcript ID: ENST00000365621
+RNU6-716P (ENST00000365621): Genomic Sequence (1:200,008,505-200,008,607)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A200008505-200008607
+------
+Processing RNU6-717P with Transcript ID: ENST00000459076
+RNU6-717P (ENST00000459076): Genomic Sequence (12:133,238,335-133,238,438)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=12%3A133238335-133238438
+------
+Processing RNU6-718P with Transcript ID: ENST00000516166
+RNU6-718P (ENST00000516166): Genomic Sequence (5:120,337,549-120,337,653)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A120337549-120337653
+------
+Processing RNU6-719P with Transcript ID: ENST00000516671
+RNU6-719P (ENST00000516671): Genomic Sequence (7:39,768,341-39,768,444)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=7%3A39768341-39768444
+------
+Processing RNU6-720P with Transcript ID: ENST00000516363
+RNU6-720P (ENST00000516363): Genomic Sequence (3:149,917,342-149,917,449)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A149917342-149917449
+------
+Processing RNU6-721P with Transcript ID: ENST00000410155
+RNU6-721P (ENST00000410155): Genomic Sequence (18:15,320,840-15,320,944)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=18%3A15320840-15320944
+------
+Processing RNU6-722P with Transcript ID: ENST00000411377
+RNU6-722P (ENST00000411377): Genomic Sequence (X:48,959,179-48,959,282)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=X%3A48959179-48959282
+------
+Processing RNU6-722P with Transcript ID: ENST00000710080
+RNU6-722P (ENST00000710080): Genomic Sequence (HSCHRX_3_CTG3:118,014-118,117)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=HSCHRX_3_CTG3%3A118014-118117
+------
+Processing RNU6-723P with Transcript ID: ENST00000383973
+RNU6-723P (ENST00000383973): Genomic Sequence (1:48,344,209-48,344,315)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A48344209-48344315
+------
+Processing RNU6-724P with Transcript ID: ENST00000390958
+RNU6-724P (ENST00000390958): Genomic Sequence (5:69,530,613-69,530,717)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A69530613-69530717
+------
+Processing RNU6-725P with Transcript ID: ENST00000516562
+RNU6-725P (ENST00000516562): Genomic Sequence (1:238,325,687-238,325,788)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A238325687-238325788
+------
+Processing RNU6-726P with Transcript ID: ENST00000364680
+RNU6-726P (ENST00000364680): Genomic Sequence (3:131,092,821-131,092,927)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A131092821-131092927
+------
+Processing RNU6-727P with Transcript ID: ENST00000363592
+RNU6-727P (ENST00000363592): Genomic Sequence (5:87,420,341-87,420,447)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A87420341-87420447
+------
+Processing RNU6-728P with Transcript ID: ENST00000365375
+RNU6-728P (ENST00000365375): Genomic Sequence (10:122,345,690-122,345,793)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A122345690-122345793
+------
+Processing RNU6-729P with Transcript ID: ENST00000645734
+RNU6-729P (ENST00000645734): Genomic Sequence (HG76_PATCH:2,870,680-2,870,786)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=HG76_PATCH%3A2870680-2870786
+------
+Processing RNU6-729P with Transcript ID: ENST00000384399
+RNU6-729P (ENST00000384399): Genomic Sequence (8:10,476,223-10,476,329)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=8%3A10476223-10476329
+------
+Processing RNU6-730P with Transcript ID: ENST00000383954
+RNU6-730P (ENST00000383954): Genomic Sequence (6:165,718,235-165,718,338)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=6%3A165718235-165718338
+------
+Processing RNU6-731P with Transcript ID: ENST00000517213
+RNU6-731P (ENST00000517213): Genomic Sequence (1:6,540,854-6,540,964)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A6540854-6540964
+------
+Processing RNU6-732P with Transcript ID: ENST00000516033
+RNU6-732P (ENST00000516033): Genomic Sequence (5:149,057,554-149,057,656)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A149057554-149057656
+------
+Processing RNU6-733P with Transcript ID: ENST00000410759
+RNU6-733P (ENST00000410759): Genomic Sequence (4:107,867,807-107,867,910)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=4%3A107867807-107867910
+------
+Processing RNU6-735P with Transcript ID: ENST00000410612
+RNU6-735P (ENST00000410612): Genomic Sequence (12:95,438,737-95,438,843)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=12%3A95438737-95438843
+------
+Processing RNU6-737P with Transcript ID: ENST00000365370
+RNU6-737P (ENST00000365370): Genomic Sequence (18:57,284,602-57,284,708)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=18%3A57284602-57284708
+------
+Processing RNU6-738P with Transcript ID: ENST00000384531
+RNU6-738P (ENST00000384531): Genomic Sequence (5:27,111,569-27,111,674)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A27111569-27111674
+------
+Processing RNU6-739P with Transcript ID: ENST00000391038
+RNU6-739P (ENST00000391038): Genomic Sequence (3:64,511,755-64,511,857)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A64511755-64511857
+------
+Processing RNU6-740P with Transcript ID: ENST00000364734
+RNU6-740P (ENST00000364734): Genomic Sequence (10:90,922,731-90,922,835)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A90922731-90922835
+------
+Processing RNU6-741P with Transcript ID: ENST00000383889
+RNU6-741P (ENST00000383889): Genomic Sequence (15:23,777,437-23,777,543)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=15%3A23777437-23777543
+------
+Processing RNU6-742P with Transcript ID: ENST00000365289
+RNU6-742P (ENST00000365289): Genomic Sequence (18:57,755,394-57,755,500)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=18%3A57755394-57755500
+------
+Processing RNU6-743P with Transcript ID: ENST00000364151
+RNU6-743P (ENST00000364151): Genomic Sequence (20:43,405,473-43,405,578)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=20%3A43405473-43405578
+------
+Processing RNU6-744P with Transcript ID: ENST00000365557
+RNU6-744P (ENST00000365557): Genomic Sequence (2:113,681,111-113,681,217)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A113681111-113681217
+------
+Processing RNU6-745P with Transcript ID: ENST00000363346
+RNU6-745P (ENST00000363346): Genomic Sequence (15:70,193,236-70,193,341)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=15%3A70193236-70193341
+------
+Processing RNU6-746P with Transcript ID: ENST00000384112
+RNU6-746P (ENST00000384112): Genomic Sequence (4:55,294,490-55,294,598)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=4%3A55294490-55294598
+------
+Processing RNU6-747P with Transcript ID: ENST00000615132
+RNU6-747P (ENST00000615132): Genomic Sequence (HSCHR1_3_CTG32_1:93,264-93,367)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=HSCHR1_3_CTG32_1%3A93264-93367
+------
+Processing RNU6-747P with Transcript ID: ENST00000390928
+RNU6-747P (ENST00000390928): Genomic Sequence (1:243,081,156-243,081,259)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A243081156-243081259
+------
+Processing RNU6-748P with Transcript ID: ENST00000384648
+RNU6-748P (ENST00000384648): Genomic Sequence (8:98,462,944-98,463,050)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=8%3A98462944-98463050
+------
+Processing RNU6-749P with Transcript ID: ENST00000459351
+RNU6-749P (ENST00000459351): Genomic Sequence (15:20,855,251-20,855,357)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=15%3A20855251-20855357
+------
+Processing RNU6-750P with Transcript ID: ENST00000390946
+RNU6-750P (ENST00000390946): Genomic Sequence (1:99,978,939-99,979,045)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A99978939-99979045
+------
+Processing RNU6-751P with Transcript ID: ENST00000516382
+RNU6-751P (ENST00000516382): Genomic Sequence (19:53,749,851-53,749,951)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=19%3A53749851-53749951
+------
+Processing RNU6-752P with Transcript ID: ENST00000516376
+RNU6-752P (ENST00000516376): Genomic Sequence (5:126,755,316-126,755,417)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A126755316-126755417
+------
+Processing RNU6-753P with Transcript ID: ENST00000363926
+RNU6-753P (ENST00000363926): Genomic Sequence (1:38,396,659-38,396,765)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A38396659-38396765
+------
+Processing RNU6-754P with Transcript ID: ENST00000391166
+RNU6-754P (ENST00000391166): Genomic Sequence (6:46,018,745-46,018,851)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=6%3A46018745-46018851
+------
+Processing RNU6-755P with Transcript ID: ENST00000364400
+RNU6-755P (ENST00000364400): Genomic Sequence (1:164,980,035-164,980,137)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A164980035-164980137
+------
+Processing RNU6-756P with Transcript ID: ENST00000383997
+RNU6-756P (ENST00000383997): Genomic Sequence (8:124,260,646-124,260,752)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=8%3A124260646-124260752
+------
+Processing RNU6-757P with Transcript ID: ENST00000410334
+RNU6-757P (ENST00000410334): Genomic Sequence (5:134,715,483-134,715,582)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A134715483-134715582
+------
+Processing RNU6-758P with Transcript ID: ENST00000516292
+RNU6-758P (ENST00000516292): Genomic Sequence (16:75,286,712-75,286,800)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=16%3A75286712-75286800
+------
+Processing RNU6-759P with Transcript ID: ENST00000516740
+RNU6-759P (ENST00000516740): Genomic Sequence (20:35,647,328-35,647,430)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=20%3A35647328-35647430
+------
+Processing RNU6-760P with Transcript ID: ENST00000516078
+RNU6-760P (ENST00000516078): Genomic Sequence (5:31,832,439-31,832,535)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A31832439-31832535
+------
+Processing RNU6-761P with Transcript ID: ENST00000384148
+RNU6-761P (ENST00000384148): Genomic Sequence (6:42,018,408-42,018,514)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=6%3A42018408-42018514
+------
+Processing RNU6-762P with Transcript ID: ENST00000517107
+RNU6-762P (ENST00000517107): Genomic Sequence (2:200,899,020-200,899,121)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A200899020-200899121
+------
+Processing RNU6-763P with Transcript ID: ENST00000390865
+RNU6-763P (ENST00000390865): Genomic Sequence (2:175,022,214-175,022,319)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A175022214-175022319
+------
+Processing RNU6-764P with Transcript ID: ENST00000516396
+RNU6-764P (ENST00000516396): Genomic Sequence (X:152,250,572-152,250,676)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=X%3A152250572-152250676
+------
+Processing RNU6-765P with Transcript ID: ENST00000516916
+RNU6-765P (ENST00000516916): Genomic Sequence (9:38,680,006-38,680,104)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=9%3A38680006-38680104
+------
+Processing RNU6-766P with Transcript ID: ENST00000362478
+RNU6-766P (ENST00000362478): Genomic Sequence (2:168,606,390-168,606,496)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A168606390-168606496
+------
+Processing RNU6-767P with Transcript ID: ENST00000384132
+RNU6-767P (ENST00000384132): Genomic Sequence (17:17,170,083-17,170,189)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=17%3A17170083-17170189
+------
+Processing RNU6-768P with Transcript ID: ENST00000384683
+RNU6-768P (ENST00000384683): Genomic Sequence (12:101,199,271-101,199,377)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=12%3A101199271-101199377
+------
+Processing RNU6-769P with Transcript ID: ENST00000384407
+RNU6-769P (ENST00000384407): Genomic Sequence (12:50,633,273-50,633,376)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=12%3A50633273-50633376
+------
+Processing RNU6-770P with Transcript ID: ENST00000363929
+RNU6-770P (ENST00000363929): Genomic Sequence (6:108,392,073-108,392,177)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=6%3A108392073-108392177
+------
+Processing RNU6-771P with Transcript ID: ENST00000632886
+RNU6-771P (ENST00000632886): Genomic Sequence (HG1342_HG2282_PATCH:433,465-433,571)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=HG1342_HG2282_PATCH%3A433465-433571
+------
+Processing RNU6-771P with Transcript ID: ENST00000365380
+RNU6-771P (ENST00000365380): Genomic Sequence (HSCHR1_5_CTG3:244,981-245,087)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=HSCHR1_5_CTG3%3A244981-245087
+------
+Processing RNU6-771P with Transcript ID: ENST00000384780
+RNU6-771P (ENST00000384780): Genomic Sequence (1:13,279,125-13,279,231)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A13279125-13279231
+------
+Processing RNU6-772P with Transcript ID: ENST00000516042
+RNU6-772P (ENST00000516042): Genomic Sequence (21:20,355,748-20,355,852)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=21%3A20355748-20355852
+------
+Processing RNU6-774P with Transcript ID: ENST00000363238
+RNU6-774P (ENST00000363238): Genomic Sequence (4:84,233,657-84,233,763)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=4%3A84233657-84233763
+------
+Processing RNU6-775P with Transcript ID: ENST00000459318
+RNU6-775P (ENST00000459318): Genomic Sequence (2:55,451,004-55,451,099)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A55451004-55451099
+------
+Processing RNU6-776P with Transcript ID: ENST00000364403
+RNU6-776P (ENST00000364403): Genomic Sequence (1:22,010,985-22,011,088)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A22010985-22011088
+------
+Processing RNU6-777P with Transcript ID: ENST00000364265
+RNU6-777P (ENST00000364265): Genomic Sequence (1:12,077,881-12,077,984)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A12077881-12077984
+------
+Processing RNU6-778P with Transcript ID: ENST00000363269
+RNU6-778P (ENST00000363269): Genomic Sequence (1:199,888,159-199,888,261)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A199888159-199888261
+------
+Processing RNU6-780P with Transcript ID: ENST00000391030
+RNU6-780P (ENST00000391030): Genomic Sequence (10:86,488,446-86,488,549)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A86488446-86488549
+------
+Processing RNU6-781P with Transcript ID: ENST00000516377
+RNU6-781P (ENST00000516377): Genomic Sequence (12:6,709,452-6,709,552)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=12%3A6709452-6709552
+------
+Processing RNU6-782P with Transcript ID: ENST00000516852
+RNU6-782P (ENST00000516852): Genomic Sequence (19:15,145,215-15,145,318)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=19%3A15145215-15145318
+------
+Processing RNU6-783P with Transcript ID: ENST00000516710
+RNU6-783P (ENST00000516710): Genomic Sequence (11:23,849,778-23,849,882)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=11%3A23849778-23849882
+------
+Processing RNU6-784P with Transcript ID: ENST00000384330
+RNU6-784P (ENST00000384330): Genomic Sequence (4:70,703,018-70,703,123)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=4%3A70703018-70703123
+------
+Processing RNU6-785P with Transcript ID: ENST00000411324
+RNU6-785P (ENST00000411324): Genomic Sequence (9:138,259,595-138,259,698)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=9%3A138259595-138259698
+------
+Processing RNU6-786P with Transcript ID: ENST00000516849
+RNU6-786P (ENST00000516849): Genomic Sequence (6:157,934,168-157,934,257)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=6%3A157934168-157934257
+------
+Processing RNU6-787P with Transcript ID: ENST00000633131
+RNU6-787P (ENST00000633131): Genomic Sequence (HG2235_PATCH:270,010-270,116)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=HG2235_PATCH%3A270010-270116
+------
+Processing RNU6-787P with Transcript ID: ENST00000384032
+RNU6-787P (ENST00000384032): Genomic Sequence (3:66,293,114-66,293,220)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A66293114-66293220
+------
+Processing RNU6-788P with Transcript ID: ENST00000390967
+RNU6-788P (ENST00000390967): Genomic Sequence (3:23,641,489-23,641,592)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A23641489-23641592
+------
+Processing RNU6-789P with Transcript ID: ENST00000517105
+RNU6-789P (ENST00000517105): Genomic Sequence (3:136,721,394-136,721,495)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A136721394-136721495
+------
+Processing RNU6-790P with Transcript ID: ENST00000384479
+RNU6-790P (ENST00000384479): Genomic Sequence (14:101,803,227-101,803,331)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=14%3A101803227-101803331
+------
+Processing RNU6-791P with Transcript ID: ENST00000410467
+RNU6-791P (ENST00000410467): Genomic Sequence (1:222,503,632-222,503,735)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A222503632-222503735
+------
+Processing RNU6-792P with Transcript ID: ENST00000363490
+RNU6-792P (ENST00000363490): Genomic Sequence (1:111,490,317-111,490,423)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A111490317-111490423
+------
+Processing RNU6-793P with Transcript ID: ENST00000384233
+RNU6-793P (ENST00000384233): Genomic Sequence (6:14,646,535-14,646,638)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=6%3A14646535-14646638
+------
+Processing RNU6-794P with Transcript ID: ENST00000517261
+RNU6-794P (ENST00000517261): Genomic Sequence (10:35,231,331-35,231,394)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A35231331-35231394
+------
+Processing RNU6-795P with Transcript ID: ENST00000516323
+RNU6-795P (ENST00000516323): Genomic Sequence (10:38,043,873-38,043,975)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A38043873-38043975
+------
+Processing RNU6-796P with Transcript ID: ENST00000391086
+RNU6-796P (ENST00000391086): Genomic Sequence (15:84,939,617-84,939,723)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=15%3A84939617-84939723
+------
+Processing RNU6-797P with Transcript ID: ENST00000363101
+RNU6-797P (ENST00000363101): Genomic Sequence (7:140,209,563-140,209,671)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=7%3A140209563-140209671
+------
+Processing RNU6-798P with Transcript ID: ENST00000516912
+RNU6-798P (ENST00000516912): Genomic Sequence (9:97,192,923-97,193,025)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=9%3A97192923-97193025
+------
+Processing RNU6-799P with Transcript ID: ENST00000363567
+RNU6-799P (ENST00000363567): Genomic Sequence (17:15,311,345-15,311,451)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=17%3A15311345-15311451
+------
+Processing RNU6-800P with Transcript ID: ENST00000384473
+RNU6-800P (ENST00000384473): Genomic Sequence (X:10,582,817-10,582,919)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=X%3A10582817-10582919
+------
+Processing RNU6-801P with Transcript ID: ENST00000364087
+RNU6-801P (ENST00000364087): Genomic Sequence (6:19,642,425-19,642,529)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=6%3A19642425-19642529
+------
+Processing RNU6-803P with Transcript ID: ENST00000516034
+RNU6-803P (ENST00000516034): Genomic Sequence (19:53,719,064-53,719,165)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=19%3A53719064-53719165
+------
+Processing RNU6-804P with Transcript ID: ENST00000384286
+RNU6-804P (ENST00000384286): Genomic Sequence (5:86,663,144-86,663,250)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A86663144-86663250
+------
+Processing RNU6-805P with Transcript ID: ENST00000365643
+RNU6-805P (ENST00000365643): Genomic Sequence (10:72,391,964-72,392,069)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A72391964-72392069
+------
+Processing RNU6-806P with Transcript ID: ENST00000365147
+RNU6-806P (ENST00000365147): Genomic Sequence (5:60,304,047-60,304,151)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A60304047-60304151
+------
+Processing RNU6-807P with Transcript ID: ENST00000516805
+RNU6-807P (ENST00000516805): Genomic Sequence (15:101,648,206-101,648,312)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=15%3A101648206-101648312
+------
+Processing RNU6-808P with Transcript ID: ENST00000391233
+RNU6-808P (ENST00000391233): Genomic Sequence (12:95,290,692-95,290,799)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=12%3A95290692-95290799
+------
+Processing RNU6-809P with Transcript ID: ENST00000384461
+RNU6-809P (ENST00000384461): Genomic Sequence (1:64,028,894-64,029,000)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A64028894-64029000
+------
+Processing RNU6-810P with Transcript ID: ENST00000364001
+RNU6-810P (ENST00000364001): Genomic Sequence (22:29,134,014-29,134,120)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=22%3A29134014-29134120
+------
+Processing RNU6-811P with Transcript ID: ENST00000384069
+RNU6-811P (ENST00000384069): Genomic Sequence (10:37,135,237-37,135,343)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A37135237-37135343
+------
+Processing RNU6-812P with Transcript ID: ENST00000363178
+RNU6-812P (ENST00000363178): Genomic Sequence (2:78,882,628-78,882,734)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A78882628-78882734
+------
+Processing RNU6-813P with Transcript ID: ENST00000384691
+RNU6-813P (ENST00000384691): Genomic Sequence (6:151,615,773-151,615,879)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=6%3A151615773-151615879
+------
+Processing RNU6-815P with Transcript ID: ENST00000384080
+RNU6-815P (ENST00000384080): Genomic Sequence (3:20,507,644-20,507,756)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A20507644-20507756
+------
+Processing RNU6-816P with Transcript ID: ENST00000390914
+RNU6-816P (ENST00000390914): Genomic Sequence (22:15,701,459-15,701,565)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=22%3A15701459-15701565
+------
+Processing RNU6-817P with Transcript ID: ENST00000391083
+RNU6-817P (ENST00000391083): Genomic Sequence (1:116,413,766-116,413,869)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A116413766-116413869
+------
+Processing RNU6-818P with Transcript ID: ENST00000364837
+RNU6-818P (ENST00000364837): Genomic Sequence (4:88,201,703-88,201,810)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=4%3A88201703-88201810
+------
+Processing RNU6-819P with Transcript ID: ENST00000364116
+RNU6-819P (ENST00000364116): Genomic Sequence (8:47,131,781-47,131,887)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=8%3A47131781-47131887
+------
+Processing RNU6-820P with Transcript ID: ENST00000384273
+RNU6-820P (ENST00000384273): Genomic Sequence (9:68,935,873-68,935,979)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=9%3A68935873-68935979
+------
+Processing RNU6-821P with Transcript ID: ENST00000622163
+RNU6-821P (ENST00000622163): Genomic Sequence (HSCHR3_9_CTG3:160,536-160,642)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=HSCHR3_9_CTG3%3A160536-160642
+------
+Processing RNU6-821P with Transcript ID: ENST00000390995
+RNU6-821P (ENST00000390995): Genomic Sequence (3:198,071,311-198,071,417)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A198071311-198071417
+------
+Processing RNU6-822P with Transcript ID: ENST00000362707
+RNU6-822P (ENST00000362707): Genomic Sequence (3:20,268,965-20,269,070)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A20268965-20269070
+------
+Processing RNU6-823P with Transcript ID: ENST00000645166
+RNU6-823P (ENST00000645166): Genomic Sequence (HSCHR3_9_CTG2_1:11,106-11,208)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=HSCHR3_9_CTG2_1%3A11106-11208
+------
+Processing RNU6-823P with Transcript ID: ENST00000391042
+RNU6-823P (ENST00000391042): Genomic Sequence (3:128,141,875-128,141,977)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A128141875-128141977
+------
+Processing RNU6-824P with Transcript ID: ENST00000363724
+RNU6-824P (ENST00000363724): Genomic Sequence (6:154,825,176-154,825,279)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=6%3A154825176-154825279
+------
+Processing RNU6-826P with Transcript ID: ENST00000516827
+RNU6-826P (ENST00000516827): Genomic Sequence (17:49,036,352-49,036,455)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=17%3A49036352-49036455
+------
+Processing RNU6-827P with Transcript ID: ENST00000365553
+RNU6-827P (ENST00000365553): Genomic Sequence (2:78,882,447-78,882,552)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A78882447-78882552
+------
+Processing RNU6-828P with Transcript ID: ENST00000364876
+RNU6-828P (ENST00000364876): Genomic Sequence (1:10,163,268-10,163,374)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A10163268-10163374
+------
+Processing RNU6-829P with Transcript ID: ENST00000363700
+RNU6-829P (ENST00000363700): Genomic Sequence (9:93,375,556-93,375,667)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=9%3A93375556-93375667
+------
+RNU6-829P (ENST00000363700): Genomic Sequence (9:93,375,556-93,375,667)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=9%3A93375556-93375667
+------
+Processing RNU6-830P with Transcript ID: ENST00000516353
+RNU6-830P (ENST00000516353): Genomic Sequence (1:55,398,514-55,398,620)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A55398514-55398620
+------
+Processing RNU6-831P with Transcript ID: ENST00000384548
+RNU6-831P (ENST00000384548): Genomic Sequence (18:3,894,699-3,894,805)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=18%3A3894699-3894805
+------
+Processing RNU6-832P with Transcript ID: ENST00000363319
+RNU6-832P (ENST00000363319): Genomic Sequence (7:69,125,270-69,125,376)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=7%3A69125270-69125376
+------
+Processing RNU6-833P with Transcript ID: ENST00000363486
+RNU6-833P (ENST00000363486): Genomic Sequence (10:73,279,062-73,279,168)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A73279062-73279168
+------
+Processing RNU6-834P with Transcript ID: ENST00000362367
+RNU6-834P (ENST00000362367): Genomic Sequence (12:49,593,104-49,593,213)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=12%3A49593104-49593213
+------
+Processing RNU6-835P with Transcript ID: ENST00000516974
+RNU6-835P (ENST00000516974): Genomic Sequence (14:87,996,345-87,996,448)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=14%3A87996345-87996448
+------
+Processing RNU6-836P with Transcript ID: ENST00000362920
+RNU6-836P (ENST00000362920): Genomic Sequence (4:41,084,607-41,084,713)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=4%3A41084607-41084713
+------
+Processing RNU6-837P with Transcript ID: ENST00000391056
+RNU6-837P (ENST00000391056): Genomic Sequence (12:17,071,398-17,071,505)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=12%3A17071398-17071505
+------
+Processing RNU6-838P with Transcript ID: ENST00000363399
+RNU6-838P (ENST00000363399): Genomic Sequence (4:48,106,081-48,106,188)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=4%3A48106081-48106188
+------
+Processing RNU6-839P with Transcript ID: ENST00000363347
+RNU6-839P (ENST00000363347): Genomic Sequence (10:109,239,639-109,239,746)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A109239639-109239746
+------
+Processing RNU6-840P with Transcript ID: ENST00000517275
+RNU6-840P (ENST00000517275): Genomic Sequence (17:35,093,909-35,093,973)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=17%3A35093909-35093973
+------
+Processing RNU6-841P with Transcript ID: ENST00000383872
+RNU6-841P (ENST00000383872): Genomic Sequence (19:49,764,524-49,764,630)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=19%3A49764524-49764630
+------
+Processing RNU6-842P with Transcript ID: ENST00000645852
+RNU6-842P (ENST00000645852): Genomic Sequence (HG76_PATCH:6,239,797-6,239,903)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=HG76_PATCH%3A6239797-6239903
+------
+Processing RNU6-842P with Transcript ID: ENST00000384269
+RNU6-842P (ENST00000384269): Genomic Sequence (8:13,044,350-13,044,456)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=8%3A13044350-13044456
+------
+Processing RNU6-843P with Transcript ID: ENST00000384454
+RNU6-843P (ENST00000384454): Genomic Sequence (2:12,411,398-12,411,501)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A12411398-12411501
+------
+Processing RNU6-844P with Transcript ID: ENST00000517175
+RNU6-844P (ENST00000517175): Genomic Sequence (15:57,405,074-57,405,175)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=15%3A57405074-57405175
+------
+Processing RNU6-845P with Transcript ID: ENST00000362578
+RNU6-845P (ENST00000362578): Genomic Sequence (16:46,556,089-46,556,191)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=16%3A46556089-46556191
+------

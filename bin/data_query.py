@@ -25,7 +25,8 @@ def search_hgnc_genes(query):
 def fetch_ensembl_transcript_ids(gene_symbol):
     server = biomart.BiomartServer('http://www.ensembl.org/biomart')
     dataset = server.datasets['hsapiens_gene_ensembl']
-    attributes = ['ensembl_transcript_id', 'external_gene_name']
+        # Define the attributes to fetch (Ensembl transcript ID, External gene name, HGNC symbol, and HGNC status)
+    attributes = ['ensembl_transcript_id', 'external_gene_name', 'hgnc_symbol', 'hgnc_status']
     response = dataset.search({
         'attributes': attributes,
         'filters': {
@@ -38,8 +39,12 @@ def fetch_ensembl_transcript_ids(gene_symbol):
         data = response.content.decode('utf-8')
         for line in data.split('\n'):
             if line:
-                ensembl_transcript_id, external_gene_name = line.split('\t')
-                transcript_ids.append(ensembl_transcript_id)
+                # Split the line to extract the gene information
+                ensembl_transcript_id, external_gene_name, hgnc_symbol, hgnc_status = line.split('\t')
+                
+                # Check if the gene has an approved status
+                if hgnc_status == 'Approved':
+                    transcript_ids.append(ensembl_transcript_id)
     except AttributeError:
         print("Error decoding response or no data found.")
         
@@ -82,7 +87,7 @@ def get_gene_locations(query):
         substr_gene_symbol = gene_symbol[5:-1]
         if (substr_gene_symbol == ""):
             continue
-        if int(substr_gene_symbol) < 665:
+        if int(substr_gene_symbol) < 845:
             continue        
         
         transcript_ids = fetch_ensembl_transcript_ids(gene_symbol)
@@ -109,7 +114,7 @@ def get_gene_locations(query):
                 print(f"UCSC Genome Browser link: {ucsc_link}")
             else:
                 print(f"No location found for {gene_symbol} ({transcript_id})")
-            time.sleep(1)  # To respect Ensembl API rate limiting
+            time.sleep(1/10)  # To respect Ensembl API rate limiting
             print("------")
 
 # Example usage
