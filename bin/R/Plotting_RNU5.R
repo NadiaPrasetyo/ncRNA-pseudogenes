@@ -1,6 +1,7 @@
 # Load necessary libraries
 library(readr)
 library(ggplot2)
+library(dplyr)
 
 # Load data
 RNU5_cons <- read_csv("../../data/RNU5_cons.csv")
@@ -23,11 +24,23 @@ RNU5_cons_clean$Has_P <- grepl("P$", RNU5_cons_clean$Gene_number) # logical colu
 RNU5_cons_clean <- RNU5_cons_clean[order(RNU5_cons_clean$Gene_letter,
                                          RNU5_cons_clean$Numeric_part,
                                          RNU5_cons_clean$Has_P), ]
+
 # Step 4: Optional - Drop intermediate columns if needed
 RNU5_cons_clean$Numeric_part <- NULL
 RNU5_cons_clean$Has_P <- NULL
 
-# Create the plot
+# Calculate summary metrics: median and max conservation for each gene
+summary_metrics_RNU5 <- RNU5_cons_clean %>%
+  group_by(Gene) %>%
+  summarise(
+    Median_Conservation = median(Score, na.rm = TRUE),
+    Max_Conservation = max(Score, na.rm = TRUE)
+  )
+
+# Optionally, print the summary metrics to the console
+print(summary_metrics_RNU5)
+
+# Create the plot (no summary metrics on plot)
 plot_RNU5 <- ggplot(RNU5_cons_clean, aes(x = Score, y = Gene)) +
   geom_boxplot(fill = "lightgreen", color = "black") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size = 8)) +
@@ -37,4 +50,7 @@ plot_RNU5 <- ggplot(RNU5_cons_clean, aes(x = Score, y = Gene)) +
   theme_minimal()
 
 # Save the plot to a file
-ggsave("../../results/RNU5_score_plot_vertical_labels_large.pdf", plot = plot_RNU5, width = 12, height = 8)
+ggsave("../../results/RNU5_score_plot.pdf", plot = plot_RNU5, width = 12, height = 8)
+
+# Optionally: Save summary metrics to a CSV file for RNU5
+write_csv(summary_metrics_RNU5, "../../results/RNU5_summary_metrics.csv")
