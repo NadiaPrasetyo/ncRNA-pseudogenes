@@ -142,12 +142,12 @@ def get_gene_locations(query):
 
     # Loop through each gene symbol to process
     for gene_symbol in gene_symbols:
-        # Extract the numeric part of the gene symbol for additional filtering
-        substr_gene_symbol = gene_symbol[5:-1]
+        # # Extract the numeric part of the gene symbol for additional filtering
+        # substr_gene_symbol = gene_symbol[5:-1]
         
-        # Skip symbols with no numeric part or if the numeric part is less than the specified amount
-        if substr_gene_symbol == "" or int(substr_gene_symbol) < 1137:
-            continue
+        # # Skip symbols with no numeric part or if the numeric part is less than the specified amount
+        # if substr_gene_symbol == "" or int(substr_gene_symbol) < 1137:
+        #     continue
         
         # Fetch Ensembl transcript IDs for the gene symbol
         transcript_ids = fetch_ensembl_transcript_ids(gene_symbol)
