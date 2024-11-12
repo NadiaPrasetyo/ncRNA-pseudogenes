@@ -6,8 +6,8 @@ import sys
 
 # Define the file path to your bigWig file
 bw_file = "data/hg38.phastCons30way.bw"
-input_file = "data/RNU5_data.txt"  # Update with the path to your file containing the gene data
-output_file = "data/RNU5_cons.csv"  # Define the output file for CSV format
+input_file = "data/RNU6_data.txt"  # Update with the path to your file containing the gene data
+output_file = "data/RNU6_cons.csv"  # Define the output file for CSV format
 temp_output_file = f"{output_file}.tmp"  # Temporary file for output
 
 # Regular expression to extract chromosome, start, and end information
