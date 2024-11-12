@@ -96,7 +96,7 @@ Place all downloaded datasets in the `data/` folder.
 The project computationaly analyses the pseudogene annotations in HGNC along with conservation data to identify likely functional pseudogenes, indicating false annotation and clinical and diagnosis importance of these pseudogenes.
 
 ### Cleaning pseudogene symbols found
-Crosscheking with the HGNC database to check if symbols found are approved or withdrawn. Withdrawn symbols should be removed from the data in cleanup, while some found approved symbols do not have an associated ensembl transcript ID, must be added in manually by cross checking with UCSC genome browser. Cases like this include: RNU4-3P, RNU5B-5P, RNU5E-2P, RNU5F-5P, RNU6-52P, RNU6-69P.
+Crosscheking with the HGNC database to check if symbols found are approved or withdrawn. Withdrawn symbols should be removed from the data in cleanup, while some found approved symbols do not have an associated ensembl transcript ID, must be added in manually by cross checking with UCSC genome browser. Cases like this include: RNU4-3P, RNU5B-5P, RNU5E-2P, RNU5F-5P, RNU6-52P, RNU6-69P, RNU6-1139P, 
 
 ### Conservation and Selection Analysis
 We use comparative genomics data to assess conservation levels across mammalian species, applying tools such as PhastCons scores to detect signs of negative selection. Negatively selected regions are likely to hold functional significance despite being labeled as pseudogenes.
