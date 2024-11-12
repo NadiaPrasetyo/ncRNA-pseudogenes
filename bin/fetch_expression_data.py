@@ -67,8 +67,8 @@ rna_seq_files = [
 ]
 #Alter these file paths for each specified gene groups
 # Path to input gene file and output CSV file
-gene_file_path = "data/RNU1_data.txt"
-output_csv = "data/RNU1_expr.csv"
+gene_file_path = "data/RNU6_data.txt"
+output_csv = "data/RNU6_expr.csv"
 
 # Regular expressions for extracting gene name and genomic location
 gene_pattern = re.compile(r"Processing (.+?) with Transcript ID")

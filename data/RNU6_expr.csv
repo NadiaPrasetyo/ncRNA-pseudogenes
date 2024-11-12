@@ -1,0 +1,1282 @@
+Gene,Max Expression,Location
+RNU6-1,37.0,Brain Anterior cingulate cortex BA24
+RNU6-2,60.0,Brain Anterior cingulate cortex BA24
+RNU6-3P,23.0,Heart Atrial Appendage
+RNU6-4P,50.0,Brain Putamen basal ganglia
+RNU6-5P,26.0,Small Intestine Terminal Ileum
+RNU6-6P,23.0,Thyroid
+RNU6-7,5.0,Testis
+RNU6-8,56.0,Brain Cerebellar Hemisphere
+RNU6-9,24.0,Thyroid
+RNU6-10P,6.0,Brain Nucleus accumbens basal ganglia
+RNU6-11P,60.0,Brain Cortex
+RNU6-12P,4.0,Brain Hypothalamus
+RNU6-13P,4.0,Adipose Visceral Omentum
+RNU6-14P,2.0,Testis
+RNU6-15P,28.0,Brain Cortex
+RNU6-16P,5.0,Testis
+RNU6-17P,4.0,Heart Atrial Appendage
+RNU6-18P,6.0,Brain Caudate basal ganglia
+RNU6-19P,3.0,Thyroid
+RNU6-20P,8.0,Thyroid
+RNU6-21P,2.0,Brain Caudate basal ganglia
+RNU6-22P,3.0,Testis
+RNU6-23P,3.0,Testis
+RNU6-24P,2.0,Colon Transverse
+RNU6-25P,6.0,Esophagus Gastroesophageal Junction
+RNU6-26P,103.0,Testis
+RNU6-27P,2.0,Brain Substantia nigra
+RNU6-28P,2.0,Skin Not Sun Exposed Suprapubic
+RNU6-29P,18.0,Brain Cortex
+RNU6-30P,31.0,Brain Hypothalamus
+RNU6-31P,1.0,Artery Coronary
+RNU6-32P,7.0,Testis
+RNU6-33P,23.0,Heart Atrial Appendage
+RNU6-34P,2.0,Esophagus Muscularis
+RNU6-35P,2.0,Pancreas
+RNU6-36P,21.0,Heart Atrial Appendage
+RNU6-37P,8.0,Brain Caudate basal ganglia
+RNU6-38P,0.0,Esophagus Muscularis
+RNU6-39P,4.0,Brain Caudate basal ganglia
+RNU6-40P,3.0,Esophagus Gastroesophageal Junction
+RNU6-41P,1.0,Colon Sigmoid
+RNU6-42P,9.0,Brain Putamen basal ganglia
+RNU6-43P,3.0,Brain Substantia nigra
+RNU6-44P,1.0,Vagina
+RNU6-45P,16.0,Brain Nucleus accumbens basal ganglia
+RNU6-46P,3.0,Brain Putamen basal ganglia
+RNU6-47P,2.0,Adrenal Gland
+RNU6-48P,16.0,Testis
+RNU6-49P,1.0,Kidney Cortex
+RNU6-50P,22.0,Brain Cerebellar Hemisphere
+RNU6-52P,1.0,Testis
+RNU6-53P,9.0,Testis
+RNU6-54P,0.0,Esophagus Muscularis
+RNU6-55P,3.0,Brain Substantia nigra
+RNU6-56P,0.0,Esophagus Muscularis
+RNU6-57P,9.0,Brain Cortex
+RNU6-58P,1.0,Heart Left Ventricle
+RNU6-59P,1.0,Pancreas
+RNU6-60P,1.0,Pancreas
+RNU6-61P,3.0,Brain Cerebellar Hemisphere
+RNU6-62P,2.0,Colon Transverse
+RNU6-63P,4.0,Spleen
+RNU6-64P,2.0,Esophagus Gastroesophageal Junction
+RNU6-65P,0.0,Esophagus Muscularis
+RNU6-66P,0.0,Esophagus Muscularis
+RNU6-67P,0.0,Esophagus Muscularis
+RNU6-68P,1.0,Liver
+RNU6-69P,2.0,Skin Not Sun Exposed Suprapubic
+RNU6-70P,4.0,Brain Nucleus accumbens basal ganglia
+RNU6-71P,1.0,Colon Transverse
+RNU6-72P,1.0,Brain Hippocampus
+RNU6-73P,0.0,Esophagus Muscularis
+RNU6-74P,1.0,Brain Caudate basal ganglia
+RNU6-75P,1.0,Heart Left Ventricle
+RNU6-76P,0.0,Esophagus Muscularis
+RNU6-77P,0.0,Esophagus Muscularis
+RNU6-78P,0.0,Esophagus Muscularis
+RNU6-79P,2.0,Small Intestine Terminal Ileum
+RNU6-80P,3.0,Spleen
+RNU6-81P,0.0,Esophagus Muscularis
+RNU6-82P,2.0,Brain Cerebellar Hemisphere
+RNU6-83P,4.0,Brain Cerebellar Hemisphere
+RNU6-84P,0.0,Esophagus Muscularis
+RNU6-85P,1.0,Artery Aorta
+RNU6-86P,0.0,Esophagus Muscularis
+RNU6-87P,7.0,Brain Cortex
+RNU6-88P,13.0,Testis
+RNU6-89P,1.0,Colon Transverse
+RNU6-90P,7.0,Testis
+RNU6-91P,2.0,Brain Anterior cingulate cortex BA24
+RNU6-92P,2.0,Testis
+RNU6-94P,62.0,Brain Cerebellar Hemisphere
+RNU6-95P,2.0,Vagina
+RNU6-97P,7.0,Testis
+RNU6-98P,0.0,Esophagus Muscularis
+RNU6-99P,0.0,Esophagus Muscularis
+RNU6-100P,10.0,Testis
+RNU6-101P,9.0,Brain Cerebellum
+RNU6-102P,2.0,Muscle Skeletal
+RNU6-103P,49.0,Testis
+RNU6-104P,0.0,Esophagus Muscularis
+RNU6-105P,33.0,Testis
+RNU6-106P,3.0,Adipose Subcutaneous
+RNU6-107P,5.0,Testis
+RNU6-108P,1.0,Cells EBV-transformed lymphocytes
+RNU6-109P,0.0,Esophagus Muscularis
+RNU6-110P,3.0,Testis
+RNU6-111P,0.0,Esophagus Muscularis
+RNU6-112P,56.0,Testis
+RNU6-113P,0.0,Esophagus Muscularis
+RNU6-114P,1.0,Skin Sun Exposed Lower leg
+RNU6-115P,1.0,Brain Nucleus accumbens basal ganglia
+RNU6-116P,1.0,Artery Coronary
+RNU6-117P,7.0,Pancreas
+RNU6-118P,12.0,Testis
+RNU6-119P,1.0,Brain Cerebellum
+RNU6-120P,1.0,Testis
+RNU6-121P,1.0,Ovary
+RNU6-122P,4.0,Brain Cerebellar Hemisphere
+RNU6-123P,4.0,Testis
+RNU6-125P,13.0,Brain Cerebellum
+RNU6-126P,7.0,Testis
+RNU6-127P,1.0,Skin Not Sun Exposed Suprapubic
+RNU6-128P,1.0,Brain Cerebellar Hemisphere
+RNU6-129P,0.0,Esophagus Muscularis
+RNU6-130P,9.0,Cells Cultured fibroblasts
+RNU6-131P,1.0,Brain Cerebellar Hemisphere
+RNU6-132P,4.0,Uterus
+RNU6-133P,0.0,Esophagus Muscularis
+RNU6-135P,2.0,Colon Transverse
+RNU6-136P,8.0,Brain Cortex
+RNU6-137P,12.0,Adrenal Gland
+RNU6-138P,0.0,Esophagus Muscularis
+RNU6-139P,0.0,Esophagus Muscularis
+RNU6-140P,8.0,Skin Sun Exposed Lower leg
+RNU6-141P,3.0,Brain Nucleus accumbens basal ganglia
+RNU6-142P,3.0,Pituitary
+RNU6-143P,17.0,Brain Cortex
+RNU6-144P,1.0,Testis
+RNU6-145P,2.0,Pancreas
+RNU6-146P,115.0,Thyroid
+RNU6-147P,1.0,Skin Not Sun Exposed Suprapubic
+RNU6-148P,0.0,Esophagus Muscularis
+RNU6-150P,2.0,Uterus
+RNU6-151P,2.0,Skin Sun Exposed Lower leg
+RNU6-152P,1.0,Ovary
+RNU6-153P,2.0,Testis
+RNU6-154P,0.0,Esophagus Muscularis
+RNU6-155P,2.0,Adipose Subcutaneous
+RNU6-156P,5.0,Brain Cortex
+RNU6-157P,1.0,Brain Cerebellar Hemisphere
+RNU6-158P,4.0,Brain Frontal Cortex BA9
+RNU6-159P,1.0,Whole Blood
+RNU6-160P,8.0,Vagina
+RNU6-161P,0.0,Esophagus Muscularis
+RNU6-162P,1.0,Esophagus Muscularis
+RNU6-163P,2.0,Esophagus Muscularis
+RNU6-164P,2.0,Testis
+RNU6-165P,0.0,Esophagus Muscularis
+RNU6-166P,0.0,Esophagus Muscularis
+RNU6-167P,29.0,Skin Sun Exposed Lower leg
+RNU6-168P,0.0,Esophagus Muscularis
+RNU6-169P,0.0,Esophagus Muscularis
+RNU6-170P,1.0,Thyroid
+RNU6-171P,6.0,Brain Cortex
+RNU6-172P,5.0,Adipose Subcutaneous
+RNU6-173P,3.0,Adrenal Gland
+RNU6-174P,0.0,Esophagus Muscularis
+RNU6-175P,0.0,Esophagus Muscularis
+RNU6-176P,7.0,Whole Blood
+RNU6-177P,2.0,Artery Aorta
+RNU6-178P,13.0,Brain Nucleus accumbens basal ganglia
+RNU6-179P,8.0,Brain Cortex
+RNU6-180P,1.0,Brain Amygdala
+RNU6-181P,13.0,Brain Cortex
+RNU6-182P,19.0,Adrenal Gland
+RNU6-183P,0.0,Esophagus Muscularis
+RNU6-184P,0.0,Esophagus Muscularis
+RNU6-185P,0.0,Esophagus Muscularis
+RNU6-187P,0.0,Esophagus Muscularis
+RNU6-188P,2.0,Colon Transverse
+RNU6-189P,2.0,Artery Coronary
+RNU6-190P,7.0,Testis
+RNU6-191P,8.0,Heart Atrial Appendage
+RNU6-192P,0.0,Esophagus Muscularis
+RNU6-193P,0.0,Esophagus Muscularis
+RNU6-194P,7.0,Nerve Tibial
+RNU6-195P,11.0,Colon Sigmoid
+RNU6-196P,8.0,Lung
+RNU6-197P,3.0,Testis
+RNU6-198P,2.0,Skin Not Sun Exposed Suprapubic
+RNU6-199P,5.0,Colon Sigmoid
+RNU6-200P,2.0,Uterus
+RNU6-201P,5.0,Minor Salivary Gland
+RNU6-202P,2.0,Kidney Cortex
+RNU6-203P,0.0,Esophagus Muscularis
+RNU6-204P,16.0,Brain Cerebellar Hemisphere
+RNU6-205P,0.0,Esophagus Muscularis
+RNU6-206P,0.0,Esophagus Muscularis
+RNU6-207P,0.0,Esophagus Muscularis
+RNU6-208P,6.0,Testis
+RNU6-209P,2.0,Whole Blood
+RNU6-210P,1.0,Vagina
+RNU6-211P,2.0,Testis
+RNU6-212P,2.0,Kidney Medulla
+RNU6-213P,4.0,Testis
+RNU6-214P,0.0,Esophagus Muscularis
+RNU6-215P,0.0,Esophagus Muscularis
+RNU6-216P,17.0,Cells EBV-transformed lymphocytes
+RNU6-217P,0.0,Esophagus Muscularis
+RNU6-218P,3.0,Lung
+RNU6-219P,0.0,Esophagus Muscularis
+RNU6-220P,1.0,Heart Left Ventricle
+RNU6-221P,1.0,Testis
+RNU6-222P,22.0,Colon Sigmoid
+RNU6-223P,3.0,Small Intestine Terminal Ileum
+RNU6-224P,1.0,Testis
+RNU6-225P,2.0,Brain Nucleus accumbens basal ganglia
+RNU6-226P,16.0,Whole Blood
+RNU6-227P,1.0,Nerve Tibial
+RNU6-228P,5.0,Fallopian Tube
+RNU6-229P,1.0,Testis
+RNU6-230P,5.0,Thyroid
+RNU6-231P,0.0,Esophagus Muscularis
+RNU6-232P,0.0,Esophagus Muscularis
+RNU6-233P,2.0,Esophagus Gastroesophageal Junction
+RNU6-234P,1.0,Artery Coronary
+RNU6-235P,4.0,Esophagus Mucosa
+RNU6-236P,3.0,Artery Aorta
+RNU6-237P,12.0,Skin Sun Exposed Lower leg
+RNU6-238P,3.0,Adipose Subcutaneous
+RNU6-239P,1.0,Cells EBV-transformed lymphocytes
+RNU6-240P,0.0,Esophagus Muscularis
+RNU6-241P,1.0,Brain Amygdala
+RNU6-242P,9.0,Small Intestine Terminal Ileum
+RNU6-243P,0.0,Esophagus Muscularis
+RNU6-244P,142.0,Brain Cortex
+RNU6-245P,1.0,Colon Transverse
+RNU6-246P,3.0,Brain Cerebellar Hemisphere
+RNU6-247P,6.0,Testis
+RNU6-248P,0.0,Esophagus Muscularis
+RNU6-249P,3.0,Brain Cerebellum
+RNU6-250P,2.0,Thyroid
+RNU6-251P,2.0,Bladder
+RNU6-252P,1.0,Testis
+RNU6-253P,2.0,Kidney Medulla
+RNU6-254P,2.0,Testis
+RNU6-255P,3.0,Brain Frontal Cortex BA9
+RNU6-256P,0.0,Esophagus Muscularis
+RNU6-257P,1.0,Adipose Subcutaneous
+RNU6-258P,2.0,Brain Cerebellum
+RNU6-259P,0.0,Esophagus Muscularis
+RNU6-260P,2.0,Artery Coronary
+RNU6-261P,0.0,Esophagus Muscularis
+RNU6-262P,4.0,Adipose Subcutaneous
+RNU6-263P,2.0,Cells Cultured fibroblasts
+RNU6-264P,1.0,Brain Hypothalamus
+RNU6-266P,0.0,Esophagus Muscularis
+RNU6-267P,1.0,Artery Coronary
+RNU6-268P,3.0,Nerve Tibial
+RNU6-269P,3.0,Colon Sigmoid
+RNU6-270P,2.0,Pancreas
+RNU6-271P,1.0,Pancreas
+RNU6-272P,3.0,Testis
+RNU6-273P,2.0,Thyroid
+RNU6-274P,0.0,Esophagus Muscularis
+RNU6-275P,0.0,Esophagus Muscularis
+RNU6-276P,0.0,Esophagus Muscularis
+RNU6-277P,15.0,Brain Cerebellum
+RNU6-278P,2.0,Colon Sigmoid
+RNU6-279P,1.0,Brain Hippocampus
+RNU6-280P,0.0,Esophagus Muscularis
+RNU6-281P,0.0,Esophagus Muscularis
+RNU6-282P,10.0,Brain Cortex
+RNU6-283P,2.0,Brain Substantia nigra
+RNU6-284P,0.0,Esophagus Muscularis
+RNU6-285P,2.0,Bladder
+RNU6-286P,1.0,Prostate
+RNU6-287P,8.0,Kidney Cortex
+RNU6-288P,8.0,Small Intestine Terminal Ileum
+RNU6-289P,0.0,Esophagus Muscularis
+RNU6-290P,1.0,Skin Sun Exposed Lower leg
+RNU6-291P,3.0,Colon Transverse
+RNU6-293P,1.0,Pancreas
+RNU6-294P,1.0,Artery Aorta
+RNU6-295P,0.0,Esophagus Muscularis
+RNU6-296P,1.0,Testis
+RNU6-297P,0.0,Esophagus Muscularis
+RNU6-298P,5.0,Brain Cortex
+RNU6-299P,1.0,Testis
+RNU6-300P,1.0,Testis
+RNU6-301P,10.0,Cells Cultured fibroblasts
+RNU6-302P,4.0,Artery Coronary
+RNU6-303P,0.0,Esophagus Muscularis
+RNU6-304P,3.0,Small Intestine Terminal Ileum
+RNU6-306P,2.0,Brain Cerebellar Hemisphere
+RNU6-307P,7.0,Testis
+RNU6-308P,3.0,Small Intestine Terminal Ileum
+RNU6-309P,0.0,Esophagus Muscularis
+RNU6-310P,2.0,Skin Sun Exposed Lower leg
+RNU6-311P,1.0,Brain Cerebellar Hemisphere
+RNU6-312P,92.0,Brain Cortex
+RNU6-313P,2.0,Colon Transverse
+RNU6-314P,7.0,Testis
+RNU6-315P,5.0,Esophagus Muscularis
+RNU6-316P,6.0,Minor Salivary Gland
+RNU6-317P,1.0,Pancreas
+RNU6-318P,1.0,Brain Caudate basal ganglia
+RNU6-319P,2.0,Minor Salivary Gland
+RNU6-320P,1.0,Muscle Skeletal
+RNU6-321P,1.0,Thyroid
+RNU6-322P,43.0,Small Intestine Terminal Ileum
+RNU6-323P,15.0,Testis
+RNU6-324P,12.0,Pancreas
+RNU6-325P,5.0,Brain Nucleus accumbens basal ganglia
+RNU6-326P,0.0,Esophagus Muscularis
+RNU6-327P,10.0,Cells EBV-transformed lymphocytes
+RNU6-328P,1.0,Thyroid
+RNU6-329P,0.0,Esophagus Muscularis
+RNU6-330P,0.0,Esophagus Muscularis
+RNU6-331P,2.0,Kidney Cortex
+RNU6-332P,0.0,Esophagus Muscularis
+RNU6-333P,1.0,Liver
+RNU6-334P,0.0,Esophagus Muscularis
+RNU6-335P,5.0,Skin Sun Exposed Lower leg
+RNU6-336P,2.0,Testis
+RNU6-337P,3.0,Testis
+RNU6-338P,0.0,Esophagus Muscularis
+RNU6-339P,5.0,Liver
+RNU6-340P,7.0,Nerve Tibial
+RNU6-341P,9.0,Testis
+RNU6-342P,4.0,Colon Transverse
+RNU6-343P,50.0,Lung
+RNU6-344P,2.0,Breast Mammary Tissue
+RNU6-345P,2.0,Thyroid
+RNU6-346P,21.0,Testis
+RNU6-347P,1.0,Skin Sun Exposed Lower leg
+RNU6-348P,0.0,Esophagus Muscularis
+RNU6-349P,0.0,Esophagus Muscularis
+RNU6-351P,0.0,Esophagus Muscularis
+RNU6-352P,0.0,Esophagus Muscularis
+RNU6-353P,204.0,Brain Cerebellar Hemisphere
+RNU6-354P,41.0,Brain Cerebellar Hemisphere
+RNU6-355P,5.0,Whole Blood
+RNU6-356P,0.0,Esophagus Muscularis
+RNU6-358P,2.0,Brain Nucleus accumbens basal ganglia
+RNU6-359P,2.0,Brain Cerebellum
+RNU6-360P,1.0,Kidney Cortex
+RNU6-361P,2.0,Brain Cerebellar Hemisphere
+RNU6-362P,1.0,Brain Cerebellar Hemisphere
+RNU6-363P,0.0,Esophagus Muscularis
+RNU6-364P,1.0,Testis
+RNU6-365P,3.0,Brain Caudate basal ganglia
+RNU6-366P,0.0,Esophagus Muscularis
+RNU6-367P,6.0,Brain Cortex
+RNU6-368P,0.0,Esophagus Muscularis
+RNU6-369P,0.0,Esophagus Muscularis
+RNU6-370P,2.0,Brain Cerebellar Hemisphere
+RNU6-371P,0.0,Esophagus Muscularis
+RNU6-373P,2.0,Brain Putamen basal ganglia
+RNU6-374P,1.0,Testis
+RNU6-375P,6.0,Lung
+RNU6-376P,2.0,Adipose Visceral Omentum
+RNU6-377P,4.0,Brain Caudate basal ganglia
+RNU6-378P,2.0,Esophagus Mucosa
+RNU6-379P,3.0,Skin Sun Exposed Lower leg
+RNU6-380P,2.0,Brain Putamen basal ganglia
+RNU6-381P,0.0,Esophagus Muscularis
+RNU6-382P,0.0,Esophagus Muscularis
+RNU6-383P,1.0,Bladder
+RNU6-384P,8.0,Kidney Cortex
+RNU6-386P,2.0,Brain Anterior cingulate cortex BA24
+RNU6-387P,19.0,Nerve Tibial
+RNU6-388P,18.0,Nerve Tibial
+RNU6-389P,4.0,Pituitary
+RNU6-390P,3.0,Brain Cortex
+RNU6-391P,1.0,Pituitary
+RNU6-392P,0.0,Esophagus Muscularis
+RNU6-393P,1.0,Colon Transverse
+RNU6-394P,0.0,Esophagus Muscularis
+RNU6-395P,160.0,Testis
+RNU6-396P,2.0,Skin Not Sun Exposed Suprapubic
+RNU6-397P,2.0,Brain Cerebellar Hemisphere
+RNU6-398P,27.0,Testis
+RNU6-399P,2.0,Testis
+RNU6-400P,0.0,Esophagus Muscularis
+RNU6-401P,1.0,Skin Sun Exposed Lower leg
+RNU6-402P,4.0,Colon Transverse
+RNU6-403P,23.0,Vagina
+RNU6-405P,6.0,Testis
+RNU6-406P,17.0,Skin Not Sun Exposed Suprapubic
+RNU6-407P,7.0,Artery Aorta
+RNU6-408P,0.0,Esophagus Muscularis
+RNU6-409P,4.0,Brain Substantia nigra
+RNU6-410P,2.0,Artery Aorta
+RNU6-411P,5.0,Thyroid
+RNU6-412P,0.0,Esophagus Muscularis
+RNU6-413P,0.0,Esophagus Muscularis
+RNU6-414P,3.0,Vagina
+RNU6-415P,59.0,Brain Cerebellar Hemisphere
+RNU6-416P,2.0,Testis
+RNU6-417P,0.0,Esophagus Muscularis
+RNU6-418P,45.0,Stomach
+RNU6-419P,5.0,Pituitary
+RNU6-420P,1.0,Spleen
+RNU6-421P,1.0,Kidney Medulla
+RNU6-422P,3.0,Testis
+RNU6-424P,0.0,Esophagus Muscularis
+RNU6-425P,2.0,Thyroid
+RNU6-426P,0.0,Esophagus Muscularis
+RNU6-428P,2.0,Adrenal Gland
+RNU6-429P,2.0,Testis
+RNU6-430P,4.0,Testis
+RNU6-431P,12.0,Lung
+RNU6-432P,3.0,Artery Aorta
+RNU6-433P,6.0,Skin Not Sun Exposed Suprapubic
+RNU6-434P,2.0,Liver
+RNU6-435P,6.0,Brain Cortex
+RNU6-436P,2.0,Brain Nucleus accumbens basal ganglia
+RNU6-437P,3.0,Brain Hippocampus
+RNU6-438P,1.0,Brain Putamen basal ganglia
+RNU6-439P,0.0,Esophagus Muscularis
+RNU6-440P,0.0,Esophagus Muscularis
+RNU6-441P,0.0,Esophagus Muscularis
+RNU6-442P,11.0,Small Intestine Terminal Ileum
+RNU6-444P,14.0,Brain Cerebellar Hemisphere
+RNU6-445P,1.0,Brain Hypothalamus
+RNU6-446P,19.0,Artery Aorta
+RNU6-447P,3.0,Testis
+RNU6-448P,1.0,Colon Transverse
+RNU6-449P,0.0,Esophagus Muscularis
+RNU6-450P,2.0,Pancreas
+RNU6-451P,12.0,Small Intestine Terminal Ileum
+RNU6-452P,1.0,Pancreas
+RNU6-453P,4.0,Brain Cerebellar Hemisphere
+RNU6-454P,2.0,Lung
+RNU6-455P,3.0,Nerve Tibial
+RNU6-456P,0.0,Esophagus Muscularis
+RNU6-457P,4.0,Brain Cerebellar Hemisphere
+RNU6-458P,0.0,Esophagus Muscularis
+RNU6-460P,12.0,Brain Substantia nigra
+RNU6-461P,0.0,Esophagus Muscularis
+RNU6-462P,1.0,Prostate
+RNU6-463P,1.0,Vagina
+RNU6-464P,0.0,Esophagus Muscularis
+RNU6-465P,2.0,Prostate
+RNU6-466P,4.0,Lung
+RNU6-467P,3.0,Testis
+RNU6-468P,1.0,Colon Transverse
+RNU6-469P,4.0,Artery Aorta
+RNU6-470P,11.0,Skin Sun Exposed Lower leg
+RNU6-471P,0.0,Esophagus Muscularis
+RNU6-472P,0.0,Esophagus Muscularis
+RNU6-473P,0.0,Esophagus Muscularis
+RNU6-474P,0.0,Esophagus Muscularis
+RNU6-475P,0.0,Esophagus Muscularis
+RNU6-476P,11.0,Nerve Tibial
+RNU6-477P,0.0,Esophagus Muscularis
+RNU6-478P,0.0,Esophagus Muscularis
+RNU6-479P,6.0,Testis
+RNU6-480P,1.0,Brain Putamen basal ganglia
+RNU6-481P,8.0,Testis
+RNU6-482P,2.0,Nerve Tibial
+RNU6-483P,16.0,Nerve Tibial
+RNU6-484P,7.0,Artery Aorta
+RNU6-485P,63.0,Kidney Cortex
+RNU6-486P,2.0,Stomach
+RNU6-487P,3.0,Fallopian Tube
+RNU6-488P,0.0,Esophagus Muscularis
+RNU6-489P,0.0,Esophagus Muscularis
+RNU6-490P,3.0,Bladder
+RNU6-491P,0.0,Esophagus Muscularis
+RNU6-492P,0.0,Esophagus Muscularis
+RNU6-493P,2.0,Bladder
+RNU6-494P,2.0,Skin Not Sun Exposed Suprapubic
+RNU6-495P,13.0,Nerve Tibial
+RNU6-496P,0.0,Esophagus Muscularis
+RNU6-497P,0.0,Esophagus Muscularis
+RNU6-498P,1.0,Nerve Tibial
+RNU6-499P,0.0,Esophagus Muscularis
+RNU6-500P,1.0,Testis
+RNU6-501P,2.0,Brain Putamen basal ganglia
+RNU6-502P,2.0,Testis
+RNU6-503P,0.0,Esophagus Muscularis
+RNU6-504P,8.0,Artery Aorta
+RNU6-505P,2.0,Brain Cerebellar Hemisphere
+RNU6-506P,2.0,Cervix Endocervix
+RNU6-507P,1.0,Skin Not Sun Exposed Suprapubic
+RNU6-508P,0.0,Esophagus Muscularis
+RNU6-509P,8.0,Ovary
+RNU6-510P,43.0,Muscle Skeletal
+RNU6-511P,2.0,Lung
+RNU6-512P,2.0,Vagina
+RNU6-513P,25.0,Ovary
+RNU6-514P,1.0,Brain Putamen basal ganglia
+RNU6-516P,36.0,Brain Cerebellar Hemisphere
+RNU6-517P,2.0,Kidney Cortex
+RNU6-518P,3.0,Brain Hippocampus
+RNU6-519P,3.0,Brain Cortex
+RNU6-520P,2.0,Adipose Subcutaneous
+RNU6-521P,0.0,Esophagus Muscularis
+RNU6-522P,1.0,Skin Sun Exposed Lower leg
+RNU6-523P,2.0,Bladder
+RNU6-524P,3.0,Liver
+RNU6-525P,2.0,Testis
+RNU6-526P,1.0,Testis
+RNU6-527P,1.0,Testis
+RNU6-528P,2.0,Skin Sun Exposed Lower leg
+RNU6-529P,76.0,Brain Putamen basal ganglia
+RNU6-530P,2.0,Thyroid
+RNU6-531P,10.0,Adipose Subcutaneous
+RNU6-532P,0.0,Esophagus Muscularis
+RNU6-533P,2.0,Brain Hypothalamus
+RNU6-534P,2.0,Pancreas
+RNU6-535P,3.0,Brain Hypothalamus
+RNU6-536P,2.0,Adipose Subcutaneous
+RNU6-537P,4.0,Adipose Subcutaneous
+RNU6-538P,1.0,Minor Salivary Gland
+RNU6-539P,6.0,Adipose Subcutaneous
+RNU6-540P,9.0,Testis
+RNU6-541P,5.0,Adipose Subcutaneous
+RNU6-542P,4.0,Testis
+RNU6-543P,0.0,Esophagus Muscularis
+RNU6-544P,0.0,Esophagus Muscularis
+RNU6-545P,0.0,Esophagus Muscularis
+RNU6-546P,0.0,Esophagus Muscularis
+RNU6-547P,2.0,Brain Caudate basal ganglia
+RNU6-548P,11.0,Brain Cortex
+RNU6-549P,7.0,Artery Aorta
+RNU6-550P,3.0,Artery Aorta
+RNU6-551P,0.0,Esophagus Muscularis
+RNU6-552P,1.0,Skin Sun Exposed Lower leg
+RNU6-553P,8.0,Colon Transverse
+RNU6-554P,95.0,Brain Cerebellar Hemisphere
+RNU6-555P,0.0,Esophagus Muscularis
+RNU6-556P,0.0,Esophagus Muscularis
+RNU6-557P,0.0,Esophagus Muscularis
+RNU6-558P,2.0,Brain Cortex
+RNU6-559P,1.0,Heart Left Ventricle
+RNU6-560P,0.0,Esophagus Muscularis
+RNU6-561P,2.0,Brain Cerebellar Hemisphere
+RNU6-562P,6.0,Brain Cortex
+RNU6-563P,0.0,Esophagus Muscularis
+RNU6-564P,26.0,Brain Cortex
+RNU6-565P,1.0,Brain Hippocampus
+RNU6-566P,1.0,Adipose Subcutaneous
+RNU6-567P,0.0,Esophagus Muscularis
+RNU6-570P,4.0,Pancreas
+RNU6-571P,1.0,Brain Hypothalamus
+RNU6-572P,1.0,Small Intestine Terminal Ileum
+RNU6-573P,0.0,Esophagus Muscularis
+RNU6-574P,12.0,Lung
+RNU6-575P,2.0,Brain Nucleus accumbens basal ganglia
+RNU6-576P,1.0,Testis
+RNU6-577P,4.0,Testis
+RNU6-578P,1.0,Testis
+RNU6-579P,1.0,Heart Left Ventricle
+RNU6-580P,2.0,Skin Not Sun Exposed Suprapubic
+RNU6-581P,2.0,Brain Cerebellar Hemisphere
+RNU6-582P,2.0,Pancreas
+RNU6-583P,7.0,Cells EBV-transformed lymphocytes
+RNU6-584P,27.0,Nerve Tibial
+RNU6-586P,0.0,Esophagus Muscularis
+RNU6-587P,0.0,Esophagus Muscularis
+RNU6-588P,5.0,Nerve Tibial
+RNU6-589P,8.0,Brain Cortex
+RNU6-590P,0.0,Esophagus Muscularis
+RNU6-591P,0.0,Esophagus Muscularis
+RNU6-592P,1.0,Minor Salivary Gland
+RNU6-593P,19.0,Testis
+RNU6-595P,24.0,Testis
+RNU6-596P,1.0,Brain Putamen basal ganglia
+RNU6-597P,0.0,Esophagus Muscularis
+RNU6-598P,2.0,Colon Transverse
+RNU6-599P,0.0,Esophagus Muscularis
+RNU6-600P,5.0,Brain Nucleus accumbens basal ganglia
+RNU6-601P,1.0,Testis
+RNU6-602P,1.0,Brain Frontal Cortex BA9
+RNU6-603P,6.0,Nerve Tibial
+RNU6-604P,3.0,Testis
+RNU6-605P,6.0,Brain Cortex
+RNU6-606P,6.0,Brain Cerebellar Hemisphere
+RNU6-607P,1.0,Esophagus Muscularis
+RNU6-608P,2.0,Skin Sun Exposed Lower leg
+RNU6-609P,0.0,Esophagus Muscularis
+RNU6-610P,142.0,Brain Cerebellar Hemisphere
+RNU6-611P,32.0,Testis
+RNU6-612P,0.0,Esophagus Muscularis
+RNU6-613P,1.0,Skin Sun Exposed Lower leg
+RNU6-614P,3.0,Testis
+RNU6-615P,1.0,Kidney Cortex
+RNU6-616P,4.0,Brain Caudate basal ganglia
+RNU6-617P,1.0,Vagina
+RNU6-618P,4.0,Artery Aorta
+RNU6-619P,3.0,Cells EBV-transformed lymphocytes
+RNU6-620P,0.0,Esophagus Muscularis
+RNU6-621P,2.0,Testis
+RNU6-622P,0.0,Esophagus Muscularis
+RNU6-623P,8.0,Lung
+RNU6-624P,5.0,Heart Left Ventricle
+RNU6-625P,1.0,Artery Coronary
+RNU6-626P,1.0,Brain Cerebellum
+RNU6-627P,0.0,Esophagus Muscularis
+RNU6-628P,2.0,Skin Sun Exposed Lower leg
+RNU6-629P,1.0,Lung
+RNU6-630P,0.0,Esophagus Muscularis
+RNU6-631P,0.0,Esophagus Muscularis
+RNU6-632P,0.0,Esophagus Muscularis
+RNU6-633P,5.0,Lung
+RNU6-634P,1.0,Brain Anterior cingulate cortex BA24
+RNU6-635P,1.0,Brain Hippocampus
+RNU6-636P,0.0,Esophagus Muscularis
+RNU6-637P,1.0,Thyroid
+RNU6-638P,13.0,Cells EBV-transformed lymphocytes
+RNU6-639P,0.0,Esophagus Muscularis
+RNU6-640P,4.0,Testis
+RNU6-641P,0.0,Esophagus Muscularis
+RNU6-642P,2.0,Vagina
+RNU6-643P,0.0,Esophagus Muscularis
+RNU6-644P,8.0,Brain Spinal cord cervical c-1
+RNU6-645P,2.0,Brain Hippocampus
+RNU6-646P,7.0,Testis
+RNU6-647P,2.0,Vagina
+RNU6-648P,2.0,Testis
+RNU6-649P,0.0,Esophagus Muscularis
+RNU6-650P,1.0,Thyroid
+RNU6-651P,2.0,Brain Cerebellar Hemisphere
+RNU6-652P,17.0,Testis
+RNU6-653P,4.0,Brain Cortex
+RNU6-654P,0.0,Esophagus Muscularis
+RNU6-655P,0.0,Esophagus Muscularis
+RNU6-656P,1.0,Artery Tibial
+RNU6-657P,1.0,Esophagus Gastroesophageal Junction
+RNU6-658P,19.0,Testis
+RNU6-659P,3.0,Brain Cortex
+RNU6-660P,0.0,Esophagus Muscularis
+RNU6-661P,3.0,Nerve Tibial
+RNU6-662P,2.0,Artery Coronary
+RNU6-663P,1.0,Brain Hippocampus
+RNU6-664P,1.0,Testis
+RNU6-665P,7.0,Nerve Tibial
+RNU6-666P,3.0,Nerve Tibial
+RNU6-667P,4.0,Brain Cortex
+RNU6-668P,0.0,Esophagus Muscularis
+RNU6-669P,2.0,Testis
+RNU6-670P,1.0,Brain Spinal cord cervical c-1
+RNU6-672P,1.0,Artery Coronary
+RNU6-673P,0.0,Esophagus Muscularis
+RNU6-674P,2.0,Artery Coronary
+RNU6-675P,1.0,Esophagus Gastroesophageal Junction
+RNU6-677P,2.0,Artery Coronary
+RNU6-678P,21.0,Brain Cortex
+RNU6-679P,0.0,Esophagus Muscularis
+RNU6-680P,4.0,Small Intestine Terminal Ileum
+RNU6-681P,2.0,Skin Not Sun Exposed Suprapubic
+RNU6-682P,1.0,Pancreas
+RNU6-684P,1.0,Uterus
+RNU6-685P,0.0,Esophagus Muscularis
+RNU6-686P,4.0,Brain Cortex
+RNU6-687P,1.0,Testis
+RNU6-689P,31.0,Brain Cortex
+RNU6-690P,0.0,Esophagus Muscularis
+RNU6-692P,0.0,Esophagus Muscularis
+RNU6-693P,1.0,Brain Putamen basal ganglia
+RNU6-694P,4.0,Adipose Subcutaneous
+RNU6-695P,2.0,Lung
+RNU6-696P,5.0,Brain Cortex
+RNU6-697P,1.0,Stomach
+RNU6-698P,1.0,Brain Cerebellum
+RNU6-699P,0.0,Esophagus Muscularis
+RNU6-700P,0.0,Esophagus Muscularis
+RNU6-701P,4.0,Testis
+RNU6-702P,8.0,Artery Coronary
+RNU6-703P,19.0,Brain Cortex
+RNU6-704P,7.0,Testis
+RNU6-705P,5.0,Adipose Subcutaneous
+RNU6-706P,0.0,Esophagus Muscularis
+RNU6-707P,0.0,Esophagus Muscularis
+RNU6-708P,11.0,Testis
+RNU6-709P,3.0,Heart Left Ventricle
+RNU6-710P,1.0,Whole Blood
+RNU6-711P,3.0,Brain Cortex
+RNU6-712P,0.0,Esophagus Muscularis
+RNU6-713P,0.0,Esophagus Muscularis
+RNU6-714P,5.0,Brain Caudate basal ganglia
+RNU6-715P,0.0,Esophagus Muscularis
+RNU6-716P,1.0,Colon Transverse
+RNU6-717P,1.0,Testis
+RNU6-718P,2.0,Brain Nucleus accumbens basal ganglia
+RNU6-719P,0.0,Esophagus Muscularis
+RNU6-720P,17.0,Testis
+RNU6-721P,1.0,Testis
+RNU6-722P,25.0,Small Intestine Terminal Ileum
+RNU6-723P,2.0,Lung
+RNU6-724P,3.0,Thyroid
+RNU6-725P,12.0,Testis
+RNU6-726P,11.0,Brain Substantia nigra
+RNU6-727P,1.0,Thyroid
+RNU6-728P,2.0,Kidney Medulla
+RNU6-729P,19.0,Brain Cerebellum
+RNU6-730P,1.0,Kidney Cortex
+RNU6-731P,1.0,Small Intestine Terminal Ileum
+RNU6-732P,1.0,Testis
+RNU6-733P,4.0,Brain Cortex
+RNU6-735P,3.0,Adrenal Gland
+RNU6-737P,1.0,Brain Caudate basal ganglia
+RNU6-738P,0.0,Esophagus Muscularis
+RNU6-739P,1.0,Skin Sun Exposed Lower leg
+RNU6-740P,2.0,Heart Atrial Appendage
+RNU6-741P,0.0,Esophagus Muscularis
+RNU6-742P,3.0,Thyroid
+RNU6-743P,0.0,Esophagus Muscularis
+RNU6-744P,3.0,Brain Putamen basal ganglia
+RNU6-745P,1.0,Small Intestine Terminal Ileum
+RNU6-746P,1.0,Brain Spinal cord cervical c-1
+RNU6-747P,5.0,Brain Nucleus accumbens basal ganglia
+RNU6-748P,7.0,Adipose Subcutaneous
+RNU6-749P,0.0,Esophagus Muscularis
+RNU6-750P,2.0,Esophagus Gastroesophageal Junction
+RNU6-751P,0.0,Esophagus Muscularis
+RNU6-752P,0.0,Esophagus Muscularis
+RNU6-753P,1.0,Cells EBV-transformed lymphocytes
+RNU6-754P,1.0,Testis
+RNU6-755P,0.0,Esophagus Muscularis
+RNU6-756P,1.0,Brain Hypothalamus
+RNU6-757P,8.0,Testis
+RNU6-758P,6.0,Brain Putamen basal ganglia
+RNU6-759P,5.0,Adipose Subcutaneous
+RNU6-760P,5.0,Brain Caudate basal ganglia
+RNU6-761P,3.0,Small Intestine Terminal Ileum
+RNU6-762P,28.0,Testis
+RNU6-763P,0.0,Esophagus Muscularis
+RNU6-764P,3.0,Brain Frontal Cortex BA9
+RNU6-765P,1.0,Testis
+RNU6-766P,5.0,Brain Cortex
+RNU6-767P,9.0,Artery Coronary
+RNU6-768P,2.0,Thyroid
+RNU6-769P,2.0,Adipose Visceral Omentum
+RNU6-770P,13.0,Brain Cortex
+RNU6-771P,6.0,Nerve Tibial
+RNU6-772P,0.0,Esophagus Muscularis
+RNU6-774P,0.0,Esophagus Muscularis
+RNU6-775P,0.0,Esophagus Muscularis
+RNU6-776P,588.0,Pancreas
+RNU6-777P,1.0,Cells EBV-transformed lymphocytes
+RNU6-778P,1.0,Brain Hypothalamus
+RNU6-780P,6.0,Skin Sun Exposed Lower leg
+RNU6-781P,5.0,Brain Nucleus accumbens basal ganglia
+RNU6-782P,2.0,Cervix Ectocervix
+RNU6-783P,0.0,Esophagus Muscularis
+RNU6-784P,2.0,Esophagus Muscularis
+RNU6-785P,1.0,Thyroid
+RNU6-786P,4.0,Vagina
+RNU6-787P,2.0,Skin Sun Exposed Lower leg
+RNU6-788P,0.0,Esophagus Muscularis
+RNU6-789P,4.0,Adipose Subcutaneous
+RNU6-790P,7.0,Brain Cortex
+RNU6-791P,1.0,Brain Caudate basal ganglia
+RNU6-792P,3.0,Colon Sigmoid
+RNU6-793P,0.0,Esophagus Muscularis
+RNU6-794P,10.0,Nerve Tibial
+RNU6-795P,3.0,Colon Transverse
+RNU6-796P,5.0,Kidney Cortex
+RNU6-797P,0.0,Esophagus Muscularis
+RNU6-798P,2.0,Lung
+RNU6-799P,2.0,Brain Caudate basal ganglia
+RNU6-800P,2.0,Uterus
+RNU6-801P,0.0,Esophagus Muscularis
+RNU6-803P,0.0,Esophagus Muscularis
+RNU6-804P,0.0,Esophagus Muscularis
+RNU6-805P,3.0,Skin Sun Exposed Lower leg
+RNU6-806P,1.0,Artery Coronary
+RNU6-807P,12.0,Nerve Tibial
+RNU6-808P,15.0,Testis
+RNU6-809P,3.0,Artery Aorta
+RNU6-810P,4.0,Testis
+RNU6-811P,0.0,Esophagus Muscularis
+RNU6-812P,1.0,Brain Nucleus accumbens basal ganglia
+RNU6-813P,3.0,Artery Aorta
+RNU6-815P,0.0,Esophagus Muscularis
+RNU6-816P,0.0,Esophagus Muscularis
+RNU6-817P,15.0,Kidney Medulla
+RNU6-818P,0.0,Esophagus Muscularis
+RNU6-819P,1.0,Testis
+RNU6-820P,7.0,Testis
+RNU6-821P,3.0,Brain Nucleus accumbens basal ganglia
+RNU6-822P,2.0,Cervix Ectocervix
+RNU6-823P,11.0,Testis
+RNU6-824P,6.0,Nerve Tibial
+RNU6-826P,1.0,Testis
+RNU6-827P,6.0,Nerve Tibial
+RNU6-828P,21.0,Artery Aorta
+RNU6-829P,1.0,Brain Amygdala
+RNU6-830P,1.0,Adipose Subcutaneous
+RNU6-831P,3.0,Testis
+RNU6-832P,1.0,Testis
+RNU6-833P,25.0,Pituitary
+RNU6-834P,13.0,Testis
+RNU6-835P,0.0,Esophagus Muscularis
+RNU6-836P,1.0,Brain Nucleus accumbens basal ganglia
+RNU6-837P,1.0,Vagina
+RNU6-838P,3.0,Artery Aorta
+RNU6-839P,0.0,Esophagus Muscularis
+RNU6-840P,10.0,Brain Nucleus accumbens basal ganglia
+RNU6-841P,2.0,Cells EBV-transformed lymphocytes
+RNU6-842P,2.0,Cells Cultured fibroblasts
+RNU6-843P,1.0,Skin Not Sun Exposed Suprapubic
+RNU6-844P,11.0,Kidney Medulla
+RNU6-845P,0.0,Esophagus Muscularis
+RNU6-847P,2.0,Brain Caudate basal ganglia
+RNU6-848P,1.0,Prostate
+RNU6-849P,0.0,Esophagus Muscularis
+RNU6-850P,76.0,Kidney Cortex
+RNU6-851P,2.0,Brain Caudate basal ganglia
+RNU6-853P,13.0,Adipose Subcutaneous
+RNU6-854P,2.0,Artery Coronary
+RNU6-855P,2.0,Ovary
+RNU6-856P,20.0,Testis
+RNU6-857P,2.0,Skin Not Sun Exposed Suprapubic
+RNU6-858P,5.0,Testis
+RNU6-859P,4.0,Brain Spinal cord cervical c-1
+RNU6-860P,2.0,Brain Spinal cord cervical c-1
+RNU6-861P,2.0,Bladder
+RNU6-862P,2.0,Testis
+RNU6-863P,5.0,Testis
+RNU6-864P,2.0,Artery Tibial
+RNU6-865P,2.0,Bladder
+RNU6-866P,3.0,Skin Sun Exposed Lower leg
+RNU6-867P,0.0,Esophagus Muscularis
+RNU6-869P,2.0,Colon Sigmoid
+RNU6-871P,3.0,Brain Cortex
+RNU6-873P,4.0,Minor Salivary Gland
+RNU6-874P,2.0,Testis
+RNU6-875P,10.0,Testis
+RNU6-876P,3.0,Brain Cortex
+RNU6-877P,4.0,Lung
+RNU6-878P,8.0,Lung
+RNU6-879P,2.0,Esophagus Mucosa
+RNU6-880P,6.0,Artery Aorta
+RNU6-881P,1.0,Adipose Subcutaneous
+RNU6-882P,28.0,Nerve Tibial
+RNU6-883P,15.0,Nerve Tibial
+RNU6-884P,4.0,Testis
+RNU6-885P,17.0,Brain Cerebellar Hemisphere
+RNU6-886P,4.0,Artery Aorta
+RNU6-887P,0.0,Esophagus Muscularis
+RNU6-888P,5.0,Brain Nucleus accumbens basal ganglia
+RNU6-889P,0.0,Esophagus Muscularis
+RNU6-890P,12.0,Testis
+RNU6-891P,2.0,Stomach
+RNU6-892P,30.0,Brain Cortex
+RNU6-893P,4.0,Brain Cortex
+RNU6-894P,1.0,Nerve Tibial
+RNU6-895P,2.0,Artery Aorta
+RNU6-896P,0.0,Esophagus Muscularis
+RNU6-897P,2.0,Brain Caudate basal ganglia
+RNU6-898P,7.0,Brain Cortex
+RNU6-899P,2.0,Brain Cerebellar Hemisphere
+RNU6-900P,7.0,Brain Cerebellar Hemisphere
+RNU6-901P,1.0,Breast Mammary Tissue
+RNU6-902P,5.0,Brain Cortex
+RNU6-903P,5.0,Artery Aorta
+RNU6-904P,1.0,Brain Putamen basal ganglia
+RNU6-905P,2.0,Testis
+RNU6-906P,0.0,Esophagus Muscularis
+RNU6-907P,4.0,Brain Cerebellum
+RNU6-908P,2.0,Colon Sigmoid
+RNU6-909P,1.0,Artery Tibial
+RNU6-910P,1.0,Whole Blood
+RNU6-911P,4.0,Skin Sun Exposed Lower leg
+RNU6-912P,4.0,Skin Sun Exposed Lower leg
+RNU6-913P,2.0,Pituitary
+RNU6-914P,226.0,Vagina
+RNU6-915P,16.0,Thyroid
+RNU6-916P,1.0,Brain Caudate basal ganglia
+RNU6-917P,25.0,Whole Blood
+RNU6-918P,2.0,Brain Amygdala
+RNU6-919P,1.0,Cells EBV-transformed lymphocytes
+RNU6-920P,6.0,Testis
+RNU6-921P,3.0,Uterus
+RNU6-922P,2.0,Kidney Cortex
+RNU6-923P,1.0,Muscle Skeletal
+RNU6-924P,4.0,Colon Sigmoid
+RNU6-925P,14.0,Nerve Tibial
+RNU6-926P,2.0,Brain Cerebellar Hemisphere
+RNU6-927P,1.0,Artery Coronary
+RNU6-928P,2.0,Brain Hippocampus
+RNU6-929P,0.0,Esophagus Muscularis
+RNU6-930P,8.0,Artery Aorta
+RNU6-931P,0.0,Esophagus Muscularis
+RNU6-932P,3.0,Brain Nucleus accumbens basal ganglia
+RNU6-933P,5.0,Small Intestine Terminal Ileum
+RNU6-934P,2.0,Skin Sun Exposed Lower leg
+RNU6-935P,0.0,Esophagus Muscularis
+RNU6-936P,3.0,Artery Aorta
+RNU6-937P,3.0,Testis
+RNU6-938P,2.0,Testis
+RNU6-939P,1.0,Artery Coronary
+RNU6-940P,6.0,Brain Nucleus accumbens basal ganglia
+RNU6-941P,27.0,Cells Cultured fibroblasts
+RNU6-942P,4.0,Muscle Skeletal
+RNU6-943P,3.0,Skin Sun Exposed Lower leg
+RNU6-944P,13.0,Stomach
+RNU6-945P,19.0,Brain Cerebellum
+RNU6-946P,2.0,Colon Transverse
+RNU6-947P,1.0,Brain Cerebellar Hemisphere
+RNU6-948P,2.0,Colon Sigmoid
+RNU6-949P,0.0,Esophagus Muscularis
+RNU6-950P,2.0,Brain Nucleus accumbens basal ganglia
+RNU6-951P,4.0,Colon Sigmoid
+RNU6-952P,1.0,Artery Aorta
+RNU6-953P,7.0,Esophagus Muscularis
+RNU6-954P,5.0,Vagina
+RNU6-955P,6.0,Lung
+RNU6-956P,2.0,Ovary
+RNU6-957P,1.0,Colon Transverse
+RNU6-958P,2.0,Kidney Cortex
+RNU6-959P,2.0,Brain Nucleus accumbens basal ganglia
+RNU6-960P,2.0,Artery Aorta
+RNU6-961P,1.0,Kidney Medulla
+RNU6-964P,4.0,Colon Transverse
+RNU6-965P,4.0,Brain Hypothalamus
+RNU6-966P,1.0,Nerve Tibial
+RNU6-967P,19.0,Spleen
+RNU6-968P,7.0,Liver
+RNU6-969P,12.0,Testis
+RNU6-970P,3.0,Fallopian Tube
+RNU6-971P,3.0,Skin Sun Exposed Lower leg
+RNU6-972P,0.0,Esophagus Muscularis
+RNU6-973P,3.0,Artery Tibial
+RNU6-974P,0.0,Esophagus Muscularis
+RNU6-975P,4.0,Lung
+RNU6-976P,0.0,Esophagus Muscularis
+RNU6-977P,2.0,Small Intestine Terminal Ileum
+RNU6-978P,0.0,Esophagus Muscularis
+RNU6-979P,3.0,Nerve Tibial
+RNU6-980P,1.0,Lung
+RNU6-982P,1.0,Testis
+RNU6-983P,0.0,Esophagus Muscularis
+RNU6-984P,2.0,Brain Cortex
+RNU6-985P,0.0,Esophagus Muscularis
+RNU6-986P,4.0,Brain Cortex
+RNU6-987P,2.0,Spleen
+RNU6-988P,6.0,Brain Cortex
+RNU6-989P,0.0,Esophagus Muscularis
+RNU6-990P,0.0,Esophagus Muscularis
+RNU6-991P,1.0,Liver
+RNU6-992P,3.0,Testis
+RNU6-993P,2.0,Brain Frontal Cortex BA9
+RNU6-994P,3.0,Brain Cerebellar Hemisphere
+RNU6-995P,0.0,Esophagus Muscularis
+RNU6-996P,1.0,Adipose Subcutaneous
+RNU6-997P,0.0,Esophagus Muscularis
+RNU6-998P,3.0,Esophagus Gastroesophageal Junction
+RNU6-999P,4.0,Colon Transverse
+RNU6-1000P,1.0,Thyroid
+RNU6-1001P,0.0,Esophagus Muscularis
+RNU6-1003P,6.0,Brain Cortex
+RNU6-1004P,11.0,Brain Cerebellar Hemisphere
+RNU6-1005P,7.0,Whole Blood
+RNU6-1006P,1.0,Cells EBV-transformed lymphocytes
+RNU6-1007P,0.0,Esophagus Muscularis
+RNU6-1008P,2.0,Vagina
+RNU6-1009P,0.0,Esophagus Muscularis
+RNU6-1010P,14.0,Brain Cortex
+RNU6-1011P,17.0,Brain Cerebellar Hemisphere
+RNU6-1012P,0.0,Esophagus Muscularis
+RNU6-1013P,2.0,Whole Blood
+RNU6-1014P,2.0,Brain Hippocampus
+RNU6-1015P,0.0,Esophagus Muscularis
+RNU6-1016P,68.0,Testis
+RNU6-1017P,4.0,Artery Coronary
+RNU6-1018P,1.0,Brain Putamen basal ganglia
+RNU6-1019P,10.0,Nerve Tibial
+RNU6-1020P,2.0,Thyroid
+RNU6-1021P,0.0,Esophagus Muscularis
+RNU6-1022P,397.0,Pancreas
+RNU6-1023P,0.0,Esophagus Muscularis
+RNU6-1024P,10.0,Nerve Tibial
+RNU6-1025P,11.0,Testis
+RNU6-1026P,3.0,Skin Not Sun Exposed Suprapubic
+RNU6-1027P,1.0,Fallopian Tube
+RNU6-1028P,26.0,Brain Cortex
+RNU6-1029P,3.0,Testis
+RNU6-1031P,4.0,Brain Cortex
+RNU6-1032P,1.0,Colon Transverse
+RNU6-1034P,3.0,Artery Aorta
+RNU6-1035P,8.0,Brain Cerebellar Hemisphere
+RNU6-1036P,2.0,Colon Transverse
+RNU6-1037P,0.0,Esophagus Muscularis
+RNU6-1038P,0.0,Esophagus Muscularis
+RNU6-1039P,17.0,Cells Cultured fibroblasts
+RNU6-1040P,2.0,Brain Cortex
+RNU6-1041P,0.0,Esophagus Muscularis
+RNU6-1042P,6.0,Testis
+RNU6-1043P,5.0,Testis
+RNU6-1044P,0.0,Esophagus Muscularis
+RNU6-1045P,6.0,Artery Aorta
+RNU6-1046P,4.0,Kidney Cortex
+RNU6-1047P,0.0,Esophagus Muscularis
+RNU6-1048P,46.0,Testis
+RNU6-1049P,29.0,Pancreas
+RNU6-1050P,1.0,Pancreas
+RNU6-1051P,4.0,Artery Aorta
+RNU6-1052P,0.0,Esophagus Muscularis
+RNU6-1053P,22.0,Testis
+RNU6-1054P,2.0,Esophagus Muscularis
+RNU6-1055P,3.0,Brain Caudate basal ganglia
+RNU6-1056P,3.0,Testis
+RNU6-1057P,4.0,Ovary
+RNU6-1059P,0.0,Esophagus Muscularis
+RNU6-1060P,0.0,Esophagus Muscularis
+RNU6-1061P,5.0,Brain Cortex
+RNU6-1062P,2.0,Testis
+RNU6-1064P,0.0,Esophagus Muscularis
+RNU6-1065P,12.0,Testis
+RNU6-1066P,1.0,Brain Cerebellar Hemisphere
+RNU6-1067P,2.0,Brain Caudate basal ganglia
+RNU6-1068P,4.0,Brain Cerebellum
+RNU6-1069P,20.0,Small Intestine Terminal Ileum
+RNU6-1071P,0.0,Esophagus Muscularis
+RNU6-1072P,1.0,Adipose Visceral Omentum
+RNU6-1073P,0.0,Esophagus Muscularis
+RNU6-1074P,2.0,Brain Putamen basal ganglia
+RNU6-1075P,0.0,Esophagus Muscularis
+RNU6-1076P,0.0,Esophagus Muscularis
+RNU6-1077P,1.0,Brain Caudate basal ganglia
+RNU6-1078P,4.0,Brain Cerebellar Hemisphere
+RNU6-1079P,15.0,Brain Cortex
+RNU6-1080P,0.0,Esophagus Muscularis
+RNU6-1081P,1.0,Colon Transverse
+RNU6-1082P,8.0,Cells Cultured fibroblasts
+RNU6-1083P,22.0,Nerve Tibial
+RNU6-1084P,2.0,Testis
+RNU6-1085P,5.0,Brain Cortex
+RNU6-1086P,12.0,Brain Cortex
+RNU6-1087P,0.0,Esophagus Muscularis
+RNU6-1088P,7.0,Nerve Tibial
+RNU6-1089P,2.0,Artery Coronary
+RNU6-1090P,1.0,Adipose Subcutaneous
+RNU6-1091P,8.0,Testis
+RNU6-1092P,1.0,Colon Transverse
+RNU6-1093P,1.0,Bladder
+RNU6-1094P,1.0,Vagina
+RNU6-1095P,22.0,Testis
+RNU6-1096P,3.0,Nerve Tibial
+RNU6-1097P,1.0,Bladder
+RNU6-1098P,19.0,Artery Coronary
+RNU6-1099P,16.0,Testis
+RNU6-1100P,5.0,Skin Sun Exposed Lower leg
+RNU6-1101P,1.0,Artery Aorta
+RNU6-1102P,7.0,Stomach
+RNU6-1103P,0.0,Esophagus Muscularis
+RNU6-1104P,1.0,Skin Sun Exposed Lower leg
+RNU6-1105P,1.0,Esophagus Muscularis
+RNU6-1106P,1.0,Esophagus Muscularis
+RNU6-1107P,1.0,Testis
+RNU6-1108P,0.0,Esophagus Muscularis
+RNU6-1109P,2.0,Testis
+RNU6-1110P,7.0,Colon Sigmoid
+RNU6-1111P,2.0,Esophagus Mucosa
+RNU6-1112P,0.0,Esophagus Muscularis
+RNU6-1113P,1.0,Fallopian Tube
+RNU6-1114P,1.0,Brain Cerebellum
+RNU6-1115P,1.0,Artery Aorta
+RNU6-1116P,0.0,Esophagus Muscularis
+RNU6-1117P,1.0,Artery Coronary
+RNU6-1118P,4.0,Nerve Tibial
+RNU6-1119P,2.0,Brain Anterior cingulate cortex BA24
+RNU6-1120P,1.0,Brain Anterior cingulate cortex BA24
+RNU6-1121P,5.0,Nerve Tibial
+RNU6-1122P,1.0,Kidney Cortex
+RNU6-1123P,11.0,Brain Nucleus accumbens basal ganglia
+RNU6-1124P,0.0,Esophagus Muscularis
+RNU6-1125P,3.0,Brain Cortex
+RNU6-1126P,3.0,Testis
+RNU6-1127P,1.0,Skin Sun Exposed Lower leg
+RNU6-1128P,5.0,Whole Blood
+RNU6-1129P,0.0,Esophagus Muscularis
+RNU6-1130P,0.0,Esophagus Muscularis
+RNU6-1131P,0.0,Esophagus Muscularis
+RNU6-1132P,6.0,Brain Caudate basal ganglia
+RNU6-1133P,2.0,Spleen
+RNU6-1134P,0.0,Esophagus Muscularis
+RNU6-1135P,1.0,Muscle Skeletal
+RNU6-1136P,28.0,Brain Cortex
+RNU6-1137P,2.0,Kidney Medulla
+RNU6-1138P,3.0,Testis
+RNU6-1139P,0.0,Esophagus Muscularis
+RNU6-1140P,2.0,Brain Substantia nigra
+RNU6-1141P,3.0,Colon Transverse
+RNU6-1143P,4.0,Muscle Skeletal
+RNU6-1144P,0.0,Esophagus Muscularis
+RNU6-1145P,1.0,Ovary
+RNU6-1146P,2.0,Skin Sun Exposed Lower leg
+RNU6-1147P,4.0,Adipose Subcutaneous
+RNU6-1148P,1.0,Brain Putamen basal ganglia
+RNU6-1149P,8.0,Lung
+RNU6-1150P,17.0,Testis
+RNU6-1151P,0.0,Esophagus Muscularis
+RNU6-1152P,3.0,Cells EBV-transformed lymphocytes
+RNU6-1153P,9.0,Testis
+RNU6-1154P,3.0,Testis
+RNU6-1155P,1.0,Brain Substantia nigra
+RNU6-1156P,4.0,Pituitary
+RNU6-1157P,13.0,Testis
+RNU6-1158P,1.0,Testis
+RNU6-1159P,5.0,Brain Cortex
+RNU6-1160P,79.0,Testis
+RNU6-1161P,8.0,Vagina
+RNU6-1162P,1.0,Skin Sun Exposed Lower leg
+RNU6-1163P,0.0,Esophagus Muscularis
+RNU6-1164P,5.0,Brain Cortex
+RNU6-1165P,9.0,Skin Sun Exposed Lower leg
+RNU6-1167P,1.0,Testis
+RNU6-1168P,1.0,Kidney Cortex
+RNU6-1169P,0.0,Esophagus Muscularis
+RNU6-1170P,4.0,Bladder
+RNU6-1171P,2.0,Muscle Skeletal
+RNU6-1172P,2.0,Testis
+RNU6-1174P,16.0,Nerve Tibial
+RNU6-1175P,13.0,Testis
+RNU6-1176P,7.0,Brain Cortex
+RNU6-1177P,2.0,Skin Sun Exposed Lower leg
+RNU6-1178P,6.0,Testis
+RNU6-1179P,0.0,Esophagus Muscularis
+RNU6-1180P,0.0,Esophagus Muscularis
+RNU6-1181P,2.0,Adipose Visceral Omentum
+RNU6-1183P,1.0,Whole Blood
+RNU6-1184P,0.0,Esophagus Muscularis
+RNU6-1186P,0.0,Esophagus Muscularis
+RNU6-1187P,3.0,Cervix Ectocervix
+RNU6-1188P,4.0,Adipose Subcutaneous
+RNU6-1189P,106.0,Ovary
+RNU6-1190P,3.0,Brain Caudate basal ganglia
+RNU6-1191P,10.0,Adipose Subcutaneous
+RNU6-1192P,1.0,Testis
+RNU6-1193P,2.0,Brain Putamen basal ganglia
+RNU6-1194P,6.0,Nerve Tibial
+RNU6-1195P,2.0,Artery Aorta
+RNU6-1196P,2.0,Vagina
+RNU6-1197P,2.0,Cells EBV-transformed lymphocytes
+RNU6-1198P,1.0,Minor Salivary Gland
+RNU6-1199P,3.0,Skin Sun Exposed Lower leg
+RNU6-1200P,2.0,Brain Caudate basal ganglia
+RNU6-1201P,6.0,Brain Cerebellar Hemisphere
+RNU6-1203P,4.0,Colon Transverse
+RNU6-1204P,1.0,Brain Cerebellum
+RNU6-1205P,5.0,Testis
+RNU6-1206P,9.0,Nerve Tibial
+RNU6-1207P,3.0,Skin Sun Exposed Lower leg
+RNU6-1208P,4.0,Nerve Tibial
+RNU6-1209P,8.0,Small Intestine Terminal Ileum
+RNU6-1210P,0.0,Esophagus Muscularis
+RNU6-1211P,0.0,Esophagus Muscularis
+RNU6-1212P,7.0,Brain Cortex
+RNU6-1213P,0.0,Esophagus Muscularis
+RNU6-1214P,1.0,Vagina
+RNU6-1215P,4.0,Colon Sigmoid
+RNU6-1216P,6.0,Brain Spinal cord cervical c-1
+RNU6-1217P,4.0,Nerve Tibial
+RNU6-1218P,0.0,Esophagus Muscularis
+RNU6-1219P,4.0,Cells EBV-transformed lymphocytes
+RNU6-1220P,0.0,Esophagus Muscularis
+RNU6-1222P,3.0,Thyroid
+RNU6-1223P,23.0,Testis
+RNU6-1224P,4.0,Brain Nucleus accumbens basal ganglia
+RNU6-1225P,3.0,Nerve Tibial
+RNU6-1226P,5.0,Adipose Subcutaneous
+RNU6-1227P,1.0,Testis
+RNU6-1228P,3.0,Whole Blood
+RNU6-1229P,0.0,Esophagus Muscularis
+RNU6-1230P,0.0,Esophagus Muscularis
+RNU6-1231P,4.0,Testis
+RNU6-1232P,0.0,Esophagus Muscularis
+RNU6-1233P,1.0,Esophagus Muscularis
+RNU6-1234P,2.0,Testis
+RNU6-1235P,2.0,Nerve Tibial
+RNU6-1236P,0.0,Esophagus Muscularis
+RNU6-1237P,3.0,Skin Sun Exposed Lower leg
+RNU6-1238P,16.0,Brain Cortex
+RNU6-1239P,21.0,Prostate
+RNU6-1240P,113.0,Brain Cerebellar Hemisphere
+RNU6-1241P,1.0,Brain Putamen basal ganglia
+RNU6-1242P,4.0,Testis
+RNU6-1243P,1.0,Ovary
+RNU6-1244P,0.0,Esophagus Muscularis
+RNU6-1245P,3.0,Brain Caudate basal ganglia
+RNU6-1246P,2.0,Artery Tibial
+RNU6-1247P,2.0,Fallopian Tube
+RNU6-1248P,3.0,Thyroid
+RNU6-1249P,1.0,Testis
+RNU6-1250P,3.0,Adrenal Gland
+RNU6-1251P,2.0,Brain Hippocampus
+RNU6-1252P,0.0,Esophagus Muscularis
+RNU6-1254P,4.0,Testis
+RNU6-1255P,2.0,Lung
+RNU6-1256P,2.0,Esophagus Gastroesophageal Junction
+RNU6-1257P,4.0,Thyroid
+RNU6-1258P,2.0,Brain Cerebellar Hemisphere
+RNU6-1260P,2.0,Brain Anterior cingulate cortex BA24
+RNU6-1261P,0.0,Esophagus Muscularis
+RNU6-1262P,13.0,Colon Sigmoid
+RNU6-1263P,5.0,Testis
+RNU6-1264P,1.0,Small Intestine Terminal Ileum
+RNU6-1265P,1.0,Ovary
+RNU6-1266P,8.0,Testis
+RNU6-1267P,26.0,Skin Sun Exposed Lower leg
+RNU6-1268P,44.0,Prostate
+RNU6-1269P,0.0,Esophagus Muscularis
+RNU6-1270P,1.0,Cervix Endocervix
+RNU6-1271P,0.0,Esophagus Muscularis
+RNU6-1272P,2.0,Heart Atrial Appendage
+RNU6-1273P,1.0,Small Intestine Terminal Ileum
+RNU6-1274P,1.0,Small Intestine Terminal Ileum
+RNU6-1275P,4.0,Colon Transverse
+RNU6-1276P,1.0,Testis
+RNU6-1277P,2.0,Testis
+RNU6-1278P,8.0,Testis
+RNU6-1279P,4.0,Testis
+RNU6-1280P,7.0,Testis
+RNU6-1281P,1.0,Esophagus Muscularis
+RNU6-1282P,3.0,Skin Not Sun Exposed Suprapubic
+RNU6-1283P,5.0,Nerve Tibial
+RNU6-1284P,2.0,Skin Not Sun Exposed Suprapubic
+RNU6-1285P,8.0,Colon Transverse
+RNU6-1286P,0.0,Esophagus Muscularis
+RNU6-1287P,0.0,Esophagus Muscularis
+RNU6-1288P,0.0,Esophagus Muscularis
+RNU6-1289P,3.0,Cells EBV-transformed lymphocytes
+RNU6-1290P,2.0,Thyroid
+RNU6-1291P,2.0,Skin Not Sun Exposed Suprapubic
+RNU6-1292P,2.0,Artery Aorta
+RNU6-1293P,2.0,Brain Cortex
+RNU6-1294P,2.0,Bladder
+RNU6-1296P,0.0,Esophagus Muscularis
+RNU6-1297P,3.0,Testis
+RNU6-1298P,1.0,Skin Sun Exposed Lower leg
+RNU6-1299P,1.0,Testis
+RNU6-1300P,3.0,Breast Mammary Tissue
+RNU6-1301P,4.0,Prostate
+RNU6-1303P,0.0,Esophagus Muscularis
+RNU6-1304P,2.0,Muscle Skeletal
+RNU6-1305P,4.0,Brain Cerebellar Hemisphere
+RNU6-1306P,2.0,Thyroid
+RNU6-1307P,0.0,Esophagus Muscularis
+RNU6-1308P,2.0,Brain Cerebellar Hemisphere
+RNU6-1309P,3.0,Whole Blood
+RNU6-1310P,2.0,Small Intestine Terminal Ileum
+RNU6-1311P,4.0,Brain Spinal cord cervical c-1
+RNU6-1312P,2.0,Heart Left Ventricle
+RNU6-1313P,2.0,Skin Not Sun Exposed Suprapubic
+RNU6-1314P,0.0,Esophagus Muscularis
+RNU6-1315P,6.0,Adipose Subcutaneous
+RNU6-1316P,2.0,Pancreas
+RNU6-1317P,1.0,Colon Sigmoid
+RNU6-1318P,4.0,Ovary
+RNU6-1319P,3.0,Skin Sun Exposed Lower leg
+RNU6-1320P,0.0,Esophagus Muscularis
+RNU6-1321P,4.0,Fallopian Tube
+RNU6-1322P,1.0,Testis
+RNU6-1323P,0.0,Esophagus Muscularis
+RNU6-1324P,3.0,Cervix Endocervix
+RNU6-1325P,0.0,Esophagus Muscularis
+RNU6-1326P,0.0,Esophagus Muscularis
+RNU6-1327P,4.0,Pituitary
+RNU6-1328P,0.0,Esophagus Muscularis
+RNU6-1329P,2.0,Cells EBV-transformed lymphocytes
+RNU6-1330P,115.0,Testis
+RNU6-1331P,4.0,Nerve Tibial
+RNU6-1332P,1.0,Vagina
+RNU6-1333P,11.0,Brain Cortex
+RNU6-1334P,1.0,Artery Coronary
+RNU6-1335P,0.0,Esophagus Muscularis
+RNU6-1336P,1.0,Heart Atrial Appendage
+RNU6-1337P,10.0,Brain Hippocampus
+RNU6-1338P,1.0,Testis
+RNU6-1339P,2.0,Liver
+RNU6-1340P,4.0,Brain Cortex
+RNU6-1341P,2.0,Brain Cerebellar Hemisphere
+RNU6-1342P,3.0,Stomach
