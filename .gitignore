@@ -5,3 +5,6 @@ hg38.phastCons30way.bw
 .windowsvenv/
 .Rproj.user
 .venv/
+.Rproj.user/
+.Rhistory
+.RData

@@ -4,8 +4,8 @@ library(ggplot2)
 library(dplyr)
 
 # Define the dataset names and corresponding colors
-datasets <- c("RNU1", "RNU2", "RNU4")
-colors <- c("lightblue", "lightpink", "lightyellow")  # Customize the colors as needed
+datasets <- c("RNU1", "RNU2", "RNU4", "RNU6")
+colors <- c("lightblue", "lightpink", "lightyellow", "plum2")  # Customize the colors as needed
 
 # Loop through each dataset
 for (i in seq_along(datasets)) {
@@ -50,7 +50,7 @@ for (i in seq_along(datasets)) {
     theme_minimal()
   
   # Save the plot to a file
-  ggsave(plot_path, plot = plot, width = 12, height = 8)
+  ggsave(plot_path, plot = plot, width = 12, height = 20)
   
   # Optionally: Save summary metrics to a CSV file for each dataset
   summary_file <- paste0("../../results/", dataset, "_summary_metrics.csv")
