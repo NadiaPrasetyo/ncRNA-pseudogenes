@@ -74,7 +74,7 @@ for (conservation in conservation_types) {
 }
 
 # Write the results into a CSV file
-write.csv(test_results, "../../results/ks_wilcoxon_test_results_combined.csv", row.names = FALSE)
+write.csv(test_results, "../../results/ks_test_conservation_results.csv", row.names = FALSE)
 
 
 #test random data kolmogorov smirnov test
