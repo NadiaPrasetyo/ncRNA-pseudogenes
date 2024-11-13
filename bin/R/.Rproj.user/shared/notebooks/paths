@@ -5,5 +5,8 @@
 /home/nadiaprasetyo/Documents/ncRNA-pseudogenes/bin/R/Boxplot_gene_phyloP447way.R="73C966C3"
 /home/nadiaprasetyo/Documents/ncRNA-pseudogenes/bin/R/Distplot_GTEX-RNAseq_summary.R="3521BAAB"
 /home/nadiaprasetyo/Documents/ncRNA-pseudogenes/bin/R/Distplot_gene_phastCons30way.R="4A18E846"
+/home/nadiaprasetyo/Documents/ncRNA-pseudogenes/bin/R/Kolmogorov-Smirnov_or_wilcoxon_test.R="07A397E0"
+/home/nadiaprasetyo/Documents/ncRNA-pseudogenes/bin/R/Kolmogorov-Smirnov_test.R="7CC18877"
 /home/nadiaprasetyo/Documents/ncRNA-pseudogenes/bin/R/RNU5_Boxplot_Conservation.R="F6EBD793"
 /home/nadiaprasetyo/Documents/ncRNA-pseudogenes/data/RNU1_expr.csv="4D2FB9A5"
+/home/nadiaprasetyo/Documents/ncRNA-pseudogenes/results/ks_test_results_conservation.csv="5271446E"
