@@ -12,7 +12,7 @@ colors <- c("lightblue", "lightpink", "lightyellow", "plum2", "lightgreen")  # D
 for (i in 1:length(datasets)) {
   
   # Read the CSV data for the current dataset
-  data <- read.csv(paste0("../../data/phastCons30_summary/", datasets[i], "_summary_metrics.csv"))
+  data <- read.csv(paste0("../../data/phastCons30_summary/", datasets[i], "_cons.csv"))
   
   # Calculate thresholds for high values
   max_threshold <- mean(data$Max_Conservation, na.rm = TRUE) + 2 * sd(data$Max_Conservation, na.rm = TRUE)
@@ -38,7 +38,7 @@ for (i in 1:length(datasets)) {
   
   # Plot Median Conservation with non-overlapping gene labels for high values
   median_plot <- ggplot(data, aes(x = Median_Conservation)) +
-    geom_density(fill = colors[i], alpha = 0.8) +
+    geom_histogram(fill = colors[i], alpha = 0.8) +
     labs(title = paste("Distribution of Median Conservation for", datasets[i]),
          x = "Median Conservation",
          y = "Density") +
@@ -51,12 +51,12 @@ for (i in 1:length(datasets)) {
                     max.overlaps = 200)  # Increase the number of allowed overlaps
   
   # Save the median plot with the appropriate file name
-  ggsave(paste0("../../results/rough-plots/", datasets[i], "_Median_Conservation_Distribution_Labeled.pdf"), 
+  ggsave(paste0("../../results/rough-plots/", datasets[i], "_phastCons30_Median_Conservation_Distribution_Labeled.pdf"), 
          plot = median_plot, width = 15, height = 6)
   
   # Plot Median Conservation without gene labels
   median_plot_no_labels <- ggplot(data, aes(x = Median_Conservation)) +
-    geom_density(fill = colors[i], alpha = 0.8) +
+    geom_histogram(fill = colors[i], alpha = 0.8) +
     labs(title = paste("Distribution of Median Conservation for", datasets[i]),
          x = "Median Conservation",
          y = "Density") +
@@ -64,12 +64,12 @@ for (i in 1:length(datasets)) {
     geom_line(data = density_median_df, aes(x = x, y = y), color = colors[i])  # Add density curve
   
   # Save the median plot without labels
-  ggsave(paste0("../../results/rough-plots/", datasets[i], "_Median_Conservation_Distribution.pdf"), 
+  ggsave(paste0("../../results/rough-plots/", datasets[i], "_phastCons30_Median_Conservation_Distribution.pdf"), 
          plot = median_plot_no_labels, width = 15, height = 6)
   
   # Plot Max Conservation with non-overlapping gene labels for high values
   max_plot <- ggplot(data, aes(x = Max_Conservation)) +
-    geom_density(fill = colors[i], alpha = 0.8) +
+    geom_histogram(fill = colors[i], alpha = 0.8) +
     labs(title = paste("Distribution of Max Conservation for", datasets[i]),
          x = "Max Conservation",
          y = "Density") +
@@ -82,12 +82,12 @@ for (i in 1:length(datasets)) {
                     max.overlaps = 200)  # Increase the number of allowed overlaps
   
   # Save the max plot with the appropriate file name
-  ggsave(paste0("../../results/rough-plots/", datasets[i], "_Max_Conservation_Distribution_Labeled.pdf"), 
+  ggsave(paste0("../../results/rough-plots/", datasets[i], "_phastCons30_Max_Conservation_Distribution_Labeled.pdf"), 
          plot = max_plot, width = 15, height = 6)
   
   # Plot Max Conservation without gene labels
   max_plot_no_labels <- ggplot(data, aes(x = Max_Conservation)) +
-    geom_density(fill = colors[i], alpha = 0.8) +
+    geom_histogram(fill = colors[i], alpha = 0.8) +
     labs(title = paste("Distribution of Max Conservation for", datasets[i]),
          x = "Max Conservation",
          y = "Density") +
@@ -95,7 +95,7 @@ for (i in 1:length(datasets)) {
     geom_line(data = density_max_df, aes(x = x, y = y), color = colors[i])  # Add density curve
   
   # Save the max plot without labels
-  ggsave(paste0("../../results/rough-plots/", datasets[i], "_Max_Conservation_Distribution.pdf"), 
+  ggsave(paste0("../../results/rough-plots/", datasets[i], "_phastCons30_Max_Conservation_Distribution.pdf"), 
          plot = max_plot_no_labels, width = 15, height = 6)
   
 }

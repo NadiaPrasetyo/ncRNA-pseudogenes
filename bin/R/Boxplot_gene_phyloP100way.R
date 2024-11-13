@@ -15,7 +15,7 @@ for (i in seq_along(datasets)) {
   
   # Construct the file path for the dataset and the plot
   data_path <- paste0("../../data/phyloP100_summary/", dataset, "_cons_phyloP100_.csv")
-  plot_path <- paste0("../../results/", dataset, "phyloP100_score_plot.pdf")
+  plot_path <- paste0("../../results/", dataset, "_phyloP100_score_plot.pdf")
   
   # Load data
   dataset_cons <- read_csv(data_path)
@@ -53,6 +53,6 @@ for (i in seq_along(datasets)) {
   ggsave(plot_path, plot = plot, width = 12, height = 20)
   
   # Optionally: Save summary metrics to a CSV file for each dataset
-  summary_file <- paste0("../../data/phyloP100_summary/", dataset, "phyloP100_summary_metrics.csv")
+  summary_file <- paste0("../../data/phyloP100_summary/", dataset, "_phyloP100_summary_metrics.csv")
   write_csv(summary_metrics, summary_file)
 }
