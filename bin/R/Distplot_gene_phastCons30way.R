@@ -13,8 +13,7 @@ for (i in 1:length(datasets)) {
   
   # Read the CSV data for the current dataset
   data <- read.csv(paste0("../../data/phastCons30_summary/", datasets[i], "_phastCons30_summary_metrics.csv"))
-  
-  
+
   #calculate 10% of the count
   minimum_y <- nrow(data) * 0.1
   
@@ -87,7 +86,7 @@ for (i in 1:length(datasets)) {
     theme_minimal() +
     geom_line(data = density_max_df, aes(x = x, y = y), color = colors[i]) +  # Add density curve
     geom_text_repel(data = label_data, 
-                    aes(x = Median_Conservation, y = pmax(minimum_y, 0), label = Gene,  # Ensure y >= 0.1
+                    aes(x = Max_Conservation, y = pmax(minimum_y, 0), label = Gene,  # Ensure y >= 0.1
                         color = label_color, fontface = fontface),
                     nudge_y = 0,   # Nudge labels slightly above the points
                     box.padding = 0.5,      # Add padding around each label
