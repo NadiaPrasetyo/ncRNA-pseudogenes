@@ -52,7 +52,7 @@ for (i in 1:length(datasets)) {
   
   # Save the median plot with the appropriate file name
   ggsave(paste0("../../results/rough-plots/", datasets[i], "_Median_Conservation_Distribution_Labeled.pdf"), 
-         plot = median_plot, width = 20, height = 6)
+         plot = median_plot, width = 15, height = 6)
   
   # Plot Median Conservation without gene labels
   median_plot_no_labels <- ggplot(data, aes(x = Median_Conservation)) +
@@ -65,7 +65,7 @@ for (i in 1:length(datasets)) {
   
   # Save the median plot without labels
   ggsave(paste0("../../results/rough-plots/", datasets[i], "_Median_Conservation_Distribution.pdf"), 
-         plot = median_plot_no_labels, width = 20, height = 6)
+         plot = median_plot_no_labels, width = 15, height = 6)
   
   # Plot Max Conservation with non-overlapping gene labels for high values
   max_plot <- ggplot(data, aes(x = Max_Conservation)) +
@@ -83,7 +83,7 @@ for (i in 1:length(datasets)) {
   
   # Save the max plot with the appropriate file name
   ggsave(paste0("../../results/rough-plots/", datasets[i], "_Max_Conservation_Distribution_Labeled.pdf"), 
-         plot = max_plot, width = 20, height = 6)
+         plot = max_plot, width = 15, height = 6)
   
   # Plot Max Conservation without gene labels
   max_plot_no_labels <- ggplot(data, aes(x = Max_Conservation)) +
@@ -96,6 +96,6 @@ for (i in 1:length(datasets)) {
   
   # Save the max plot without labels
   ggsave(paste0("../../results/rough-plots/", datasets[i], "_Max_Conservation_Distribution.pdf"), 
-         plot = max_plot_no_labels, width = 20, height = 6)
+         plot = max_plot_no_labels, width = 15, height = 6)
   
 }
