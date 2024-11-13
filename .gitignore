@@ -3,7 +3,7 @@ hg38.phastCons30way.bw
 *.pyc
 */__pycache__/
 .windowsvenv/
-.Rproj.user
+.Rproj.user/
 .venv/
 .Rproj.user/
 .Rhistory
