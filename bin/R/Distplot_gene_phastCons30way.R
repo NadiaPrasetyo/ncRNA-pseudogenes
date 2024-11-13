@@ -6,13 +6,17 @@ library(stringr)
 
 # Define the list of datasets and corresponding colors
 datasets <- c("RNU1", "RNU2", "RNU4", "RNU5", "RNU6")
-colors <- c("lightblue", "lightpink", "lightyellow", "plum2", "lightgreen")  # Different colors for each dataset
+colors <- c("lightblue", "lightpink", "burlywood2", "plum2", "lightgreen")  # Different colors for each dataset
 
 # Loop through each dataset
 for (i in 1:length(datasets)) {
   
   # Read the CSV data for the current dataset
-  data <- read.csv(paste0("../../data/phastCons30_summary/", datasets[i], "_cons.csv"))
+  data <- read.csv(paste0("../../data/phastCons30_summary/", datasets[i], "_phastCons30_summary_metrics.csv"))
+  
+  
+  #calculate 10% of the count
+  minimum_y <- nrow(data) * 0.1
   
   # Calculate thresholds for high values
   max_threshold <- mean(data$Max_Conservation, na.rm = TRUE) + 2 * sd(data$Max_Conservation, na.rm = TRUE)
@@ -44,11 +48,18 @@ for (i in 1:length(datasets)) {
          y = "Density") +
     theme_minimal() +
     geom_line(data = density_median_df, aes(x = x, y = y), color = colors[i]) +  # Add density curve
-    geom_text_repel(data = label_data, aes(x = Median_Conservation, y = 0, label = Gene,
-                                           color = label_color, fontface = fontface),
-                    nudge_y = 0.05,   # Nudge labels slightly above the points
+    geom_text_repel(data = label_data, 
+                    aes(x = Median_Conservation, y = pmax(minimum_y, 0), label = Gene,  # Ensure y >= 0.1
+                        color = label_color, fontface = fontface),
+                    nudge_y = 0,   # Nudge labels slightly above the points
+                    box.padding = 0.5,      # Add padding around each label
                     direction = "y",   # Stack vertically
-                    max.overlaps = 200)  # Increase the number of allowed overlaps
+                    max.overlaps = 200,  # Allow overlap of up to 200 labels
+                    segment.size = 0,    # Remove the connecting lines between the labels
+                    segment.color = NA,  # Ensure no segment lines are drawn
+                    alpha = 0.7,
+                    force = 1,          # Adjust the repelling strength for better stacking
+                    nudge_x = 0)        # Avoid horizontal nudging so labels stay aligned vertically
   
   # Save the median plot with the appropriate file name
   ggsave(paste0("../../results/rough-plots/", datasets[i], "_phastCons30_Median_Conservation_Distribution_Labeled.pdf"), 
@@ -75,11 +86,18 @@ for (i in 1:length(datasets)) {
          y = "Density") +
     theme_minimal() +
     geom_line(data = density_max_df, aes(x = x, y = y), color = colors[i]) +  # Add density curve
-    geom_text_repel(data = label_data, aes(x = Max_Conservation, y = 0, label = Gene,
-                                           color = label_color, fontface = fontface),
-                    nudge_y = 0.05,    # Nudge labels slightly above the points
+    geom_text_repel(data = label_data, 
+                    aes(x = Median_Conservation, y = pmax(minimum_y, 0), label = Gene,  # Ensure y >= 0.1
+                        color = label_color, fontface = fontface),
+                    nudge_y = 0,   # Nudge labels slightly above the points
+                    box.padding = 0.5,      # Add padding around each label
                     direction = "y",   # Stack vertically
-                    max.overlaps = 200)  # Increase the number of allowed overlaps
+                    max.overlaps = 200,  # Allow overlap of up to 200 labels
+                    segment.size = 0,    # Remove the connecting lines between the labels
+                    segment.color = NA,  # Ensure no segment lines are drawn
+                    alpha = 0.7,
+                    force = 1,          # Adjust the repelling strength for better stacking
+                    nudge_x = 0)        # Avoid horizontal nudging so labels stay aligned vertically
   
   # Save the max plot with the appropriate file name
   ggsave(paste0("../../results/rough-plots/", datasets[i], "_phastCons30_Max_Conservation_Distribution_Labeled.pdf"), 
