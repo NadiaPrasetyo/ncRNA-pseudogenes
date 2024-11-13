@@ -5,7 +5,7 @@ library(dplyr)
 
 # Define the dataset names and corresponding colors
 datasets <- c("RNU1", "RNU2", "RNU4", "RNU6")
-colors <- c("lightblue", "lightpink", "lightyellow", "plum2")  # Customize the colors as needed
+colors <- c("paleturquoise2", "rosybrown1", "lemonchiffon1", "thistle1")  # Customize the colors as needed
 
 # Loop through each dataset
 for (i in seq_along(datasets)) {
@@ -14,8 +14,8 @@ for (i in seq_along(datasets)) {
   plot_color <- colors[i]
   
   # Construct the file path for the dataset and the plot
-  data_path <- paste0("../../data/phastCons30_summary/", dataset, "_cons.csv")
-  plot_path <- paste0("../../results/", dataset, "_phastCons30_score_plot.pdf")
+  data_path <- paste0("../../data/phyloP100_summary/", dataset, "_cons_phyloP100_.csv")
+  plot_path <- paste0("../../results/", dataset, "phyloP100_score_plot.pdf")
   
   # Load data
   dataset_cons <- read_csv(data_path)
@@ -53,6 +53,6 @@ for (i in seq_along(datasets)) {
   ggsave(plot_path, plot = plot, width = 12, height = 20)
   
   # Optionally: Save summary metrics to a CSV file for each dataset
-  summary_file <- paste0("../../data/phastCons30_summary", dataset, "_phastCons30_summary_metrics.csv")
+  summary_file <- paste0("../../data/phyloP100_summary/", dataset, "phyloP100_summary_metrics.csv")
   write_csv(summary_metrics, summary_file)
 }
