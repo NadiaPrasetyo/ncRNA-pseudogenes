@@ -44,7 +44,7 @@ for (i in seq_along(datasets)) {
   plot <- ggplot(dataset_cons_clean, aes(x = Score, y = Gene)) +
     geom_boxplot(fill = plot_color, color = "black") +
     theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size = 8)) +
-    labs(title = paste("Distribution of Scores by Gene (Ordered) for", dataset),
+    labs(title = paste("Distribution of Scores by Gene (phastCons30way) for", dataset),
          x = "Score",
          y = "Gene") +
     theme_minimal()
@@ -52,7 +52,7 @@ for (i in seq_along(datasets)) {
   # Save the plot to a file
   ggsave(plot_path, plot = plot, width = 12, height = 20)
   
-  # Optionally: Save summary metrics to a CSV file for each dataset
+  # Save summary metrics to a CSV file for each dataset
   summary_file <- paste0("../../data/phastCons30_summary", dataset, "_phastCons30_summary_metrics.csv")
   write_csv(summary_metrics, summary_file)
 }

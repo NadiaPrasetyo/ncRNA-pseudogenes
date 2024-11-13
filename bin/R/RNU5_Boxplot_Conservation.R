@@ -2,6 +2,7 @@
 library(readr)
 library(ggplot2)
 library(dplyr)
+# Alternate between phastCons30, phyloP100, and phyloP447
 
 # Load data
 RNU5_cons <- read_csv("../../data/phyloP100_summary/RNU5_cons_phyloP100_.csv")
@@ -50,7 +51,7 @@ plot_RNU5 <- ggplot(RNU5_cons_clean, aes(x = Score, y = Gene)) +
   theme_minimal()
 
 # Save the plot to a file
-ggsave("../../results/RNU5__phylo100P_score_plot.pdf", plot = plot_RNU5, width = 12, height = 8)
+ggsave("../../results/RNU5__phyloP100_score_plot.pdf", plot = plot_RNU5, width = 12, height = 8)
 
 # Optionally: Save summary metrics to a CSV file for RNU5
 write_csv(summary_metrics_RNU5, "../../data/phyloP100_summary/RNU5_phyloP100_summary_metrics.csv")

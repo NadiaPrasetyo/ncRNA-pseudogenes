@@ -44,7 +44,7 @@ for (i in seq_along(datasets)) {
   plot <- ggplot(dataset_cons_clean, aes(x = Score, y = Gene)) +
     geom_boxplot(fill = plot_color, color = "black") +
     theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size = 8)) +
-    labs(title = paste("Distribution of Scores by Gene (Ordered) for", dataset),
+    labs(title = paste("Distribution of Scores by Gene (phyloP100way) for", dataset),
          x = "Score",
          y = "Gene") +
     theme_minimal()
