@@ -6,13 +6,13 @@ library(stringr)
 
 # Define the list of datasets and corresponding colors
 datasets <- c("RNU1", "RNU2", "RNU4", "RNU5", "RNU6")
-colors <- c("lightblue", "lightpink", "burlywood2", "plum2", "lightgreen")  # Different colors for each dataset
+colors <- c("lightskyblue", "salmon", "khaki1", "orchid1", "seagreen1")  # Different colors for each dataset
 
 # Loop through each dataset
 for (i in 1:length(datasets)) {
   
   # Read the CSV data for the current dataset
-  data <- read.csv(paste0("../../data/phastCons30_summary/", datasets[i], "_phastCons30_summary_metrics.csv"))
+  data <- read.csv(paste0("../../data/phyloP447_summary/", datasets[i], "_phyloP447_summary_metrics.csv"))
 
   #calculate 10% of the count
   minimum_y <- nrow(data) * 0.1
@@ -61,7 +61,7 @@ for (i in 1:length(datasets)) {
                     nudge_x = 0)        # Avoid horizontal nudging so labels stay aligned vertically
   
   # Save the median plot with the appropriate file name
-  ggsave(paste0("../../results/rough-plots/", datasets[i], "_phastCons30_Median_Conservation_Distribution_Labeled.pdf"), 
+  ggsave(paste0("../../results/rough-plots/", datasets[i], "_phyloP447_Median_Conservation_Distribution_Labeled.pdf"), 
          plot = median_plot, width = 15, height = 6)
   
   # Plot Median Conservation without gene labels
@@ -74,7 +74,7 @@ for (i in 1:length(datasets)) {
     geom_line(data = density_median_df, aes(x = x, y = y), color = colors[i])  # Add density curve
   
   # Save the median plot without labels
-  ggsave(paste0("../../results/rough-plots/unlabeled/", datasets[i], "_phastCons30_Median_Conservation_Distribution.pdf"), 
+  ggsave(paste0("../../results/rough-plots/unlabeled/", datasets[i], "_phyloP447_Median_Conservation_Distribution.pdf"), 
          plot = median_plot_no_labels, width = 15, height = 6)
   
   # Plot Max Conservation with non-overlapping gene labels for high values
@@ -99,7 +99,7 @@ for (i in 1:length(datasets)) {
                     nudge_x = 0)        # Avoid horizontal nudging so labels stay aligned vertically
   
   # Save the max plot with the appropriate file name
-  ggsave(paste0("../../results/rough-plots/", datasets[i], "_phastCons30_Max_Conservation_Distribution_Labeled.pdf"), 
+  ggsave(paste0("../../results/rough-plots/", datasets[i], "_phyloP447_Max_Conservation_Distribution_Labeled.pdf"), 
          plot = max_plot, width = 15, height = 6)
   
   # Plot Max Conservation without gene labels
@@ -112,7 +112,7 @@ for (i in 1:length(datasets)) {
     geom_line(data = density_max_df, aes(x = x, y = y), color = colors[i])  # Add density curve
   
   # Save the max plot without labels
-  ggsave(paste0("../../results/rough-plots/unlabeled/", datasets[i], "_phastCons30_Max_Conservation_Distribution.pdf"), 
+  ggsave(paste0("../../results/rough-plots/unlabeled/", datasets[i], "_phyloP447_Max_Conservation_Distribution.pdf"), 
          plot = max_plot_no_labels, width = 15, height = 6)
   
 }

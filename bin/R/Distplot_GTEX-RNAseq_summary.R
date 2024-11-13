@@ -65,7 +65,7 @@ for (i in 1:length(datasets)) {
                     nudge_x = 0)        # Avoid horizontal nudging so labels stay aligned vertically
   
   # Save the unlabeled plot as a PDF with dataset-specific filenames
-  ggsave(paste0("../../results/rough-plots/", datasets[i], "_Max_Expression_Distribution.pdf"), 
+  ggsave(paste0("../../results/rough-plots/unlabeled/", datasets[i], "_Max_Expression_Distribution.pdf"), 
          plot = max_expr_plot_no_labels, width = 10, height = 6)
   
   # Save the labeled plot as a PDF with dataset-specific filenames
