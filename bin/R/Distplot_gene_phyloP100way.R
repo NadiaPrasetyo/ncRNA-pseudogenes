@@ -6,7 +6,7 @@ library(stringr)
 
 # Define the list of datasets and corresponding colors
 datasets <- c("RNU1", "RNU2", "RNU4", "RNU5", "RNU6")
-colors <- c("paleturquoise2", "rosybrown1", "lemonchiffon1", "thistle1", "olivedrab2")  # Different colors for each dataset
+colors <- c("paleturquoise2", "rosybrown1", "lemonchiffon1", "olivedrab2", "thistle1")  # Different colors for each dataset
 
 # Loop through each dataset
 for (i in 1:length(datasets)) {
