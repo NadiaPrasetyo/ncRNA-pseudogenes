@@ -146,8 +146,10 @@ def get_gene_locations(query, output_file):
         if not gene_symbols:
             return  # Exit if no gene symbols were found
 
+        count = 0;
         # Loop through each gene symbol to process
         for gene_symbol in gene_symbols:
+            count += 1;
             
             # #Extract the numeric part of the gene symbol for additional filtering
             # substr_gene_symbol = gene_symbol[3:-2]
@@ -157,6 +159,10 @@ def get_gene_locations(query, output_file):
             # #Skip symbols with no numeric part or if the numeric part is less than the specified amount
             # if substr_gene_symbol == "" or int(substr_gene_symbol) < 5:
             #     continue
+            
+            #Skip genes before a specific count
+            if count < 116:
+                continue
         
             # Fetch Ensembl transcript IDs for the gene symbol
             transcript_ids = fetch_ensembl_transcript_ids(gene_symbol)
@@ -208,4 +214,4 @@ def get_gene_locations(query, output_file):
 # get_gene_locations('RNU5')
 # get_gene_locations('RNU6')
 # get_gene_locations('RNU4ATAC', 'data/RNU4ATAC_data.txt') 
-get_gene_locations(f'{gene_group}', f'data/{gene_group}_data.txt')
+get_gene_locations(f'{gene_group}', f'data/{gene_group}_data_temp.txt')

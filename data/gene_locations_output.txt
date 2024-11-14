@@ -1,0 +1,45 @@
+Processing VTRNA2-2P with Transcript ID: not found
+No location found for VTRNA2-2P
+------
+Processing VTRNA3-1P with Transcript ID: not found
+No location found for VTRNA3-1P
+------
+Processing MT-TA with Transcript ID: not found
+No location found for MT-TA
+------
+Processing MT-TC with Transcript ID: not found
+No location found for MT-TC
+------
+Processing MT-TD with Transcript ID: not found
+No location found for MT-TD
+------
+Processing MT-TE with Transcript ID: not found
+No location found for MT-TE
+------
+Processing MT-TF with Transcript ID: not found
+No location found for MT-TF
+------
+Processing MT-TG with Transcript ID: not found
+No location found for MT-TG
+------
+Processing MT-TH with Transcript ID: not found
+No location found for MT-TH
+------
+Processing MT-TI with Transcript ID: not found
+No location found for MT-TI
+------
+Processing MT-TK with Transcript ID: not found
+No location found for MT-TK
+------
+Processing MT-TL1 with Transcript ID: not found
+No location found for MT-TL1
+------
+Processing MT-TL2 with Transcript ID: not found
+No location found for MT-TL2
+------
+Processing MT-TM with Transcript ID: not found
+No location found for MT-TM
+------
+Processing MT-TN with Transcript ID: not found
+No location found for MT-TN
+------

@@ -1,0 +1,258 @@
+Processing VTRNA2-2P with Transcript ID: ENST00000516091
+VTRNA2-2P (ENST00000516091): Genomic Sequence (2:65,555,432-65,555,534)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A65555432-65555534
+------
+Processing VTRNA3-1P with Transcript ID: ENST00000362552
+VTRNA3-1P (ENST00000362552): Genomic Sequence (X:53,462,209-53,462,310)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=X%3A53462209-53462310
+------
+Processing MT-TA with Transcript ID: ENST00000387392
+MT-TA (ENST00000387392): Genomic Sequence (MT:5,587-5,655)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A5587-5655
+------
+Processing MT-TC with Transcript ID: ENST00000387405
+MT-TC (ENST00000387405): Genomic Sequence (MT:5,761-5,826)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A5761-5826
+------
+Processing MT-TD with Transcript ID: ENST00000387419
+MT-TD (ENST00000387419): Genomic Sequence (MT:7,518-7,585)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A7518-7585
+------
+Processing MT-TE with Transcript ID: ENST00000387459
+MT-TE (ENST00000387459): Genomic Sequence (MT:14,674-14,742)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A14674-14742
+------
+Processing MT-TF with Transcript ID: ENST00000387314
+MT-TF (ENST00000387314): Genomic Sequence (MT:577-647)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A577-647
+------
+Processing MT-TG with Transcript ID: ENST00000387429
+MT-TG (ENST00000387429): Genomic Sequence (MT:9,991-10,058)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A9991-10058
+------
+Processing MT-TH with Transcript ID: ENST00000387441
+MT-TH (ENST00000387441): Genomic Sequence (MT:12,138-12,206)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A12138-12206
+------
+Processing MT-TI with Transcript ID: ENST00000387365
+MT-TI (ENST00000387365): Genomic Sequence (MT:4,263-4,331)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A4263-4331
+------
+Processing MT-TK with Transcript ID: ENST00000387421
+MT-TK (ENST00000387421): Genomic Sequence (MT:8,295-8,364)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A8295-8364
+------
+Processing MT-TL1 with Transcript ID: ENST00000386347
+MT-TL1 (ENST00000386347): Genomic Sequence (MT:3,230-3,304)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A3230-3304
+------
+Processing MT-TL2 with Transcript ID: ENST00000387456
+MT-TL2 (ENST00000387456): Genomic Sequence (MT:12,266-12,336)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A12266-12336
+------
+Processing MT-TM with Transcript ID: ENST00000387377
+MT-TM (ENST00000387377): Genomic Sequence (MT:4,402-4,469)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A4402-4469
+------
+Processing MT-TN with Transcript ID: ENST00000387400
+MT-TN (ENST00000387400): Genomic Sequence (MT:5,657-5,729)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A5657-5729
+------
+Processing MT-TP with Transcript ID: ENST00000387461
+MT-TP (ENST00000387461): Genomic Sequence (MT:15,956-16,023)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A15956-16023
+------
+Processing MT-TQ with Transcript ID: ENST00000387372
+MT-TQ (ENST00000387372): Genomic Sequence (MT:4,329-4,400)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A4329-4400
+------
+Processing MT-TR with Transcript ID: ENST00000387439
+MT-TR (ENST00000387439): Genomic Sequence (MT:10,405-10,469)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A10405-10469
+------
+Processing MT-TS1 with Transcript ID: ENST00000387416
+MT-TS1 (ENST00000387416): Genomic Sequence (MT:7,446-7,514)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A7446-7514
+------
+Processing MT-TS2 with Transcript ID: ENST00000387449
+MT-TS2 (ENST00000387449): Genomic Sequence (MT:12,207-12,265)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A12207-12265
+------
+Processing MT-TT with Transcript ID: ENST00000387460
+MT-TT (ENST00000387460): Genomic Sequence (MT:15,888-15,953)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A15888-15953
+------
+Processing MT-TV with Transcript ID: ENST00000387342
+MT-TV (ENST00000387342): Genomic Sequence (MT:1,602-1,670)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A1602-1670
+------
+Processing MT-TW with Transcript ID: ENST00000387382
+MT-TW (ENST00000387382): Genomic Sequence (MT:5,512-5,579)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A5512-5579
+------
+Processing MT-TY with Transcript ID: ENST00000387409
+MT-TY (ENST00000387409): Genomic Sequence (MT:5,826-5,891)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=MT%3A5826-5891
+------
+No Ensembl Transcript IDs found for NMTRL-TAA1-1
+Processing NMTRL-TAA2-1 with Transcript ID: not found
+NMTRL-TAA2-1 (): Genomic Sequence (chr2:117,023,841-117,023,914)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A117023841-117023914
+------
+Processing NMTRL-TAA3-1 with Transcript ID: not found
+NMTRL-TAA3-1 (): Genomic Sequence (chr1:237,943,656-237,943,729)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A237943656-237943729
+------
+No Ensembl Transcript IDs found for NMTRL-TAA4-1
+Processing NMTRL-TAA5-1 with Transcript ID: not found
+NMTRL-TAA5-1 (): Genomic Sequence (chr20:57,358,372-57,358,445)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=20%3A57358372-57358445
+------
+Processing NMTRL-TAA6-1 with Transcript ID: not found
+NMTRL-TAA6-1 (): Genomic Sequence (chr8:46,828,416-46,828,489)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=8%3A46828416-46828489
+------
+No Ensembl Transcript IDs found for NMTRP-TGG1-1
+Processing NMTRP-TGG1-1 with Transcript ID: not found
+NMTRP-TGG1-1 (): Genomic Sequence (chr1:237942562-237942632)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A39393522-39393618
+------
+No Ensembl Transcript IDs found for NMTRQ-CTG1-1
+Processing NMTRQ-CTG1-1 with Transcript ID: not found
+NMTRQ-CTG1-1 (): Genomic Sequence (chr10:19747679-19747752)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A39393522-39393618
+------
+No Ensembl Transcript IDs found for NMTRQ-TTG1-1
+Processing NMTRQ-TTG1-1 with Transcript ID: not found
+NMTRQ-TTG1-1 (): Genomic Sequence (chr2:39,393,522-39,393,618)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A39393522-39393618
+------
+No Ensembl Transcript IDs found for NMTRQ-TTG2-1
+Processing NMTRQ-TTG2-1 with Transcript ID: not found
+NMTRQ-TTG2-1 (): Genomic Sequence (chr2:39,393,522-39,393,618)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A39393522-39393618
+------
+No Ensembl Transcript IDs found for NMTRQ-TTG3-1
+No Ensembl Transcript IDs found for NMTRQ-TTG4-1
+Processing NMTRQ-TTG4-1 with Transcript ID: not found
+NMTRQ-TTG4-1 (): Genomic Sequence (chr2:39,393,522-39,393,618)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A39393522-39393618
+------
+No Ensembl Transcript IDs found for NMTRQ-TTG5-1
+No Ensembl Transcript IDs found for NMTRQ-TTG6-1
+Processing NMTRQ-TTG6-1 with Transcript ID: not found
+NMTRQ-TTG6-1 (): Genomic Sequence (chr2:39,393,522-39,393,618)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A39393522-39393618
+------
+No Ensembl Transcript IDs found for NMTRQ-TTG7-1
+Processing NMTRQ-TTG7-1 with Transcript ID: not found
+NMTRQ-TTG7-1 (): Genomic Sequence (chr2:39,393,522-39,393,618)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A39393522-39393618
+------
+No Ensembl Transcript IDs found for NMTRQ-TTG8-1
+Processing NMTRQ-TTG8-1 with Transcript ID: not found
+NMTRQ-TTG8-1 (): Genomic Sequence (chr2:39,393,522-39,393,618)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A39393522-39393618
+------
+No Ensembl Transcript IDs found for NMTRQ-TTG9-1
+Processing NMTRQ-TTG9-1 with Transcript ID: not found
+NMTRQ-TTG9-1 (): Genomic Sequence (chr2:39,393,522-39,393,618)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A39393522-39393618
+------
+No Ensembl Transcript IDs found for NMTRQ-TTG10-1
+Processing NMTRQ-TTG10-1 with Transcript ID: not found
+NMTRQ-TTG10-1 (): Genomic Sequence (chr2:39,393,522-39,393,618)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A39393522-39393618
+------
+No Ensembl Transcript IDs found for NMTRQ-TTG11-1
+Processing NMTRQ-TTG11-1 with Transcript ID: not found
+NMTRQ-TTG11-1 (): Genomic Sequence (chr2:39,393,522-39,393,618)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A39393522-39393618
+------
+Processing NMTRQ-TTG12-1 with Transcript ID: ENST00000467595
+NMTRQ-TTG12-1 (ENST00000467595): Genomic Sequence (17:19,603,274-19,603,345)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=17%3A19603274-19603345
+------
+No Ensembl Transcript IDs found for NMTRQ-TTG13-1
+Processing NMTRQ-TTG13-1 with Transcript ID: not found
+NMTRQ-TTG13-1 (): Genomic Sequence (chr2:39,393,522-39,393,618)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A39393522-39393618
+------
+No Ensembl Transcript IDs found for NMTRQ-TTG14-1
+No Ensembl Transcript IDs found for NMTRQ-TTG15-1
+Processing NMTRQ-TTG15-1 with Transcript ID: not found
+NMTRQ-TTG15-1 (): Genomic Sequence (chr2:39,393,522-39,393,618)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A39393522-39393618
+------
+No Ensembl Transcript IDs found for NMTRS-TGA1-1
+No Ensembl Transcript IDs found for NMTRS-TGA2-1
+Processing NMTRS-TGA3-1 with Transcript ID: ENST00000481618
+NMTRS-TGA3-1 (ENST00000481618): Genomic Sequence (17:22,528,853-22,528,921)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=17%3A22528853-22528921
+------
+No Ensembl Transcript IDs found for NMTRV-TAC1-1
+No Ensembl Transcript IDs found for TRA-AGC1-1
+No Ensembl Transcript IDs found for TRA-AGC2-1
+No Ensembl Transcript IDs found for TRA-AGC2-2
+No Ensembl Transcript IDs found for TRA-AGC3-1
+No Ensembl Transcript IDs found for TRA-AGC4-1
+No Ensembl Transcript IDs found for TRA-AGC5-1
+No Ensembl Transcript IDs found for TRA-AGC6-1
+No Ensembl Transcript IDs found for TRA-AGC7-1
+No Ensembl Transcript IDs found for TRA-AGC8-1
+No Ensembl Transcript IDs found for TRA-AGC8-2
+No Ensembl Transcript IDs found for TRA-AGC9-1
+No Ensembl Transcript IDs found for TRA-AGC9-2
+No Ensembl Transcript IDs found for TRA-AGC10-1
+No Ensembl Transcript IDs found for TRA-AGC11-1
+No Ensembl Transcript IDs found for TRA-AGC12-1
+No Ensembl Transcript IDs found for TRA-AGC12-2
+No Ensembl Transcript IDs found for TRA-AGC12-3
+No Ensembl Transcript IDs found for TRA-AGC13-1
+No Ensembl Transcript IDs found for TRA-AGC13-2
+No Ensembl Transcript IDs found for TRA-AGC13-3
+No Ensembl Transcript IDs found for TRA-AGC14-1
+No Ensembl Transcript IDs found for TRA-AGC14-2
+No Ensembl Transcript IDs found for TRA-AGC15-1
+No Ensembl Transcript IDs found for TRA-AGC16-1
+No Ensembl Transcript IDs found for TRA-AGC17-1
+No Ensembl Transcript IDs found for TRA-AGC18-1
+No Ensembl Transcript IDs found for TRA-AGC18-2
+No Ensembl Transcript IDs found for TRA-AGC19-1
+No Ensembl Transcript IDs found for TRA-AGC20-1
+No Ensembl Transcript IDs found for TRA-AGC21-1
+No Ensembl Transcript IDs found for TRA-AGC22-1
+No Ensembl Transcript IDs found for TRA-AGC24-1
+No Ensembl Transcript IDs found for TRA-CGC1-1
+No Ensembl Transcript IDs found for TRA-CGC2-1
+No Ensembl Transcript IDs found for TRA-CGC3-1
+No Ensembl Transcript IDs found for TRA-CGC4-1
+No Ensembl Transcript IDs found for TRA-CGC5-1
+No Ensembl Transcript IDs found for TRA-TGC1-1
+No Ensembl Transcript IDs found for TRA-TGC2-1
+No Ensembl Transcript IDs found for TRA-TGC3-1
+No Ensembl Transcript IDs found for TRA-TGC3-2
+No Ensembl Transcript IDs found for TRA-TGC4-1
+No Ensembl Transcript IDs found for TRA-TGC5-1
+No Ensembl Transcript IDs found for TRA-TGC6-1
+No Ensembl Transcript IDs found for TRA-TGC7-1
+No Ensembl Transcript IDs found for TRA-TGC8-1
+No Ensembl Transcript IDs found for TRA-TGC10-1
+No Ensembl Transcript IDs found for TRC-GCA1-1
+No Ensembl Transcript IDs found for TRC-GCA2-1
+No Ensembl Transcript IDs found for TRC-GCA2-2
+No Ensembl Transcript IDs found for TRC-GCA2-3
+No Ensembl Transcript IDs found for TRC-GCA2-4
+No Ensembl Transcript IDs found for TRC-GCA3-1
+No Ensembl Transcript IDs found for TRC-GCA4-1
+No Ensembl Transcript IDs found for TRC-GCA5-1
+No Ensembl Transcript IDs found for TRC-GCA6-1
+No Ensembl Transcript IDs found for TRC-GCA7-1
+No Ensembl Transcript IDs found for TRC-GCA8-1
+No Ensembl Transcript IDs found for TRC-GCA9-1
+No Ensembl Transcript IDs found for TRC-GCA9-2
+No Ensembl Transcript IDs found for TRC-GCA9-3
+No Ensembl Transcript IDs found for TRC-GCA9-4
+No Ensembl Transcript IDs found for TRC-GCA10-1
+No Ensembl Transcript IDs found for TRC-GCA11-1
+No Ensembl Transcript IDs found for TRC-GCA12-1
