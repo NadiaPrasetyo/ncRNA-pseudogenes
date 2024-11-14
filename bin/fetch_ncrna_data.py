@@ -2,7 +2,7 @@ import requests
 import biomart
 import time
 
-gene_group = 'RNU6ATAC'
+gene_group = 'RNU12'
 
 # Function to search HGNC database for gene symbols starting with a query term.
 # This function performs an HTTP request to the HGNC database and retrieves gene symbols
