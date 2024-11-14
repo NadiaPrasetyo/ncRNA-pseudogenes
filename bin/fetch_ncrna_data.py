@@ -13,8 +13,8 @@ def search_hgnc_genes(query):
         print("Invalid query: must be a non-empty string.")
         return []  # Return an empty list if the query is invalid
 
-    # URL for HGNC REST API search with a wildcard on gene symbol
-    url = f'https://rest.genenames.org/search/symbol:{query}*'  
+    # URL for HGNC REST API search with a wildcard on gene symbol that is APPROVED
+    url = f'https://rest.genenames.org/search/*{query}*+AND+(locus_type:%22RNA%2C%20transfer%22+OR+locus_type:%22pseudogene%22)+AND+status:%22Approved%22'
     headers = {'Accept': 'application/json'}  # Set Accept header for JSON response
 
     try:
@@ -35,6 +35,7 @@ def search_hgnc_genes(query):
         # Check if there are any gene symbols found
         if data['response']['numFound'] > 0:
             # Extract gene symbols from response data
+            print(f"Found {data['response']['numFound']} genes for query: {query}")
             return [gene['symbol'] for gene in data['response']['docs']]
         else:
             print(f"No genes found for query: {query}")

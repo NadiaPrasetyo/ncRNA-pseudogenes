@@ -1,8 +1,0 @@
-No Ensembl Transcript IDs found for TRNAC17
-No Ensembl Transcript IDs found for TRNAE2
-No Ensembl Transcript IDs found for TRNAG1
-No Ensembl Transcript IDs found for TRNAG14
-No Ensembl Transcript IDs found for TRNAI10
-No Ensembl Transcript IDs found for TRNAI14
-No Ensembl Transcript IDs found for TRNAI16
-No Ensembl Transcript IDs found for TRNAI19
