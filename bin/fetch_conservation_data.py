@@ -5,8 +5,8 @@ import os
 import sys
 
 
-gene_group = "RNU6ATAC" # Update with the gene group you are working with
-cons_type = "phyloP447"  # Update with the conservation type you are working with
+gene_group = "VTRNA" # Update with the gene group you are working with
+cons_type = "phastCons30"  # Update with the conservation type you are working with
 
 if (cons_type == "phastCons30"):
     bw_file = "data/hg38.phastCons30way.bw"

@@ -5,4 +5,3 @@ UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&posit
 Processing RNU12-2P with Transcript ID: ENST00000364789
 RNU12-2P (ENST00000364789): Genomic Sequence (X:47,132,671-47,132,826)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=X%3A47132671-47132826
-------

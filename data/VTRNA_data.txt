@@ -1,0 +1,23 @@
+Processing VTRNA1-1 with Transcript ID: ENST00000363120
+VTRNA1-1 (ENST00000363120): Genomic Sequence (5:140,711,275-140,711,373)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A140711275-140711373
+------
+Processing VTRNA1-2 with Transcript ID: ENST00000365241
+VTRNA1-2 (ENST00000365241): Genomic Sequence (5:140,718,925-140,719,013)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A140718925-140719013
+------
+Processing VTRNA1-3 with Transcript ID: ENST00000365645
+VTRNA1-3 (ENST00000365645): Genomic Sequence (5:140,726,158-140,726,246)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A140726158-140726246
+------
+Processing VTRNA2-1 with Transcript ID: ENST00000602301
+VTRNA2-1 (ENST00000602301): Genomic Sequence (5:136,080,470-136,080,597)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A136080470-136080597
+------
+Processing VTRNA2-2P with Transcript ID: ENST00000516091
+VTRNA2-2P (ENST00000516091): Genomic Sequence (2:65,555,432-65,555,534)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A65555432-65555534
+------
+Processing VTRNA3-1P with Transcript ID: ENST00000362552
+VTRNA3-1P (ENST00000362552): Genomic Sequence (X:53,462,209-53,462,310)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=X%3A53462209-53462310

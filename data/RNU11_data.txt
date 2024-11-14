@@ -21,4 +21,3 @@ UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&posit
 Processing RNU11-6P with Transcript ID: ENST00000391127
 RNU11-6P (ENST00000391127): Genomic Sequence (8:80,749,561-80,749,693)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=8%3A80749561-80749693
-------

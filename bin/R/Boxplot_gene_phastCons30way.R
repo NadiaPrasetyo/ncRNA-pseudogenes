@@ -6,7 +6,9 @@ library(dplyr)
 # Define the dataset names and corresponding colors
 #datasets <- c("RNU1", "RNU2", "RNU4", "RNU6")
 #colors <- c("lightblue", "lightpink", "lightyellow", "plum2")  # Customize the colors as needed
-datasets <- c("RNU4ATAC", "RNU6ATAC")
+
+datasets <- c("RNU4ATAC", "RNU6ATAC", "RNU11", "RNU12", "VTRNA")
+colors <- c("deeppink1", "darkturquoise", "chocolate3", "darkgray", "forestgreen" )
 colors <- c("hotpink1", "cyan2")
 
 # Loop through each dataset
@@ -26,14 +28,13 @@ for (i in seq_along(datasets)) {
   dataset_cons_clean <- dataset_cons[!is.na(dataset_cons$Score), ]
   
   # 1. Extract the numeric part from the Gene column
-  #below is for the convention of RNU#-#(P)
-  #dataset_cons_clean$Gene_number <- as.numeric(gsub(paste0(dataset, "-(\\d+)P?"), "\\1", dataset_cons_clean$Gene))
-  
-  #below is for the convention of dataset#(P)
-  dataset_cons_clean$Gene_number <- ifelse(
-    is.na(as.numeric(gsub(paste0(dataset, "(\\d+)P?"), "\\1", dataset_cons_clean$Gene))),
-    1,
-    as.numeric(gsub(paste0(dataset, "(\\d+)P?"), "\\1", dataset_cons_clean$Gene))
+  # Combined extraction for both conventions: RNU#-#(P) and dataset#(P)
+  dataset_cons_clean$Gene_number <- as.numeric(
+    ifelse(
+      grepl(paste0(dataset, "-(\\d+)P?"), dataset_cons_clean$Gene),
+      gsub(paste0(dataset, "-(\\d+)P?"), "\\1", dataset_cons_clean$Gene),
+      gsub(paste0(dataset, "(\\d+)P?"), "\\1", dataset_cons_clean$Gene)
+    )
   )
   
   # 2. Reorder the Gene factor based on the extracted number
