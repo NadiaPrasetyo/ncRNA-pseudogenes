@@ -66,7 +66,7 @@ rna_seq_files = [
     "data/GTEX-RNAseq/GTEX-ZVT2-0326-SM-5E44G.Ovary.RNAseq.bw"
 ]
 
-gene_group = "RNU4ATAC" #Update on the gene group you're working on
+gene_group = "RNU6ATAC" #Update on the gene group you're working on
 
 #Alter these file paths for each specified gene groups
 # Path to input gene file and output CSV file

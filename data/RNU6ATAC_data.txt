@@ -165,4 +165,3 @@ UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&posit
 Processing RNU6ATAC42P with Transcript ID: ENST00000408637
 RNU6ATAC42P (ENST00000408637): Genomic Sequence (12:64,939,023-64,939,117)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=12%3A64939023-64939117
-------

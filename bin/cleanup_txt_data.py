@@ -7,7 +7,7 @@ import sys
 pattern = re.compile(r"(\d+|X|Y):([\d,]+)-([\d,]+)")
 
 # Path to the input file
-input_file = "data/RNU4ATAC_data.txt"  # Update this to the path of your actual file
+input_file = "data/RNU6ATAC_data.txt"  # Update this to the path of your actual file
 
 # Ensure the input file exists
 if not os.path.isfile(input_file):

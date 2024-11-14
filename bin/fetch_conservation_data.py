@@ -5,7 +5,7 @@ import os
 import sys
 
 
-gene_group = "RNU4ATAC" # Update with the gene group you are working with
+gene_group = "RNU6ATAC" # Update with the gene group you are working with
 cons_type = "phyloP447"  # Update with the conservation type you are working with
 
 if (cons_type == "phastCons30"):
