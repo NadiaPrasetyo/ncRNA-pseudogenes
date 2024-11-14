@@ -28,10 +28,11 @@ for (i in seq_along(datasets)) {
   
   # 1. Extract the numeric part from the Gene column
   # Combined extraction for conventions: RNU#-#(P), dataset#(P), and VTRNA#-#P
+  # Combined extraction for conventions: VTRNA#-#, RNU#-#(P), dataset#(P)
   dataset_cons_clean$Gene_number <- as.numeric(
     ifelse(
-      grepl("VTRNA-(\\d+)P", dataset_cons_clean$Gene),
-      gsub("VTRNA-(\\d+)P", "\\1", dataset_cons_clean$Gene),
+      grepl("VTRNA\\d+-(\\d+)P?", dataset_cons_clean$Gene),
+      gsub("VTRNA\\d+-(\\d+)P?", "\\1", dataset_cons_clean$Gene),
       ifelse(
         grepl(paste0(dataset, "-(\\d+)P?"), dataset_cons_clean$Gene),
         gsub(paste0(dataset, "-(\\d+)P?"), "\\1", dataset_cons_clean$Gene),
