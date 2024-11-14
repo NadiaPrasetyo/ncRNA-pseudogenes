@@ -2,6 +2,8 @@ import requests
 import biomart
 import time
 
+gene_group = 'RNU6ATAC'
+
 # Function to search HGNC database for gene symbols starting with a query term.
 # This function performs an HTTP request to the HGNC database and retrieves gene symbols
 # that start with the query term.
@@ -195,4 +197,4 @@ def get_gene_locations(query, output_file):
 # get_gene_locations('RNU5')
 # get_gene_locations('RNU6')
 # get_gene_locations('RNU4ATAC', 'data/RNU4ATAC_data.txt') 
-get_gene_locations('RNU6ATAC', 'data/RNU6ATAC_data.txt')
+get_gene_locations(f'{gene_group}', f'data/{gene_group}_data.txt')

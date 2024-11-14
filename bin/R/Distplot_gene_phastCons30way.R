@@ -5,8 +5,11 @@ library(dplyr)    # For data manipulation
 library(stringr)
 
 # Define the list of datasets and corresponding colors
-datasets <- c("RNU1", "RNU2", "RNU4", "RNU5", "RNU6")
-colors <- c("lightblue", "lightpink", "burlywood2", "lightgreen", "plum2")  # Different colors for each dataset
+#datasets <- c("RNU1", "RNU2", "RNU4", "RNU5", "RNU6")
+#colors <- c("lightblue", "lightpink", "burlywood2", "lightgreen", "plum2")  # Different colors for each dataset
+
+datasets <- c("RNU4ATAC", "RNU6ATAC")
+colors <- c("hotpink1", "cyan2")
 
 # Loop through each dataset
 for (i in 1:length(datasets)) {
