@@ -8,8 +8,7 @@ library(dplyr)
 #colors <- c("paleturquoise2", "rosybrown1", "lemonchiffon1", "thistle1")  # Customize the colors as needed
 
 datasets <- c("RNU4ATAC", "RNU6ATAC", "RNU11", "RNU12", "VTRNA")
-colors <- c("deeppink1", "darkturquoise", "chocolate3", "darkgray", "forestgreen" )
-colors <- c("palevioletred1", "darkturquoise")
+colors <- c("palevioletred1", "darkturquoise", "tan3", "slategray", "springgreen4")
 
 # Loop through each dataset
 for (i in seq_along(datasets)) {
@@ -28,15 +27,18 @@ for (i in seq_along(datasets)) {
   dataset_cons_clean <- dataset_cons[!is.na(dataset_cons$Score), ]
   
   # 1. Extract the numeric part from the Gene column
-  # Combined extraction for both conventions: RNU#-#(P) and dataset#(P)
+  # Combined extraction for conventions: RNU#-#(P), dataset#(P), and VTRNA#-#P
   dataset_cons_clean$Gene_number <- as.numeric(
     ifelse(
-      grepl(paste0(dataset, "-(\\d+)P?"), dataset_cons_clean$Gene),
-      gsub(paste0(dataset, "-(\\d+)P?"), "\\1", dataset_cons_clean$Gene),
-      gsub(paste0(dataset, "(\\d+)P?"), "\\1", dataset_cons_clean$Gene)
+      grepl("VTRNA-(\\d+)P", dataset_cons_clean$Gene),
+      gsub("VTRNA-(\\d+)P", "\\1", dataset_cons_clean$Gene),
+      ifelse(
+        grepl(paste0(dataset, "-(\\d+)P?"), dataset_cons_clean$Gene),
+        gsub(paste0(dataset, "-(\\d+)P?"), "\\1", dataset_cons_clean$Gene),
+        gsub(paste0(dataset, "(\\d+)P?"), "\\1", dataset_cons_clean$Gene)
+      )
     )
   )
-  
   
   # 2. Reorder the Gene factor based on the extracted number
   dataset_cons_clean$Gene <- factor(dataset_cons_clean$Gene, levels = unique(dataset_cons_clean$Gene[order(dataset_cons_clean$Gene_number)]))
