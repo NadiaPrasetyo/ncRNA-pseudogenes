@@ -1,16 +1,14 @@
 # Loading the required packages
 library(dplyr)
-library("dgof")
 library(readr)
 
 # Define the gene groups and conservation types
-gene_groups <- c("RNU1", "RNU2", "RNU4", "RNU5", "RNU6")
+gene_groups <- c("RNU1", "RNU2", "RNU4", "RNU5", "RNU6", "RNU4ATAC", "RNU6ATAC", "RNU11", "RNU12", "VTRNA")
 conservation_types <- c("phastCons30", "phyloP100", "phyloP447")
 
 # Create an empty data frame to store the test results with sample counts
 test_results <- data.frame(Conservation_Type = character(),
                            Gene_group = character(),
-                           Test = character(),
                            Statistic = numeric(),
                            p_value = numeric(),
                            Functional_Sample_Count = integer(),
@@ -34,8 +32,18 @@ for (conservation in conservation_types) {
     
     # Check if the file exists
     if (!file.exists(file_path)) {
-      cat("Skipping: File does not exist for gene", gene, "in conservation type", conservation, "\n")
-      next
+      cat("File does not exist for gene", gene, "in conservation type", conservation, "\n")
+      
+      # Record the result with "Insufficient data" message in Statistic and p_value columns
+      test_results <- rbind(test_results, data.frame(Conservation_Type = conservation,
+                                                     Gene_group = gene,
+                                                     Statistic = NA,
+                                                     p_value = NA,
+                                                     Functional_Sample_Count = 0,
+                                                     Pseudogene_Sample_Count = 0,
+                                                     stringsAsFactors = FALSE))
+      
+      next  # Skip to the next gene
     }
     
     # Read the data for the current gene group and conservation type
@@ -59,49 +67,36 @@ for (conservation in conservation_types) {
     pooled_functional_count <- pooled_functional_count + functional_count
     pooled_pseudogene_count <- pooled_pseudogene_count + pseudogene_count
     
-    # Perform KS test if there's enough data for this gene group
-    if (functional_count >= 2 && pseudogene_count >= 2) {
-      ks_result <- ks.test(functional_genes, pseudogenes)
-      test_results <- rbind(test_results, data.frame(Conservation_Type = conservation,
-                                                     Gene_group = gene,
-                                                     Test = "KS",
-                                                     Statistic = ks_result$statistic,
-                                                     p_value = ks_result$p.value,
-                                                     Functional_Sample_Count = functional_count,
-                                                     Pseudogene_Sample_Count = pseudogene_count,
-                                                     stringsAsFactors = FALSE))
-    } else {
-      cat("Skipping:", gene, "in conservation type", conservation, "due to insufficient data\n")
-    }
+    # Perform KS test (even with insufficient data, we will just record NA values)
+    ks_result <- ks.test(functional_genes, pseudogenes)
+    test_results <- rbind(test_results, data.frame(Conservation_Type = conservation,
+                                                   Gene_group = gene,
+                                                   Statistic = ks_result$statistic,
+                                                   p_value = ks_result$p.value,
+                                                   Functional_Sample_Count = functional_count,
+                                                   Pseudogene_Sample_Count = pseudogene_count,
+                                                   stringsAsFactors = FALSE))
     
     # Print a message indicating that the gene has been processed
     cat("Processed:", gene, "in conservation type", conservation, "\n")
   }
   
-  # Perform the KS test on pooled data if there's enough data in both groups
-  if(pooled_functional_count >= 2 && pooled_pseudogene_count >= 2) {
-    cat("Running KS test on pooled data for conservation type", conservation, "\n")
-    ks_result <- ks.test(pooled_functional, pooled_pseudogenes)
-    
-    # Store the pooled test result with sample counts
-    test_results <- rbind(test_results, data.frame(Conservation_Type = conservation,
-                                                   Gene_group = "Pooled",
-                                                   Test = "KS",
-                                                   Statistic = ks_result$statistic,
-                                                   p_value = ks_result$p.value,
-                                                   Functional_Sample_Count = pooled_functional_count,
-                                                   Pseudogene_Sample_Count = pooled_pseudogene_count,
-                                                   stringsAsFactors = FALSE))
-  } else {
-    cat("Skipping pooled KS test for conservation type", conservation, "due to insufficient data\n")
-  }
+  # Perform the KS test on pooled data (always attempt KS, even if sample size is low)
+  ks_result <- ks.test(pooled_functional, pooled_pseudogenes)
+  
+  # Store the pooled test result with sample counts
+  test_results <- rbind(test_results, data.frame(Conservation_Type = conservation,
+                                                 Gene_group = "Pooled",
+                                                 Statistic = ks_result$statistic,
+                                                 p_value = ks_result$p.value,
+                                                 Functional_Sample_Count = pooled_functional_count,
+                                                 Pseudogene_Sample_Count = pooled_pseudogene_count,
+                                                 stringsAsFactors = FALSE))
 }
 
 # Write the results into a CSV file
 write.csv(test_results, "../../results/ks_test_conservation_results.csv", row.names = FALSE)
 
-
-#test random data kolmogorov smirnov test
+# Test random data Kolmogorov-Smirnov test (example)
 x1 <- rnorm(100)
 ks.test(x1, "pnorm")
-

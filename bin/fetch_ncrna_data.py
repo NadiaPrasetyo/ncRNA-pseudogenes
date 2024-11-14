@@ -3,6 +3,7 @@ import biomart
 import time
 
 gene_group = 'RNY'
+#continue from RNY4P23, and before, cleanup, check the no ensembl transcript found, some of them can be found directly from UCSC
 
 # Function to search HGNC database for gene symbols starting with a query term.
 # This function performs an HTTP request to the HGNC database and retrieves gene symbols
