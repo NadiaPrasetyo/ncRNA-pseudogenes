@@ -1,0 +1,71 @@
+Processing RNU4ATAC with Transcript ID: ENST00000580972
+RNU4ATAC (ENST00000580972): Genomic Sequence (2:121,530,881-121,531,007)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A121530881-121531007
+------
+Processing RNU4ATAC2P with Transcript ID: ENST00000408674
+RNU4ATAC2P (ENST00000408674): Genomic Sequence (5:159,318,042-159,318,167)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A159318042-159318167
+------
+Processing RNU4ATAC3P with Transcript ID: ENST00000516699
+RNU4ATAC3P (ENST00000516699): Genomic Sequence (13:92,059,844-92,059,969)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=13%3A92059844-92059969
+------
+Processing RNU4ATAC4P with Transcript ID: ENST00000516307
+RNU4ATAC4P (ENST00000516307): Genomic Sequence (1:67,267,601-67,267,726)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A67267601-67267726
+------
+Processing RNU4ATAC5P with Transcript ID: ENST00000517226
+RNU4ATAC5P (ENST00000517226): Genomic Sequence (11:122,451,474-122,451,599)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=11%3A122451474-122451599
+------
+Processing RNU4ATAC6P with Transcript ID: ENST00000516592
+RNU4ATAC6P (ENST00000516592): Genomic Sequence (10:28,652,630-28,652,755)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A28652630-28652755
+------
+Processing RNU4ATAC7P with Transcript ID: ENST00000516280
+RNU4ATAC7P (ENST00000516280): Genomic Sequence (20:54,859,688-54,859,812)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=20%3A54859688-54859812
+------
+Processing RNU4ATAC8P with Transcript ID: ENST00000516196
+RNU4ATAC8P (ENST00000516196): Genomic Sequence (1:73,883,714-73,883,822)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A73883714-73883822
+------
+Processing RNU4ATAC9P with Transcript ID: ENST00000517146
+RNU4ATAC9P (ENST00000517146): Genomic Sequence (4:72,965,178-72,965,303)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=4%3A72965178-72965303
+------
+Processing RNU4ATAC10P with Transcript ID: ENST00000516967
+RNU4ATAC10P (ENST00000516967): Genomic Sequence (11:122,449,210-122,449,331)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=11%3A122449210-122449331
+------
+Processing RNU4ATAC11P with Transcript ID: ENST00000515939
+RNU4ATAC11P (ENST00000515939): Genomic Sequence (9:33,868,540-33,868,665)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=9%3A33868540-33868665
+------
+Processing RNU4ATAC12P with Transcript ID: ENST00000516460
+RNU4ATAC12P (ENST00000516460): Genomic Sequence (12:132,995,190-132,995,302)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=12%3A132995190-132995302
+------
+Processing RNU4ATAC13P with Transcript ID: ENST00000515932
+RNU4ATAC13P (ENST00000515932): Genomic Sequence (5:113,493,835-113,493,960)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=5%3A113493835-113493960
+------
+Processing RNU4ATAC14P with Transcript ID: ENST00000516204
+RNU4ATAC14P (ENST00000516204): Genomic Sequence (14:75,202,081-75,202,169)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=14%3A75202081-75202169
+------
+Processing RNU4ATAC15P with Transcript ID: ENST00000516415
+RNU4ATAC15P (ENST00000516415): Genomic Sequence (9:33,174,170-33,174,295)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=9%3A33174170-33174295
+------
+Processing RNU4ATAC16P with Transcript ID: ENST00000408512
+RNU4ATAC16P (ENST00000408512): Genomic Sequence (12:781,133-781,258)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=12%3A781133-781258
+------
+Processing RNU4ATAC17P with Transcript ID: ENST00000517272
+RNU4ATAC17P (ENST00000517272): Genomic Sequence (3:8,364,529-8,364,648)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A8364529-8364648
+------
+Processing RNU4ATAC18P with Transcript ID: ENST00000516179
+RNU4ATAC18P (ENST00000516179): Genomic Sequence (6:159,720,415-159,720,540)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=6%3A159720415-159720540

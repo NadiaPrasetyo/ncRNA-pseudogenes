@@ -4,13 +4,25 @@ import csv
 import os
 import sys
 
-# Define the file path to your bigWig file
-# bw_file = "data/hg38.phastCons30way.bw"
-# bw_file = "data/hg38.phyloP100way.bw"
-bw_file = "data/hg38.phyloP447way.bw"
 
-input_file = "data/RNU6_data.txt"  # Update with the path to your file containing the gene data
-output_file = "data/phyloP447_summary/RNU6_cons_phyloP447_.csv"  # Define the output file for CSV format
+gene_group = "RNU4ATAC" # Update with the gene group you are working with
+cons_type = "phyloP447"  # Update with the conservation type you are working with
+
+if (cons_type == "phastCons30"):
+    bw_file = "data/hg38.phastCons30way.bw"
+    output_file = f"data/phastCons30_summary/{gene_group}_cons.csv"  # Define the output file for CSV format
+elif (cons_type == "phyloP100"):
+    bw_file = "data/hg38.phyloP100way.bw"
+    output_file = f"data/phyloP100_summary/{gene_group}_cons_phyloP100_.csv"  # Define the output file for CSV format
+elif (cons_type == "phyloP447"):
+    bw_file = "data/hg38.phyloP447way.bw"
+    output_file = f"data/phyloP447_summary/{gene_group}_cons_phyloP447_.csv"  # Define the output file for CSV format
+else:
+    sys.exit(f"Error: Conservation type '{cons_type}' is not supported.")
+
+# Define the input file containing the gene data
+input_file = f"data/{gene_group}_data.txt"
+
 temp_output_file = f"{output_file}.tmp"  # Temporary file for output
 
 # Regular expression to extract chromosome, start, and end information

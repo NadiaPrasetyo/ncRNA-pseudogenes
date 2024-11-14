@@ -65,10 +65,13 @@ rna_seq_files = [
     "data/GTEX-RNAseq/GTEX-ZT9W-2026-SM-51MRA.Breast_Mammary_Tissue.RNAseq.bw",
     "data/GTEX-RNAseq/GTEX-ZVT2-0326-SM-5E44G.Ovary.RNAseq.bw"
 ]
+
+gene_group = "RNU4ATAC" #Update on the gene group you're working on
+
 #Alter these file paths for each specified gene groups
 # Path to input gene file and output CSV file
-gene_file_path = "data/RNU6_data.txt"
-output_csv = "data/RNU6_expr.csv"
+gene_file_path = f"data/{gene_group}_data.txt"
+output_csv = f"data/{gene_group}_expr.csv"
 
 # Regular expressions for extracting gene name and genomic location
 gene_pattern = re.compile(r"Processing (.+?) with Transcript ID")

@@ -129,63 +129,70 @@ def generate_ucsc_link(chrom, start, end):
 # Main function to get gene locations based on a query.
 # This function integrates all the above functions to search for genes, fetch transcript IDs,
 # and fetch genomic locations for each transcript.
-def get_gene_locations(query):
+# Modified Main function to get gene locations based on a query and write to file
+def get_gene_locations(query, output_file):
     # Validate input query
     if not query or not isinstance(query, str):
         print("Invalid query: must be a non-empty string.")
         return
     
-    # Fetch gene symbols matching the query from HGNC database
-    gene_symbols = search_hgnc_genes(query)
-    if not gene_symbols:
-        return  # Exit if no gene symbols were found
+    # Open the output file in write mode
+    with open(output_file, 'w') as file:
+        # Fetch gene symbols matching the query from HGNC database
+        gene_symbols = search_hgnc_genes(query)
+        if not gene_symbols:
+            return  # Exit if no gene symbols were found
 
-    # Loop through each gene symbol to process
-    for gene_symbol in gene_symbols:
-        # # Extract the numeric part of the gene symbol for additional filtering
-        # substr_gene_symbol = gene_symbol[5:-1]
-        
-        # # Skip symbols with no numeric part or if the numeric part is less than the specified amount
-        # if substr_gene_symbol == "" or int(substr_gene_symbol) < 1137:
-        #     continue
-        
-        # Fetch Ensembl transcript IDs for the gene symbol
-        transcript_ids = fetch_ensembl_transcript_ids(gene_symbol)
-        if not transcript_ids:
-            print(f"No Ensembl Transcript IDs found for {gene_symbol}")
-            continue  # Skip if no transcript IDs found
+        # Loop through each gene symbol to process
+        for gene_symbol in gene_symbols:
+            # Fetch Ensembl transcript IDs for the gene symbol
+            transcript_ids = fetch_ensembl_transcript_ids(gene_symbol)
+            if not transcript_ids:
+                print(f"No Ensembl Transcript IDs found for {gene_symbol}")
+                file.write(f"No Ensembl Transcript IDs found for {gene_symbol}\n")
+                continue  # Skip if no transcript IDs found
 
-        # Loop through each transcript ID to fetch genomic location
-        for transcript_id in transcript_ids:
-            print(f"Processing {gene_symbol} with Transcript ID: {transcript_id}")
+            # Loop through each transcript ID to fetch genomic location
+            for transcript_id in transcript_ids:
+                msg = f"Processing {gene_symbol} with Transcript ID: {transcript_id}"
+                print(msg)
+                file.write(msg + '\n')
 
-            # Fetch genomic coordinates for the transcript
-            location_data = fetch_ensembl_genome_location(transcript_id)
-            
-            # If location data is found, generate and print the UCSC link
-            if location_data:
-                chrom, start, end = location_data
-                formatted_start = '{:,}'.format(start)  # Format start coordinate
-                formatted_end = '{:,}'.format(end)  # Format end coordinate
-                location_str = f"Genomic Sequence ({chrom}:{formatted_start}-{formatted_end})"
+                # Fetch genomic coordinates for the transcript
+                location_data = fetch_ensembl_genome_location(transcript_id)
                 
-                # Generate the UCSC link for the location
-                ucsc_link = generate_ucsc_link(chrom, start, end)
+                # If location data is found, generate and print the UCSC link
+                if location_data:
+                    chrom, start, end = location_data
+                    formatted_start = '{:,}'.format(start)  # Format start coordinate
+                    formatted_end = '{:,}'.format(end)  # Format end coordinate
+                    location_str = f"Genomic Sequence ({chrom}:{formatted_start}-{formatted_end})"
+                    
+                    # Generate the UCSC link for the location
+                    ucsc_link = generate_ucsc_link(chrom, start, end)
+                    
+                    # Print and write the gene information and UCSC link
+                    output_str = f"{gene_symbol} ({transcript_id}): {location_str}"
+                    link_str = f"UCSC Genome Browser link: {ucsc_link}"
+                    print(output_str)
+                    print(link_str)
+                    file.write(output_str + '\n')
+                    file.write(link_str + '\n')
+                else:
+                    no_loc_msg = f"No location found for {gene_symbol} ({transcript_id})"
+                    print(no_loc_msg)
+                    file.write(no_loc_msg + '\n')
                 
-                # Print the gene information and UCSC link
-                print(f"{gene_symbol} ({transcript_id}): {location_str}")
-                print(f"UCSC Genome Browser link: {ucsc_link}")
-            else:
-                print(f"No location found for {gene_symbol} ({transcript_id})")
-            
-            # Sleep briefly to respect Ensembl's API rate limiting
-            time.sleep(1/10)
-            print("------")
-
+                # Sleep briefly to respect Ensembl's API rate limiting
+                time.sleep(1/10)
+                print("------")
+                file.write("------\n")
 
 # Example usage
 # get_gene_locations('RNU2')  # Uncomment to run with specific query
 # get_gene_locations('RNU1-')
 # get_gene_locations('RNU4-')
 # get_gene_locations('RNU5')
-get_gene_locations('RNU6')
+# get_gene_locations('RNU6')
+# get_gene_locations('RNU4ATAC', 'data/RNU4ATAC_data.txt') 
+get_gene_locations('RNU6ATAC', 'data/RNU6ATAC_data.txt')
