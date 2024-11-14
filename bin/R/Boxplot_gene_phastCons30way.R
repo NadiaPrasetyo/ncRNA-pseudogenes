@@ -63,6 +63,6 @@ for (i in seq_along(datasets)) {
   ggsave(plot_path, plot = plot, width = 12, height = 10)
   
   # Save summary metrics to a CSV file for each dataset
-  summary_file <- paste0("../../data/phastCons30_summary", dataset, "_phastCons30_summary_metrics.csv")
+  summary_file <- paste0("../../data/phastCons30_summary/", dataset, "_phastCons30_summary_metrics.csv")
   write_csv(summary_metrics, summary_file)
 }
