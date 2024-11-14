@@ -90,7 +90,10 @@ Processing RNY3P5 with Transcript ID: ENST00000384127
 RNY3P5 (ENST00000384127): Genomic Sequence (13:60,789,560-60,789,661)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=13%3A60789560-60789661
 ------
-No Ensembl Transcript IDs found for RNY3P6
+Processing RNY3P6 with Transcript ID: not found
+RNY3P6 (): Genomic Sequence (chr13:99,536,319-99,536,395)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=13%3A99536319-99536395
+------
 Processing RNY3P7 with Transcript ID: ENST00000384073
 RNY3P7 (ENST00000384073): Genomic Sequence (13:77,623,372-77,623,472)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=13%3A77623372-77623472
@@ -135,14 +138,26 @@ Processing RNY4 with Transcript ID: ENST00000516507
 RNY4 (ENST00000516507): Genomic Sequence (7:148,963,315-148,963,410)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=7%3A148963315-148963410
 ------
-No Ensembl Transcript IDs found for RNY4P1
-No Ensembl Transcript IDs found for RNY4P2
+Processing RNY4P1 with Transcript ID: not found
+RNY4P1 (): Genomic Sequence (chr9:74,847,506-74,847,598)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=9%3A74847506-74847598
+------
+Processing RNY4P2 with Transcript ID: not found
+RNY4P2 (): Genomic Sequence (chr17:42,932,850-42,932,941)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=17%3A42932850-42932941
+------
 Processing RNY4P3 with Transcript ID: ENST00000365254
 RNY4P3 (ENST00000365254): Genomic Sequence (16:50,098,264-50,098,358)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=16%3A50098264-50098358
 ------
-No Ensembl Transcript IDs found for RNY4P4
-No Ensembl Transcript IDs found for RNY4P5
+Processing RNY4P4 with Transcript ID: not found
+RNY4P4 (): Genomic Sequence (chr3:136,588,209-136,588,310)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A136588209-136588310
+------
+Processing RNY4P5 with Transcript ID: not found
+RNY4P5 (): Genomic Sequence (chr8:123,044,717-123,044,810)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=8%3A123044717-123044810
+------
 Processing RNY4P6 with Transcript ID: ENST00000363667
 RNY4P6 (ENST00000363667): Genomic Sequence (11:117,015,897-117,015,992)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=11%3A117015897-117015992
@@ -151,7 +166,10 @@ Processing RNY4P7 with Transcript ID: ENST00000364600
 RNY4P7 (ENST00000364600): Genomic Sequence (2:127,798,903-127,798,998)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A127798903-127798998
 ------
-No Ensembl Transcript IDs found for RNY4P8
+Processing RNY4P8 with Transcript ID: not found
+RNY4P8 (): Genomic Sequence (chr17:40,243,223-40,243,316)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=17%3A40243223-40243316
+------
 Processing RNY4P9 with Transcript ID: ENST00000363194
 RNY4P9 (ENST00000363194): Genomic Sequence (13:49,908,634-49,908,730)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=13%3A49908634-49908730
@@ -160,8 +178,10 @@ Processing RNY4P10 with Transcript ID: ENST00000365571
 RNY4P10 (ENST00000365571): Genomic Sequence (6:33,199,601-33,199,696)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=6%3A33199601-33199696
 ------
-No Ensembl Transcript IDs found for RNY4P11
-No Ensembl Transcript IDs found for RNY4P12
+Processing RNY4P11 with Transcript ID: not found
+RNY4P11 (): Genomic Sequence (chr20:18,329,009-18,329,101)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=20%3A18329009-18329101
+------
 Processing RNY4P13 with Transcript ID: ENST00000384284
 RNY4P13 (ENST00000384284): Genomic Sequence (17:30,059,052-30,059,147)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=17%3A30059052-30059147
@@ -170,7 +190,10 @@ Processing RNY4P14 with Transcript ID: ENST00000363656
 RNY4P14 (ENST00000363656): Genomic Sequence (13:39,785,415-39,785,510)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=13%3A39785415-39785510
 ------
-No Ensembl Transcript IDs found for RNY4P15
+Processing RNY4P15 with Transcript ID: not found
+RNY4P15 (): Genomic Sequence (chr2:88,229,572-88,229,663)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A88229572-88229663
+------
 Processing RNY4P16 with Transcript ID: ENST00000364768
 RNY4P16 (ENST00000364768): Genomic Sequence (1:234,837,976-234,838,069)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A234837976-234838069
@@ -191,9 +214,102 @@ Processing RNY4P20 with Transcript ID: ENST00000516678
 RNY4P20 (ENST00000516678): Genomic Sequence (6:151,298,841-151,298,933)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=6%3A151298841-151298933
 ------
-No Ensembl Transcript IDs found for RNY4P21
-No Ensembl Transcript IDs found for RNY4P22
+Processing RNY4P21 with Transcript ID: not found
+RNY4P21 (): Genomic Sequence (chr14:74,091,413-74,091,484)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=14%3A74091413-74091484
+------
+Processing RNY4P22 with Transcript ID: not found
+RNY4P22 (): Genomic Sequence (chr3:20,192,782-20,192,873)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A20192782-20192873
+------
 Processing RNY4P23 with Transcript ID: ENST00000364507
 RNY4P23 (ENST00000364507): Genomic Sequence (X:70,396,279-70,396,375)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=X%3A70396279-70396375
 ------
+Processing RNY4P24 with Transcript ID: ENST00000362735
+RNY4P24 (ENST00000362735): Genomic Sequence (13:52,400,004-52,400,099)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=13%3A52400004-52400099
+------
+Processing RNY4P25 with Transcript ID: ENST00000459254
+RNY4P25 (ENST00000459254): Genomic Sequence (1:151,439,000-151,439,095)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A151439000-151439095
+------
+Processing RNY4P26 with Transcript ID: not found
+RNY4P26 (): Genomic Sequence (chr10:94,047,038-94,047,124)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A94047038-94047124
+------
+Processing RNY4P27 with Transcript ID: ENST00000363341
+RNY4P27 (ENST00000363341): Genomic Sequence (13:95,336,106-95,336,201)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=13%3A95336106-95336201
+------
+Processing RNY4P28 with Transcript ID: ENST00000365281
+RNY4P28 (ENST00000365281): Genomic Sequence (13:60,187,738-60,187,830)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=13%3A60187738-60187830
+------
+Processing RNY4P29 with Transcript ID: ENST00000410801
+RNY4P29 (ENST00000410801): Genomic Sequence (13:58,527,655-58,527,751)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=13%3A58527655-58527751
+------
+Processing RNY4P30 with Transcript ID: ENST00000410216
+RNY4P30 (ENST00000410216): Genomic Sequence (13:49,889,634-49,889,728)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=13%3A49889634-49889728
+------
+Processing RNY4P31 with Transcript ID: not found
+RNY4P31 (): Genomic Sequence (chr13:60,816,701-60,816,787)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=13%3A60816701-60816787
+------
+Processing RNY4P34 with Transcript ID: ENST00000364779
+RNY4P34 (ENST00000364779): Genomic Sequence (2:200,373,175-200,373,269)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A200373175-200373269
+------
+Processing RNY4P36 with Transcript ID: ENST00000391116
+RNY4P36 (ENST00000391116): Genomic Sequence (17:76,703,632-76,703,727)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=17%3A76703632-76703727
+------
+Processing RNY4P37 with Transcript ID: ENST00000516225
+RNY4P37 (ENST00000516225): Genomic Sequence (18:46,077,004-46,077,099)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=18%3A46077004-46077099
+------
+Processing RNY5 with Transcript ID: not found
+RNY5 (): Genomic Sequence (chr7:148,941,488-148,941,570)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=7%3A148941488-148941570
+------
+Processing RNY5P1 with Transcript ID: not found
+RNY5P1 (): Genomic Sequence (chr1:35427810-35427891)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=1%3A35427810-35427891
+------
+Processing RNY5P2 with Transcript ID: not found
+RNY5P2 (): Genomic Sequence (chr2:197,543,376-197,543,434)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=2%3A197543376-197543434
+------
+Processing RNY5P3 with Transcript ID: not found
+RNY5P3 (): Genomic Sequence (chr3:170,842,098-170,842,171)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=3%3A170842098-170842171
+------
+Processing RNY5P4 with Transcript ID: not found
+RNY5P4 (): Genomic Sequence (chr4:129,860,420-129,860,499)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=4%3A129860420-129860499
+------
+Processing RNY5P5 with Transcript ID: not found
+RNY5P5 (): Genomic Sequence (chr6:25,192,413-25,192,485)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=13%3A25192413-25192485
+------
+Processing RNY5P6 with Transcript ID: not found
+RNY5P6 (): Genomic Sequence (chr8:43,152,976-43,153,050)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=8%3A43152976-43153050
+------
+Processing RNY5P7 with Transcript ID: not found
+RNY5P7 (): Genomic Sequence (chr10:101,166,209-101,166,282)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=10%3A101166209-101166282
+------
+Processing RNY5P8 with Transcript ID: not found
+RNY5P8 (): Genomic Sequence (chr13:102,819,999-102,820,065)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=13%3A102819999-102820065
+------
+Processing RNY5P9 with Transcript ID: not found
+RNY5P9 (): Genomic Sequence (chr16:58,728,596-58,728,675)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=16%3A58728596-58728675
+------
+Processing RNY5P10 with Transcript ID: not found
+RNY5P10 (): Genomic Sequence (chr19:36,049,146-36,049,218)
+UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=19%3A36049146-36049218

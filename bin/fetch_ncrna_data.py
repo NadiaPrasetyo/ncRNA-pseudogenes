@@ -2,8 +2,7 @@ import requests
 import biomart
 import time
 
-gene_group = 'RNY'
-#continue from RNY4P23, and before, cleanup, check the no ensembl transcript found, some of them can be found directly from UCSC
+gene_group = 'TRNA'
 
 # Function to search HGNC database for gene symbols starting with a query term.
 # This function performs an HTTP request to the HGNC database and retrieves gene symbols
@@ -148,6 +147,16 @@ def get_gene_locations(query, output_file):
 
         # Loop through each gene symbol to process
         for gene_symbol in gene_symbols:
+            
+            # #Extract the numeric part of the gene symbol for additional filtering
+            # substr_gene_symbol = gene_symbol[3:-2]
+            
+            # substr_gene_symbol = substr_gene_symbol.replace('P', '')
+                    
+            # #Skip symbols with no numeric part or if the numeric part is less than the specified amount
+            # if substr_gene_symbol == "" or int(substr_gene_symbol) < 5:
+            #     continue
+        
             # Fetch Ensembl transcript IDs for the gene symbol
             transcript_ids = fetch_ensembl_transcript_ids(gene_symbol)
             if not transcript_ids:
