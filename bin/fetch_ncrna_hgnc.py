@@ -3,7 +3,7 @@ import pyBigWig
 import time
 
 # Define gene group and BigBed file path
-gene_group = 'TRNA'
+gene_group = 'RN7SL'
 bigbed_file_path = 'data/hgnc.bb'  # Specify the path to your BigBed file
 
 
@@ -95,8 +95,8 @@ def search_hgnc_genes(query):
     if not query or not isinstance(query, str):
         print("Invalid query: must be a non-empty string.")
         return []
-    
-    url = f'https://rest.genenames.org/search/*{query}*+AND+(locus_type:%22RNA%2C%20transfer%22+OR+locus_type:%22pseudogene%22)+AND+status:%22Approved%22'
+    #AND+(locus_type:%22RNA%2C%20transfer%22+OR+locus_type:%22pseudogene%22)+
+    url = f'https://rest.genenames.org/search/*{query}*+AND+status:%22Approved%22'
     headers = {'Accept': 'application/json'}
     try:
         response = requests.get(url, headers=headers, timeout=10)
