@@ -7,7 +7,7 @@ import sys
 pattern = re.compile(r"(\d+|X|Y):([\d,]+)-([\d,]+)")
 
 # Path to the input file (update this path as needed)
-input_file = "data/RNU7_data_temp.txt"  # This will be set for your gene data or temp data file
+input_file = "data/RN7SL_data.txt"  # This will be set for your gene data or temp data file
 
 # Ensure the input file exists
 if not os.path.isfile(input_file):

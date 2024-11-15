@@ -673,4 +673,3 @@ UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&posit
 Processing RNU7-200P with Transcript ID: not found
 HGNC:45734 (0): Genomic Sequence (chr1:20,841,240-20,841,301)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr1%3A20841240-20841301
-------

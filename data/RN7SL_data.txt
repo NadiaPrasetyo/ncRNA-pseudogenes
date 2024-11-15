@@ -2745,4 +2745,3 @@ UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&posit
 Processing RN7SL870P with Transcript ID: not found
 HGNC:46886 (0): Genomic Sequence (chr3:47,560,228-47,560,523)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr3%3A47560228-47560523
-------
