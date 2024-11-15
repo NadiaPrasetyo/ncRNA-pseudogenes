@@ -14,7 +14,7 @@ def search_hgnc_genes(query):
         return []  # Return an empty list if the query is invalid
 
     # URL for HGNC REST API search with a wildcard on gene symbol that is APPROVED
-    url = f'https://rest.genenames.org/search/*{query}*+AND+(locus_type:%22RNA%2C%20transfer%22+OR+locus_type:%22pseudogene%22)+AND+status:%22Approved%22'
+    url = f'https://rest.genenames.org/search/*{query}*+AND+status:%22Approved%22'
     headers = {'Accept': 'application/json'}  # Set Accept header for JSON response
 
     try:
@@ -133,36 +133,44 @@ def generate_ucsc_link(chrom, start, end):
 # This function integrates all the above functions to search for genes, fetch transcript IDs,
 # and fetch genomic locations for each transcript.
 # Modified Main function to get gene locations based on a query and write to file
-def get_gene_locations(query, output_file):
-    # Validate input query
-    if not query or not isinstance(query, str):
-        print("Invalid query: must be a non-empty string.")
+# Modified Main function to get gene locations based on a query or a list of gene symbols
+def get_gene_locations(query=None, gene_symbols=None, output_file='data/output.txt'):
+    # Validate input query or gene_symbols list
+    if query and gene_symbols:
+        print("Error: Please provide either a query or a list of gene symbols, not both.")
         return
     
-    # Open the output file in write mode
-    with open(output_file, 'w') as file:
-        # Fetch gene symbols matching the query from HGNC database
-        gene_symbols = search_hgnc_genes(query)
-        if not gene_symbols:
+    if not query and not gene_symbols:
+        print("Error: Please provide either a query or a list of gene symbols.")
+        return
+
+    # If gene symbols are provided directly, use them
+    if gene_symbols:
+        gene_symbols_to_process = gene_symbols
+    else:
+        # Otherwise, fetch gene symbols from HGNC based on the query
+        gene_symbols_to_process = search_hgnc_genes(query)
+        if not gene_symbols_to_process:
             return  # Exit if no gene symbols were found
 
-        count = 0;
+    # Open the output file in write mode
+    with open(output_file, 'w') as file:
+        #count = 0  # To control which genes to process
+        
         # Loop through each gene symbol to process
-        for gene_symbol in gene_symbols:
-            count += 1;
+        for gene_symbol in gene_symbols_to_process:
+            # count += 1
+            
+            # # Skip genes before a specific count (if required)
+            # if count < 116:
+            #     continue
             
             # #Extract the numeric part of the gene symbol for additional filtering
-            # substr_gene_symbol = gene_symbol[3:-2]
-            
-            # substr_gene_symbol = substr_gene_symbol.replace('P', '')
+            # substr_gene_symbol = gene_symbol[5:-1]
                     
             # #Skip symbols with no numeric part or if the numeric part is less than the specified amount
             # if substr_gene_symbol == "" or int(substr_gene_symbol) < 5:
             #     continue
-            
-            #Skip genes before a specific count
-            if count < 116:
-                continue
         
             # Fetch Ensembl transcript IDs for the gene symbol
             transcript_ids = fetch_ensembl_transcript_ids(gene_symbol)
@@ -208,10 +216,9 @@ def get_gene_locations(query, output_file):
                 file.write("------\n")
 
 # Example usage
-# get_gene_locations('RNU2')  # Uncomment to run with specific query
-# get_gene_locations('RNU1-')
-# get_gene_locations('RNU4-')
-# get_gene_locations('RNU5')
-# get_gene_locations('RNU6')
-# get_gene_locations('RNU4ATAC', 'data/RNU4ATAC_data.txt') 
-get_gene_locations(f'{gene_group}', f'data/{gene_group}_data_temp.txt')
+# If you have a list of gene symbols to look up:
+gene_symbols_list = ['MT-TA', 'MT-TC', 'MT-TD', 'MT-TE', 'MT-TF', 'MT-TG', 'MT-TH', 'MT-TI', 'MT-TK', 'MT-TL1', 'MT-TL2', 'MT-TM', 'MT-TN', 'MT-TP', 'MT-TQ', 'MT-TS1', 'MT-TS2', 'MT-TT', 'MT-TV', 'MT-TW', 'MT-TY', 'NMTRL-TAA1-1', 'NMTRL-TAA4-1', 'NMTRQ-TTG3-1', 'NMTRQ-TTG5-1', 'NMTRQ-TTG14-1', 'NMTRS-TGA1-1', 'TRA-AGC9-2', 'TRA-AGC12-2', 'TRA-AGC13-1', 'TRA-AGC13-3', 'TRA-AGC16-1', 'TRA-AGC17-1', 'TRA-AGC18-1', 'TRA-AGC18-2', 'TRA-AGC19-1', 'TRA-AGC20-1', 'TRA-AGC21-1', 'TRA-AGC22-1', 'TRA-TGC8-1', 'TRC-GCA24-1', 'TRD-GTC4-1', 'TRD-GTC5-1', 'TRD-GTC6-1', 'TRD-GTC7-1', 'TRD-GTC8-1', 'TRD-GTC9-1', 'TRE-CTC3-1', 'TRE-CTC5-1', 'TRE-CTC6-1', 'TRE-CTC8-1', 'TRE-CTC17-1', 'TRE-TTC5-1', 'TRE-TTC8-2', 'TRE-TTC16-1', 'TRG-GCC5-1', 'TRG-GCC6-1', 'TRH-GTG2-1', 'TRH-GTG3-1', 'TRK-CTT10-1', 'TRK-CTT11-1', 'TRK-TTT11-1', 'TRK-TTT16-1', 'TRL-AAG5-1', 'TRL-AAG8-1', 'TRL-CAG3-1', 'TRN-ATT1-1', 'TRN-ATT1-2', 'TRN-GTT3-2', 'TRN-GTT11-1', 'TRN-GTT11-2', 'TRN-GTT12-1', 'TRN-GTT13-1', 'TRN-GTT14-1', 'TRN-GTT15-1', 'TRN-GTT15-2', 'TRN-GTT16-1', 'TRN-GTT16-2', 'TRN-GTT16-3', 'TRN-GTT16-4', 'TRN-GTT17-1', 'TRN-GTT18-1', 'TRN-GTT19-1', 'TRN-GTT19-2', 'TRN-GTT20-1', 'TRP-AGG3-1', 'TRQ-CTG8-1', 'TRQ-CTG8-2', 'TRQ-CTG8-3', 'TRQ-CTG10-1', 'TRQ-CTG12-1', 'TRQ-CTG14-1', 'TRQ-CTG15-1', 'TRQ-CTG18-1', 'TRR-CCT5-1', 'TRR-TCG6-1', 'TRS-AGA6-1', 'TRSUP-CTA1-1', 'TRSUP-TTA1-1', 'TRSUP-TTA2-1', 'TRT-AGT7-1', 'TRT-CGT6-1', 'TRU-TCA3-1', 'TRV-AAC7-1', 'TRV-CAC7-1', 'TRV-CAC9-1', 'TRV-CAC10-1', 'TRV-CAC12-1', 'TRW-CCA6-1', 'TRX-CAT2-1', 'TRY-GTA9-1', 'TRY-GTA10-1', 'TRE-TTC8-1', 'TRE-TTC11-1', 'TRE-TTC12-1', 'TRE-TTC13-1', 'TRF-GAA7-1', 'TRG-CCC8-1', 'TRK-CTT15-1', 'TRK-TTT12-1', 'TRL-AAG6-1', 'TRMT10BP1', 'TRMT112P8', 'TRN-GTT16-5', 'TRN-GTT21-1', 'TRQ-CTG17-1', 'TRR-CCT6-1', 'TRX-CAT3-1']
+get_gene_locations(gene_symbols=gene_symbols_list, output_file=f'data/{gene_group}_partial_data.txt')
+
+# If you want to use a query to search HGNC:
+# get_gene_locations(query=gene_group, output_file=f'data/{gene_group}_data.txt')

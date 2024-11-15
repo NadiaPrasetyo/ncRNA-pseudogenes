@@ -26,8 +26,10 @@ Pseudogenes derived from non-coding RNAs, particularly those related to the spli
   - **Comparative genomics data** from other mammals for conservation analysis.
 
 - `bin/`: Contains Python and R scripts for data processing, alignment, evolutionary analysis, and statistical tests:
+  - `fetch_ncrna_hgnc.py`: Retrieves and processes HGNC symbols found from the HGNC database, mapped onto the HGNC annotations found in UCSC database.
   - `fetch_ncrna_data.py`: Retrieves and preprocesses HGNC symbols into chromosomal locations by mapping to the Ensembl database.
   - `fetch_conservation_data.py.`: Collects conservation data of each nucleotide position within the location range of each gene symbol (phastCons30way).
+  - `cleanup_txt_data`: Scans through temporary data files to look into no location found or no ensembl transcript IDs found cases and removes incorrect lines. Prints a list of gene symbols where the location was not found in UCSC
   - `R-script_plotting.R`: Analyzes conservation of identified pseudogenes across vertebrate species to detect signs of negative selection.
 
 - `notebooks/`: Jupyter notebooks to explore and visualize the analysis results: @TODO
@@ -46,9 +48,12 @@ To set up this project, you will need Python 3.x (Python 3.10.12 was used), R, a
 - `requests 2.32.3`
 
 ### R Requirements
-- `ggplot2` (for visualizations)
-- `readr` 
-- `BiocManager`
+- `ggplot2 3.5.1` 
+- `readr 2.1.5` 
+- `BiocManager 1.30.25`
+- `dplyr 1.1.4`
+- `ggrepel 0.9.6`
+- `stringr 1.5.1`
 
 
 Install the required Python packages using:
@@ -96,7 +101,7 @@ Place all downloaded datasets in the `data/` folder.
 The project computationaly analyses the pseudogene annotations in HGNC along with conservation data to identify likely functional pseudogenes, indicating false annotation and clinical and diagnosis importance of these pseudogenes.
 
 ### Cleaning pseudogene symbols found
-Crosscheking with the HGNC database to check if symbols found are approved or withdrawn. Withdrawn symbols should be removed from the data in cleanup, while some found approved symbols do not have an associated ensembl transcript ID, must be added in manually by cross checking with UCSC genome browser. Cases like this include: RNU4-3P, RNU5B-5P, RNU5E-2P, RNU5F-5P, RNU6-52P, RNU6-69P, RNU6-1139P, 
+Crosscheking with the HGNC database to check if symbols found are approved or withdrawn. Withdrawn symbols should be removed from the data in cleanup, while some found approved symbols do not have an associated ensembl transcript ID, must be added in manually by cross checking with UCSC genome browser. Cases like this include: RNU4-3P, RNU5B-5P, RNU5E-2P, RNU5F-5P, RNU6-52P, RNU6-69P, RNU6-1139P.
 
 ### Conservation and Selection Analysis
 We use comparative genomics data to assess conservation levels across mammalian species, applying tools such as PhastCons scores to detect signs of negative selection. Negatively selected regions are likely to hold functional significance despite being labeled as pseudogenes.

@@ -2,6 +2,11 @@ import requests
 import pyBigWig
 import time
 
+# Define gene group and BigBed file path
+gene_group = 'TRNA'
+bigbed_file_path = 'data/hgnc.bb'  # Specify the path to your BigBed file
+
+
 # Function to fetch chromosomal locations based on the provided BigBed data
 def fetch_chromosomal_location(gene_symbol, bigbed_file):
     try:
@@ -15,12 +20,10 @@ def fetch_chromosomal_location(gene_symbol, bigbed_file):
                 # The gene symbol is embedded within a tab-separated string in the name field
                 if gene_symbol in name:
                     # Extract the gene symbol and transcript ID from the name field
-                    # Assuming the gene symbol is the first part of the name (before any spaces or tabs)
                     parts = name.split()
                     gene_name = parts[0]  # Assuming gene symbol is the first element
                     
-                    # Extract transcript ID from the name if available (adjust based on your format)
-                    # In the case that the transcript ID is not part of the name, we return "not found"
+                    # Extract transcript ID from the name if available
                     transcript_id = parts[1] if len(parts) > 1 else "not found"
                     
                     return chrom, start, end, gene_name, transcript_id
@@ -31,6 +34,11 @@ def fetch_chromosomal_location(gene_symbol, bigbed_file):
 
 # Generate UCSC Genome Browser link
 def generate_ucsc_link(chrom, start, end):
+    # Adjust the chromosome name if it's X or Y
+    if chrom == "chrX":
+        chrom = "X"
+    elif chrom == "chrY":
+        chrom = "Y"
     return f"https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position={chrom}%3A{start}-{end}"
 
 # Main function to get gene locations and print to the console
@@ -108,9 +116,6 @@ def search_hgnc_genes(query):
         print(f"Error parsing response: {e}")
         return []
 
-# Define gene group and BigBed file path
-gene_group = 'TRNA'
-bigbed_file_path = 'data/hgnc.bb'  # Specify the path to your BigBed file
 
 # Call function with the gene group and output file path
 get_gene_locations(gene_group, f'data/{gene_group}_data_temp.txt', bigbed_file_path)
