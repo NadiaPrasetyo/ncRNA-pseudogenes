@@ -3,7 +3,7 @@ import pyBigWig
 import time
 
 # Define gene group and BigBed file path
-gene_group = 'RNU7'
+gene_group = 'RN7SK'
 bigbed_file_path = 'data/hgnc.bb'  # Specify the path to your BigBed file
 
 
