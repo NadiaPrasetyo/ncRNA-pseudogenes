@@ -3,10 +3,27 @@ library(dplyr)
 library(readr)
 
 # Define the gene groups and conservation types
-gene_groups <- c("RNU1", "RNU2", "RNU4", "RNU5", "RNU6", "RNU4ATAC", "RNU6ATAC", "RNU11", "RNU12", "VTRNA")
+gene_groups <- c("RNU1", "RNU2", "RNU4", "RNU5", "RNU6", "RNU4ATAC", "RNU6ATAC", "RNU11", "RNU12", "VTRNA",
+                 "RNY","TRNA","RN7SL","RNU7","RN7SK")
 conservation_types <- c("phastCons30", "phyloP100", "phyloP447")
 
-# Create an empty data frame to store the test results with sample counts
+# Define the list of exceptions (genes that are pseudogenes but do not end with "P",from TRNA gene groups)
+exception_genes <- c('TRA-AGC23-1', 'TRA-TGC9-1', 'TRC-ACA1-1', 'TRC-GCA25-1', 'TRE-CTC7-1', 
+                     'TRE-CTC16-1', 'TRE-TTC6-1', 'TRE-TTC7-1', 'TRE-TTC8-1', 'TRE-TTC9-1',
+                     'TRE-TTC10-1', 'TRE-TTC11-1', 'TRE-TTC12-1', 'TRE-TTC13-1', 'TRF-GAA7-1',
+                     'TRF-GAA8-1', 'TRF-GAA9-1', 'TRF-GAA10-1', 'TRF-GAA11-1', 'TRF-GAA12-1',
+                     'TRG-CCC8-1', 'TRG-TCC5-1', 'TRG-TCC6-1', 'TRI-AAT10-1', 'TRI-AAT11-1', 
+                     'TRK-CTT12-1', 'TRK-CTT13-1', 'TRK-CTT14-1', 'TRK-CTT15-1', 'TRK-CTT16-1',
+                     'TRK-TTT10-1', 'TRK-TTT12-1', 'TRK-TTT13-1', 'TRK-TTT15-1', 'TRL-AAG6-1', 
+                     'TRL-AAG7-1', 'TRL-TAA5-1', 'TRL-TAG4-1', 'TRN-GTT16-5', 'TRN-GTT21-1',
+                     'TRN-GTT22-1', 'TRN-GTT23-1', 'TRQ-CTG9-1', 'TRQ-CTG11-1', 'TRQ-CTG13-1', 
+                     'TRQ-CTG16-1', 'TRQ-CTG17-1', 'TRQ-TTG5-1', 'TRQ-TTG6-1', 'TRQ-TTG10-1',
+                     'TRR-CCT6-1', 'TRR-CCT7-1', 'TRR-CCT9-1', 'TRS-ACT1-1', 'TRUND-NNN3-1',
+                     'TRUND-NNN4-1', 'TRUND-NNN6-1', 'TRUND-NNN7-1', 'TRUND-NNN8-1', 'TRUND-NNN9-1', 
+                     'TRUND-NNN10-1', 'TRV-CAC11-1', 'TRV-CAC11-2', 'TRX-CAT3-1', 'TRY-GTA11-1',
+                     'TRY-GTA12-1')
+
+# Create an empty data frame to store the test results with sample counts (without Gene_Type column)
 test_results <- data.frame(Conservation_Type = character(),
                            Gene_group = character(),
                            Statistic = numeric(),
@@ -49,9 +66,9 @@ for (conservation in conservation_types) {
     # Read the data for the current gene group and conservation type
     data <- read_csv(file_path)
     
-    # Create a new column 'Gene_Type' to differentiate functional genes and pseudogenes
+    # Create a new column 'Gene_Type' to differentiate functional genes and pseudogenes (no need to add this column to results)
     data <- data %>%
-      mutate(Gene_Type = ifelse(grepl("P$", Gene), "Pseudogene", "Functional"))
+      mutate(Gene_Type = ifelse(grepl("P", Gene) & !Gene %in% exception_genes, "Pseudogene", "Functional"))    
     
     # Separate functional genes and pseudogenes
     functional_genes <- data$Median_Conservation[data$Gene_Type == "Functional"]
@@ -67,31 +84,53 @@ for (conservation in conservation_types) {
     pooled_functional_count <- pooled_functional_count + functional_count
     pooled_pseudogene_count <- pooled_pseudogene_count + pseudogene_count
     
-    # Perform KS test (even with insufficient data, we will just record NA values)
-    ks_result <- ks.test(functional_genes, pseudogenes)
-    test_results <- rbind(test_results, data.frame(Conservation_Type = conservation,
-                                                   Gene_group = gene,
-                                                   Statistic = ks_result$statistic,
-                                                   p_value = ks_result$p.value,
-                                                   Functional_Sample_Count = functional_count,
-                                                   Pseudogene_Sample_Count = pseudogene_count,
-                                                   stringsAsFactors = FALSE))
+    # Perform KS test only if both groups have data
+    if (functional_count > 0 && pseudogene_count > 0) {
+      ks_result <- ks.test(functional_genes, pseudogenes)
+      test_results <- rbind(test_results, data.frame(Conservation_Type = conservation,
+                                                     Gene_group = gene,
+                                                     Statistic = ks_result$statistic,
+                                                     p_value = ks_result$p.value,
+                                                     Functional_Sample_Count = functional_count,
+                                                     Pseudogene_Sample_Count = pseudogene_count,
+                                                     stringsAsFactors = FALSE))
+    } else {
+      # If either group is empty, handle it here (e.g., no KS test performed)
+      test_results <- rbind(test_results, data.frame(Conservation_Type = conservation,
+                                                     Gene_group = gene,
+                                                     Statistic = NA,
+                                                     p_value = NA,
+                                                     Functional_Sample_Count = functional_count,
+                                                     Pseudogene_Sample_Count = pseudogene_count,
+                                                     stringsAsFactors = FALSE))
+      cat("Skipping KS test for gene", gene, "due to insufficient data\n")
+    }
     
     # Print a message indicating that the gene has been processed
     cat("Processed:", gene, "in conservation type", conservation, "\n")
   }
   
-  # Perform the KS test on pooled data (always attempt KS, even if sample size is low)
-  ks_result <- ks.test(pooled_functional, pooled_pseudogenes)
-  
-  # Store the pooled test result with sample counts
-  test_results <- rbind(test_results, data.frame(Conservation_Type = conservation,
-                                                 Gene_group = "Pooled",
-                                                 Statistic = ks_result$statistic,
-                                                 p_value = ks_result$p.value,
-                                                 Functional_Sample_Count = pooled_functional_count,
-                                                 Pseudogene_Sample_Count = pooled_pseudogene_count,
-                                                 stringsAsFactors = FALSE))
+  # Perform the KS test on pooled data (only if both groups have data)
+  if (pooled_functional_count > 0 && pooled_pseudogene_count > 0) {
+    ks_result <- ks.test(pooled_functional, pooled_pseudogenes)
+    test_results <- rbind(test_results, data.frame(Conservation_Type = conservation,
+                                                   Gene_group = "Pooled",
+                                                   Statistic = ks_result$statistic,
+                                                   p_value = ks_result$p.value,
+                                                   Functional_Sample_Count = pooled_functional_count,
+                                                   Pseudogene_Sample_Count = pooled_pseudogene_count,
+                                                   stringsAsFactors = FALSE))
+  } else {
+    # If either group is empty, handle it here for pooled data
+    test_results <- rbind(test_results, data.frame(Conservation_Type = conservation,
+                                                   Gene_group = "Pooled",
+                                                   Statistic = NA,
+                                                   p_value = NA,
+                                                   Functional_Sample_Count = pooled_functional_count,
+                                                   Pseudogene_Sample_Count = pooled_pseudogene_count,
+                                                   stringsAsFactors = FALSE))
+    cat("Skipping KS test for pooled data due to insufficient data\n")
+  }
 }
 
 # Write the results into a CSV file

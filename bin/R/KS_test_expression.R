@@ -3,11 +3,26 @@ library(dplyr)
 library(readr)
 
 # Define the gene groups
-gene_groups <- c("RNU1", "RNU2", "RNU4", "RNU5", "RNU6", "RNU4ATAC", "RNU6ATAC", "RNU11", "RNU12", "VTRNA")
+gene_groups <- c("RNU1", "RNU2", "RNU4", "RNU5", "RNU6", "RNU4ATAC", "RNU6ATAC", "RNU11", "RNU12", "VTRNA",
+                 "RNY","TRNA","RN7SL","RNU7","RN7SK")
+# Define the list of exceptions (genes that are pseudogenes but do not end with "P",from TRNA gene groups)
+exception_genes <- c('TRA-AGC23-1', 'TRA-TGC9-1', 'TRC-ACA1-1', 'TRC-GCA25-1', 'TRE-CTC7-1', 
+                     'TRE-CTC16-1', 'TRE-TTC6-1', 'TRE-TTC7-1', 'TRE-TTC8-1', 'TRE-TTC9-1',
+                     'TRE-TTC10-1', 'TRE-TTC11-1', 'TRE-TTC12-1', 'TRE-TTC13-1', 'TRF-GAA7-1',
+                     'TRF-GAA8-1', 'TRF-GAA9-1', 'TRF-GAA10-1', 'TRF-GAA11-1', 'TRF-GAA12-1',
+                     'TRG-CCC8-1', 'TRG-TCC5-1', 'TRG-TCC6-1', 'TRI-AAT10-1', 'TRI-AAT11-1', 
+                     'TRK-CTT12-1', 'TRK-CTT13-1', 'TRK-CTT14-1', 'TRK-CTT15-1', 'TRK-CTT16-1',
+                     'TRK-TTT10-1', 'TRK-TTT12-1', 'TRK-TTT13-1', 'TRK-TTT15-1', 'TRL-AAG6-1', 
+                     'TRL-AAG7-1', 'TRL-TAA5-1', 'TRL-TAG4-1', 'TRN-GTT16-5', 'TRN-GTT21-1',
+                     'TRN-GTT22-1', 'TRN-GTT23-1', 'TRQ-CTG9-1', 'TRQ-CTG11-1', 'TRQ-CTG13-1', 
+                     'TRQ-CTG16-1', 'TRQ-CTG17-1', 'TRQ-TTG5-1', 'TRQ-TTG6-1', 'TRQ-TTG10-1',
+                     'TRR-CCT6-1', 'TRR-CCT7-1', 'TRR-CCT9-1', 'TRS-ACT1-1', 'TRUND-NNN3-1',
+                     'TRUND-NNN4-1', 'TRUND-NNN6-1', 'TRUND-NNN7-1', 'TRUND-NNN8-1', 'TRUND-NNN9-1', 
+                     'TRUND-NNN10-1', 'TRV-CAC11-1', 'TRV-CAC11-2', 'TRX-CAT3-1', 'TRY-GTA11-1',
+                     'TRY-GTA12-1')
 
 # Create an empty data frame to store the test results
 test_results <- data.frame(Gene_group = character(),
-                           Test = character(),
                            Statistic = numeric(),
                            p_value = numeric(),
                            Functional_n = integer(),
@@ -26,7 +41,7 @@ for (gene in gene_groups) {
   
   # Create a new column 'Gene_Type' to differentiate functional genes and pseudogenes
   data <- data %>%
-    mutate(Gene_Type = ifelse(grepl("P$", Gene), "Pseudogene", "Functional"))
+    mutate(Gene_Type = ifelse(grepl("P", Gene) & !Gene %in% exception_genes, "Pseudogene", "Functional"))    
   
   # Separate functional genes and pseudogenes
   functional_genes <- data$`Max Expression`[data$Gene_Type == "Functional"]
@@ -51,7 +66,6 @@ for (gene in gene_groups) {
   # If KS test was successful, store the results, otherwise, store NA
   if (!is.null(ks_result)) {
     test_results <- rbind(test_results, data.frame(Gene_group = gene,
-                                                   Test = "KS",
                                                    Statistic = ks_result$statistic,
                                                    p_value = ks_result$p.value,
                                                    Functional_n = functional_n,
@@ -59,7 +73,6 @@ for (gene in gene_groups) {
                                                    stringsAsFactors = FALSE))
   } else {
     test_results <- rbind(test_results, data.frame(Gene_group = gene,
-                                                   Test = "KS",
                                                    Statistic = NA,
                                                    p_value = NA,
                                                    Functional_n = functional_n,
@@ -85,7 +98,6 @@ pooled_ks_result <- tryCatch({
 # If KS test on pooled data was successful, store the results, otherwise, store NA
 if (!is.null(pooled_ks_result)) {
   test_results <- rbind(test_results, data.frame(Gene_group = "All_Genes_Pooled",
-                                                 Test = "KS",
                                                  Statistic = pooled_ks_result$statistic,
                                                  p_value = pooled_ks_result$p.value,
                                                  Functional_n = pooled_functional_n,
@@ -93,7 +105,6 @@ if (!is.null(pooled_ks_result)) {
                                                  stringsAsFactors = FALSE))
 } else {
   test_results <- rbind(test_results, data.frame(Gene_group = "All_Genes_Pooled",
-                                                 Test = "KS",
                                                  Statistic = NA,
                                                  p_value = NA,
                                                  Functional_n = pooled_functional_n,
