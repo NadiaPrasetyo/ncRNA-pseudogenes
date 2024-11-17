@@ -9,8 +9,11 @@ library(stringr)
 #colors <- c("cornflowerblue", "firebrick2", "goldenrod1", "mediumseagreen", "mediumorchid2")  # Different colors for each dataset
 
 # List of datasets and corresponding colors
-datasets <- c("RNU4ATAC", "RNU6ATAC", "RNU11", "RNU12", "VTRNA")
-colors <- c("maroon1", "cyan2", "sienna", "snow3", "green4")
+#datasets <- c("RNU4ATAC", "RNU6ATAC", "RNU11", "RNU12", "VTRNA")
+#colors <- c("maroon1", "cyan2", "sienna", "snow3", "green4")
+
+datasets <- c("RNY","TRNA","RN7SL","RNU7","RN7SK")
+colors <- c("dodgerblue4", "darkorchid4", "lightsalmon4", "red3", "darkolivegreen")
 
 # Loop through each dataset
 for (i in 1:length(datasets)) {
