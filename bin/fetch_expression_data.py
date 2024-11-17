@@ -66,7 +66,7 @@ rna_seq_files = [
     "data/GTEX-RNAseq/GTEX-ZVT2-0326-SM-5E44G.Ovary.RNAseq.bw"
 ]
 
-gene_group = "VTRNA" #Update on the gene group you're working on
+gene_group = "RN7SK" #Update on the gene group you're working on
 
 #Alter these file paths for each specified gene groups
 # Path to input gene file and output CSV file
@@ -75,7 +75,7 @@ output_csv = f"data/{gene_group}_expr.csv"
 
 # Regular expressions for extracting gene name and genomic location
 gene_pattern = re.compile(r"Processing (.+?) with Transcript ID")
-location_pattern = re.compile(r"(\d+|X|Y):([\d,]+)-([\d,]+)")
+location_pattern = re.compile(r"(chr[\w\d_]+|\d+|X|Y|MT):([\d,]+)-([\d,]+)")
 
 # Step 1: Parse genes from the input file
 genes = []
@@ -97,9 +97,15 @@ try:
             if not location_match:
                 print(f"Warning: No location found for gene {gene_name} in section:\n{section}\n")
                 continue
-            chromosome = f"chr{location_match.group(1)}"
-            start = int(location_match.group(2).replace(',', ''))
-            end = int(location_match.group(3).replace(',', ''))
+            chromosome = location_match.group(1)
+            start = int(location_match.group(2).replace(",", ""))  # Remove commas and convert to int
+            end = int(location_match.group(3).replace(",", ""))    # Remove commas and convert to int
+
+            # Standardize chromosome naming
+            if chromosome == "MT":
+                chromosome = "chrM"
+            elif not chromosome.startswith("chr"):
+                chromosome = f"chr{chromosome}"
             
             # Append parsed gene details to the genes list
             genes.append({"name": gene_name, "chromosome": chromosome, "start": start, "end": end})
@@ -117,14 +123,30 @@ for file_path in rna_seq_files:
         with pyBigWig.open(file_path) as bw:
             # Extract tissue/body location from the filename (e.g., "Esophagus_Muscularis")
             body_location = os.path.basename(file_path).split('.')[1].replace('_', ' ')
-            
+            chrom_sizes = bw.chroms()
             for gene in genes:
                 chrom = gene["chromosome"]
                 start = gene["start"]
                 end = gene["end"]
+                #print(f"Processing {gene['name']} at {chrom}:{start}-{end}")
+
+                # Validate bounds
+                if chrom not in chrom_sizes or start < 0 or end > chrom_sizes[chrom]:
+                    print(f"Skipping invalid interval {chrom}:{start}-{end} for gene {gene['name']} in {file_path}")
+                    # if_yes = input("Do you want to continue? (y/n): ")
+                    # if if_yes == 'n':
+                    #     exit()
+                    # else:
+                    #     continue
+                    continue
                 
                 # Fetch expression values in the specified genomic range
-                values = bw.values(chrom, start, end)
+                try:
+                    values = bw.values(chrom, start, end)
+                except RuntimeError as e:
+                    print(f"No data available for {chrom}:{start}-{end} in {file_path}: {e}")
+                    continue
+                
                 valid_values = [value for value in values if value is not None]
                 
                 # Update max expression if new value is higher
@@ -133,11 +155,11 @@ for file_path in rna_seq_files:
                     if max_value > gene_max_info[gene["name"]]["max_value"]:
                         gene_max_info[gene["name"]]["max_value"] = max_value
                         gene_max_info[gene["name"]]["location"] = body_location
-                
+                              
     except FileNotFoundError:
         print(f"File not found: {file_path}")
-    except pyBigWig.open.Error as e:
-        print(f"Error opening {file_path}: {e}")
+    except RuntimeError as e:
+        print(f"Error processing {file_path}: {e}")
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
 

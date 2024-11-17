@@ -1,0 +1,295 @@
+Gene,Max Expression,Location
+RN7SK,9.0,Muscle Skeletal
+RN7SKP1,70.0,Artery Coronary
+RN7SKP2,9.0,Muscle Skeletal
+RN7SKP3,1.0,Brain Cerebellar Hemisphere
+RN7SKP4,2.0,Testis
+RN7SKP5,11.0,Brain Cerebellar Hemisphere
+RN7SKP6,1.0,Fallopian Tube
+RN7SKP7,11.0,Kidney Medulla
+RN7SKP8,4.0,Artery Coronary
+RN7SKP9,2.0,Whole Blood
+RN7SKP10,2.0,Brain Substantia nigra
+RN7SKP11,5.0,Testis
+RN7SKP12,1.0,Cells Cultured fibroblasts
+RN7SKP13,2.0,Testis
+RN7SKP14,1.0,Testis
+RN7SKP15,0.0,Esophagus Muscularis
+RN7SKP16,70.0,Artery Coronary
+RN7SKP17,12.0,Breast Mammary Tissue
+RN7SKP18,0.0,Esophagus Muscularis
+RN7SKP19,0.0,Esophagus Muscularis
+RN7SKP20,9.0,Heart Left Ventricle
+RN7SKP21,2.0,Esophagus Gastroesophageal Junction
+RN7SKP22,1.0,Kidney Cortex
+RN7SKP23,1.0,Testis
+RN7SKP24,1.0,Brain Putamen basal ganglia
+RN7SKP25,3.0,Pituitary
+RN7SKP26,9.0,Muscle Skeletal
+RN7SKP27,4.0,Nerve Tibial
+RN7SKP28,5.0,Esophagus Gastroesophageal Junction
+RN7SKP29,1.0,Fallopian Tube
+RN7SKP30,11.0,Testis
+RN7SKP31,1.0,Testis
+RN7SKP32,1.0,Testis
+RN7SKP33,0.0,Esophagus Muscularis
+RN7SKP34,0.0,Esophagus Muscularis
+RN7SKP35,2.0,Skin Not Sun Exposed Suprapubic
+RN7SKP36,1.0,Skin Sun Exposed Lower leg
+RN7SKP37,1.0,Brain Cerebellar Hemisphere
+RN7SKP38,5.0,Testis
+RN7SKP39,2.0,Skin Not Sun Exposed Suprapubic
+RN7SKP40,3.0,Artery Aorta
+RN7SKP42,3.0,Adipose Subcutaneous
+RN7SKP43,3.0,Artery Aorta
+RN7SKP44,6.0,Artery Aorta
+RN7SKP45,2.0,Brain Anterior cingulate cortex BA24
+RN7SKP46,1.0,Pancreas
+RN7SKP47,2.0,Brain Caudate basal ganglia
+RN7SKP48,1.0,Colon Transverse
+RN7SKP49,2.0,Testis
+RN7SKP50,3.0,Adipose Subcutaneous
+RN7SKP51,25.0,Lung
+RN7SKP52,2.0,Esophagus Muscularis
+RN7SKP53,3.0,Brain Cortex
+RN7SKP54,21.0,Small Intestine Terminal Ileum
+RN7SKP55,11.0,Brain Cerebellar Hemisphere
+RN7SKP56,4.0,Brain Cortex
+RN7SKP57,5.0,Brain Cerebellar Hemisphere
+RN7SKP58,2.0,Lung
+RN7SKP59,0.0,Esophagus Muscularis
+RN7SKP60,2.0,Kidney Cortex
+RN7SKP61,0.0,Esophagus Muscularis
+RN7SKP62,0.0,Esophagus Muscularis
+RN7SKP63,13.0,Testis
+RN7SKP64,4.0,Brain Amygdala
+RN7SKP65,1.0,Fallopian Tube
+RN7SKP66,3.0,Testis
+RN7SKP67,1.0,Brain Nucleus accumbens basal ganglia
+RN7SKP68,2.0,Testis
+RN7SKP69,5.0,Esophagus Gastroesophageal Junction
+RN7SKP70,948.0,Brain Cerebellum
+RN7SKP71,143.0,Brain Nucleus accumbens basal ganglia
+RN7SKP72,1.0,Adipose Subcutaneous
+RN7SKP73,3.0,Brain Cerebellar Hemisphere
+RN7SKP74,14.0,Brain Cortex
+RN7SKP75,3.0,Esophagus Gastroesophageal Junction
+RN7SKP76,0.0,Esophagus Muscularis
+RN7SKP77,2.0,Brain Hippocampus
+RN7SKP78,11.0,Kidney Medulla
+RN7SKP79,2.0,Adrenal Gland
+RN7SKP80,54.0,Artery Aorta
+RN7SKP81,2.0,Brain Hippocampus
+RN7SKP82,2.0,Testis
+RN7SKP83,6.0,Brain Hippocampus
+RN7SKP85,2.0,Skin Not Sun Exposed Suprapubic
+RN7SKP86,3.0,Brain Cerebellum
+RN7SKP87,3.0,Testis
+RN7SKP88,4.0,Artery Coronary
+RN7SKP89,4.0,Testis
+RN7SKP90,2.0,Kidney Cortex
+RN7SKP91,2.0,Whole Blood
+RN7SKP92,1.0,Vagina
+RN7SKP93,2.0,Brain Spinal cord cervical c-1
+RN7SKP94,1.0,Pancreas
+RN7SKP95,9.0,Nerve Tibial
+RN7SKP96,3.0,Brain Hypothalamus
+RN7SKP97,13.0,Nerve Tibial
+RN7SKP98,2.0,Testis
+RN7SKP99,3.0,Brain Cerebellar Hemisphere
+RN7SKP100,1.0,Brain Putamen basal ganglia
+RN7SKP101,0.0,Esophagus Muscularis
+RN7SKP102,0.0,Esophagus Muscularis
+RN7SKP103,1.0,Stomach
+RN7SKP104,1.0,Lung
+RN7SKP105,2.0,Kidney Medulla
+RN7SKP106,11.0,Brain Cortex
+RN7SKP107,1.0,Brain Substantia nigra
+RN7SKP108,1.0,Spleen
+RN7SKP109,1.0,Pancreas
+RN7SKP110,5.0,Colon Transverse
+RN7SKP111,0.0,Esophagus Muscularis
+RN7SKP112,2.0,Kidney Cortex
+RN7SKP113,7.0,Testis
+RN7SKP114,4.0,Artery Aorta
+RN7SKP115,5.0,Testis
+RN7SKP116,33.0,Skin Not Sun Exposed Suprapubic
+RN7SKP117,0.0,Esophagus Muscularis
+RN7SKP118,7.0,Testis
+RN7SKP119,3.0,Nerve Tibial
+RN7SKP120,0.0,Esophagus Muscularis
+RN7SKP121,2.0,Testis
+RN7SKP122,1.0,Lung
+RN7SKP123,1.0,Cells Cultured fibroblasts
+RN7SKP124,3.0,Brain Frontal Cortex BA9
+RN7SKP125,1.0,Testis
+RN7SKP126,1.0,Colon Sigmoid
+RN7SKP127,11.0,Colon Transverse
+RN7SKP128,1.0,Skin Not Sun Exposed Suprapubic
+RN7SKP129,4.0,Brain Putamen basal ganglia
+RN7SKP130,4.0,Artery Aorta
+RN7SKP131,1.0,Testis
+RN7SKP132,2.0,Testis
+RN7SKP133,1.0,Artery Tibial
+RN7SKP134,2.0,Colon Transverse
+RN7SKP135,0.0,Esophagus Muscularis
+RN7SKP136,5.0,Prostate
+RN7SKP137,4.0,Lung
+RN7SKP139,1.0,Brain Nucleus accumbens basal ganglia
+RN7SKP140,6.0,Brain Cortex
+RN7SKP141,1.0,Small Intestine Terminal Ileum
+RN7SKP142,0.0,Esophagus Muscularis
+RN7SKP143,1.0,Testis
+RN7SKP144,2.0,Brain Putamen basal ganglia
+RN7SKP145,2.0,Stomach
+RN7SKP146,3.0,Testis
+RN7SKP147,3.0,Testis
+RN7SKP148,1.0,Testis
+RN7SKP149,0.0,Esophagus Muscularis
+RN7SKP150,25.0,Brain Cortex
+RN7SKP151,4.0,Skin Sun Exposed Lower leg
+RN7SKP152,0.0,Esophagus Muscularis
+RN7SKP153,2.0,Kidney Cortex
+RN7SKP154,2.0,Brain Spinal cord cervical c-1
+RN7SKP155,0.0,Esophagus Muscularis
+RN7SKP156,0.0,Esophagus Muscularis
+RN7SKP157,0.0,Esophagus Muscularis
+RN7SKP158,2.0,Artery Coronary
+RN7SKP159,1.0,Nerve Tibial
+RN7SKP160,15.0,Brain Cerebellar Hemisphere
+RN7SKP161,14.0,Adipose Subcutaneous
+RN7SKP162,1.0,Vagina
+RN7SKP163,8.0,Testis
+RN7SKP164,0.0,Esophagus Muscularis
+RN7SKP165,4.0,Small Intestine Terminal Ileum
+RN7SKP166,0.0,Esophagus Muscularis
+RN7SKP167,1.0,Brain Cerebellar Hemisphere
+RN7SKP168,2.0,Testis
+RN7SKP169,4.0,Testis
+RN7SKP170,2.0,Artery Aorta
+RN7SKP171,2.0,Testis
+RN7SKP172,12.0,Breast Mammary Tissue
+RN7SKP173,29.0,Testis
+RN7SKP174,0.0,Esophagus Muscularis
+RN7SKP175,118.0,Breast Mammary Tissue
+RN7SKP176,200.0,Small Intestine Terminal Ileum
+RN7SKP177,1.0,Uterus
+RN7SKP178,1.0,Testis
+RN7SKP179,7.0,Brain Cortex
+RN7SKP180,2.0,Skin Not Sun Exposed Suprapubic
+RN7SKP181,0.0,Esophagus Muscularis
+RN7SKP182,1.0,Testis
+RN7SKP183,0.0,Esophagus Muscularis
+RN7SKP184,2.0,Liver
+RN7SKP185,4.0,Small Intestine Terminal Ileum
+RN7SKP186,2.0,Testis
+RN7SKP187,11.0,Kidney Medulla
+RN7SKP188,0.0,Esophagus Muscularis
+RN7SKP189,0.0,Esophagus Muscularis
+RN7SKP190,0.0,Esophagus Muscularis
+RN7SKP191,2.0,Adipose Visceral Omentum
+RN7SKP192,1.0,Testis
+RN7SKP193,2.0,Cells EBV-transformed lymphocytes
+RN7SKP194,0.0,Esophagus Muscularis
+RN7SKP195,5.0,Heart Left Ventricle
+RN7SKP196,1.0,Pancreas
+RN7SKP197,6.0,Thyroid
+RN7SKP198,5.0,Artery Aorta
+RN7SKP199,0.0,Esophagus Muscularis
+RN7SKP200,0.0,Esophagus Muscularis
+RN7SKP202,9.0,Heart Left Ventricle
+RN7SKP203,123.0,Artery Aorta
+RN7SKP204,2.0,Testis
+RN7SKP205,2.0,Heart Left Ventricle
+RN7SKP206,2.0,Artery Tibial
+RN7SKP207,0.0,Esophagus Muscularis
+RN7SKP208,14.0,Colon Sigmoid
+RN7SKP209,7.0,Pituitary
+RN7SKP210,3.0,Skin Sun Exposed Lower leg
+RN7SKP211,1.0,Skin Sun Exposed Lower leg
+RN7SKP212,0.0,Esophagus Muscularis
+RN7SKP213,3.0,Testis
+RN7SKP214,14.0,Brain Nucleus accumbens basal ganglia
+RN7SKP216,1.0,Breast Mammary Tissue
+RN7SKP217,2.0,Artery Aorta
+RN7SKP218,0.0,Esophagus Muscularis
+RN7SKP219,2.0,Esophagus Gastroesophageal Junction
+RN7SKP220,4.0,Brain Substantia nigra
+RN7SKP221,5.0,Testis
+RN7SKP222,2.0,Testis
+RN7SKP223,0.0,Esophagus Muscularis
+RN7SKP224,1.0,Nerve Tibial
+RN7SKP225,7.0,Brain Nucleus accumbens basal ganglia
+RN7SKP226,1.0,Brain Caudate basal ganglia
+RN7SKP227,2.0,Artery Tibial
+RN7SKP228,0.0,Esophagus Muscularis
+RN7SKP229,1.0,Kidney Cortex
+RN7SKP230,23.0,Testis
+RN7SKP231,0.0,Esophagus Muscularis
+RN7SKP232,6.0,Nerve Tibial
+RN7SKP233,2.0,Brain Cerebellum
+RN7SKP234,3.0,Artery Aorta
+RN7SKP235,5.0,Testis
+RN7SKP236,0.0,Esophagus Muscularis
+RN7SKP237,9.0,Testis
+RN7SKP238,1.0,Testis
+RN7SKP239,12.0,Brain Nucleus accumbens basal ganglia
+RN7SKP240,3.0,Artery Coronary
+RN7SKP241,37.0,Brain Cortex
+RN7SKP242,0.0,Esophagus Muscularis
+RN7SKP243,4.0,Prostate
+RN7SKP244,4.0,Cervix Endocervix
+RN7SKP245,3.0,Fallopian Tube
+RN7SKP246,1.0,Esophagus Muscularis
+RN7SKP247,1.0,Brain Putamen basal ganglia
+RN7SKP248,4.0,Testis
+RN7SKP249,5.0,Brain Substantia nigra
+RN7SKP250,1.0,Nerve Tibial
+RN7SKP251,4.0,Brain Substantia nigra
+RN7SKP252,1.0,Vagina
+RN7SKP253,2.0,Testis
+RN7SKP254,3.0,Nerve Tibial
+RN7SKP255,17.0,Brain Cerebellar Hemisphere
+RN7SKP256,4.0,Nerve Tibial
+RN7SKP257,5.0,Testis
+RN7SKP258,2.0,Artery Coronary
+RN7SKP259,3.0,Pituitary
+RN7SKP260,0.0,Esophagus Muscularis
+RN7SKP261,6.0,Brain Cortex
+RN7SKP262,1.0,Prostate
+RN7SKP263,2.0,Skin Sun Exposed Lower leg
+RN7SKP264,2.0,Esophagus Muscularis
+RN7SKP265,1.0,Testis
+RN7SKP266,3.0,Small Intestine Terminal Ileum
+RN7SKP267,2.0,Nerve Tibial
+RN7SKP268,19.0,Colon Transverse
+RN7SKP269,9.0,Muscle Skeletal
+RN7SKP270,1.0,Testis
+RN7SKP271,9.0,Stomach
+RN7SKP272,4.0,Nerve Tibial
+RN7SKP273,6.0,Nerve Tibial
+RN7SKP275,8.0,Cervix Endocervix
+RN7SKP276,47.0,Brain Nucleus accumbens basal ganglia
+RN7SKP277,0.0,Esophagus Muscularis
+RN7SKP278,0.0,Esophagus Muscularis
+RN7SKP279,0.0,Esophagus Muscularis
+RN7SKP280,1.0,Testis
+RN7SKP281,7.0,Testis
+RN7SKP282,1.0,Colon Sigmoid
+RN7SKP283,4.0,Adipose Visceral Omentum
+RN7SKP284,0.0,Esophagus Muscularis
+RN7SKP285,5.0,Esophagus Gastroesophageal Junction
+RN7SKP286,0.0,Esophagus Muscularis
+RN7SKP287,35.0,Testis
+RN7SKP288,1.0,Muscle Skeletal
+RN7SKP289,1.0,Testis
+RN7SKP290,0.0,Esophagus Muscularis
+RN7SKP291,1.0,Fallopian Tube
+RN7SKP292,10.0,Testis
+RN7SKP293,9.0,Artery Tibial
+RN7SKP294,0.0,Esophagus Muscularis
+RN7SKP295,0.0,Esophagus Muscularis
+RN7SKP296,11.0,Skin Sun Exposed Lower leg
+RN7SKP297,3.0,Artery Tibial
+RN7SKP298,0.0,Esophagus Muscularis
+RN7SKP299,2.0,Brain Hippocampus

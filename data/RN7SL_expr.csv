@@ -1,0 +1,688 @@
+Gene,Max Expression,Location
+RN7SL1,529.0,Pancreas
+RN7SL2,4.0,Pituitary
+RN7SL3,1.0,Vagina
+RN7SL4P,844.0,Brain Cerebellar Hemisphere
+RN7SL5P,835.0,Brain Anterior cingulate cortex BA24
+RN7SL6P,31.0,Brain Cortex
+RN7SL7P,2.0,Colon Transverse
+RN7SL8P,81.0,Kidney Medulla
+RN7SL11P,2.0,Vagina
+RN7SL12P,12.0,Skin Sun Exposed Lower leg
+RN7SL14P,1.0,Prostate
+RN7SL15P,34.0,Vagina
+RN7SL16P,2.0,Testis
+RN7SL18P,2.0,Kidney Medulla
+RN7SL19P,6.0,Small Intestine Terminal Ileum
+RN7SL20P,4.0,Skin Sun Exposed Lower leg
+RN7SL22P,3.0,Artery Tibial
+RN7SL23P,18.0,Testis
+RN7SL25P,5.0,Kidney Cortex
+RN7SL26P,5.0,Testis
+RN7SL28P,3.0,Spleen
+RN7SL30P,2.0,Prostate
+RN7SL32P,25.0,Small Intestine Terminal Ileum
+RN7SL33P,1.0,Small Intestine Terminal Ileum
+RN7SL34P,8.0,Brain Cortex
+RN7SL35P,1.0,Testis
+RN7SL36P,2.0,Small Intestine Terminal Ileum
+RN7SL37P,5.0,Testis
+RN7SL38P,0.0,Esophagus Muscularis
+RN7SL39P,1.0,Testis
+RN7SL40P,9.0,Brain Nucleus accumbens basal ganglia
+RN7SL41P,2.0,Testis
+RN7SL42P,3.0,Adipose Visceral Omentum
+RN7SL43P,2.0,Kidney Cortex
+RN7SL44P,6.0,Nerve Tibial
+RN7SL45P,4.0,Brain Nucleus accumbens basal ganglia
+RN7SL47P,2.0,Small Intestine Terminal Ileum
+RN7SL48P,5.0,Cervix Ectocervix
+RN7SL49P,23.0,Nerve Tibial
+RN7SL50P,1.0,Skin Sun Exposed Lower leg
+RN7SL51P,2.0,Testis
+RN7SL52P,2.0,Vagina
+RN7SL55P,2.0,Uterus
+RN7SL57P,2.0,Skin Sun Exposed Lower leg
+RN7SL58P,1.0,Lung
+RN7SL60P,2.0,Vagina
+RN7SL62P,0.0,Esophagus Muscularis
+RN7SL63P,2.0,Stomach
+RN7SL65P,2.0,Brain Cerebellar Hemisphere
+RN7SL66P,3.0,Pancreas
+RN7SL67P,5.0,Kidney Cortex
+RN7SL68P,6.0,Fallopian Tube
+RN7SL69P,4.0,Testis
+RN7SL70P,2.0,Kidney Cortex
+RN7SL72P,1.0,Adipose Visceral Omentum
+RN7SL73P,4.0,Uterus
+RN7SL74P,2.0,Esophagus Gastroesophageal Junction
+RN7SL75P,21.0,Testis
+RN7SL76P,5.0,Colon Transverse
+RN7SL77P,10.0,Minor Salivary Gland
+RN7SL78P,5.0,Brain Cortex
+RN7SL79P,1.0,Brain Hippocampus
+RN7SL81P,23.0,Colon Transverse
+RN7SL82P,6.0,Thyroid
+RN7SL83P,2.0,Brain Hippocampus
+RN7SL87P,1.0,Breast Mammary Tissue
+RN7SL88P,0.0,Esophagus Muscularis
+RN7SL89P,3.0,Colon Sigmoid
+RN7SL91P,1.0,Spleen
+RN7SL92P,12.0,Nerve Tibial
+RN7SL93P,7.0,Adipose Subcutaneous
+RN7SL96P,1.0,Esophagus Muscularis
+RN7SL97P,1.0,Small Intestine Terminal Ileum
+RN7SL98P,5.0,Brain Nucleus accumbens basal ganglia
+RN7SL100P,2.0,Artery Coronary
+RN7SL101P,1.0,Spleen
+RN7SL104P,1.0,Heart Left Ventricle
+RN7SL105P,4.0,Adipose Subcutaneous
+RN7SL106P,3.0,Testis
+RN7SL107P,1.0,Adipose Subcutaneous
+RN7SL108P,1.0,Testis
+RN7SL110P,2.0,Muscle Skeletal
+RN7SL111P,2.0,Brain Caudate basal ganglia
+RN7SL113P,15.0,Testis
+RN7SL116P,2.0,Brain Putamen basal ganglia
+RN7SL117P,0.0,Esophagus Muscularis
+RN7SL118P,6.0,Skin Sun Exposed Lower leg
+RN7SL120P,0.0,Esophagus Muscularis
+RN7SL121P,2.0,Thyroid
+RN7SL122P,1.0,Thyroid
+RN7SL123P,6.0,Nerve Tibial
+RN7SL124P,9.0,Adipose Visceral Omentum
+RN7SL125P,3.0,Testis
+RN7SL126P,2.0,Testis
+RN7SL127P,6.0,Testis
+RN7SL128P,6.0,Testis
+RN7SL130P,19.0,Lung
+RN7SL131P,3.0,Artery Aorta
+RN7SL132P,1.0,Brain Substantia nigra
+RN7SL134P,2.0,Uterus
+RN7SL135P,1.0,Artery Tibial
+RN7SL138P,13.0,Kidney Cortex
+RN7SL140P,0.0,Esophagus Muscularis
+RN7SL141P,2.0,Skin Sun Exposed Lower leg
+RN7SL143P,2.0,Testis
+RN7SL144P,10.0,Artery Aorta
+RN7SL145P,24.0,Nerve Tibial
+RN7SL146P,6.0,Stomach
+RN7SL147P,0.0,Esophagus Muscularis
+RN7SL148P,3.0,Brain Cerebellar Hemisphere
+RN7SL149P,2.0,Brain Cerebellum
+RN7SL150P,1.0,Esophagus Gastroesophageal Junction
+RN7SL151P,2.0,Whole Blood
+RN7SL152P,10.0,Brain Cerebellar Hemisphere
+RN7SL153P,12.0,Brain Cortex
+RN7SL154P,6.0,Testis
+RN7SL155P,1.0,Thyroid
+RN7SL156P,2.0,Thyroid
+RN7SL159P,4.0,Brain Cortex
+RN7SL160P,2.0,Uterus
+RN7SL162P,2.0,Colon Transverse
+RN7SL163P,2.0,Brain Caudate basal ganglia
+RN7SL164P,7.0,Brain Cortex
+RN7SL165P,7.0,Brain Cortex
+RN7SL166P,4.0,Brain Cerebellar Hemisphere
+RN7SL167P,1.0,Skin Not Sun Exposed Suprapubic
+RN7SL168P,4.0,Ovary
+RN7SL169P,2.0,Brain Caudate basal ganglia
+RN7SL170P,1.0,Skin Sun Exposed Lower leg
+RN7SL172P,16.0,Whole Blood
+RN7SL173P,2.0,Colon Transverse
+RN7SL174P,4.0,Esophagus Mucosa
+RN7SL176P,45.0,Testis
+RN7SL177P,2.0,Brain Hippocampus
+RN7SL178P,0.0,Esophagus Muscularis
+RN7SL180P,9.0,Brain Cerebellar Hemisphere
+RN7SL181P,11.0,Testis
+RN7SL182P,3.0,Stomach
+RN7SL183P,1.0,Colon Transverse
+RN7SL184P,4.0,Heart Atrial Appendage
+RN7SL185P,4.0,Brain Putamen basal ganglia
+RN7SL186P,529.0,Pancreas
+RN7SL187P,10.0,Artery Aorta
+RN7SL188P,3.0,Stomach
+RN7SL189P,3.0,Skin Sun Exposed Lower leg
+RN7SL190P,2.0,Brain Putamen basal ganglia
+RN7SL191P,0.0,Esophagus Muscularis
+RN7SL192P,9.0,Bladder
+RN7SL193P,0.0,Esophagus Muscularis
+RN7SL196P,6.0,Thyroid
+RN7SL197P,2.0,Testis
+RN7SL198P,1.0,Brain Nucleus accumbens basal ganglia
+RN7SL199P,15.0,Nerve Tibial
+RN7SL200P,3.0,Brain Cerebellum
+RN7SL201P,0.0,Esophagus Muscularis
+RN7SL202P,4.0,Brain Cortex
+RN7SL203P,6.0,Brain Cortex
+RN7SL204P,5.0,Brain Cortex
+RN7SL205P,2.0,Thyroid
+RN7SL208P,4.0,Kidney Medulla
+RN7SL209P,16.0,Testis
+RN7SL210P,1.0,Brain Putamen basal ganglia
+RN7SL211P,12.0,Cells EBV-transformed lymphocytes
+RN7SL213P,9.0,Testis
+RN7SL214P,5.0,Cervix Ectocervix
+RN7SL215P,2.0,Thyroid
+RN7SL216P,1.0,Skin Not Sun Exposed Suprapubic
+RN7SL217P,4.0,Brain Nucleus accumbens basal ganglia
+RN7SL218P,0.0,Esophagus Muscularis
+RN7SL219P,7.0,Testis
+RN7SL220P,3.0,Brain Putamen basal ganglia
+RN7SL221P,6.0,Brain Cortex
+RN7SL222P,1.0,Testis
+RN7SL223P,1.0,Testis
+RN7SL225P,11.0,Testis
+RN7SL228P,2.0,Testis
+RN7SL229P,6.0,Nerve Tibial
+RN7SL230P,3.0,Brain Cerebellar Hemisphere
+RN7SL231P,3.0,Uterus
+RN7SL233P,7.0,Brain Cerebellar Hemisphere
+RN7SL234P,2.0,Lung
+RN7SL236P,23.0,Kidney Medulla
+RN7SL237P,2.0,Testis
+RN7SL238P,3.0,Testis
+RN7SL239P,7.0,Colon Transverse
+RN7SL240P,2.0,Adipose Subcutaneous
+RN7SL241P,3.0,Testis
+RN7SL242P,2.0,Brain Cerebellar Hemisphere
+RN7SL244P,43.0,Testis
+RN7SL246P,5.0,Stomach
+RN7SL248P,3.0,Testis
+RN7SL250P,6.0,Kidney Medulla
+RN7SL251P,15.0,Brain Cortex
+RN7SL252P,2.0,Ovary
+RN7SL253P,4.0,Brain Putamen basal ganglia
+RN7SL254P,1.0,Esophagus Gastroesophageal Junction
+RN7SL255P,4.0,Testis
+RN7SL258P,10.0,Testis
+RN7SL259P,1.0,Skin Sun Exposed Lower leg
+RN7SL260P,3.0,Nerve Tibial
+RN7SL261P,1.0,Cervix Endocervix
+RN7SL262P,17.0,Brain Cortex
+RN7SL263P,14.0,Artery Coronary
+RN7SL265P,4.0,Testis
+RN7SL266P,0.0,Esophagus Muscularis
+RN7SL267P,5.0,Kidney Medulla
+RN7SL268P,57.0,Brain Cerebellar Hemisphere
+RN7SL269P,7.0,Nerve Tibial
+RN7SL270P,6.0,Testis
+RN7SL271P,1.0,Cervix Ectocervix
+RN7SL272P,5.0,Brain Cerebellar Hemisphere
+RN7SL273P,8.0,Brain Cerebellar Hemisphere
+RN7SL274P,8.0,Testis
+RN7SL275P,2.0,Artery Tibial
+RN7SL277P,4.0,Pituitary
+RN7SL278P,14.0,Artery Aorta
+RN7SL279P,7.0,Brain Cortex
+RN7SL280P,6.0,Brain Cortex
+RN7SL282P,1.0,Bladder
+RN7SL283P,2.0,Adrenal Gland
+RN7SL284P,3.0,Artery Aorta
+RN7SL285P,3.0,Testis
+RN7SL286P,4.0,Testis
+RN7SL288P,3.0,Brain Cortex
+RN7SL290P,1.0,Uterus
+RN7SL291P,1.0,Lung
+RN7SL292P,4.0,Prostate
+RN7SL293P,1.0,Esophagus Mucosa
+RN7SL294P,1.0,Fallopian Tube
+RN7SL296P,4.0,Brain Caudate basal ganglia
+RN7SL297P,5.0,Stomach
+RN7SL299P,0.0,Esophagus Muscularis
+RN7SL300P,3.0,Spleen
+RN7SL301P,3.0,Whole Blood
+RN7SL302P,2.0,Testis
+RN7SL303P,3.0,Testis
+RN7SL304P,1.0,Vagina
+RN7SL305P,28.0,Testis
+RN7SL306P,6.0,Vagina
+RN7SL307P,1.0,Testis
+RN7SL308P,3.0,Skin Not Sun Exposed Suprapubic
+RN7SL309P,1.0,Esophagus Muscularis
+RN7SL310P,2.0,Pituitary
+RN7SL311P,2.0,Brain Cerebellar Hemisphere
+RN7SL313P,8.0,Brain Nucleus accumbens basal ganglia
+RN7SL314P,1.0,Testis
+RN7SL316P,9.0,Brain Cerebellar Hemisphere
+RN7SL317P,5.0,Testis
+RN7SL318P,1.0,Esophagus Gastroesophageal Junction
+RN7SL319P,0.0,Esophagus Muscularis
+RN7SL320P,4.0,Cells EBV-transformed lymphocytes
+RN7SL321P,4.0,Artery Tibial
+RN7SL322P,2.0,Brain Hippocampus
+RN7SL323P,1.0,Testis
+RN7SL325P,0.0,Esophagus Muscularis
+RN7SL326P,2.0,Colon Transverse
+RN7SL327P,2.0,Skin Not Sun Exposed Suprapubic
+RN7SL328P,3.0,Testis
+RN7SL329P,3.0,Testis
+RN7SL330P,3.0,Testis
+RN7SL331P,93.0,Nerve Tibial
+RN7SL332P,2.0,Testis
+RN7SL333P,19.0,Small Intestine Terminal Ileum
+RN7SL334P,3.0,Whole Blood
+RN7SL335P,1.0,Cervix Ectocervix
+RN7SL336P,9.0,Kidney Cortex
+RN7SL337P,7.0,Small Intestine Terminal Ileum
+RN7SL338P,7.0,Adipose Visceral Omentum
+RN7SL339P,1.0,Cells EBV-transformed lymphocytes
+RN7SL340P,2.0,Liver
+RN7SL341P,0.0,Esophagus Muscularis
+RN7SL342P,2.0,Kidney Medulla
+RN7SL343P,3.0,Brain Spinal cord cervical c-1
+RN7SL344P,3.0,Brain Cortex
+RN7SL346P,3.0,Pancreas
+RN7SL350P,1.0,Artery Coronary
+RN7SL351P,2.0,Brain Hippocampus
+RN7SL352P,1.0,Testis
+RN7SL353P,2.0,Esophagus Muscularis
+RN7SL354P,1.0,Testis
+RN7SL356P,12.0,Heart Atrial Appendage
+RN7SL357P,2.0,Muscle Skeletal
+RN7SL359P,4.0,Artery Aorta
+RN7SL361P,1.0,Testis
+RN7SL362P,2.0,Colon Sigmoid
+RN7SL363P,11.0,Whole Blood
+RN7SL364P,13.0,Brain Cortex
+RN7SL366P,1.0,Testis
+RN7SL368P,18.0,Artery Aorta
+RN7SL369P,8.0,Brain Cortex
+RN7SL370P,3.0,Brain Anterior cingulate cortex BA24
+RN7SL371P,1.0,Colon Transverse
+RN7SL372P,2.0,Testis
+RN7SL375P,0.0,Esophagus Muscularis
+RN7SL376P,8.0,Nerve Tibial
+RN7SL377P,4.0,Testis
+RN7SL378P,1.0,Testis
+RN7SL379P,0.0,Esophagus Muscularis
+RN7SL380P,1.0,Artery Coronary
+RN7SL381P,50.0,Testis
+RN7SL382P,6.0,Brain Cerebellar Hemisphere
+RN7SL383P,1.0,Brain Caudate basal ganglia
+RN7SL384P,3.0,Muscle Skeletal
+RN7SL385P,3.0,Small Intestine Terminal Ileum
+RN7SL386P,349.0,Pancreas
+RN7SL387P,8.0,Brain Cortex
+RN7SL388P,5.0,Testis
+RN7SL390P,2.0,Thyroid
+RN7SL391P,3.0,Skin Sun Exposed Lower leg
+RN7SL392P,0.0,Esophagus Muscularis
+RN7SL393P,2.0,Prostate
+RN7SL394P,5.0,Testis
+RN7SL395P,7.0,Brain Cortex
+RN7SL396P,7.0,Brain Cortex
+RN7SL397P,2.0,Lung
+RN7SL398P,4.0,Fallopian Tube
+RN7SL399P,10.0,Testis
+RN7SL400P,0.0,Esophagus Muscularis
+RN7SL401P,0.0,Esophagus Muscularis
+RN7SL402P,2.0,Kidney Cortex
+RN7SL403P,14.0,Nerve Tibial
+RN7SL404P,5.0,Artery Aorta
+RN7SL405P,9.0,Artery Coronary
+RN7SL408P,0.0,Esophagus Muscularis
+RN7SL411P,2.0,Brain Putamen basal ganglia
+RN7SL413P,4.0,Testis
+RN7SL414P,2.0,Esophagus Gastroesophageal Junction
+RN7SL415P,0.0,Esophagus Muscularis
+RN7SL416P,6.0,Testis
+RN7SL417P,82.0,Artery Aorta
+RN7SL418P,2.0,Testis
+RN7SL419P,2.0,Spleen
+RN7SL420P,1.0,Cells Cultured fibroblasts
+RN7SL422P,2.0,Brain Nucleus accumbens basal ganglia
+RN7SL423P,2.0,Testis
+RN7SL424P,0.0,Esophagus Muscularis
+RN7SL425P,8.0,Brain Cerebellar Hemisphere
+RN7SL426P,3.0,Testis
+RN7SL428P,31.0,Colon Transverse
+RN7SL429P,2.0,Testis
+RN7SL430P,3.0,Testis
+RN7SL431P,295.0,Muscle Skeletal
+RN7SL432P,2.0,Muscle Skeletal
+RN7SL434P,6.0,Fallopian Tube
+RN7SL435P,1.0,Heart Left Ventricle
+RN7SL438P,2.0,Brain Cerebellar Hemisphere
+RN7SL440P,1.0,Vagina
+RN7SL441P,26.0,Vagina
+RN7SL442P,2.0,Stomach
+RN7SL443P,6.0,Brain Cortex
+RN7SL444P,7.0,Vagina
+RN7SL445P,2.0,Artery Aorta
+RN7SL446P,2.0,Testis
+RN7SL447P,1.0,Small Intestine Terminal Ileum
+RN7SL448P,2.0,Testis
+RN7SL449P,12.0,Brain Cortex
+RN7SL451P,2.0,Skin Not Sun Exposed Suprapubic
+RN7SL452P,7.0,Artery Coronary
+RN7SL453P,2.0,Liver
+RN7SL454P,1.0,Esophagus Gastroesophageal Junction
+RN7SL455P,2.0,Esophagus Gastroesophageal Junction
+RN7SL456P,3.0,Brain Substantia nigra
+RN7SL457P,2.0,Brain Cerebellum
+RN7SL459P,3.0,Skin Not Sun Exposed Suprapubic
+RN7SL460P,1.0,Esophagus Muscularis
+RN7SL461P,1.0,Pituitary
+RN7SL462P,1.0,Esophagus Muscularis
+RN7SL464P,2.0,Testis
+RN7SL465P,6.0,Skin Not Sun Exposed Suprapubic
+RN7SL466P,1.0,Nerve Tibial
+RN7SL468P,0.0,Esophagus Muscularis
+RN7SL469P,3.0,Brain Caudate basal ganglia
+RN7SL470P,3.0,Stomach
+RN7SL471P,28.0,Brain Anterior cingulate cortex BA24
+RN7SL472P,6.0,Lung
+RN7SL473P,15.0,Colon Transverse
+RN7SL474P,2.0,Kidney Cortex
+RN7SL475P,5.0,Artery Aorta
+RN7SL477P,15.0,Testis
+RN7SL478P,2.0,Skin Sun Exposed Lower leg
+RN7SL479P,2.0,Adrenal Gland
+RN7SL480P,1.0,Muscle Skeletal
+RN7SL481P,19.0,Nerve Tibial
+RN7SL482P,2.0,Skin Sun Exposed Lower leg
+RN7SL483P,1.0,Thyroid
+RN7SL484P,29.0,Testis
+RN7SL487P,9.0,Nerve Tibial
+RN7SL488P,2.0,Brain Putamen basal ganglia
+RN7SL489P,1.0,Esophagus Gastroesophageal Junction
+RN7SL491P,5.0,Whole Blood
+RN7SL492P,0.0,Esophagus Muscularis
+RN7SL493P,18.0,Testis
+RN7SL494P,12.0,Stomach
+RN7SL495P,3.0,Thyroid
+RN7SL496P,2.0,Bladder
+RN7SL497P,3.0,Testis
+RN7SL498P,4.0,Small Intestine Terminal Ileum
+RN7SL499P,2.0,Cells EBV-transformed lymphocytes
+RN7SL500P,4.0,Thyroid
+RN7SL502P,5.0,Testis
+RN7SL503P,1.0,Whole Blood
+RN7SL504P,1.0,Esophagus Muscularis
+RN7SL505P,2.0,Cells Cultured fibroblasts
+RN7SL507P,1.0,Spleen
+RN7SL508P,3.0,Brain Cerebellar Hemisphere
+RN7SL509P,1.0,Thyroid
+RN7SL510P,6.0,Bladder
+RN7SL513P,7.0,Nerve Tibial
+RN7SL515P,2.0,Vagina
+RN7SL516P,1.0,Brain Anterior cingulate cortex BA24
+RN7SL517P,9.0,Artery Aorta
+RN7SL518P,2.0,Artery Aorta
+RN7SL519P,2.0,Testis
+RN7SL520P,5.0,Brain Cortex
+RN7SL521P,27.0,Brain Cerebellar Hemisphere
+RN7SL523P,4.0,Testis
+RN7SL524P,1.0,Skin Sun Exposed Lower leg
+RN7SL525P,4.0,Artery Coronary
+RN7SL526P,20.0,Thyroid
+RN7SL530P,1.0,Brain Cerebellar Hemisphere
+RN7SL531P,3.0,Testis
+RN7SL535P,17.0,Small Intestine Terminal Ileum
+RN7SL536P,2.0,Testis
+RN7SL538P,8.0,Brain Hippocampus
+RN7SL539P,1.0,Pancreas
+RN7SL541P,2.0,Pancreas
+RN7SL542P,0.0,Esophagus Muscularis
+RN7SL543P,10.0,Skin Sun Exposed Lower leg
+RN7SL544P,3.0,Esophagus Mucosa
+RN7SL545P,2.0,Colon Transverse
+RN7SL546P,2.0,Testis
+RN7SL547P,0.0,Esophagus Muscularis
+RN7SL549P,3.0,Brain Cortex
+RN7SL551P,4.0,Liver
+RN7SL552P,5.0,Testis
+RN7SL553P,0.0,Esophagus Muscularis
+RN7SL554P,3.0,Testis
+RN7SL555P,3.0,Testis
+RN7SL556P,3.0,Skin Sun Exposed Lower leg
+RN7SL557P,2.0,Brain Nucleus accumbens basal ganglia
+RN7SL558P,14.0,Testis
+RN7SL559P,5.0,Cells Cultured fibroblasts
+RN7SL560P,3.0,Artery Aorta
+RN7SL561P,1.0,Small Intestine Terminal Ileum
+RN7SL563P,0.0,Esophagus Muscularis
+RN7SL564P,1.0,Brain Cortex
+RN7SL565P,1.0,Small Intestine Terminal Ileum
+RN7SL566P,24.0,Nerve Tibial
+RN7SL567P,3.0,Uterus
+RN7SL568P,5.0,Lung
+RN7SL569P,5.0,Cells EBV-transformed lymphocytes
+RN7SL570P,2.0,Vagina
+RN7SL571P,2.0,Thyroid
+RN7SL573P,55.0,Brain Cerebellar Hemisphere
+RN7SL574P,67.0,Testis
+RN7SL575P,5.0,Vagina
+RN7SL577P,5.0,Nerve Tibial
+RN7SL578P,1.0,Brain Cerebellar Hemisphere
+RN7SL580P,2.0,Uterus
+RN7SL581P,3.0,Cervix Ectocervix
+RN7SL582P,1.0,Brain Anterior cingulate cortex BA24
+RN7SL583P,9.0,Brain Cortex
+RN7SL584P,0.0,Esophagus Muscularis
+RN7SL585P,11.0,Brain Caudate basal ganglia
+RN7SL586P,1.0,Brain Nucleus accumbens basal ganglia
+RN7SL587P,5.0,Breast Mammary Tissue
+RN7SL589P,11.0,Artery Coronary
+RN7SL591P,5.0,Brain Anterior cingulate cortex BA24
+RN7SL592P,2.0,Artery Coronary
+RN7SL594P,4.0,Stomach
+RN7SL596P,2.0,Brain Putamen basal ganglia
+RN7SL597P,2.0,Brain Hypothalamus
+RN7SL598P,3.0,Testis
+RN7SL600P,17.0,Artery Aorta
+RN7SL601P,1.0,Artery Tibial
+RN7SL602P,4.0,Breast Mammary Tissue
+RN7SL604P,2.0,Brain Cerebellar Hemisphere
+RN7SL605P,23.0,Brain Spinal cord cervical c-1
+RN7SL606P,3.0,Brain Cerebellar Hemisphere
+RN7SL607P,0.0,Esophagus Muscularis
+RN7SL608P,107.0,Testis
+RN7SL610P,7.0,Testis
+RN7SL612P,2.0,Uterus
+RN7SL614P,9.0,Testis
+RN7SL615P,4.0,Adipose Subcutaneous
+RN7SL616P,2.0,Colon Transverse
+RN7SL617P,2.0,Brain Nucleus accumbens basal ganglia
+RN7SL618P,0.0,Esophagus Muscularis
+RN7SL619P,13.0,Stomach
+RN7SL620P,6.0,Brain Amygdala
+RN7SL621P,8.0,Testis
+RN7SL622P,3.0,Heart Left Ventricle
+RN7SL623P,4.0,Nerve Tibial
+RN7SL624P,3.0,Brain Frontal Cortex BA9
+RN7SL625P,7.0,Artery Aorta
+RN7SL627P,2.0,Brain Caudate basal ganglia
+RN7SL628P,5.0,Colon Sigmoid
+RN7SL629P,6.0,Nerve Tibial
+RN7SL630P,2.0,Thyroid
+RN7SL632P,1.0,Esophagus Gastroesophageal Junction
+RN7SL633P,1.0,Pituitary
+RN7SL634P,5.0,Testis
+RN7SL635P,2.0,Esophagus Mucosa
+RN7SL636P,2.0,Testis
+RN7SL638P,2.0,Colon Transverse
+RN7SL640P,3.0,Testis
+RN7SL643P,1.0,Brain Cerebellum
+RN7SL644P,2.0,Pancreas
+RN7SL645P,6.0,Testis
+RN7SL646P,1.0,Artery Coronary
+RN7SL647P,0.0,Esophagus Muscularis
+RN7SL648P,8.0,Adipose Subcutaneous
+RN7SL649P,1.0,Testis
+RN7SL650P,10.0,Thyroid
+RN7SL652P,6.0,Adipose Subcutaneous
+RN7SL653P,2.0,Esophagus Muscularis
+RN7SL654P,0.0,Esophagus Muscularis
+RN7SL655P,2.0,Skin Sun Exposed Lower leg
+RN7SL656P,9.0,Nerve Tibial
+RN7SL657P,59.0,Testis
+RN7SL658P,1.0,Testis
+RN7SL659P,6.0,Testis
+RN7SL660P,7.0,Artery Coronary
+RN7SL663P,18.0,Thyroid
+RN7SL664P,10.0,Testis
+RN7SL665P,6.0,Adipose Subcutaneous
+RN7SL666P,2.0,Brain Putamen basal ganglia
+RN7SL667P,1.0,Artery Coronary
+RN7SL668P,3.0,Testis
+RN7SL670P,2.0,Testis
+RN7SL671P,5.0,Testis
+RN7SL672P,4.0,Artery Aorta
+RN7SL673P,11.0,Artery Aorta
+RN7SL674P,71.0,Ovary
+RN7SL675P,1.0,Cells Cultured fibroblasts
+RN7SL676P,4.0,Testis
+RN7SL677P,2.0,Pancreas
+RN7SL678P,3.0,Ovary
+RN7SL679P,2.0,Testis
+RN7SL680P,0.0,Esophagus Muscularis
+RN7SL681P,2.0,Whole Blood
+RN7SL683P,2.0,Colon Transverse
+RN7SL684P,11.0,Whole Blood
+RN7SL685P,2.0,Breast Mammary Tissue
+RN7SL687P,4.0,Colon Transverse
+RN7SL688P,7.0,Brain Cortex
+RN7SL689P,71.0,Artery Aorta
+RN7SL690P,2.0,Spleen
+RN7SL691P,0.0,Esophagus Muscularis
+RN7SL692P,2.0,Cells Cultured fibroblasts
+RN7SL693P,11.0,Brain Cerebellar Hemisphere
+RN7SL697P,3.0,Adipose Subcutaneous
+RN7SL698P,3.0,Vagina
+RN7SL700P,0.0,Esophagus Muscularis
+RN7SL702P,2.0,Adipose Subcutaneous
+RN7SL703P,2.0,Brain Nucleus accumbens basal ganglia
+RN7SL704P,13.0,Artery Aorta
+RN7SL705P,2.0,Cells EBV-transformed lymphocytes
+RN7SL706P,2.0,Testis
+RN7SL708P,1.0,Skin Sun Exposed Lower leg
+RN7SL709P,2.0,Whole Blood
+RN7SL711P,12.0,Brain Cortex
+RN7SL712P,0.0,Esophagus Muscularis
+RN7SL713P,1.0,Vagina
+RN7SL714P,0.0,Esophagus Muscularis
+RN7SL715P,0.0,Esophagus Muscularis
+RN7SL716P,4.0,Testis
+RN7SL717P,5.0,Testis
+RN7SL718P,2.0,Brain Cerebellar Hemisphere
+RN7SL719P,4.0,Thyroid
+RN7SL720P,1.0,Artery Tibial
+RN7SL722P,2.0,Colon Sigmoid
+RN7SL724P,9.0,Nerve Tibial
+RN7SL725P,4.0,Uterus
+RN7SL726P,8.0,Testis
+RN7SL727P,0.0,Esophagus Muscularis
+RN7SL728P,2.0,Brain Hypothalamus
+RN7SL731P,1297.0,Muscle Skeletal
+RN7SL732P,2.0,Pancreas
+RN7SL733P,2.0,Skin Sun Exposed Lower leg
+RN7SL734P,5.0,Minor Salivary Gland
+RN7SL735P,2.0,Brain Putamen basal ganglia
+RN7SL736P,9.0,Brain Cortex
+RN7SL737P,50.0,Brain Cortex
+RN7SL738P,8.0,Brain Cortex
+RN7SL740P,2.0,Testis
+RN7SL741P,2.0,Brain Substantia nigra
+RN7SL743P,1.0,Small Intestine Terminal Ileum
+RN7SL744P,6.0,Testis
+RN7SL745P,5.0,Artery Aorta
+RN7SL748P,4.0,Vagina
+RN7SL749P,14.0,Artery Aorta
+RN7SL750P,3.0,Testis
+RN7SL751P,6.0,Brain Putamen basal ganglia
+RN7SL752P,4.0,Whole Blood
+RN7SL753P,5.0,Adipose Visceral Omentum
+RN7SL754P,3.0,Testis
+RN7SL756P,2.0,Ovary
+RN7SL757P,2.0,Testis
+RN7SL759P,5.0,Testis
+RN7SL760P,2.0,Stomach
+RN7SL761P,0.0,Esophagus Muscularis
+RN7SL762P,3.0,Brain Nucleus accumbens basal ganglia
+RN7SL763P,4.0,Skin Sun Exposed Lower leg
+RN7SL764P,2.0,Adipose Subcutaneous
+RN7SL766P,0.0,Esophagus Muscularis
+RN7SL767P,11.0,Brain Putamen basal ganglia
+RN7SL769P,3.0,Muscle Skeletal
+RN7SL771P,7.0,Nerve Tibial
+RN7SL774P,5.0,Brain Spinal cord cervical c-1
+RN7SL775P,4.0,Testis
+RN7SL776P,2.0,Testis
+RN7SL778P,2.0,Thyroid
+RN7SL782P,0.0,Esophagus Muscularis
+RN7SL783P,1.0,Muscle Skeletal
+RN7SL784P,8.0,Testis
+RN7SL785P,1.0,Brain Cerebellar Hemisphere
+RN7SL786P,1.0,Skin Sun Exposed Lower leg
+RN7SL787P,6.0,Skin Sun Exposed Lower leg
+RN7SL788P,2.0,Thyroid
+RN7SL789P,2.0,Esophagus Gastroesophageal Junction
+RN7SL790P,1.0,Thyroid
+RN7SL791P,1.0,Skin Sun Exposed Lower leg
+RN7SL792P,3.0,Pituitary
+RN7SL793P,5.0,Brain Anterior cingulate cortex BA24
+RN7SL794P,2.0,Uterus
+RN7SL795P,5.0,Brain Cortex
+RN7SL796P,3.0,Adipose Subcutaneous
+RN7SL797P,2.0,Fallopian Tube
+RN7SL798P,7.0,Lung
+RN7SL799P,3.0,Nerve Tibial
+RN7SL800P,17.0,Testis
+RN7SL801P,2.0,Testis
+RN7SL802P,1.0,Brain Substantia nigra
+RN7SL803P,4.0,Stomach
+RN7SL804P,1.0,Thyroid
+RN7SL806P,5.0,Small Intestine Terminal Ileum
+RN7SL807P,0.0,Esophagus Muscularis
+RN7SL808P,3.0,Stomach
+RN7SL809P,26.0,Artery Aorta
+RN7SL810P,1.0,Testis
+RN7SL811P,3.0,Nerve Tibial
+RN7SL812P,8.0,Adipose Subcutaneous
+RN7SL813P,3.0,Testis
+RN7SL814P,0.0,Esophagus Muscularis
+RN7SL815P,2.0,Brain Hippocampus
+RN7SL817P,1.0,Esophagus Muscularis
+RN7SL818P,5.0,Colon Sigmoid
+RN7SL819P,3.0,Colon Transverse
+RN7SL820P,4.0,Adipose Visceral Omentum
+RN7SL822P,0.0,Esophagus Muscularis
+RN7SL823P,5.0,Heart Left Ventricle
+RN7SL824P,4.0,Brain Cortex
+RN7SL825P,4.0,Artery Tibial
+RN7SL826P,2.0,Testis
+RN7SL827P,3.0,Cervix Endocervix
+RN7SL828P,1.0,Pancreas
+RN7SL831P,2.0,Cervix Ectocervix
+RN7SL832P,22.0,Nerve Tibial
+RN7SL833P,9.0,Brain Cortex
+RN7SL834P,72.0,Small Intestine Terminal Ileum
+RN7SL835P,2.0,Thyroid
+RN7SL836P,1.0,Esophagus Muscularis
+RN7SL837P,0.0,Esophagus Muscularis
+RN7SL838P,14.0,Kidney Cortex
+RN7SL840P,1.0,Skin Sun Exposed Lower leg
+RN7SL841P,1.0,Artery Coronary
+RN7SL842P,19.0,Cells EBV-transformed lymphocytes
+RN7SL843P,1.0,Stomach
+RN7SL845P,5.0,Testis
+RN7SL846P,4.0,Brain Cerebellum
+RN7SL847P,0.0,Esophagus Muscularis
+RN7SL849P,0.0,Esophagus Muscularis
+RN7SL850P,4.0,Testis
+RN7SL851P,6.0,Small Intestine Terminal Ileum
+RN7SL853P,2.0,Testis
+RN7SL854P,1.0,Spleen
+RN7SL856P,17.0,Brain Cortex
+RN7SL860P,124.0,Testis
+RN7SL861P,7.0,Cells Cultured fibroblasts
+RN7SL862P,6.0,Lung
+RN7SL863P,2.0,Brain Cerebellum
+RN7SL864P,5.0,Nerve Tibial
+RN7SL865P,2.0,Bladder
+RN7SL868P,4.0,Colon Sigmoid
+RN7SL869P,0.0,Esophagus Muscularis
+RN7SL870P,1.0,Brain Frontal Cortex BA9

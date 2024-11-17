@@ -4,10 +4,10 @@ import sys
 
 # Regular expression to extract chromosome, start, and end information
 # allows for X and Y chromosomes in addition to numeric chromosomes
-pattern = re.compile(r"(\d+|X|Y):([\d,]+)-([\d,]+)")
+pattern = re.compile(r"(MT|\d+|X|Y|chr[\w\d_]+):([\d,]+)-([\d,]+)")
 
 # Path to the input file (update this path as needed)
-input_file = "data/RN7SK_data.txt"  # This will be set for your gene data or temp data file
+input_file = "data/TRNA_data.txt"  # This will be set for your gene data or temp data file
 
 # Ensure the input file exists
 if not os.path.isfile(input_file):
@@ -33,6 +33,10 @@ def clean_gene_data():
                 gene_match = re.search(r"Processing (.+) with Transcript ID", gene_data)
                 if gene_match:
                     current_gene = gene_match.group(1)
+                elif "No location found" in gene_data:
+                    print(f"Warning: No location found for gene {current_gene} in data segment.")
+                    invalid_lines.append(gene_data)  # Store for invalid lines
+                    continue
                 else:
                     print(f"Warning: Gene symbol not found in data segment:\n{gene_data}\n")
                     invalid_lines.append(gene_data)  # Store for invalid lines

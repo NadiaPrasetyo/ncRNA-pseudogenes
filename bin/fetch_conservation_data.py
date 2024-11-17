@@ -5,16 +5,17 @@ import os
 import sys
 
 
-gene_group = "TRNA" # Update with the gene group you are working with
-cons_type = "phastCons30"  # Update with the conservation type you are working with
+gene_group = "RN7SK" # Update with the gene group you are working with
+cons_type = input("Enter the conservation type (a: phastCons30, b: phyloP100, c: phyloP447): ").strip().lower() # Get the conservation type from the user
 
-if (cons_type == "phastCons30"):
+# Define the BigWig file and output file based on the conservation type
+if (cons_type == "a"):
     bw_file = "data/hg38.phastCons30way.bw"
     output_file = f"data/phastCons30_summary/{gene_group}_cons.csv"  # Define the output file for CSV format
-elif (cons_type == "phyloP100"):
+elif (cons_type == "b"):
     bw_file = "data/hg38.phyloP100way.bw"
     output_file = f"data/phyloP100_summary/{gene_group}_cons_phyloP100_.csv"  # Define the output file for CSV format
-elif (cons_type == "phyloP447"):
+elif (cons_type == "c"):
     bw_file = "data/hg38.phyloP447way.bw"
     output_file = f"data/phyloP447_summary/{gene_group}_cons_phyloP447_.csv"  # Define the output file for CSV format
 else:
@@ -27,7 +28,7 @@ temp_output_file = f"{output_file}.tmp"  # Temporary file for output
 
 # Regular expression to extract chromosome, start, and end information
 # allows for X and Y chromosomes in addition to numeric chromosomes
-pattern = re.compile(r"(\d+|X|Y):([\d,]+)-([\d,]+)")
+pattern = re.compile(r"(chr[\w\d_]+|\d+|X|Y|MT):([\d,]+)-([\d,]+)")
 
 # Ensure input files exist
 if not os.path.isfile(bw_file):
@@ -65,7 +66,13 @@ try:
             # Extract the location string
             location_match = re.search(pattern, gene_data)
             if location_match:
-                chrom = f"chr{location_match.group(1)}"
+                chrom = location_match.group(1)
+                # Standardize chromosome naming
+                if chrom == "MT":
+                    chrom = "chrM"
+                elif not chrom.startswith("chr"):
+                    chrom = f"chr{chrom}"
+                    
                 try:
                     start = int(location_match.group(2).replace(',', ''))
                     end = int(location_match.group(3).replace(',', ''))

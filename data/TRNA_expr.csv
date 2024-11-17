@@ -1,0 +1,596 @@
+Gene,Max Expression,Location
+VTRNA2-2P,0.0,Esophagus Muscularis
+VTRNA3-1P,1.0,Brain Nucleus accumbens basal ganglia
+MT-TA,25541.0,Testis
+MT-TC,30664.0,Heart Left Ventricle
+MT-TD,15025.0,Brain Cortex
+MT-TE,40872.0,Heart Atrial Appendage
+MT-TF,43002.0,Brain Cortex
+MT-TG,13290.0,Brain Cortex
+MT-TH,18112.0,Heart Left Ventricle
+MT-TI,7729.0,Brain Cortex
+MT-TK,24541.0,Brain Caudate basal ganglia
+MT-TL1,144667.0,Heart Left Ventricle
+MT-TL2,8155.0,Brain Cortex
+MT-TM,53497.0,Brain Cortex
+MT-TN,26261.0,Heart Left Ventricle
+MT-TP,13049.0,Testis
+MT-TQ,20188.0,Brain Caudate basal ganglia
+MT-TR,27013.0,Heart Left Ventricle
+MT-TS1,201991.0,Heart Left Ventricle
+MT-TS2,4425.0,Brain Caudate basal ganglia
+MT-TT,4065.0,Brain Caudate basal ganglia
+MT-TV,58801.0,Brain Caudate basal ganglia
+MT-TW,11992.0,Brain Cortex
+MT-TY,29591.0,Adrenal Gland
+NMTRL-TAA2-1,1.0,Skin Sun Exposed Lower leg
+NMTRL-TAA3-1,1.0,Brain Caudate basal ganglia
+NMTRL-TAA5-1,1.0,Skin Sun Exposed Lower leg
+NMTRL-TAA6-1,0.0,Esophagus Muscularis
+NMTRP-TGG1-1,0.0,Esophagus Muscularis
+NMTRQ-CTG1-1,1.0,Artery Tibial
+NMTRQ-TTG1-1,1.0,Cells EBV-transformed lymphocytes
+NMTRQ-TTG2-1,1.0,Cells Cultured fibroblasts
+NMTRQ-TTG4-1,1.0,Brain Caudate basal ganglia
+NMTRQ-TTG6-1,2.0,Colon Sigmoid
+NMTRQ-TTG7-1,4.0,Testis
+NMTRQ-TTG8-1,0.0,Esophagus Muscularis
+NMTRQ-TTG9-1,3.0,Testis
+NMTRQ-TTG10-1,3.0,Artery Coronary
+NMTRQ-TTG11-1,0.0,Esophagus Muscularis
+NMTRQ-TTG12-1,3.0,Nerve Tibial
+NMTRQ-TTG13-1,4.0,Brain Spinal cord cervical c-1
+NMTRQ-TTG15-1,1.0,Colon Sigmoid
+NMTRS-TGA2-1,4.0,Testis
+NMTRS-TGA3-1,1.0,Brain Caudate basal ganglia
+NMTRV-TAC1-1,0.0,Esophagus Muscularis
+TRA-AGC1-1,0.0,Esophagus Muscularis
+TRA-AGC2-1,0.0,Esophagus Muscularis
+TRA-AGC2-2,3.0,Testis
+TRA-AGC3-1,4.0,Cells EBV-transformed lymphocytes
+TRA-AGC4-1,1.0,Brain Putamen basal ganglia
+TRA-AGC5-1,0.0,Esophagus Muscularis
+TRA-AGC6-1,0.0,Esophagus Muscularis
+TRA-AGC7-1,2.0,Testis
+TRA-AGC8-1,2.0,Thyroid
+TRA-AGC8-2,3.0,Brain Putamen basal ganglia
+TRA-AGC9-1,3.0,Kidney Medulla
+TRA-AGC10-1,9.0,Testis
+TRA-AGC11-1,4.0,Testis
+TRA-AGC12-1,30.0,Testis
+TRA-AGC12-3,131.0,Brain Cortex
+TRA-AGC13-2,0.0,Esophagus Muscularis
+TRA-AGC14-1,13.0,Testis
+TRA-AGC14-2,16.0,Ovary
+TRA-AGC15-1,10.0,Brain Cortex
+TRA-AGC24-1,5.0,Kidney Medulla
+TRA-CGC1-1,0.0,Esophagus Muscularis
+TRA-CGC2-1,1.0,Testis
+TRA-CGC3-1,0.0,Esophagus Muscularis
+TRA-CGC4-1,1.0,Pituitary
+TRA-CGC5-1,-inf,
+TRA-TGC1-1,1.0,Testis
+TRA-TGC2-1,8.0,Testis
+TRA-TGC3-1,2.0,Testis
+TRA-TGC3-2,2.0,Testis
+TRA-TGC4-1,8.0,Esophagus Gastroesophageal Junction
+TRA-TGC5-1,1.0,Whole Blood
+TRA-TGC6-1,1.0,Thyroid
+TRA-TGC7-1,0.0,Esophagus Muscularis
+TRA-TGC10-1,6.0,Stomach
+TRC-GCA1-1,0.0,Esophagus Muscularis
+TRC-GCA2-1,1.0,Spleen
+TRC-GCA2-2,1.0,Spleen
+TRC-GCA2-3,1.0,Kidney Cortex
+TRC-GCA2-4,1.0,Muscle Skeletal
+TRC-GCA3-1,2.0,Testis
+TRC-GCA4-1,8.0,Whole Blood
+TRC-GCA5-1,1.0,Artery Aorta
+TRC-GCA6-1,3.0,Testis
+TRC-GCA7-1,15.0,Testis
+TRC-GCA8-1,2.0,Adipose Subcutaneous
+TRC-GCA9-1,3.0,Prostate
+TRC-GCA9-2,0.0,Esophagus Muscularis
+TRC-GCA9-3,4.0,Brain Caudate basal ganglia
+TRC-GCA9-4,1.0,Testis
+TRC-GCA10-1,0.0,Esophagus Muscularis
+TRC-GCA11-1,3.0,Nerve Tibial
+TRC-GCA12-1,1.0,Testis
+TRC-GCA13-1,0.0,Esophagus Muscularis
+TRC-GCA14-1,4.0,Colon Transverse
+TRC-GCA15-1,4.0,Whole Blood
+TRC-GCA16-1,24.0,Colon Transverse
+TRC-GCA17-1,1.0,Testis
+TRC-GCA18-1,2.0,Testis
+TRC-GCA19-1,5.0,Testis
+TRC-GCA20-1,6.0,Nerve Tibial
+TRC-GCA21-1,1.0,Vagina
+TRC-GCA22-1,32.0,Adipose Subcutaneous
+TRC-GCA23-1,4.0,Kidney Cortex
+TRD-GTC1-1,4.0,Testis
+TRD-GTC2-1,11.0,Kidney Medulla
+TRD-GTC2-2,1.0,Artery Coronary
+TRD-GTC2-3,0.0,Esophagus Muscularis
+TRD-GTC2-4,0.0,Esophagus Muscularis
+TRD-GTC2-5,0.0,Esophagus Muscularis
+TRD-GTC2-6,3.0,Colon Sigmoid
+TRD-GTC2-7,5.0,Colon Sigmoid
+TRD-GTC2-8,3.0,Colon Sigmoid
+TRD-GTC2-9,5.0,Colon Sigmoid
+TRD-GTC2-10,11.0,Artery Aorta
+TRD-GTC2-11,68.0,Small Intestine Terminal Ileum
+TRD-GTC3-1,3.0,Colon Sigmoid
+TRD-GTC10-1,301.0,Whole Blood
+TRE-CTC1-1,2.0,Small Intestine Terminal Ileum
+TRE-CTC1-2,1.0,Cells EBV-transformed lymphocytes
+TRE-CTC1-3,2.0,Brain Nucleus accumbens basal ganglia
+TRE-CTC1-4,0.0,Esophagus Muscularis
+TRE-CTC1-5,0.0,Esophagus Muscularis
+TRE-CTC1-6,1.0,Esophagus Mucosa
+TRE-CTC1-7,1.0,Kidney Cortex
+TRE-CTC2-1,2.0,Brain Cerebellar Hemisphere
+TRE-CTC4-1,0.0,Esophagus Muscularis
+TRE-CTC9-1,0.0,Esophagus Muscularis
+TRE-CTC10-1,1.0,Brain Caudate basal ganglia
+TRE-CTC11-1,1.0,Brain Caudate basal ganglia
+TRE-CTC12-1,3.0,Colon Sigmoid
+TRE-CTC13-1,0.0,Esophagus Muscularis
+TRE-CTC14-1,1.0,Testis
+TRE-CTC15-1,1.0,Vagina
+TRE-CTC18-1,3.0,Brain Cortex
+TRE-TTC1-1,11.0,Kidney Cortex
+TRE-TTC1-2,11.0,Kidney Cortex
+TRE-TTC2-1,7.0,Colon Sigmoid
+TRE-TTC2-2,2.0,Thyroid
+TRE-TTC3-1,20.0,Colon Transverse
+TRE-TTC4-1,14.0,Testis
+TRE-TTC4-2,20.0,Artery Aorta
+TRE-TTC14-1,10.0,Stomach
+TRE-TTC15-1,0.0,Esophagus Muscularis
+TRF-GAA1-1,7.0,Testis
+TRF-GAA1-2,2.0,Brain Nucleus accumbens basal ganglia
+TRF-GAA1-3,7.0,Testis
+TRF-GAA1-4,2.0,Brain Nucleus accumbens basal ganglia
+TRF-GAA1-5,5.0,Brain Cortex
+TRF-GAA1-6,3.0,Colon Sigmoid
+TRF-GAA2-1,7.0,Brain Cortex
+TRF-GAA3-1,6.0,Kidney Cortex
+TRF-GAA4-1,0.0,Esophagus Muscularis
+TRF-GAA5-1,0.0,Esophagus Muscularis
+TRF-GAA6-1,0.0,Esophagus Muscularis
+TRG-CCC1-1,2.0,Brain Cerebellar Hemisphere
+TRG-CCC1-2,2.0,Brain Cerebellum
+TRG-CCC2-1,23.0,Nerve Tibial
+TRG-CCC2-2,23.0,Nerve Tibial
+TRG-CCC3-1,3.0,Brain Cerebellar Hemisphere
+TRG-CCC4-1,1.0,Kidney Cortex
+TRG-CCC5-1,1.0,Testis
+TRG-CCC6-1,4.0,Brain Hypothalamus
+TRG-CCC7-1,5.0,Testis
+TRG-GCC1-1,1.0,Artery Aorta
+TRG-GCC1-2,3.0,Testis
+TRG-GCC1-3,1.0,Kidney Medulla
+TRG-GCC1-4,0.0,Esophagus Muscularis
+TRG-GCC1-5,9.0,Adrenal Gland
+TRG-GCC2-1,82.0,Whole Blood
+TRG-GCC2-2,28.0,Brain Cerebellar Hemisphere
+TRG-GCC2-3,1.0,Pancreas
+TRG-GCC2-4,28.0,Brain Cerebellar Hemisphere
+TRG-GCC2-5,1.0,Pancreas
+TRG-GCC2-6,28.0,Brain Cerebellar Hemisphere
+TRG-GCC3-1,8.0,Brain Nucleus accumbens basal ganglia
+TRG-GCC4-1,0.0,Esophagus Muscularis
+TRG-TCC1-1,1.0,Esophagus Muscularis
+TRG-TCC2-1,2.0,Spleen
+TRG-TCC2-2,1.0,Skin Not Sun Exposed Suprapubic
+TRG-TCC2-3,1.0,Testis
+TRG-TCC2-4,0.0,Esophagus Muscularis
+TRG-TCC2-5,0.0,Esophagus Muscularis
+TRG-TCC2-6,36.0,Whole Blood
+TRG-TCC3-1,9.0,Spleen
+TRG-TCC4-1,3.0,Adipose Visceral Omentum
+TRH-GTG1-1,2.0,Cells EBV-transformed lymphocytes
+TRH-GTG1-2,2.0,Heart Atrial Appendage
+TRH-GTG1-3,6.0,Cells EBV-transformed lymphocytes
+TRH-GTG1-4,4.0,Cells EBV-transformed lymphocytes
+TRH-GTG1-5,10.0,Brain Caudate basal ganglia
+TRH-GTG1-6,4.0,Uterus
+TRH-GTG1-7,10.0,Brain Caudate basal ganglia
+TRH-GTG1-8,4.0,Uterus
+TRH-GTG1-9,1.0,Pancreas
+TRI-AAT1-1,0.0,Esophagus Muscularis
+TRI-AAT2-1,5.0,Fallopian Tube
+TRI-AAT3-1,0.0,Esophagus Muscularis
+TRI-AAT4-1,144.0,Small Intestine Terminal Ileum
+TRI-AAT5-1,1.0,Thyroid
+TRI-AAT5-2,21.0,Nerve Tibial
+TRI-AAT5-3,0.0,Esophagus Muscularis
+TRI-AAT5-4,1.0,Thyroid
+TRI-AAT5-5,21.0,Nerve Tibial
+TRI-AAT6-1,0.0,Esophagus Muscularis
+TRI-AAT7-1,2.0,Testis
+TRI-AAT7-2,1.0,Testis
+TRI-AAT8-1,0.0,Esophagus Muscularis
+TRI-AAT9-1,0.0,Esophagus Muscularis
+TRI-AAT12-1,1.0,Testis
+TRI-GAT1-1,21.0,Brain Cerebellar Hemisphere
+TRI-GAT1-2,4.0,Testis
+TRI-GAT1-3,6.0,Nerve Tibial
+TRI-TAT1-1,17.0,Artery Aorta
+TRI-TAT2-1,50.0,Artery Aorta
+TRI-TAT2-2,29.0,Testis
+TRI-TAT2-3,0.0,Esophagus Muscularis
+TRI-TAT3-1,1.0,Brain Nucleus accumbens basal ganglia
+TRK-CTT1-1,4.0,Brain Cortex
+TRK-CTT1-2,2.0,Brain Hippocampus
+TRK-CTT2-1,1.0,Esophagus Gastroesophageal Junction
+TRK-CTT2-2,25.0,Vagina
+TRK-CTT2-3,9.0,Brain Cerebellar Hemisphere
+TRK-CTT2-4,2.0,Brain Frontal Cortex BA9
+TRK-CTT2-5,25.0,Vagina
+TRK-CTT3-1,10.0,Cells EBV-transformed lymphocytes
+TRK-CTT4-1,8.0,Brain Cortex
+TRK-CTT5-1,2.0,Brain Cerebellar Hemisphere
+TRK-CTT6-1,62.0,Brain Spinal cord cervical c-1
+TRK-CTT7-1,1.0,Skin Sun Exposed Lower leg
+TRK-CTT8-1,1.0,Heart Atrial Appendage
+TRK-CTT9-1,0.0,Esophagus Muscularis
+TRK-TTT1-1,1.0,Prostate
+TRK-TTT2-1,2.0,Cells EBV-transformed lymphocytes
+TRK-TTT3-1,14.0,Cells EBV-transformed lymphocytes
+TRK-TTT3-2,2.0,Adipose Visceral Omentum
+TRK-TTT3-3,24.0,Adrenal Gland
+TRK-TTT3-4,24.0,Adrenal Gland
+TRK-TTT3-5,4.0,Kidney Medulla
+TRK-TTT4-1,0.0,Esophagus Muscularis
+TRK-TTT5-1,5.0,Testis
+TRK-TTT6-1,0.0,Esophagus Muscularis
+TRK-TTT7-1,0.0,Esophagus Muscularis
+TRK-TTT8-1,1.0,Brain Putamen basal ganglia
+TRK-TTT9-1,0.0,Esophagus Muscularis
+TRK-TTT14-1,5.0,Colon Sigmoid
+TRK-TTT17-1,1.0,Brain Spinal cord cervical c-1
+TRL-AAG1-1,2.0,Thyroid
+TRL-AAG1-2,1.0,Thyroid
+TRL-AAG1-3,1.0,Muscle Skeletal
+TRL-AAG2-1,1.0,Heart Left Ventricle
+TRL-AAG2-2,3.0,Brain Cerebellar Hemisphere
+TRL-AAG2-3,1.0,Heart Left Ventricle
+TRL-AAG2-4,3.0,Brain Cerebellar Hemisphere
+TRL-AAG3-1,10.0,Testis
+TRL-AAG4-1,2.0,Pituitary
+TRL-CAA1-1,4.0,Artery Tibial
+TRL-CAA1-2,1.0,Testis
+TRL-CAA2-1,2.0,Testis
+TRL-CAA3-1,6.0,Cells EBV-transformed lymphocytes
+TRL-CAA4-1,7.0,Nerve Tibial
+TRL-CAA5-1,3.0,Skin Sun Exposed Lower leg
+TRL-CAA6-1,31.0,Nerve Tibial
+TRL-CAA7-1,3.0,Nerve Tibial
+TRL-CAG1-1,2.0,Brain Hippocampus
+TRL-CAG1-2,0.0,Esophagus Muscularis
+TRL-CAG1-3,0.0,Esophagus Muscularis
+TRL-CAG1-4,0.0,Esophagus Muscularis
+TRL-CAG1-5,3.0,Testis
+TRL-CAG1-6,21.0,Whole Blood
+TRL-CAG1-7,5.0,Cells EBV-transformed lymphocytes
+TRL-CAG2-1,5.0,Brain Cerebellar Hemisphere
+TRL-CAG2-2,1.0,Esophagus Muscularis
+TRL-TAA1-1,7.0,Breast Mammary Tissue
+TRL-TAA2-1,1.0,Skin Sun Exposed Lower leg
+TRL-TAA3-1,1.0,Brain Caudate basal ganglia
+TRL-TAA4-1,4.0,Cells EBV-transformed lymphocytes
+TRL-TAG1-1,1.0,Thyroid
+TRL-TAG2-1,1.0,Artery Coronary
+TRL-TAG3-1,2.0,Cells EBV-transformed lymphocytes
+TRM-CAT1-1,2.0,Thyroid
+TRM-CAT2-1,0.0,Esophagus Muscularis
+TRM-CAT3-1,2.0,Cells EBV-transformed lymphocytes
+TRM-CAT3-2,1.0,Cells EBV-transformed lymphocytes
+TRM-CAT4-1,0.0,Esophagus Muscularis
+TRM-CAT4-2,1.0,Esophagus Muscularis
+TRM-CAT4-3,1.0,Testis
+TRM-CAT5-1,2.0,Testis
+TRM-CAT5-2,2.0,Testis
+TRM-CAT6-1,20.0,Testis
+TRM-CAT7-1,0.0,Esophagus Muscularis
+TRN-GTT1-1,2.0,Artery Coronary
+TRN-GTT2-1,2.0,Breast Mammary Tissue
+TRN-GTT2-2,6.0,Brain Cortex
+TRN-GTT2-3,5.0,Brain Caudate basal ganglia
+TRN-GTT2-4,1.0,Testis
+TRN-GTT2-5,7.0,Testis
+TRN-GTT2-6,13.0,Brain Cortex
+TRN-GTT2-7,4.0,Brain Cerebellar Hemisphere
+TRN-GTT2-8,2.0,Brain Cerebellar Hemisphere
+TRN-GTT3-1,3.0,Brain Cerebellar Hemisphere
+TRN-GTT4-1,2.0,Brain Putamen basal ganglia
+TRN-GTT5-1,2.0,Brain Cerebellar Hemisphere
+TRN-GTT6-1,1.0,Artery Aorta
+TRN-GTT7-1,1.0,Skin Not Sun Exposed Suprapubic
+TRN-GTT8-1,2.0,Artery Coronary
+TRN-GTT9-1,6.0,Brain Amygdala
+TRN-GTT9-2,4.0,Brain Hypothalamus
+TRN-GTT10-1,2.0,Brain Substantia nigra
+TRN-GTT24-1,7.0,Brain Cerebellar Hemisphere
+TRN-GTT25-1,5.0,Brain Anterior cingulate cortex BA24
+TRN-GTT26-1,4.0,Colon Transverse
+TRN-GTT27-1,2.0,Testis
+TRP-AGG1-1,1.0,Vagina
+TRP-AGG2-1,1.0,Bladder
+TRP-AGG2-2,2.0,Heart Atrial Appendage
+TRP-AGG2-3,4.0,Brain Putamen basal ganglia
+TRP-AGG2-4,2.0,Heart Atrial Appendage
+TRP-AGG2-5,4.0,Brain Putamen basal ganglia
+TRP-AGG2-6,5.0,Cells EBV-transformed lymphocytes
+TRP-AGG2-7,12.0,Brain Cerebellar Hemisphere
+TRP-AGG2-8,5.0,Brain Nucleus accumbens basal ganglia
+TRP-AGG5-1,3.0,Brain Hippocampus
+TRP-CGG1-1,2.0,Adipose Visceral Omentum
+TRP-CGG1-2,26.0,Vagina
+TRP-CGG1-3,13.0,Whole Blood
+TRP-CGG2-1,1.0,Brain Nucleus accumbens basal ganglia
+TRP-GGG1-1,11.0,Nerve Tibial
+TRP-TGG1-1,0.0,Esophagus Muscularis
+TRP-TGG2-1,2.0,Cells EBV-transformed lymphocytes
+TRP-TGG3-1,10.0,Testis
+TRP-TGG3-2,10.0,Testis
+TRP-TGG3-3,4.0,Vagina
+TRP-TGG3-4,1.0,Brain Cerebellum
+TRP-TGG3-5,1.0,Brain Cerebellar Hemisphere
+TRQ-CTG1-1,1.0,Artery Tibial
+TRQ-CTG1-2,3.0,Esophagus Muscularis
+TRQ-CTG1-3,1.0,Artery Aorta
+TRQ-CTG1-4,1.0,Thyroid
+TRQ-CTG1-5,3.0,Esophagus Muscularis
+TRQ-CTG2-1,0.0,Esophagus Muscularis
+TRQ-CTG3-1,5.0,Brain Hippocampus
+TRQ-CTG3-2,2.0,Brain Substantia nigra
+TRQ-CTG4-1,9.0,Testis
+TRQ-CTG4-2,4.0,Cervix Ectocervix
+TRQ-CTG5-1,0.0,Esophagus Muscularis
+TRQ-CTG6-1,2.0,Adipose Visceral Omentum
+TRQ-CTG7-1,2.0,Testis
+TRQ-TTG1-1,4.0,Brain Cerebellar Hemisphere
+TRQ-TTG2-1,5.0,Testis
+TRQ-TTG3-1,1.0,Liver
+TRQ-TTG3-2,0.0,Esophagus Muscularis
+TRQ-TTG3-3,4.0,Testis
+TRQ-TTG4-1,1.0,Brain Caudate basal ganglia
+TRQ-TTG7-1,4.0,Testis
+TRQ-TTG8-1,0.0,Esophagus Muscularis
+TRQ-TTG9-1,0.0,Esophagus Muscularis
+TRR-ACG1-1,16.0,Artery Aorta
+TRR-ACG1-2,2.0,Brain Hippocampus
+TRR-ACG1-3,16.0,Artery Aorta
+TRR-ACG2-1,10.0,Testis
+TRR-ACG2-2,0.0,Esophagus Muscularis
+TRR-ACG2-3,1.0,Kidney Cortex
+TRR-ACG2-4,1.0,Brain Hypothalamus
+TRR-CCG1-1,8.0,Brain Cerebellar Hemisphere
+TRR-CCG1-2,3.0,Adipose Visceral Omentum
+TRR-CCG1-3,8.0,Brain Cerebellar Hemisphere
+TRR-CCG2-1,2.0,Brain Hypothalamus
+TRR-CCT1-1,1.0,Skin Sun Exposed Lower leg
+TRR-CCT2-1,1.0,Brain Cerebellar Hemisphere
+TRR-CCT3-1,6.0,Adrenal Gland
+TRR-CCT4-1,10.0,Testis
+TRR-CCT6-2,26.0,Testis
+TRR-CCT8-1,0.0,Esophagus Muscularis
+TRR-TCG1-1,5.0,Testis
+TRR-TCG2-1,1.0,Cells EBV-transformed lymphocytes
+TRR-TCG3-1,2.0,Cells Cultured fibroblasts
+TRR-TCG4-1,0.0,Esophagus Muscularis
+TRR-TCG5-1,2.0,Brain Nucleus accumbens basal ganglia
+TRR-TCT1-1,39.0,Testis
+TRR-TCT2-1,17.0,Brain Cerebellar Hemisphere
+TRR-TCT3-1,5.0,Brain Cortex
+TRR-TCT3-2,5.0,Brain Cortex
+TRR-TCT4-1,1.0,Liver
+TRR-TCT5-1,2.0,Pituitary
+TRS-AGA1-1,0.0,Esophagus Muscularis
+TRS-AGA2-1,94.0,Small Intestine Terminal Ileum
+TRS-AGA2-2,2.0,Brain Cerebellum
+TRS-AGA2-3,6.0,Testis
+TRS-AGA2-4,5.0,Artery Aorta
+TRS-AGA2-5,1.0,Testis
+TRS-AGA2-6,94.0,Small Intestine Terminal Ileum
+TRS-AGA3-1,1.0,Uterus
+TRS-AGA4-1,0.0,Esophagus Muscularis
+TRS-AGA5-1,7.0,Pituitary
+TRS-AGA7-1,2.0,Testis
+TRS-CGA1-1,11.0,Fallopian Tube
+TRS-CGA2-1,1.0,Thyroid
+TRS-CGA3-1,3.0,Ovary
+TRS-CGA4-1,2.0,Prostate
+TRS-GCT1-1,6.0,Testis
+TRS-GCT2-1,0.0,Esophagus Muscularis
+TRS-GCT3-1,9.0,Stomach
+TRS-GCT4-1,0.0,Esophagus Muscularis
+TRS-GCT4-2,0.0,Esophagus Muscularis
+TRS-GCT4-3,7.0,Whole Blood
+TRS-GCT5-1,3.0,Fallopian Tube
+TRS-GCT6-1,1.0,Brain Nucleus accumbens basal ganglia
+TRS-TGA1-1,1.0,Testis
+TRS-TGA2-1,4.0,Testis
+TRS-TGA3-1,1.0,Brain Caudate basal ganglia
+TRS-TGA4-1,0.0,Esophagus Muscularis
+TRSUP-CTA2-1,1.0,Brain Hypothalamus
+TRSUP-CTA3-1,0.0,Esophagus Muscularis
+TRSUP-TTA3-1,5.0,Nerve Tibial
+TRT-AGT1-1,7.0,Artery Tibial
+TRT-AGT1-2,76.0,Small Intestine Terminal Ileum
+TRT-AGT1-3,5.0,Brain Cortex
+TRT-AGT2-1,4.0,Kidney Cortex
+TRT-AGT2-2,1.0,Artery Tibial
+TRT-AGT4-1,7.0,Fallopian Tube
+TRT-AGT5-1,7.0,Fallopian Tube
+TRT-AGT6-1,1.0,Adipose Visceral Omentum
+TRT-CGT1-1,2.0,Brain Frontal Cortex BA9
+TRT-CGT2-1,2.0,Skin Sun Exposed Lower leg
+TRT-CGT3-1,14.0,Testis
+TRT-CGT4-1,2.0,Adipose Subcutaneous
+TRT-CGT5-1,0.0,Esophagus Muscularis
+TRT-TGT1-1,1.0,Adipose Visceral Omentum
+TRT-TGT2-1,2.0,Testis
+TRT-TGT3-1,0.0,Esophagus Muscularis
+TRT-TGT4-1,3.0,Testis
+TRT-TGT5-1,7.0,Testis
+TRT-TGT6-1,8.0,Testis
+TRU-TCA1-1,11.0,Stomach
+TRU-TCA2-1,3.0,Testis
+TRUND-NNN1-1,0.0,Esophagus Muscularis
+TRUND-NNN2-1,6.0,Cells EBV-transformed lymphocytes
+TRUND-NNN5-1,2.0,Testis
+TRV-AAC1-1,3.0,Testis
+TRV-AAC1-2,1.0,Esophagus Muscularis
+TRV-AAC1-3,0.0,Esophagus Muscularis
+TRV-AAC1-4,2.0,Colon Transverse
+TRV-AAC1-5,0.0,Esophagus Muscularis
+TRV-AAC2-1,14.0,Brain Cortex
+TRV-AAC3-1,4.0,Cells EBV-transformed lymphocytes
+TRV-AAC4-1,4.0,Brain Cortex
+TRV-AAC5-1,0.0,Esophagus Muscularis
+TRV-AAC6-1,0.0,Esophagus Muscularis
+TRV-CAC1-1,11.0,Kidney Medulla
+TRV-CAC1-2,0.0,Esophagus Muscularis
+TRV-CAC1-3,1.0,Esophagus Muscularis
+TRV-CAC1-4,2.0,Vagina
+TRV-CAC1-5,1.0,Esophagus Muscularis
+TRV-CAC1-6,12.0,Testis
+TRV-CAC1-7,1.0,Artery Coronary
+TRV-CAC2-1,0.0,Esophagus Muscularis
+TRV-CAC3-1,32.0,Small Intestine Terminal Ileum
+TRV-CAC4-1,1.0,Adipose Subcutaneous
+TRV-CAC5-1,2.0,Uterus
+TRV-CAC6-1,1.0,Brain Cortex
+TRV-CAC8-1,9.0,Kidney Cortex
+TRV-CAC13-1,0.0,Esophagus Muscularis
+TRV-CAC14-1,1.0,Pancreas
+TRV-TAC1-1,14.0,Testis
+TRV-TAC1-2,2.0,Uterus
+TRV-TAC2-1,4.0,Testis
+TRV-TAC3-1,4.0,Brain Cortex
+TRV-TAC4-1,0.0,Esophagus Muscularis
+TRW-CCA1-1,69.0,Spleen
+TRW-CCA2-1,7.0,Brain Nucleus accumbens basal ganglia
+TRW-CCA3-1,6.0,Artery Tibial
+TRW-CCA3-2,1.0,Testis
+TRW-CCA3-3,6.0,Artery Tibial
+TRW-CCA4-1,6.0,Small Intestine Terminal Ileum
+TRW-CCA5-1,1.0,Esophagus Muscularis
+TRX-CAT1-1,13.0,Artery Aorta
+TRX-CAT1-2,2.0,Skin Not Sun Exposed Suprapubic
+TRX-CAT1-3,1.0,Brain Nucleus accumbens basal ganglia
+TRX-CAT1-4,2.0,Cells EBV-transformed lymphocytes
+TRX-CAT1-5,1.0,Ovary
+TRX-CAT1-6,1.0,Brain Cerebellar Hemisphere
+TRX-CAT1-7,1.0,Testis
+TRX-CAT1-8,2.0,Skin Not Sun Exposed Suprapubic
+TRY-ATA1-1,15.0,Testis
+TRY-GTA1-1,3.0,Uterus
+TRY-GTA2-1,6.0,Colon Transverse
+TRY-GTA3-1,4.0,Small Intestine Terminal Ileum
+TRY-GTA4-1,66.0,Cells EBV-transformed lymphocytes
+TRY-GTA5-1,17.0,Cells EBV-transformed lymphocytes
+TRY-GTA5-2,26.0,Testis
+TRY-GTA5-3,17.0,Cells EBV-transformed lymphocytes
+TRY-GTA5-4,26.0,Testis
+TRY-GTA5-5,8.0,Skin Sun Exposed Lower leg
+TRY-GTA6-1,2.0,Brain Nucleus accumbens basal ganglia
+TRY-GTA7-1,83.0,Cells EBV-transformed lymphocytes
+TRY-GTA8-1,1.0,Testis
+AARS1P1,0.0,Esophagus Muscularis
+AIMP1P1,5.0,Brain Putamen basal ganglia
+AIMP1P2,2.0,Lung
+GARS1P1,1.0,Brain Spinal cord cervical c-1
+KARS1P1,3.0,Bladder
+KARS1P2,29.0,Testis
+KARS1P3,5.0,Lung
+NARS1P1,18.0,Muscle Skeletal
+NARS1P2,3.0,Nerve Tibial
+PRORSD1P,123.0,Testis
+QTRT1P1,2.0,Testis
+RARS1P1,4.0,Artery Coronary
+CARS1P1,7.0,Brain Spinal cord cervical c-1
+CARS1P2,2.0,Heart Atrial Appendage
+TRA-AGC23-1,0.0,Esophagus Muscularis
+TRA-TGC9-1,7.0,Brain Hypothalamus
+TRC-ACA1-1,1.0,Brain Cerebellar Hemisphere
+TRC-GCA25-1,2.0,Brain Spinal cord cervical c-1
+TRE-CTC7-1,1.0,Adrenal Gland
+TRE-CTC16-1,4.0,Uterus
+TRE-TTC6-1,14.0,Brain Cortex
+TRE-TTC7-1,1.0,Kidney Medulla
+TRE-TTC9-1,3.0,Testis
+TRE-TTC10-1,27.0,Small Intestine Terminal Ileum
+TRF-GAA8-1,26.0,Testis
+TRF-GAA9-1,27.0,Artery Aorta
+TRF-GAA10-1,9.0,Pituitary
+TRF-GAA11-1,0.0,Esophagus Muscularis
+TRF-GAA12-1,4.0,Esophagus Muscularis
+TRG-TCC5-1,3.0,Cells EBV-transformed lymphocytes
+TRG-TCC6-1,4.0,Stomach
+TRI-AAT10-1,1.0,Esophagus Muscularis
+TRI-AAT11-1,0.0,Esophagus Muscularis
+TRK-CTT12-1,16.0,Thyroid
+TRK-CTT13-1,0.0,Esophagus Muscularis
+TRK-CTT14-1,2.0,Brain Cortex
+TRK-CTT16-1,2.0,Artery Coronary
+TRK-TTT10-1,24.0,Testis
+TRK-TTT13-1,2.0,Adipose Visceral Omentum
+TRK-TTT15-1,1.0,Testis
+TRL-AAG7-1,1.0,Cells EBV-transformed lymphocytes
+TRL-TAA5-1,1.0,Skin Sun Exposed Lower leg
+TRL-TAG4-1,6.0,Small Intestine Terminal Ileum
+TRMT10BP1,2.0,Kidney Medulla
+TRMT112P1,2.0,Testis
+TRMT112P2,2.0,Kidney Cortex
+TRMT112P3,5.0,Testis
+TRMT112P4,10.0,Liver
+TRMT112P5,0.0,Esophagus Muscularis
+TRMT112P6,112.0,Testis
+TRMT112P7,1.0,Thyroid
+TRMT112P8,7.0,Nerve Tibial
+TRN-GTT22-1,0.0,Esophagus Muscularis
+TRN-GTT23-1,7.0,Kidney Cortex
+TRP-AGG4-1,1.0,Testis
+TRP-AGG6-1,2.0,Bladder
+TRP-TGG4-1,35.0,Vagina
+TRP-TGG5-1,8.0,Skin Not Sun Exposed Suprapubic
+TRQ-CTG9-1,4.0,Brain Caudate basal ganglia
+TRQ-CTG11-1,0.0,Esophagus Muscularis
+TRQ-CTG13-1,0.0,Esophagus Muscularis
+TRQ-CTG16-1,15.0,Colon Transverse
+TRQ-TTG5-1,2.0,Testis
+TRQ-TTG6-1,2.0,Colon Sigmoid
+TRQ-TTG10-1,3.0,Artery Coronary
+TRR-CCT7-1,0.0,Esophagus Muscularis
+TRR-CCT9-1,4.0,Skin Not Sun Exposed Suprapubic
+TRS-ACT1-1,0.0,Esophagus Muscularis
+TRUND-NNN3-1,4.0,Artery Coronary
+TRUND-NNN4-1,1.0,Artery Coronary
+TRUND-NNN6-1,2.0,Prostate
+TRUND-NNN7-1,1.0,Skin Sun Exposed Lower leg
+TRUND-NNN8-1,2.0,Whole Blood
+TRUND-NNN9-1,0.0,Esophagus Muscularis
+TRUND-NNN10-1,9.0,Vagina
+TRV-CAC11-1,2.0,Brain Nucleus accumbens basal ganglia
+TRV-CAC11-2,3.0,Brain Cerebellar Hemisphere
+TRY-GTA11-1,1.0,Testis
+TRY-GTA12-1,2.0,Brain Nucleus accumbens basal ganglia
+TSEN2P1,3.0,Testis
+TSEN15P1,4.0,Kidney Medulla
+TSEN15P2,6.0,Cervix Endocervix
+TSEN15P3,1.0,Testis
+TYW1P1,4.0,Fallopian Tube
+WARS1P1,9.0,Vagina
+WARS2P1,3.0,Testis
+XPOTP1,46.0,Ovary
+TRT-AGT3-1,1.0,Esophagus Gastroesophageal Junction
+FARSBP1,2.0,Cells EBV-transformed lymphocytes
+IARS2P1,1.0,Brain Caudate basal ganglia
+QRSL1P1,2.0,Brain Cerebellar Hemisphere
+QRSL1P2,2.0,Adipose Subcutaneous
+QRSL1P3,5.0,Skin Not Sun Exposed Suprapubic
+TARS2P1,2.0,Testis
