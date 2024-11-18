@@ -79,8 +79,8 @@ for (gene in gene_groups) {
       # Then check for exception_genes, where genes do not end with "P"
       Gene %in% exception_genes ~ "Pseudogene",
       
-      # For genes ending with "P" but not in exception_genes_2, classify as Pseudogene
-      grepl("P$", Gene) ~ "Pseudogene",
+      # For genes that has "P" but not in exception_genes_2, classify as Pseudogene
+      grepl("P", Gene) ~ "Pseudogene",
       
       # All other genes are considered Functional
       TRUE ~ "Functional"
