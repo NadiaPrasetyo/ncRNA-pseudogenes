@@ -1,3 +1,4 @@
+library(dplyr)
 # Set the directory where your files are located
 data_dir <- "../../data/"
 
@@ -21,6 +22,14 @@ exception_genes <- c('TRA-AGC23-1', 'TRA-TGC9-1', 'TRC-ACA1-1', 'TRC-GCA25-1', '
                      'TRUND-NNN4-1', 'TRUND-NNN6-1', 'TRUND-NNN7-1', 'TRUND-NNN8-1', 'TRUND-NNN9-1', 
                      'TRUND-NNN10-1', 'TRV-CAC11-1', 'TRV-CAC11-2', 'TRX-CAT3-1', 'TRY-GTA11-1',
                      'TRY-GTA12-1')
+
+#Define list of 2nd exceptions: have P but are functional genes
+exception_genes_2 <- c('MT-TP', 'NMTRP-TGG1-1', 'TRP-AGG1-1', 'TRP-AGG2-1', 'TRP-AGG2-2', 'TRP-AGG2-3', 
+                       'TRP-AGG2-4', 'TRP-AGG2-5', 'TRP-AGG2-6', 'TRP-AGG2-7', 'TRP-AGG2-8', 'TRP-AGG3-1', 
+                       'TRP-AGG5-1', 'TRP-CGG1-1', 'TRP-CGG1-2', 'TRP-CGG1-3', 'TRP-CGG2-1', 'TRP-GGG1-1',
+                       'TRP-TGG1-1', 'TRP-TGG2-1', 'TRP-TGG3-1', 'TRP-TGG3-2', 'TRP-TGG3-3', 'TRP-TGG3-4', 
+                       'TRP-TGG3-5', 'TRSUP-CTA1-1', 'TRSUP-CTA2-1', 'TRSUP-CTA3-1', 'TRSUP-TTA1-1', 'TRSUP-TTA2-1',
+                       'TRSUP-TTA3-1')
 
 # Initialize an empty data frame to store the combined data
 combined_data <- data.frame(Gene_group = character(),
@@ -63,8 +72,19 @@ for (gene in gene_groups) {
   
   # Create a new column 'Gene_Type' to differentiate functional genes and pseudogenes
   gene_combined_data <- gene_combined_data %>%
-    mutate(Gene_Type = ifelse(Gene %in% exception_genes, "Pseudogene", 
-                              ifelse(grepl("P", Gene), "Pseudogene", "Functional")))
+    mutate(Gene_Type = case_when(
+      # First check for exception_genes_2, where genes with "P" are functional
+      Gene %in% exception_genes_2 ~ "Functional",
+      
+      # Then check for exception_genes, where genes do not end with "P"
+      Gene %in% exception_genes ~ "Pseudogene",
+      
+      # For genes ending with "P" but not in exception_genes_2, classify as Pseudogene
+      grepl("P$", Gene) ~ "Pseudogene",
+      
+      # All other genes are considered Functional
+      TRUE ~ "Functional"
+    ))
   
   # Append the combined gene data to the main combined data frame
   gene_combined_data$Gene_group <- gene  # Add the gene group name
