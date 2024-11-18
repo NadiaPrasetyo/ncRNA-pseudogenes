@@ -1,5 +1,6 @@
 # Load necessary libraries
 library(ggplot2)
+library(ggfortify)
 
 # Step 1: Load the data
 data <- read.csv("../../results/combined_gene_data.csv")  # Replace with your file path
@@ -14,19 +15,12 @@ numerical_features <- data[, c("PhastCons30_median", "PhyloP100_median", "PhyloP
 numerical_features_scaled <- scale(numerical_features)
 
 # Step 4: Perform PCA
-pca_result <- prcomp(numerical_features_scaled, center = TRUE, scale. = TRUE)
+pca_result <- prcomp(numerical_features_scaled, scale. = TRUE)
 
-# Step 5: Extract PCA components for plotting
-pca_data <- data.frame(pca_result$x)
-pca_data$Gene_Type <- data$Gene_Type  # Add the gene type for coloring in the plot
+# Step 5: Plot data
+plot<-autoplot(pca_result, data = data, colour = "Gene_Type",  loadings = TRUE, loadings.colour = 'cornflowerblue', loadings.label = TRUE, loadings.label.colour = "cornflowerblue", loadings.label.size  = 3)
 
-# Step 6: Plot the PCA
-plot<-ggplot(pca_data, aes(x = PC1, y = PC2, color = Gene_Type)) +
-  geom_point(size = 3) +
-  labs(title = "PCA of Gene types", x = "Principal Component 1", y = "Principal Component 2") +
-  theme_minimal()
-
-# Step 7: Save the plot
+# Step 6: Save the plot
 ggsave("../../results/PCA_plot.pdf", plot = plot)
 
 # Variance explained by each PC
@@ -64,8 +58,30 @@ ggsave("../../results/PCA_plot_variance_summary.pdf", plot = plot)
 # Loadings (contributions of variables to PCs)
 loadings <- pca_result$rotation
 
-# Display loadings for each PC
 print(loadings)
+
+# Extract loadings for PC1 and PC2
+loadings_df <- data.frame(
+  Variable = rownames(loadings),
+  PC1 = loadings[, "PC1"],
+  PC2 = loadings[, "PC2"]
+)
+
+# Loadings plot
+plot<-ggplot(loadings_df, aes(x = PC1, y = PC2, label = Variable)) +
+  geom_point(size = 3, color = "blue") +
+  geom_text(vjust = 1.5, size = 4) +  # Labels for variables
+  labs(
+    title = "Loadings Plot for PC1 and PC2",
+    x = "PC1 Loadings",
+    y = "PC2 Loadings"
+  ) +
+  theme_minimal() +
+  geom_hline(yintercept = 0, linetype = "dashed") +  # Add horizontal axis
+  geom_vline(xintercept = 0, linetype = "dashed")    # Add vertical axis
+
+ggsave("../../results/PCA_plot_loadings.pdf", plot = plot)
+
 
 
 
