@@ -63,7 +63,8 @@ for (gene in gene_groups) {
   
   # Create a new column 'Gene_Type' to differentiate functional genes and pseudogenes
   gene_combined_data <- gene_combined_data %>%
-    mutate(Gene_Type = ifelse(grepl("P", Gene) & !Gene %in% exception_genes, "Pseudogene", "Functional"))
+    mutate(Gene_Type = ifelse(Gene %in% exception_genes, "Pseudogene", 
+                              ifelse(grepl("P", Gene), "Pseudogene", "Functional")))
   
   # Append the combined gene data to the main combined data frame
   gene_combined_data$Gene_group <- gene  # Add the gene group name
