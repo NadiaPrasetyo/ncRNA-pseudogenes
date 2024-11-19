@@ -6,7 +6,7 @@ library(readr)
 gene_groups <- c("RNU1", "RNU2", "RNU4", "RNU5", "RNU6", "RNU4ATAC", "RNU6ATAC", "RNU11", "RNU12", "VTRNA",
                  "RNY","TRNA","RN7SL","RNU7","RN7SK")
 
-expression_types <- c("ENCODE-expr", "GTEX-RNAseq_summary")
+expression_types <- c("ENCODE", "GTEX")
 
 # Define the list of exceptions (genes that are pseudogenes but do not end with "P",from TRNA gene groups)
 exception_genes <- c('TRA-AGC23-1', 'TRA-TGC9-1', 'TRC-ACA1-1', 'TRC-GCA25-1', 'TRE-CTC7-1', 
@@ -33,106 +33,138 @@ exception_genes_2 <- c('MT-TP', 'NMTRP-TGG1-1', 'TRP-AGG1-1', 'TRP-AGG2-1', 'TRP
                        'TRSUP-TTA3-1')
 
 # Create an empty data frame to store the test results
-test_results <- data.frame(Gene_group = character(),
+test_results <- data.frame(Expression_Type = character(),
+                           Gene_group = character(),
                            Statistic = numeric(),
                            p_value = numeric(),
-                           Functional_n = integer(),
-                           Pseudogene_n = integer(),
+                           Functional_Sample_Count = integer(),
+                           Pseudogene_Sample_Count = integer(),
                            stringsAsFactors = FALSE)
 
-# Create empty vectors to collect pooled data for functional and pseudogenes across all genes
-all_functional_genes <- c()
-all_pseudogenes <- c()
-
-# Loop through each gene group (e.g., RNU1, RNU2, etc.)
-for (gene in gene_groups) {
+# Loop through each Expression type (folder)
+for (expression in expression_types) {
   
-  # Read the data for the current gene group
-  data <- read_csv(paste0("../../data/", gene, "_expr.csv"))
+  # Create empty vectors for pooled functional and pseudogene data and sample counts
+  all_functional_genes <- c()
+  all_pseudogenes <- c()
   
-  # Create a new column 'Gene_Type' to differentiate functional genes and pseudogenes
-  data <- data %>%
-    mutate(Gene_Type = case_when(
-      # First check for exception_genes_2, where genes with "P" are functional
-      Gene %in% exception_genes_2 ~ "Functional",
+  # Loop through each gene group (e.g., RNU1, RNU2, etc.)
+  for (gene in gene_groups) {
+    # Construct the file path for the current expression type and gene group
+    file_path <- paste0("../../data/", expression, "-expr_summary/", gene, "_expr.csv")
+    
+    # Check if the file exists
+    if (!file.exists(file_path)) {
+      cat("File does not exist for gene", gene, "in expression type", expression, "\n")
       
-      # Then check for exception_genes, where genes do not end with "P"
-      Gene %in% exception_genes ~ "Pseudogene",
+      # Record the result with "Insufficient data" message in Statistic and p_value columns
+      test_results <- rbind(test_results, data.frame(Expression_Type = expression,
+                                                     Gene_group = gene,
+                                                     Statistic = NA,
+                                                     p_value = NA,
+                                                     Functional_Sample_Count = 0,
+                                                     Pseudogene_Sample_Count = 0,
+                                                     stringsAsFactors = FALSE))
       
-      # For genes that has "P" but not in exception_genes_2, classify as Pseudogene
-      grepl("P", Gene) ~ "Pseudogene",
-      
-      # All other genes are considered Functional
-      TRUE ~ "Functional"
-    )) 
+      next  # Skip to the next gene
+    }
+    
+    # Read the data for the current gene group
+    data <- read_csv(file_path)
+    
+    # Create a new column 'Gene_Type' to differentiate functional genes and pseudogenes
+    data <- data %>%
+      mutate(Gene_Type = case_when(
+        # First check for exception_genes_2, where genes with "P" are functional
+        Gene %in% exception_genes_2 ~ "Functional",
+        
+        # Then check for exception_genes, where genes do not end with "P"
+        Gene %in% exception_genes ~ "Pseudogene",
+        
+        # For genes that has "P" but not in exception_genes_2, classify as Pseudogene
+        grepl("P", Gene) ~ "Pseudogene",
+        
+        # All other genes are considered Functional
+        TRUE ~ "Functional"
+      )) 
+    
+    # Separate functional genes and pseudogenes
+    if(expression == 'GTEX'){
+      functional_genes <- data$`Max Expression`[data$Gene_Type == "Functional"]
+      pseudogenes <- data$`Max Expression`[data$Gene_Type == "Pseudogene"]
+    }else{
+      functional_genes <- data$`Max_FPKM`[data$Gene_Type == "Functional"]
+      pseudogenes <- data$`Max_FPKM`[data$Gene_Type == "Pseudogene"]
+    }
+    
+    # Add to the pooled data for later testing
+    all_functional_genes <- c(all_functional_genes, functional_genes)
+    all_pseudogenes <- c(all_pseudogenes, pseudogenes)
+    
+    # Count the sample sizes for functional genes and pseudogenes
+    functional_n <- length(functional_genes)
+    pseudogene_n <- length(pseudogenes)
+    
+    # Always run the KS test for each gene group, regardless of the sample sizes
+    ks_result <- tryCatch({
+      ks.test(functional_genes, pseudogenes)
+    }, error = function(e) {
+      # If there's an error (e.g., because of too few data points), return NULL
+      NULL
+    })
+    
+    # If KS test was successful, store the results, otherwise, store NA
+    if (!is.null(ks_result)) {
+      test_results <- rbind(test_results, data.frame(Expression_Type = expression,
+                                                     Gene_group = gene,
+                                                     Statistic = ks_result$statistic,
+                                                     p_value = ks_result$p.value,
+                                                     Functional_Sample_Count = functional_n,
+                                                     Pseudogene_Sample_Count = pseudogene_n,
+                                                     stringsAsFactors = FALSE))
+    } else {
+      test_results <- rbind(test_results, data.frame(Expression_Type = expression,
+                                                     Gene_group = gene,
+                                                     Statistic = NA,
+                                                     p_value = NA,
+                                                     Functional_Sample_Count = functional_n,
+                                                     Pseudogene_Sample_Count = pseudogene_n,
+                                                     stringsAsFactors = FALSE))
+    }
+    
+    # Print a message indicating that the gene has been processed
+    cat("Processed:", gene, "\n")
+  }
   
-  # Separate functional genes and pseudogenes
-  functional_genes <- data$`Max Expression`[data$Gene_Type == "Functional"]
-  pseudogenes <- data$`Max Expression`[data$Gene_Type == "Pseudogene"]
+  # Perform the KS test on the pooled functional and pseudogene data
+  pooled_functional_n <- length(all_functional_genes)
+  pooled_pseudogene_n <- length(all_pseudogenes)
   
-  # Add to the pooled data for later testing
-  all_functional_genes <- c(all_functional_genes, functional_genes)
-  all_pseudogenes <- c(all_pseudogenes, pseudogenes)
-  
-  # Count the sample sizes for functional genes and pseudogenes
-  functional_n <- length(functional_genes)
-  pseudogene_n <- length(pseudogenes)
-  
-  # Always run the KS test for each gene group, regardless of the sample sizes
-  ks_result <- tryCatch({
-    ks.test(functional_genes, pseudogenes)
+  # Always run the KS test on pooled data, regardless of sample size
+  pooled_ks_result <- tryCatch({
+    ks.test(all_functional_genes, all_pseudogenes)
   }, error = function(e) {
-    # If there's an error (e.g., because of too few data points), return NULL
     NULL
   })
   
-  # If KS test was successful, store the results, otherwise, store NA
-  if (!is.null(ks_result)) {
-    test_results <- rbind(test_results, data.frame(Gene_group = gene,
-                                                   Statistic = ks_result$statistic,
-                                                   p_value = ks_result$p.value,
-                                                   Functional_n = functional_n,
-                                                   Pseudogene_n = pseudogene_n,
+  # If KS test on pooled data was successful, store the results, otherwise, store NA
+  if (!is.null(pooled_ks_result)) {
+    test_results <- rbind(test_results, data.frame(Expression_Type = expression,
+                                                   Gene_group = "Pooled",
+                                                   Statistic = pooled_ks_result$statistic,
+                                                   p_value = pooled_ks_result$p.value,
+                                                   Functional_Sample_Count = pooled_functional_n,
+                                                   Pseudogene_Sample_Count = pooled_pseudogene_n,
                                                    stringsAsFactors = FALSE))
   } else {
-    test_results <- rbind(test_results, data.frame(Gene_group = gene,
+    test_results <- rbind(test_results, data.frame(Expression_Type = expression,
+                                                   Gene_group = "Pooled",
                                                    Statistic = NA,
                                                    p_value = NA,
-                                                   Functional_n = functional_n,
-                                                   Pseudogene_n = pseudogene_n,
+                                                   Functional_Sample_Count = pooled_functional_n,
+                                                   Pseudogene_Sample_Count = pooled_pseudogene_n,
                                                    stringsAsFactors = FALSE))
   }
-  
-  # Print a message indicating that the gene has been processed
-  cat("Processed:", gene, "\n")
-}
-
-# Perform the KS test on the pooled functional and pseudogene data
-pooled_functional_n <- length(all_functional_genes)
-pooled_pseudogene_n <- length(all_pseudogenes)
-
-# Always run the KS test on pooled data, regardless of sample size
-pooled_ks_result <- tryCatch({
-  ks.test(all_functional_genes, all_pseudogenes)
-}, error = function(e) {
-  NULL
-})
-
-# If KS test on pooled data was successful, store the results, otherwise, store NA
-if (!is.null(pooled_ks_result)) {
-  test_results <- rbind(test_results, data.frame(Gene_group = "All_Genes_Pooled",
-                                                 Statistic = pooled_ks_result$statistic,
-                                                 p_value = pooled_ks_result$p.value,
-                                                 Functional_n = pooled_functional_n,
-                                                 Pseudogene_n = pooled_pseudogene_n,
-                                                 stringsAsFactors = FALSE))
-} else {
-  test_results <- rbind(test_results, data.frame(Gene_group = "All_Genes_Pooled",
-                                                 Statistic = NA,
-                                                 p_value = NA,
-                                                 Functional_n = pooled_functional_n,
-                                                 Pseudogene_n = pooled_pseudogene_n,
-                                                 stringsAsFactors = FALSE))
 }
 
 # Write the results into a CSV file
