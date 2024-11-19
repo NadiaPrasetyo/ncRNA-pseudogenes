@@ -12,7 +12,7 @@ colors <- c("cornflowerblue", "firebrick2", "goldenrod1", "mediumseagreen", "med
 for (i in 1:length(datasets)) {
   
   # Load the data from the CSV file for the current dataset
-  data <- read.csv(paste0("../../data/ENCODE-expr/", datasets[i], "_expr_data.csv"))
+  data <- read.csv(paste0("../../data/ENCODE-expr_summary/", datasets[i], "_expr.csv"))
   
   # Calculate 10% of the count for minimum y value
   minimum_y <- nrow(data) * 0.05
@@ -28,8 +28,8 @@ for (i in 1:length(datasets)) {
   
   # Create a new column for styling: check if 'Gene' does not contain a "P"
   label_data <- label_data %>%
-    mutate(is_bold = !str_detect(Gene.Symbol, "P"),
-           label_color = if_else(is_bold, "Gene.Symbol", "Pseudogene"),
+    mutate(is_bold = !str_detect(Gene, "P"),
+           label_color = if_else(is_bold, "Functional Gene", "Pseudogene"),
            fontface = if_else(is_bold, "bold", "plain"))
   
   # Create the density data for overlay
@@ -58,7 +58,7 @@ for (i in 1:length(datasets)) {
     theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
     geom_line(data = density_median_df, aes(x = x, y = y), color = colors[i]) +  # Add density curve
     geom_text_repel(data = label_data, 
-                    aes(x = Max_FPKM, y = pmax(minimum_y, 0), label = Gene.Symbol,
+                    aes(x = Max_FPKM, y = pmax(minimum_y, 0), label = Gene,
                         color = label_color, fontface = fontface),
                     nudge_y = 0,
                     box.padding = 0.5,
