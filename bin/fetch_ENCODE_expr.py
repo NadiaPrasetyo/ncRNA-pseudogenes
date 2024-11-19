@@ -44,14 +44,14 @@ def fetch_max_expression_data(tsv_file, gene_symbols):
             else:
                 max_fpkm = None
             
-            result_data.append({'Gene Symbol': gene, 'Max_TPM': max_tpm, 'Max_FPKM': max_fpkm})
+            result_data.append({'Gene': gene, 'Max_TPM': max_tpm, 'Max_FPKM': max_fpkm})
 
     return result_data
 
 # Step 3: Save Results to CSV
 def save_to_csv(data, output_csv):
     with open(output_csv, 'w', newline='') as file:
-        fieldnames = ['Gene Symbol', 'Max_TPM', 'Max_FPKM']
+        fieldnames = ['Gene', 'Max_TPM', 'Max_FPKM']
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         
         # Write the header

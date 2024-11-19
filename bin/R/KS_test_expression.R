@@ -5,6 +5,9 @@ library(readr)
 # Define the gene groups
 gene_groups <- c("RNU1", "RNU2", "RNU4", "RNU5", "RNU6", "RNU4ATAC", "RNU6ATAC", "RNU11", "RNU12", "VTRNA",
                  "RNY","TRNA","RN7SL","RNU7","RN7SK")
+
+expression_types <- c("ENCODE-expr", "GTEX-RNAseq_summary")
+
 # Define the list of exceptions (genes that are pseudogenes but do not end with "P",from TRNA gene groups)
 exception_genes <- c('TRA-AGC23-1', 'TRA-TGC9-1', 'TRC-ACA1-1', 'TRC-GCA25-1', 'TRE-CTC7-1', 
                      'TRE-CTC16-1', 'TRE-TTC6-1', 'TRE-TTC7-1', 'TRE-TTC8-1', 'TRE-TTC9-1',
@@ -20,6 +23,14 @@ exception_genes <- c('TRA-AGC23-1', 'TRA-TGC9-1', 'TRC-ACA1-1', 'TRC-GCA25-1', '
                      'TRUND-NNN4-1', 'TRUND-NNN6-1', 'TRUND-NNN7-1', 'TRUND-NNN8-1', 'TRUND-NNN9-1', 
                      'TRUND-NNN10-1', 'TRV-CAC11-1', 'TRV-CAC11-2', 'TRX-CAT3-1', 'TRY-GTA11-1',
                      'TRY-GTA12-1')
+
+#Define list of 2nd exceptions: have P but are functional genes
+exception_genes_2 <- c('MT-TP', 'NMTRP-TGG1-1', 'TRP-AGG1-1', 'TRP-AGG2-1', 'TRP-AGG2-2', 'TRP-AGG2-3', 
+                       'TRP-AGG2-4', 'TRP-AGG2-5', 'TRP-AGG2-6', 'TRP-AGG2-7', 'TRP-AGG2-8', 'TRP-AGG3-1', 
+                       'TRP-AGG5-1', 'TRP-CGG1-1', 'TRP-CGG1-2', 'TRP-CGG1-3', 'TRP-CGG2-1', 'TRP-GGG1-1',
+                       'TRP-TGG1-1', 'TRP-TGG2-1', 'TRP-TGG3-1', 'TRP-TGG3-2', 'TRP-TGG3-3', 'TRP-TGG3-4', 
+                       'TRP-TGG3-5', 'TRSUP-CTA1-1', 'TRSUP-CTA2-1', 'TRSUP-CTA3-1', 'TRSUP-TTA1-1', 'TRSUP-TTA2-1',
+                       'TRSUP-TTA3-1')
 
 # Create an empty data frame to store the test results
 test_results <- data.frame(Gene_group = character(),
@@ -41,7 +52,19 @@ for (gene in gene_groups) {
   
   # Create a new column 'Gene_Type' to differentiate functional genes and pseudogenes
   data <- data %>%
-    mutate(Gene_Type = ifelse(grepl("P", Gene) & !Gene %in% exception_genes, "Pseudogene", "Functional"))    
+    mutate(Gene_Type = case_when(
+      # First check for exception_genes_2, where genes with "P" are functional
+      Gene %in% exception_genes_2 ~ "Functional",
+      
+      # Then check for exception_genes, where genes do not end with "P"
+      Gene %in% exception_genes ~ "Pseudogene",
+      
+      # For genes that has "P" but not in exception_genes_2, classify as Pseudogene
+      grepl("P", Gene) ~ "Pseudogene",
+      
+      # All other genes are considered Functional
+      TRUE ~ "Functional"
+    )) 
   
   # Separate functional genes and pseudogenes
   functional_genes <- data$`Max Expression`[data$Gene_Type == "Functional"]
