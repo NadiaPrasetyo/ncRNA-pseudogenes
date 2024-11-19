@@ -63,12 +63,12 @@ def save_to_csv(data, output_csv):
 # Main Execution
 if __name__ == "__main__":
     
-    gene_group = "RN7SK"  # Replace with your gene group
+    gene_group = "RNU1"  # Replace with your gene group
     
     # Input file paths
     txt_file = f"data/{gene_group}_data.txt"  # Replace with the path to your TXT file
     tsv_file = "data/rna_expression_report_2024_11_19_2h_13m.tsv" 
-    output_csv = f"data/ENCODE-expr/{gene_group}_expr.csv"
+    output_csv = f"data/ENCODE-expr_summary/{gene_group}_expr.csv"
     
     # Process the files
     gene_symbols = extract_gene_symbols(txt_file)
