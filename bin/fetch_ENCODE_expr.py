@@ -63,7 +63,7 @@ def save_to_csv(data, output_csv):
 # Main Execution
 if __name__ == "__main__":
     
-    gene_group = "VTRNA"  # Replace with your gene group
+    gene_group = "RN7SK"  # Replace with your gene group
     
     # Input file paths
     txt_file = f"data/{gene_group}_data.txt"  # Replace with the path to your TXT file
