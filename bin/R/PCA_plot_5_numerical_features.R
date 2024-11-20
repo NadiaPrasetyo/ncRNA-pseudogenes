@@ -9,7 +9,7 @@ data <- read.csv("../../results/combined_gene_data.csv")  # Replace with your fi
 data <- data[complete.cases(data), ]
 
 # Step 3: Select numerical columns for PCA
-numerical_features <- data[, c("PhastCons30_median", "PhyloP100_median", "PhyloP447_median", "GTEX_max")]
+numerical_features <- data[, c("PhastCons30_median", "PhyloP100_median", "PhyloP447_median", "GTEX_max", "ENCODE_max")]
 
 # Step 4: Standardize the data
 numerical_features_scaled <- scale(numerical_features)
