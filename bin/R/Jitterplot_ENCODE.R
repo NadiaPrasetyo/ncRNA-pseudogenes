@@ -39,9 +39,9 @@ custom_colors <- c(
   "RN7SK.Pseudogene" = "#88c9f2"
 )
 
-# Clean the data: Remove rows with non-finite PhyloP100_median
+# Clean the data: Remove rows with non-finite ENCODE_max
 clean_data <- data %>%
-  filter(is.finite(PhyloP100_median))
+  filter(is.finite(ENCODE_max))
 
 # Normalize data by Gene_group and Gene_Type
 normalized_data <- clean_data %>%
@@ -49,22 +49,33 @@ normalized_data <- clean_data %>%
   mutate(
     control_median = ifelse(
       any(Gene_Type == "Pseudogene"),
-      median(PhyloP100_median[Gene_Type == "Pseudogene"]),
+      median(ENCODE_max[Gene_Type == "Pseudogene"], na.rm = TRUE),
       NA
     ),
     control_mad = ifelse(
       any(Gene_Type == "Pseudogene"),
-      mad(PhyloP100_median[Gene_Type == "Pseudogene"]),
-      1  # Use mad = 1 to avoid division by zero
+      mad(ENCODE_max[Gene_Type == "Pseudogene"], na.rm = TRUE),
+      1  # Default MAD to 1 to avoid division by zero
     ),
+    control_mad = ifelse(control_mad == 0, 1e-6, control_mad),  # Avoid MAD of 0 by using a small constant
     Z_score = ifelse(
       !is.na(control_median),
-      (PhyloP100_median - control_median) / control_mad,
+      (ENCODE_max - control_median) / control_mad,
       NA
     )
   ) %>%
   ungroup() %>%
-  mutate(Z_score = ifelse(is.na(Z_score), 0, Z_score))
+  mutate(Z_score = ifelse(is.finite(Z_score), Z_score, 0))  # Replace remaining non-finite values with 0
+
+
+# Apply log transformation to Z-score
+normalized_data <- normalized_data %>%
+  mutate(
+    Z_score_log = ifelse(
+      Z_score > 0, log10(Z_score + 1),  # Log-transform positive Z-scores
+      0  # Keep Z-scores <= 0 as 0
+    )
+  )
 
 # Create Gene_Type_combined for all gene groups (not just the combined ones)
 normalized_data <- normalized_data %>%
@@ -84,66 +95,49 @@ combined_data <- normalized_data %>%
     Gene_Type_combined = paste(Gene_group, Gene_Type, sep = ".")  # Combine Gene_group and Gene_Type for color mapping
   )
 
-# Define function to calculate outlier boundaries for jitter
-calculate_outliers <- function(data) {
-  Q1 <- quantile(data$Z_score, 0.25, na.rm = TRUE)
-  Q3 <- quantile(data$Z_score, 0.75, na.rm = TRUE)
-  IQR <- Q3 - Q1
-  lower_bound <- Q1 - 1.5 * IQR
-  upper_bound <- Q3 + 1.5 * IQR
-  return(c(lower_bound, upper_bound))
-}
-
-# Calculate outliers for the combined data
-outlier_bounds <- calculate_outliers(combined_data)
-
-# Filter jitter points to only include those outside the boxplot range
-combined_data_jitter <- combined_data %>%
-  filter(Z_score < outlier_bounds[1] | Z_score > outlier_bounds[2])
-
 # Plot combined data with jitter points
-combined_plot <- ggplot(combined_data, aes(x = Gene_Type_label, y = Z_score, color = Gene_Type_combined)) +
+combined_plot <- ggplot(combined_data, aes(x = Gene_Type_label, y = Z_score_log, color = Gene_Type_combined)) +
   geom_jitter(width = 0.2, height = 0, size = 1.5, alpha = 0.7) +  # Use jitter instead of violin and boxplot
   stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +  # Highlight median
   theme_minimal() +
   labs(
-    title = "PhyloP100 Z-scores for RNU1, RNU2, RNU4, RNU5, RNU6",
+    title = "ENCODE Z-scores for RNU1, RNU2, RNU4, RNU5, RNU6",
     x = "Gene Type",
-    y = "Z-score"
+    y = "Log10 Z-score"
   ) +
   scale_color_manual(values = custom_colors) +  # Apply custom colors
   theme(
     legend.position = "none",
     plot.title = element_text(face = "bold", size = 14)
-  )
+  ) +
+  expand_limits(y = c(0.8, 4))
 
 # Save the combined jitter plot
-ggsave(filename = "../../results/Z_scores_combined_RNU1_RNU2_RNU4_RNU5_RNU6_jitter.pdf", plot = combined_plot, width = 8, height = 6)
+ggsave(filename = "../../results/Expr_ENCODE_Z__combined_RNU1_RNU2_RNU4_RNU5_RNU6_jitter.pdf", plot = combined_plot, width = 8, height = 6)
 
 # Filter data for RNU12
 rnu12_data <- normalized_data %>%
   filter(Gene_group == "RNU12")
 
-rnu12_data$Z_score = rnu12_data$PhyloP100_median / rnu12_data$PhyloP100_median[rnu12_data$Gene == "RNU12-2P"]
+rnu12_data$Z_score = rnu12_data$ENCODE_max / rnu12_data$ENCODE_max[rnu12_data$Gene == "RNU12-2P"]
 
 # Plot for RNU12 with only the two singular points
-rnu12_plot <- ggplot(rnu12_data, aes(x = Gene_Type, y = Z_score, color = Gene_Type_combined)) +
+rnu12_plot <- ggplot(rnu12_data, aes(x = Gene_Type, y = Z_score_log, color = Gene_Type_combined)) +
   geom_point(size = 4, alpha = 0.7) +  # Singular data points
   scale_color_manual(values = custom_colors) +  # Custom colors for RNU12
   labs(
-    title = "PhyloP100 Z-scores for RNU12",
+    title = "ENCODE Z-scores for RNU12",
     x = "Gene Type",
-    y = "Z-score"
+    y = "Log10 Z-score"
   ) +
   theme_minimal() +
   theme(
     legend.position = "none",
     plot.title = element_text(face = "bold", size = 14)
-  ) +
-  expand_limits(y = c(0, 3))
+  ) 
 
 # Save the plot for RNU12
-ggsave(filename = "../../results/Z_scores_RNU12_jitter.pdf", plot = rnu12_plot, width = 8, height = 6)
+ggsave(filename = "../../results/Expr_ENCODE_Z_RNU12_jitter.pdf", plot = rnu12_plot, width = 8, height = 6)
 
 # Create and save individual plots for other Gene_groups
 other_gene_groups <- setdiff(unique(normalized_data$Gene_group), combined_groups)
@@ -155,22 +149,15 @@ for (group in other_gene_groups) {
     filter(Gene_group == group) %>%
     filter(is.finite(Z_score))  # Ensure no NA values in Z_scores
   
-  # Calculate outliers for the group
-  outlier_bounds <- calculate_outliers(group_data)
-  
-  # Filter jitter points to only include those outside the boxplot range
-  group_data_jitter <- group_data %>%
-    filter(Z_score < outlier_bounds[1] | Z_score > outlier_bounds[2])
-  
   # Create and save individual jitter plot
-  p <- ggplot(group_data, aes(x = Gene_Type, y = Z_score, color = interaction(Gene_group, Gene_Type))) +
+  p <- ggplot(group_data, aes(x = Gene_Type, y = Z_score_log, color = interaction(Gene_group, Gene_Type))) +
     geom_jitter(width = 0.2, height = 0, size = 1.5, alpha = 0.7) +  # Use jitter
     stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +  # Highlight median
     theme_minimal() +
     labs(
-      title = paste("PhyloP100 Z-scores for Gene Group:", group),
+      title = paste("ENCODE Z-scores for Gene Group:", group),
       x = "Gene Type",
-      y = "Z-score"
+      y = "Log10 Z-score"
     ) +
     scale_color_manual(values = custom_colors) +
     theme(
@@ -178,5 +165,5 @@ for (group in other_gene_groups) {
       plot.title = element_text(face = "bold", size = 14)
     )
   
-  ggsave(filename = paste0("../../results/Z_scores_", group, "_jitter.pdf"), plot = p, width = 8, height = 6)
+  ggsave(filename = paste0("../../results/Expr_ENCODE_Z_", group, "_jitter.pdf"), plot = p, width = 8, height = 6)
 }
