@@ -63,16 +63,18 @@ def save_to_csv(data, output_csv):
 # Main Execution
 if __name__ == "__main__":
     
-    gene_group = "RN7SK"  # Replace with your gene group
     
-    # Input file paths
-    txt_file = f"data/{gene_group}_data.txt"  # Replace with the path to your TXT file
-    tsv_file = "data/rna_expression_report_2024_11_19_2h_13m.tsv" 
-    output_csv = f"data/ENCODE-expr_summary/{gene_group}_expr.csv"
+    gene_groups = ["RNU1", "RNU2", "RNU4", "RNU5", "RNU6", "RNU4ATAC", "RNU6ATAC", "RNU11", "RNU12", "VTRNA", "RNY", "TRNA", "RN7SL", "RNU7", "RN7SK"]
     
-    # Process the files
-    gene_symbols = extract_gene_symbols(txt_file)
-    max_expression_data = fetch_max_expression_data(tsv_file, gene_symbols)
-    save_to_csv(max_expression_data, output_csv)
-    
-    print(f"Results saved to {output_csv}")
+    for gene_group in gene_groups:        
+        # Input file paths
+        txt_file = f"data/{gene_group}_data.txt"  # Replace with the path to your TXT file
+        tsv_file = "data/rna_expression_report_2024_11_20_22h_6m.tsv" 
+        output_csv = f"data/ENCODE-expr_summary/{gene_group}_expr.csv"
+        
+        # Process the files
+        gene_symbols = extract_gene_symbols(txt_file)
+        max_expression_data = fetch_max_expression_data(tsv_file, gene_symbols)
+        save_to_csv(max_expression_data, output_csv)
+        
+        print(f"Results saved to {output_csv}")
