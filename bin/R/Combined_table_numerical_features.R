@@ -37,6 +37,7 @@ combined_data <- data.frame(Gene_group = character(),
                             PhyloP100_median = numeric(),
                             PhyloP447_median = numeric(),
                             GTEX_max = numeric(),
+                            ENCODE_max = numeric(),
                             Gene_type = character())
 
 # Loop through each file, and add the median conservation and max expression into the combined_data frame
@@ -45,30 +46,34 @@ for (gene in gene_groups) {
   phastCons_file <- file.path(data_dir, paste0("phastCons30_summary/", gene, "_phastCons30_summary_metrics.csv"))
   phyloP100_file <- file.path(data_dir, paste0("phyloP100_summary/", gene, "_phyloP100_summary_metrics.csv"))
   phyloP447_file <- file.path(data_dir, paste0("phyloP447_summary/", gene, "_phyloP447_summary_metrics.csv"))
-  expr_file <- file.path(data_dir, paste0(gene, "_expr.csv"))
+  gtex_file <- file.path(data_dir, paste0("GTEX-expr_summary/", gene, "_expr.csv"))
+  encode_file <- file.path(data_dir, paste0("ENCODE-expr_summary/", gene, "_expr.csv"))
   
   # Read the files
   phastCons_data <- read.csv(phastCons_file)
   phyloP100_data <- read.csv(phyloP100_file)
   phyloP447_data <- read.csv(phyloP447_file)
-  expr_data <- read.csv(expr_file)
+  gtex_data <- read.csv(gtex_file)
+  encode_data <- read.csv(encode_file)
   
   # Filter or select only the median conservation columns
   # For phastCons, phyloP100, and phyloP447, we'll assume columns are named "median" for median conservation
   phastCons_data <- phastCons_data[, c("Gene", "Median_Conservation")]  
   phyloP100_data <- phyloP100_data[, c("Gene", "Median_Conservation")]  
   phyloP447_data <- phyloP447_data[, c("Gene", "Median_Conservation")] 
-  expr_data <- expr_data[, c("Gene", "Max.Expression")]  
+  gtex_data <- gtex_data[, c("Gene", "Max.Expression")]  
+  encode_data <- encode_data[, c("Gene", "Max_FPKM")]
   
   # Combine all data frames for this gene group
   # Initialize gene_combined_data with phastCons_data
   gene_combined_data <- phastCons_data
   gene_combined_data <- merge(gene_combined_data, phyloP100_data, by = "Gene", all = TRUE)
   gene_combined_data <- merge(gene_combined_data, phyloP447_data, by = "Gene", all = TRUE)
-  gene_combined_data <- merge(gene_combined_data, expr_data, by = "Gene", all = TRUE)
+  gene_combined_data <- merge(gene_combined_data, gtex_data, by = "Gene", all = TRUE)
+  gene_combined_data <- merge(gene_combined_data, encode_data, by = "Gene", all = TRUE)
   
   # Rename columns to match the initial ones
-  colnames(gene_combined_data) <- c("Gene", "PhastCons30_median", "PhyloP100_median", "PhyloP447_median", "GTEX_max")
+  colnames(gene_combined_data) <- c("Gene", "PhastCons30_median", "PhyloP100_median", "PhyloP447_median", "GTEX_max", "ENCODE_max")
   
   # Create a new column 'Gene_Type' to differentiate functional genes and pseudogenes
   gene_combined_data <- gene_combined_data %>%
