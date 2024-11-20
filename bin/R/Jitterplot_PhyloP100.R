@@ -84,99 +84,106 @@ combined_data <- normalized_data %>%
     Gene_Type_combined = paste(Gene_group, Gene_Type, sep = ".")  # Combine Gene_group and Gene_Type for color mapping
   )
 
-# Define function to calculate outlier boundaries for jitter
-calculate_outliers <- function(data) {
-  Q1 <- quantile(data$Z_score, 0.25, na.rm = TRUE)
-  Q3 <- quantile(data$Z_score, 0.75, na.rm = TRUE)
-  IQR <- Q3 - Q1
-  lower_bound <- Q1 - 1.5 * IQR
-  upper_bound <- Q3 + 1.5 * IQR
-  return(c(lower_bound, upper_bound))
-}
-
-# Calculate outliers for the combined data
-outlier_bounds <- calculate_outliers(combined_data)
-
-# Filter jitter points to only include those outside the boxplot range
-combined_data_jitter <- combined_data %>%
-  filter(Z_score < outlier_bounds[1] | Z_score > outlier_bounds[2])
-
 # Plot combined data with jitter points
 combined_plot <- ggplot(combined_data, aes(x = Gene_Type_label, y = Z_score, color = Gene_Type_combined)) +
-  geom_jitter(width = 0.2, height = 0, size = 1.5, alpha = 0.7) +  # Use jitter instead of violin and boxplot
+  geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +  # Use jitter instead of violin and boxplot
   stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +  # Highlight median
   theme_minimal() +
   labs(
-    title = "PhyloP100 Z-scores for RNU1, RNU2, RNU4, RNU5, RNU6",
+    title = "Vertebrate Conservation (PhyloP100) of Major Spliceosomal RNAs",
     x = "Gene Type",
     y = "Z-score"
   ) +
   scale_color_manual(values = custom_colors) +  # Apply custom colors
   theme(
     legend.position = "none",
-    plot.title = element_text(face = "bold", size = 14)
+    plot.title = element_text(face = "bold", size = 22),  # Larger title font size
+    axis.title.x = element_text(size = 20),              # Larger x-axis label font size
+    axis.title.y = element_text(size = 20),              # Larger y-axis label font size
+    axis.text.x = element_text(size = 18, angle = 25, hjust = 1),    #Diagonal X axis text
+    axis.text.y = element_text(size = 18),                # Larger y-axis tick font size
+    text = element_text(family = "serif")  # Set font family to serif (Times New Roman)
   )
 
 # Save the combined jitter plot
-ggsave(filename = "../../results/Z_scores_combined_RNU1_RNU2_RNU4_RNU5_RNU6_jitter.pdf", plot = combined_plot, width = 8, height = 6)
+ggsave(filename = "../../results/Z_scores_combined_RNU1_RNU2_RNU4_RNU5_RNU6_jitter.pdf", plot = combined_plot, width = 12, height = 7)
 
-# Filter data for RNU12
-rnu12_data <- normalized_data %>%
-  filter(Gene_group == "RNU12")
+# Define groups
+combined_groups_2 <- c("RNU4ATAC", "RNU6ATAC", "RNU11", "RNU12")
+remaining_ncRNAs <- setdiff(unique(normalized_data$Gene_group), c(combined_groups, combined_groups_2))
 
-rnu12_data$Z_score = rnu12_data$PhyloP100_median / rnu12_data$PhyloP100_median[rnu12_data$Gene == "RNU12-2P"]
+# --- Plot Combined Group 2 ---
+# Filter combined data for the second group
+combined_data_2 <- normalized_data %>%
+  filter(Gene_group %in% combined_groups_2) %>%
+  mutate(
+    Gene_group = factor(Gene_group, levels = combined_groups_2),
+    Gene_Type_label = ifelse(Gene_Type == "Pseudogene", paste(Gene_group, "(P)"), paste(Gene_group, "(F)")),
+    Gene_Type_combined = paste(Gene_group, Gene_Type, sep = ".")  # Combine Gene_group and Gene_Type for color mapping
+  )
 
-# Plot for RNU12 with only the two singular points
-rnu12_plot <- ggplot(rnu12_data, aes(x = Gene_Type, y = Z_score, color = Gene_Type_combined)) +
-  geom_point(size = 4, alpha = 0.7) +  # Singular data points
-  scale_color_manual(values = custom_colors) +  # Custom colors for RNU12
+combined_data_2$Z_score = combined_data_2$PhyloP100_median / combined_data_2$PhyloP100_median[combined_data_2$Gene == "RNU12-2P"]
+
+# Plot combined group 2
+combined_plot_2 <- ggplot(combined_data_2, aes(x = Gene_Type_label, y = Z_score, color = Gene_Type_combined)) +
+  geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +  # Use jitter 
+  stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +  # Highlight median
+  theme_minimal() +
   labs(
-    title = "PhyloP100 Z-scores for RNU12",
+    title = "Vertebrate Conservation (PhyloP100) of Minor Spliceosomal RNAs",
     x = "Gene Type",
     y = "Z-score"
   ) +
-  theme_minimal() +
+  scale_color_manual(values = custom_colors) +  # Apply custom colors
   theme(
     legend.position = "none",
-    plot.title = element_text(face = "bold", size = 14)
+    plot.title = element_text(face = "bold", size = 22),  # Larger title font size
+    axis.title.x = element_text(size = 20),              # Larger x-axis label font size
+    axis.title.y = element_text(size = 20),              # Larger y-axis label font size
+    axis.text.x = element_text(size = 18, angle = 25, hjust = 1),    #Diagonal X axis text
+    axis.text.y = element_text(size = 18),                # Larger y-axis tick font size
+    text = element_text(family = "serif")  # Set font family to serif (Times New Roman)
+  )
+
+# Save the combined plot for group 2
+ggsave(filename = "../../results/Z_scores_combined_RNU4ATAC_RNU6ATAC_RNU11_RNU12_jitter.pdf", plot = combined_plot_2, width = 12, height = 7)
+
+# --- Plot Remaining ncRNAs ---
+# Filter data for remaining ncRNAs
+remaining_data <- normalized_data %>%
+  filter(Gene_group %in% remaining_ncRNAs) %>%
+  mutate(
+    Gene_Type_label = ifelse(Gene_Type == "Pseudogene", paste(Gene_group, "(P)"), paste(Gene_group, "(F)")),
+    Gene_Type_combined = paste(Gene_group, Gene_Type, sep = ".")  # Combine Gene_group and Gene_Type for color mapping
+  )
+
+# Calculate outliers for remaining ncRNAs
+remaining_outlier_bounds <- calculate_outliers(remaining_data)
+
+# Filter jitter points for remaining ncRNAs
+remaining_data_jitter <- remaining_data %>%
+  filter(Z_score < remaining_outlier_bounds[1] | Z_score > remaining_outlier_bounds[2])
+
+# Plot remaining ncRNAs
+remaining_plot <- ggplot(remaining_data, aes(x = Gene_Type_label, y = Z_score, color = Gene_Type_combined)) +
+  geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +  # Use jitter instead of violin and boxplot
+  stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +  # Highlight median
+  theme_minimal() +
+  labs(
+    title = "Vertebrate Conservation (PhyloP100) of other sncRNAs",
+    x = "Gene Type",
+    y = "Z-score"
   ) +
-  expand_limits(y = c(0, 3))
+  scale_color_manual(values = custom_colors) +  # Apply custom colors
+  theme(
+    legend.position = "none",
+    plot.title = element_text(face = "bold", size = 22),  # Larger title font size
+    axis.title.x = element_text(size = 20),              # Larger x-axis label font size
+    axis.title.y = element_text(size = 20),              # Larger y-axis label font size
+    axis.text.x = element_text(size = 18, angle = 25, hjust = 1),    #Diagonal X axis text
+    axis.text.y = element_text(size = 18),                # Larger y-axis tick font size
+    text = element_text(family = "serif")  # Set font family to serif (Times New Roman)
+  )
 
-# Save the plot for RNU12
-ggsave(filename = "../../results/Z_scores_RNU12_jitter.pdf", plot = rnu12_plot, width = 8, height = 6)
-
-# Create and save individual plots for other Gene_groups
-other_gene_groups <- setdiff(unique(normalized_data$Gene_group), combined_groups)
-# Exclude "RNU12" directly from the vector
-other_gene_groups <- other_gene_groups[other_gene_groups != "RNU12"]
-
-for (group in other_gene_groups) {
-  group_data <- normalized_data %>%
-    filter(Gene_group == group) %>%
-    filter(is.finite(Z_score))  # Ensure no NA values in Z_scores
-  
-  # Calculate outliers for the group
-  outlier_bounds <- calculate_outliers(group_data)
-  
-  # Filter jitter points to only include those outside the boxplot range
-  group_data_jitter <- group_data %>%
-    filter(Z_score < outlier_bounds[1] | Z_score > outlier_bounds[2])
-  
-  # Create and save individual jitter plot
-  p <- ggplot(group_data, aes(x = Gene_Type, y = Z_score, color = interaction(Gene_group, Gene_Type))) +
-    geom_jitter(width = 0.2, height = 0, size = 1.5, alpha = 0.7) +  # Use jitter
-    stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +  # Highlight median
-    theme_minimal() +
-    labs(
-      title = paste("PhyloP100 Z-scores for Gene Group:", group),
-      x = "Gene Type",
-      y = "Z-score"
-    ) +
-    scale_color_manual(values = custom_colors) +
-    theme(
-      legend.position = "none",
-      plot.title = element_text(face = "bold", size = 14)
-    )
-  
-  ggsave(filename = paste0("../../results/Z_scores_", group, "_jitter.pdf"), plot = p, width = 8, height = 6)
-}
+# Save the plot for remaining ncRNAs
+ggsave(filename = "../../results/Z_scores_remaining_ncRNAs_jitter.pdf", plot = remaining_plot, width = 12, height = 7)
