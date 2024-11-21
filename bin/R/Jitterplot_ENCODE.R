@@ -44,38 +44,34 @@ clean_data <- data %>%
   filter(is.finite(ENCODE_max))
 
 # Normalize data by Gene_group and Gene_Type
+# Step 1: Compute control_median, control_mad, and control_mean_abs_dev outside of mutate
+control_stats <- clean_data %>%
+  filter(Gene_Type == "Pseudogene") %>%
+  group_by(Gene_group) %>%
+  summarise(
+    control_median = median(ENCODE_max, na.rm = TRUE),
+    control_mad = mad(ENCODE_max, constant = 1.4826, na.rm = TRUE),
+    control_mean_abs_dev = mean(abs(ENCODE_max - median(ENCODE_max, na.rm = TRUE)), na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Step 2: Join the computed control statistics back to the original data
 normalized_data <- clean_data %>%
+  left_join(control_stats, by = "Gene_group") %>%
   group_by(Gene_group) %>%
   mutate(
-    control_median = ifelse(
-      any(Gene_Type == "Pseudogene"),
-      median(ENCODE_max[Gene_Type == "Pseudogene"], na.rm = TRUE),
-      NA
-    ),
-    control_mad = ifelse(
-      any(Gene_Type == "Pseudogene"),
-      mad(ENCODE_max[Gene_Type == "Pseudogene"], na.rm = TRUE),
-      1  # Default MAD to 1 to avoid division by zero
-    ),
-    control_mad = ifelse(control_mad == 0, 1e-6, control_mad),  # Avoid MAD of 0 by using a small constant
-    Z_score = ifelse(
-      !is.na(control_median),
-      (ENCODE_max - control_median) / control_mad,
-      NA
+    # Avoid division by zero or undefined MAD
+    Z_score = case_when(
+      !is.na(control_mad) & control_mad > 1e-6 ~ 
+        (ENCODE_max - control_median) / (1.4826 * control_mad),
+      !is.na(control_mean_abs_dev) & control_mad <= 1e-6 ~ 
+        (ENCODE_max - control_median) / (1.2533 * control_mean_abs_dev),
+      TRUE ~ NA_real_  # Assign NA for cases where Z-score can't be computed
     )
   ) %>%
   ungroup() %>%
-  mutate(Z_score = ifelse(is.finite(Z_score), Z_score, 0))  # Replace remaining non-finite values with 0
+  mutate(Z_score = ifelse(is.finite(Z_score), Z_score, 1))  # Replace non-finite Z-scores with 1
 
-
-# Apply log transformation to Z-score
-normalized_data <- normalized_data %>%
-  mutate(
-    Z_score_log = ifelse(
-      Z_score > 0, log10(Z_score + 1),  # Log-transform positive Z-scores
-      0  # Keep Z-scores <= 0 as 0
-    )
-  )
 
 # Create Gene_Type_combined for all gene groups (not just the combined ones)
 normalized_data <- normalized_data %>%
@@ -96,23 +92,24 @@ combined_data <- normalized_data %>%
   )
 
 # Plot combined data with jitter points
-combined_plot <- ggplot(combined_data, aes(x = Gene_Type_label, y = Z_score_log, color = Gene_Type_combined)) +
+combined_plot <- ggplot(combined_data, aes(x = Gene_Type_label, y = Z_score, color = Gene_Type_combined)) +
   geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +  # Use jitter instead of violin and boxplot
   stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +  # Highlight median
   theme_minimal() +
   labs(
     title = "Gene Expression (ENCODE) of Major Spliceosomal RNAs",
     x = "Gene Type",
-    y = "Z-score"
+    y = "Z-score (Log10 scale)"
   ) +
   scale_color_manual(values = custom_colors) +  # Apply custom colors
+  scale_y_continuous(trans = "log10", labels = scientific)+
   theme(
     legend.position = "none",
-    plot.title = element_text(face = "bold", size = 22),  # Larger title font size
-    axis.title.x = element_text(size = 20),              # Larger x-axis label font size
-    axis.title.y = element_text(size = 20),              # Larger y-axis label font size
-    axis.text.x = element_text(size = 18, angle = 25, hjust = 1),    #Diagonal X axis text
-    axis.text.y = element_text(size = 18),                # Larger y-axis tick font size
+    plot.title = element_text(face = "bold", size = 24),  # Larger title font size
+    axis.title.x = element_text(size = 22),              # Larger x-axis label font size
+    axis.title.y = element_text(size = 22),              # Larger y-axis label font size
+    axis.text.x = element_text(size = 24, angle = 25, hjust = 1),    #Diagonal X axis text
+    axis.text.y = element_text(size = 22),                # Larger y-axis tick font size
     text = element_text(family = "serif")  # Set font family to serif (Times New Roman)
   )
 
@@ -140,29 +137,28 @@ combined_data_2 <- combined_data_2 %>%
       Gene == "RNU12-2P",
       ENCODE_max / ENCODE_max[Gene == "RNU12-2P"],  # Reference normalization
       Z_score  # Keep the existing Z_score otherwise
-    ),
-    # Log transformation for Z_score, using log1p to handle zero values safely
-    Z_score_log = ifelse(Z_score > 0, log(Z_score), 0)
+    )
   )
 
 # Plot combined group 2
-combined_plot_2 <- ggplot(combined_data_2, aes(x = Gene_Type_label, y = Z_score_log, color = Gene_Type_combined)) +
+combined_plot_2 <- ggplot(combined_data_2, aes(x = Gene_Type_label, y = Z_score, color = Gene_Type_combined)) +
   geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +  # Use jitter 
   stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +  # Highlight median
   theme_minimal() +
   labs(
     title = "Gene Expression (ENCODE) of Minor Spliceosomal RNAs",
     x = "Gene Type",
-    y = "Z-score"
+    y = "Z-score (Log10 scale)"
   ) +
   scale_color_manual(values = custom_colors) +  # Apply custom colors
+  scale_y_continuous(trans = "log10", labels = scientific)+
   theme(
     legend.position = "none",
-    plot.title = element_text(face = "bold", size = 22),  # Larger title font size
-    axis.title.x = element_text(size = 20),              # Larger x-axis label font size
-    axis.title.y = element_text(size = 20),              # Larger y-axis label font size
-    axis.text.x = element_text(size = 18, angle = 25, hjust = 1),    #Diagonal X axis text
-    axis.text.y = element_text(size = 18),                # Larger y-axis tick font size
+    plot.title = element_text(face = "bold", size = 24),  # Larger title font size
+    axis.title.x = element_text(size = 22),              # Larger x-axis label font size
+    axis.title.y = element_text(size = 22),              # Larger y-axis label font size
+    axis.text.x = element_text(size = 24, angle = 25, hjust = 1),    #Diagonal X axis text
+    axis.text.y = element_text(size = 22),                # Larger y-axis tick font size
     text = element_text(family = "serif")  # Set font family to serif (Times New Roman)
   )
 
@@ -180,25 +176,59 @@ remaining_data <- normalized_data %>%
 
 
 # Plot remaining ncRNAs
-remaining_plot <- ggplot(remaining_data, aes(x = Gene_Type_label, y = Z_score_log, color = Gene_Type_combined)) +
+remaining_plot <- ggplot(remaining_data, aes(x = Gene_Type_label, y = Z_score, color = Gene_Type_combined)) +
   geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +  # Use jitter instead of violin and boxplot
   stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +  # Highlight median
   theme_minimal() +
   labs(
     title = "Gene Expression (ENCODE) of other sncRNAs",
     x = "Gene Type",
-    y = "Z-score"
+    y = "Z-score (Log10 scale)"
   ) +
   scale_color_manual(values = custom_colors) +  # Apply custom colors
+  scale_y_continuous(trans = "log10", labels = scientific)+
   theme(
     legend.position = "none",
-    plot.title = element_text(face = "bold", size = 22),  # Larger title font size
-    axis.title.x = element_text(size = 20),              # Larger x-axis label font size
-    axis.title.y = element_text(size = 20),              # Larger y-axis label font size
-    axis.text.x = element_text(size = 18, angle = 25, hjust = 1),    #Diagonal X axis text
-    axis.text.y = element_text(size = 18),                # Larger y-axis tick font size
+    plot.title = element_text(face = "bold", size = 24),  # Larger title font size
+    axis.title.x = element_text(size = 22),              # Larger x-axis label font size
+    axis.title.y = element_text(size = 22),              # Larger y-axis label font size
+    axis.text.x = element_text(size = 24, angle = 25, hjust = 1),    #Diagonal X axis text
+    axis.text.y = element_text(size = 22),                # Larger y-axis tick font size
     text = element_text(family = "serif")  # Set font family to serif (Times New Roman)
   )
 
 # Save the plot for remaining ncRNAs
 ggsave(filename = "../../results/ENCODE_Z_remaining_ncRNAs_jitter.pdf", plot = remaining_plot, width = 12, height = 7)
+
+
+# Combine all pseudogenes and functional genes together
+combined_gene_type_data <- normalized_data %>%
+  filter(Gene_group!="TRNA") %>%
+  mutate(
+    Gene_Type_combined = ifelse(Gene_Type == "Pseudogene", "Pseudogene", "Functional")
+  )
+
+# Plot combined pseudogenes and functional genes
+combined_gene_type_plot <- ggplot(combined_gene_type_data, aes(x = Gene_Type_combined, y = Z_score, color = Gene_Type_combined)) +
+  geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +  # Use jitter instead of violin and boxplot
+  stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +  # Highlight median
+  theme_minimal() +
+  labs(
+    title = "Gene Expression (ENCODE) of Pseudogenes vs Functional Genes",
+    x = "Gene Type",
+    y = "Z-score (Log10 scale)"
+  ) +
+  scale_color_manual(values = c("Functional" = "firebrick", "Pseudogene" = "cornflowerblue")) +  # Custom colors for each Gene_Type
+  scale_y_continuous(trans = "log10", labels = scales::scientific)+
+  theme(
+    legend.position = "none",
+    plot.title = element_text(face = "bold", size = 24),  # Larger title font size
+    axis.title.x = element_text(size = 22),              # Larger x-axis label font size
+    axis.title.y = element_text(size = 22),              # Larger y-axis label font size
+    axis.text.x = element_text(size = 24),    # Diagonal X axis text
+    axis.text.y = element_text(size = 22),                # Larger y-axis tick font size
+    text = element_text(family = "serif")  # Set font family to serif (Times New Roman)
+  )
+
+# Save the plot
+ggsave(filename = "../../results/ENCODE_Z_combined_Pseudogene_vs_Functional_jitter.pdf", plot = combined_gene_type_plot, width = 12, height = 7)
