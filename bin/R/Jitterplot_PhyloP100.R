@@ -218,5 +218,9 @@ combined_gene_type_plot <- ggplot(combined_gene_type_data, aes(x = Gene_Type_com
     text = element_text(family = "serif")  # Set font family to serif (Times New Roman)
   )
 
+median_values <- combined_gene_type_data %>%
+  group_by(Gene_Type_combined) %>%
+  summarize(Median_Z = median(Z_score, na.rm = TRUE))
+
 # Save the plot
 ggsave(filename = "../../results/PhyloP100_Z_combined_Pseudogene_vs_Functional_jitter.pdf", plot = combined_gene_type_plot, width = 12, height = 7)

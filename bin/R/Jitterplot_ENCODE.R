@@ -1,6 +1,7 @@
 # Load necessary libraries
 library(ggplot2)
 library(dplyr)
+library(scales)
 
 # Data-loading step
 data <- read.csv("../../results/combined_gene_data.csv")
@@ -45,33 +46,37 @@ clean_data <- data %>%
 
 # Normalize data by Gene_group and Gene_Type
 # Step 1: Compute control_median, control_mad, and control_mean_abs_dev outside of mutate
-control_stats <- clean_data %>%
-  filter(Gene_Type == "Pseudogene") %>%
-  group_by(Gene_group) %>%
-  summarise(
-    control_median = median(ENCODE_max, na.rm = TRUE),
-    control_mad = mad(ENCODE_max, constant = 1.4826, na.rm = TRUE),
-    control_mean_abs_dev = mean(abs(ENCODE_max - median(ENCODE_max, na.rm = TRUE)), na.rm = TRUE),
-    .groups = "drop"
-  )
+#control_stats <- clean_data %>%
+#  filter(Gene_Type == "Pseudogene") %>%
+#  group_by(Gene_group) %>%
+#  summarise(
+#    control_median = median(ENCODE_max, na.rm = TRUE),
+#    control_mad = mad(ENCODE_max, constant = 1.4826, na.rm = TRUE),
+#    control_mean_abs_dev = mean(abs(ENCODE_max - median(ENCODE_max, na.rm = TRUE)), na.rm = TRUE),
+#    .groups = "drop"
+#  )
 
 # Step 2: Join the computed control statistics back to the original data
-normalized_data <- clean_data %>%
-  left_join(control_stats, by = "Gene_group") %>%
-  group_by(Gene_group) %>%
-  mutate(
-    # Avoid division by zero or undefined MAD
-    Z_score = case_when(
-      !is.na(control_mad) & control_mad > 1e-6 ~ 
-        (ENCODE_max - control_median) / (1.4826 * control_mad),
-      !is.na(control_mean_abs_dev) & control_mad <= 1e-6 ~ 
-        (ENCODE_max - control_median) / (1.2533 * control_mean_abs_dev),
-      TRUE ~ NA_real_  # Assign NA for cases where Z-score can't be computed
-    )
-  ) %>%
-  ungroup() %>%
-  mutate(Z_score = ifelse(is.finite(Z_score), Z_score, 1))  # Replace non-finite Z-scores with 1
+#normalized_data <- clean_data %>%
+#  left_join(control_stats, by = "Gene_group") %>%
+#  group_by(Gene_group) %>%
+#  mutate(
+#    # Avoid division by zero or undefined MAD
+#    Z_score = case_when(
+#      !is.na(control_mad) & control_mad > 1e-6 ~ 
+#        (ENCODE_max - control_median) / (1.4826 * control_mad),
+#      !is.na(control_mean_abs_dev) & control_mad <= 1e-6 ~ 
+#        (ENCODE_max - control_median) / (1.2533 * control_mean_abs_dev),
+#      TRUE ~ NA_real_  # Assign NA for cases where Z-score can't be computed
+#    )
+#  ) %>%
+#  ungroup() %>%
+#  mutate(Z_score = ifelse(is.finite(Z_score), Z_score, 1))  # Replace non-finite Z-scores with 1
 
+normalized_data <- clean_data %>%
+  group_by(Gene_group) %>%
+  mutate(Z_score = scale(ENCODE_max)) %>%
+  ungroup()
 
 # Create Gene_Type_combined for all gene groups (not just the combined ones)
 normalized_data <- normalized_data %>%
@@ -102,7 +107,7 @@ combined_plot <- ggplot(combined_data, aes(x = Gene_Type_label, y = Z_score, col
     y = "Z-score (Log10 scale)"
   ) +
   scale_color_manual(values = custom_colors) +  # Apply custom colors
-  scale_y_continuous(trans = "log10", labels = scientific)+
+  #scale_y_continuous(trans = "log10", labels = scientific)+
   theme(
     legend.position = "none",
     plot.title = element_text(face = "bold", size = 24),  # Larger title font size
@@ -151,7 +156,7 @@ combined_plot_2 <- ggplot(combined_data_2, aes(x = Gene_Type_label, y = Z_score,
     y = "Z-score (Log10 scale)"
   ) +
   scale_color_manual(values = custom_colors) +  # Apply custom colors
-  scale_y_continuous(trans = "log10", labels = scientific)+
+  #scale_y_continuous(trans = "log10", labels = scientific)+
   theme(
     legend.position = "none",
     plot.title = element_text(face = "bold", size = 24),  # Larger title font size
@@ -186,7 +191,7 @@ remaining_plot <- ggplot(remaining_data, aes(x = Gene_Type_label, y = Z_score, c
     y = "Z-score (Log10 scale)"
   ) +
   scale_color_manual(values = custom_colors) +  # Apply custom colors
-  scale_y_continuous(trans = "log10", labels = scientific)+
+  #scale_y_continuous(trans = "log10", labels = scientific)+
   theme(
     legend.position = "none",
     plot.title = element_text(face = "bold", size = 24),  # Larger title font size
@@ -216,10 +221,10 @@ combined_gene_type_plot <- ggplot(combined_gene_type_data, aes(x = Gene_Type_com
   labs(
     title = "Gene Expression (ENCODE) of Pseudogenes vs Functional Genes",
     x = "Gene Type",
-    y = "Z-score (Log10 scale)"
+    y = "Z-score (Scaled)"
   ) +
   scale_color_manual(values = c("Functional" = "firebrick", "Pseudogene" = "cornflowerblue")) +  # Custom colors for each Gene_Type
-  scale_y_continuous(trans = "log10", labels = scales::scientific)+
+  #scale_y_continuous(trans = "log10", labels = scales::scientific)+
   theme(
     legend.position = "none",
     plot.title = element_text(face = "bold", size = 24),  # Larger title font size
@@ -229,6 +234,10 @@ combined_gene_type_plot <- ggplot(combined_gene_type_data, aes(x = Gene_Type_com
     axis.text.y = element_text(size = 22),                # Larger y-axis tick font size
     text = element_text(family = "serif")  # Set font family to serif (Times New Roman)
   )
+
+median_values <- combined_gene_type_data %>%
+  group_by(Gene_Type_combined) %>%
+  summarize(Median_Z = median(Z_score, na.rm = TRUE))
 
 # Save the plot
 ggsave(filename = "../../results/ENCODE_Z_combined_Pseudogene_vs_Functional_jitter.pdf", plot = combined_gene_type_plot, width = 12, height = 7)
