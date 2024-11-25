@@ -56,6 +56,13 @@ pseudogenes = data[data['label'] == 0]['functional_probability']
 
 # Set font to Times New Roman
 plt.rcParams['font.family'] = 'DejaVu Serif'
+# Set global font size for everything in the plot
+plt.rcParams.update({'font.size': 32,  # Global font size for all text
+                     'axes.labelsize': 32,  # Axis labels font size
+                     'xtick.labelsize': 32,  # X-axis tick label font size
+                     'ytick.labelsize': 32,  # Y-axis tick label font size
+                     'legend.fontsize': 22,  # Legend font size
+                     'figure.titlesize': 32})  # Global figure title font size
 
 # Create the bar plot
 plt.figure(figsize=(10, 6))
@@ -63,10 +70,9 @@ sns.histplot(functional_genes, bins=20, color='firebrick', alpha=0.7, label='Fun
 sns.histplot(pseudogenes, bins=20, color='cornflowerblue', alpha=0.7, label='Pseudogenes')
 
 # Add titles and labels
-plt.title('Distribution of Predicted Probabilities for Functional Genes vs Pseudogenes', fontsize=16)
-plt.xlabel('Probability of Being Functional', fontsize=14)
-plt.ylabel('Frequency', fontsize=14)
-plt.legend(title='Gene Type', fontsize=12)
+plt.xlabel('Probability of Being Functional')
+plt.ylabel('Frequency')
+plt.legend(title='Gene Type')
 plt.grid(axis='y', linestyle='--', alpha=0.7)
 
 # Show the plot
