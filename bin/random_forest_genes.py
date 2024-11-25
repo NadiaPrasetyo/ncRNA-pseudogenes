@@ -34,8 +34,9 @@ model.fit(X_train, y_train)
 test_probabilities = model.predict_proba(X_test)[:, 1]  # Probabilities for functional genes
 
 # Save test predictions
-test_data.loc[:, 'functional_probability'] = test_probabilities
-test_data[['Gene', 'functional_probability']].to_csv('test_predictions.csv', index=False)
+test_data = test_data.copy()
+test_data['functional_probability'] = test_probabilities
+test_data[['Gene', 'functional_probability']].to_csv('results/test_predictions.csv', index=False)
 
 # Evaluate the model on the training data
 train_predictions = model.predict(X_train)
@@ -57,12 +58,12 @@ pseudogenes = data[data['label'] == 0]['functional_probability']
 # Set font to Times New Roman
 plt.rcParams['font.family'] = 'DejaVu Serif'
 # Set global font size for everything in the plot
-plt.rcParams.update({'font.size': 32,  # Global font size for all text
-                     'axes.labelsize': 32,  # Axis labels font size
-                     'xtick.labelsize': 32,  # X-axis tick label font size
-                     'ytick.labelsize': 32,  # Y-axis tick label font size
+plt.rcParams.update({'font.size': 28,  # Global font size for all text
+                     'axes.labelsize': 28,  # Axis labels font size
+                     'xtick.labelsize': 28,  # X-axis tick label font size
+                     'ytick.labelsize': 28,  # Y-axis tick label font size
                      'legend.fontsize': 22,  # Legend font size
-                     'figure.titlesize': 32})  # Global figure title font size
+                     'figure.titlesize': 28})  # Global figure title font size
 
 # Create the bar plot
 plt.figure(figsize=(10, 6))
@@ -74,6 +75,37 @@ plt.xlabel('Probability of Being Functional')
 plt.ylabel('Frequency')
 plt.legend(title='Gene Type')
 plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+# Show the plot
+plt.tight_layout()
+plt.show()
+
+# Scatter plot of test data probabilities
+plt.figure(figsize=(10, 6))
+
+# Scatter plot for test data
+plt.scatter(test_data['PhyloP100_median'], test_data['ENCODE_max'], c=test_data['functional_probability'], cmap='coolwarm', s=100, edgecolors='black', label='Test Genes')
+
+# Set global font size for everything in the plot
+plt.rcParams.update({'font.size': 28,  # Global font size for all text
+                     'axes.labelsize': 28,  # Axis labels font size
+                     'xtick.labelsize': 28,  # X-axis tick label font size
+                     'ytick.labelsize': 28,  # Y-axis tick label font size
+                     'legend.fontsize': 22,  # Legend font size
+                     'figure.titlesize': 28})  # Global figure title font size
+
+# # Annotate the points with gene names
+# for i in range(test_data.shape[0]):
+#     plt.text(test_data['PhyloP100_median'].iloc[i], 
+#              test_data['ENCODE_max'].iloc[i], 
+#              test_data['Gene'].iloc[i], 
+#              fontsize=18, ha='center', va='bottom', color='black')
+
+# Add titles and labels
+plt.xlabel('PhyloP100 Median')
+plt.ylabel('ENCODE Max')
+plt.colorbar(label='Probability of Being Functional')
+plt.grid(False)
 
 # Show the plot
 plt.tight_layout()
