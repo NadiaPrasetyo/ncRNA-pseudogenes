@@ -12,7 +12,7 @@ data = pd.read_csv('results/combined_gene_data.csv')
 data['label'] = data['Gene_Type'].apply(lambda x: 1 if x == 'Functional' else 0)
 
 # List of test genes
-test_genes_list = ['RNU6-1189P', 'RNU6-82P', 'RNU2-2P', 'RNU1-27P', 'RNU1-28P', 'RNU5B-1']
+test_genes_list = ['RNU6-1189P', 'RNU6-82P', 'RNU2-2P', 'RNU1-27P', 'RNU1-28P', 'RNU5B-1', 'RNU5F-1']
 
 # Separate training and test data
 train_data = data[~data['Gene'].isin(test_genes_list)]  # Exclude test genes from training
