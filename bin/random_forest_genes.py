@@ -6,7 +6,6 @@ from sklearn.metrics import classification_report, roc_auc_score
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-
 # Load the dataset
 data = pd.read_csv('results/combined_gene_data.csv')
 # Extract relevant features and labels
@@ -18,6 +17,14 @@ test_genes_list = ['RNU6-1189P', 'RNU6-82P', 'RNU2-2P', 'RNU1-27P', 'RNU1-28P', 
 # Separate training and test data
 train_data = data[~data['Gene'].isin(test_genes_list)]  # Exclude test genes from training
 test_data = data[data['Gene'].isin(test_genes_list)]  # Include only test genes
+
+# Count the number of functional genes and pseudogenes in training data
+num_functional_train = train_data[train_data['label'] == 1].shape[0]
+num_pseudogenes_train = train_data[train_data['label'] == 0].shape[0]
+
+# Print the counts
+print(f"Number of functional genes in training data: {num_functional_train}")
+print(f"Number of pseudogenes in training data: {num_pseudogenes_train}")
 
 # Features for training and testing
 X_train = train_data[['PhyloP100_median', 'ENCODE_max']]
@@ -53,7 +60,6 @@ data['functional_probability'] = model.predict_proba(data[['PhyloP100_median', '
 # Split the data by gene type for visualization
 functional_genes = data[data['label'] == 1]['functional_probability']
 pseudogenes = data[data['label'] == 0]['functional_probability']
-
 
 # Set font to Times New Roman
 plt.rcParams['font.family'] = 'DejaVu Serif'
@@ -93,13 +99,6 @@ plt.rcParams.update({'font.size': 28,  # Global font size for all text
                      'ytick.labelsize': 28,  # Y-axis tick label font size
                      'legend.fontsize': 22,  # Legend font size
                      'figure.titlesize': 28})  # Global figure title font size
-
-# # Annotate the points with gene names
-# for i in range(test_data.shape[0]):
-#     plt.text(test_data['PhyloP100_median'].iloc[i], 
-#              test_data['ENCODE_max'].iloc[i], 
-#              test_data['Gene'].iloc[i], 
-#              fontsize=18, ha='center', va='bottom', color='black')
 
 # Add titles and labels
 plt.xlabel('PhyloP100 Median')
