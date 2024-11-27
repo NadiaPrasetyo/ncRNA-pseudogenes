@@ -28,11 +28,24 @@ Pseudogenes derived from non-coding RNAs, particularly those related to the spli
 - `bin/`: Contains Python and R scripts for data processing, alignment, evolutionary analysis, and statistical tests:
   - `fetch_ncrna_hgnc.py`: Retrieves and processes HGNC symbols found from the HGNC database, mapped onto the HGNC annotations found in UCSC database.
   - `fetch_ncrna_data.py`: Retrieves and preprocesses HGNC symbols into chromosomal locations by mapping to the Ensembl database.
-  - `fetch_conservation_data.py.`: Collects conservation data of each nucleotide position within the location range of each gene symbol (phastCons30way).
+  - `fetch_conservation_data.py.`: Collects conservation data of each nucleotide position within the location range of each gene symbol (phastCons30way, phyloP100, and phyloP447).
   - `cleanup_txt_data`: Scans through temporary data files to look into no location found or no ensembl transcript IDs found cases and removes incorrect lines. Prints a list of gene symbols where the location was not found in UCSC
-  - `R-script_plotting.R`: Analyzes conservation of identified pseudogenes across vertebrate species to detect signs of negative selection.
+  - `fetch_expression_data.py`: Collects maximum expression data from the GTEX tracks downloaded from UCSC
+  - `fetch_ENCODE_expr.py`: Collects maximum fpkm expression data from the ENCODE RNA sequence data, downloaded from the ENCODE RNA-Get portal
+  - `get_specific_gene_list.py`: Create a list of functional genes with P and pseudogenes without P for exceptions of the rule: every gene that has a P in its gene symbol is a pseudogene
+  - `random_forest_genes.py`: Creates a model that is trained on the difference between conservation and max expression data of each gene to calculate the probability of being functional. This is used to test a few ambiguos genes to calculate their functional probability.
+  
+  - `Boxplot_gene_*.R`: Analyzes conservation of identified pseudogenes across vertebrate species to detect signs of negative selection.
+  - `Combined_table_numerical_features.R`: Combines all numerical features into one table
+  - `Distplot_*_summary.R`: Creates a distribution histogram for each expression type - labelled for the top 2sd expression
+  - `Distplot_gene_*.R`: Creates a distribution histogram for each conservation type - labelled for the top 2sd expression
+  - `Jitterplot_*.R`: Calculates robust z-scores of each feature for each gene, normalised to the median of the pseudogenes and create a jitter-plot for the z-score of each feature - separated between functional ncRNA and pseudogene. Outliers are easily spotted with this plot
+  - `Kolmogorov-Smirnov_or_wilcoxon_test.R`: Uses Kolmogorov Smirnov test for each gene group and pooled functional ncRNAs and pseudogenes for each conservation type
+  - `KS_test_expression.R`: Uses Kolmogorov Smirnov test for each gene group and pooled functional ncRNAs and pseudogenes for each expression type
+  - `ScatterPlot_PhyloP100_ENCODE.R`: Creates a scatter-plot of Encode maximum expression against PhyloP100 median. The encode max expression is scaled to improve visualisations.
+  - `Violinplot_PhyloP100.R`: Calculates robust z-scores of phyloP100 median for each gene, normalised to the median of the pseudogenes and create a violin-plot for the z-score of each feature - separated between functional ncRNA and pseudogene. Outliers are indicated with jitter-plot overlay.
 
-- `notebooks/`: Jupyter notebooks to explore and visualize the analysis results: @TODO
+- `notebooks/`: Jupyter notebooks to explore and visualize the analysis results: not used too much - most documentation in lab diary and manuscript
 
 - `results/`: Final results, including lists of pseudogenes under negative selection and visualizations of conservation patterns.
 
