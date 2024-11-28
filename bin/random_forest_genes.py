@@ -17,7 +17,7 @@ data['label'] = data['Gene_Type'].apply(lambda x: 1 if x == 'Functional' else 0)
 # ambiguous_genes = ['RNU6-1189P', 'RNU6-82P', 'RNU2-2P', 'RNU1-27P', 'RNU1-28P', 'RNU5B-1', 'RNU5F-1']
 # ambiguous_genes = ['RNU1-52P', 'RNU4-63P', 'RNU2-4P', 'RNU5B-5P', 'RNU6-1194P', 'RNU6-1334P'] 
 # ambiguous_genes = ['RNU4ATAC15P','RN7SKP70', 'RN7SKP253', 'RN7SKP12', 'RN7SKP123', 'RN7SL471P'] 
-# ambiguous_genes = ['TRL-TAA5-1', 'XPOTP1', 'AIMP1P2', 'NARS1P2', 'GARS1P1', 'KARS1P1', 'AARS1P1', 'QRSL1P1', 'AIMP1P1', 'QRSL1P3', 'QRSL1P2', 'RARS1P1']
+# ambiguous_genes = ['TRL-TAA5-1']
 ambiguous_genes = ['RNU6ATAC24P', 'RNU6ATAC10P']
 
 # Step 1: Exclude ambiguous genes from the dataset
