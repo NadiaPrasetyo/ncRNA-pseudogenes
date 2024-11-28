@@ -8,54 +8,86 @@ import seaborn as sns
 
 # Load the dataset
 data = pd.read_csv('results/combined_gene_data.csv')
+
 # Extract relevant features and labels
 data['label'] = data['Gene_Type'].apply(lambda x: 1 if x == 'Functional' else 0)
 
-# List of test genes
-test_genes_list = ['RNU6-1189P', 'RNU6-82P', 'RNU2-2P', 'RNU1-27P', 'RNU1-28P', 'RNU5B-1', 'RNU5F-1']
+# List of ambiguous genes (assuming you have them defined)
+# You can modify this to use any criteria you have for ambiguous genes
+ambiguous_genes = ['RNU6-1189P', 'RNU6-82P', 'RNU2-2P', 'RNU1-27P', 'RNU1-28P', 'RNU5B-1', 'RNU5F-1']  
 
-# Separate training and test data
-train_data = data[~data['Gene'].isin(test_genes_list)]  # Exclude test genes from training
-test_data = data[data['Gene'].isin(test_genes_list)]  # Include only test genes
+# Step 1: Exclude ambiguous genes from the dataset
+data_non_ambiguous = data[~data['Gene'].isin(ambiguous_genes)]
 
-# Count the number of functional genes and pseudogenes in training data
-num_functional_train = train_data[train_data['label'] == 1].shape[0]
-num_pseudogenes_train = train_data[train_data['label'] == 0].shape[0]
+# Diagnostics: Print number of functional and pseudogenes in the full dataset
+print("Total counts in full dataset:")
+print(f"Functional Genes: {data[data['label'] == 1].shape[0]}")
+print(f"Pseudogenes: {data[data['label'] == 0].shape[0]}")
 
-# Print the counts
-print(f"Number of functional genes in training data: {num_functional_train}")
-print(f"Number of pseudogenes in training data: {num_pseudogenes_train}")
+# Step 2: Split the non-ambiguous data into training and test sets (90% training, 10% testing)
+X = data_non_ambiguous[['PhyloP100_median', 'ENCODE_max']]  # Features
+y = data_non_ambiguous['label']  # Labels
 
-# Features for training and testing
-X_train = train_data[['PhyloP100_median', 'ENCODE_max']]
-y_train = train_data['label']
-X_test = test_data[['PhyloP100_median', 'ENCODE_max']]
+# Randomly split into 90% training and 10% test
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=42)
 
-# Initialize the Random Forest Classifier
+# Diagnostics: Print the number of functional and pseudogenes in the training and test sets
+print("\nTraining Set Counts:")
+print(f"Functional Genes: {y_train.sum()}")
+print(f"Pseudogenes: {len(y_train) - y_train.sum()}")
+
+print("\nTest Set Counts:")
+print(f"Functional Genes: {y_test.sum()}")
+print(f"Pseudogenes: {len(y_test) - y_test.sum()}")
+
+# Step 3: Initialize the Random Forest Classifier and train the model
 model = RandomForestClassifier(n_estimators=100, random_state=42)
-
-# Train the model
+print("\nTraining the Random Forest model...")
 model.fit(X_train, y_train)
 
-# Predict probabilities for the test data
-test_probabilities = model.predict_proba(X_test)[:, 1]  # Probabilities for functional genes
+# Step 4: Evaluate the model on the test set
+print("\nEvaluating the model on the test set...")
+test_predictions = model.predict(X_test)
+test_probs = model.predict_proba(X_test)[:, 1]  # Probabilities for functional genes
 
-# Save test predictions
-test_data = test_data.copy()
-test_data['functional_probability'] = test_probabilities
-test_data[['Gene', 'functional_probability']].to_csv('results/test_predictions.csv', index=False)
+# Print the classification report and ROC AUC score for the test set
+print("\nTest Classification Report:")
+print(classification_report(y_test, test_predictions))
+print(f"Test ROC AUC Score: {roc_auc_score(y_test, test_probs):.2f}")
 
-# Evaluate the model on the training data
-train_predictions = model.predict(X_train)
-train_probs = model.predict_proba(X_train)[:, 1]
-print("Training Classification Report:")
-print(classification_report(y_train, train_predictions))
-print(f"Training ROC AUC Score: {roc_auc_score(y_train, train_probs):.2f}")
+# Step 5: Predict on ambiguous genes
+# Select ambiguous genes from the original dataset
+ambiguous_data = data[data['Gene'].isin(ambiguous_genes)]
 
-print("Test predictions have been saved to 'results/test_predictions.csv'")
+# Diagnostics: Check if ambiguous data is empty
+if ambiguous_data.empty:
+    print("\nNo ambiguous genes found in the dataset.")
+else:
+    # Print the number of functional and pseudogenes in ambiguous genes
+    print("\nAmbiguous Genes Counts:")
+    print(f"Functional Genes: {ambiguous_data[ambiguous_data['label'] == 1].shape[0]}")
+    print(f"Pseudogenes: {ambiguous_data[ambiguous_data['label'] == 0].shape[0]}")
 
-# Add the predicted probabilities to the full dataset
+    # Predict probabilities for ambiguous genes
+    print("\nPredicting probabilities for ambiguous genes...")
+    X_ambiguous = ambiguous_data[['PhyloP100_median', 'ENCODE_max']]
+    ambiguous_probs = model.predict_proba(X_ambiguous)[:, 1]
+
+    # Add the predicted probabilities to the ambiguous data
+    ambiguous_data['functional_probability'] = ambiguous_probs
+
+    # Save the ambiguous gene predictions to a CSV file
+    ambiguous_data[['Gene', 'functional_probability']].to_csv('results/ambiguous_gene_predictions.csv', index=False)
+
+    # Optionally, print ambiguous gene predictions for review
+    print("\nPredictions for ambiguous genes:")
+    print(ambiguous_data[['Gene', 'functional_probability']])
+
+# Step 6: Add the predicted probabilities for all genes in the full dataset
+print("\nAdding predicted probabilities for all genes in the full dataset...")
 data['functional_probability'] = model.predict_proba(data[['PhyloP100_median', 'ENCODE_max']])[:, 1]
+
+# Visualizations (optional, if you want to see the overall distribution)
 
 # Split the data by gene type for visualization
 functional_genes = data[data['label'] == 1]['functional_probability']
@@ -90,20 +122,35 @@ plt.show()
 plt.figure(figsize=(10, 6))
 
 # Scatter plot for test data
-plt.scatter(test_data['PhyloP100_median'], test_data['ENCODE_max'], c=test_data['functional_probability'], cmap='coolwarm', s=100, edgecolors='black', label='Test Genes')
-
-# Set global font size for everything in the plot
-plt.rcParams.update({'font.size': 28,  # Global font size for all text
-                     'axes.labelsize': 28,  # Axis labels font size
-                     'xtick.labelsize': 28,  # X-axis tick label font size
-                     'ytick.labelsize': 28,  # Y-axis tick label font size
-                     'legend.fontsize': 22,  # Legend font size
-                     'figure.titlesize': 28})  # Global figure title font size
+plt.scatter(X_test['PhyloP100_median'], X_test['ENCODE_max'], c=test_probs, cmap='coolwarm', s=100, edgecolors='black', label='Test Genes')
 
 # Add titles and labels
 plt.xlabel('PhyloP100 Median')
 plt.ylabel('ENCODE Max')
-plt.colorbar(label='Probability of Being Functional')
+plt.colorbar(label='Functional Probability')
+plt.grid(False)
+
+# Show the plot
+plt.tight_layout()
+plt.show()
+
+# Scatter plot of ambiguous gene probabilities
+plt.figure(figsize=(10, 6))
+
+# Filter out ambiguous data
+ambiguous_data = data[data['Gene'].isin(ambiguous_genes)]
+
+# Scatter plot for ambiguous genes
+plt.scatter(ambiguous_data['PhyloP100_median'], ambiguous_data['ENCODE_max'], 
+            c=ambiguous_data['functional_probability'], cmap='coolwarm', s=100, edgecolors='black')
+
+
+# Add titles and labels
+plt.xlabel('PhyloP100 Median')
+plt.ylabel('ENCODE Max')
+plt.colorbar(label='Functional Probability')
+
+# Disable grid for better clarity
 plt.grid(False)
 
 # Show the plot
