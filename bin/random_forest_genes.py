@@ -14,11 +14,9 @@ data['label'] = data['Gene_Type'].apply(lambda x: 1 if x == 'Functional' else 0)
 
 # List of ambiguous genes (assuming you have them defined)
 # You can modify this to use any criteria you have for ambiguous genes
-# ambiguous_genes = ['RNU6-1189P', 'RNU6-82P', 'RNU2-2P', 'RNU1-27P', 'RNU1-28P', 'RNU5B-1', 'RNU5F-1']
-# ambiguous_genes = ['RNU1-52P', 'RNU4-63P', 'RNU2-4P', 'RNU5B-5P', 'RNU6-1194P', 'RNU6-1334P'] 
-# ambiguous_genes = ['RNU4ATAC15P','RN7SKP70', 'RN7SKP253', 'RN7SKP12', 'RN7SKP123', 'RN7SL471P'] 
-# ambiguous_genes = ['TRL-TAA5-1']
-ambiguous_genes = ['RNU6ATAC24P', 'RNU6ATAC10P']
+ambiguous_genes = ['RNU6-1189P', 'RNU6-82P', 'RNU2-2P', 'RNU1-27P', 'RNU1-28P', 'RNU5B-1', 
+                   'RNU5F-1', 'RNU5B-5P', 'RNU6-1194P', 'RNU6-1334P', 'RN7SKP70', 'RN7SL471P', 
+                    'TRL-TAA5-1', 'RNU6ATAC10P','MT-TF', 'MT-TL1', 'NMTRS-TGA3-1']
 
 # Step 1: Exclude ambiguous genes from the dataset
 data_non_ambiguous = data[~data['Gene'].isin(ambiguous_genes)]
@@ -91,11 +89,12 @@ else:
 print("\nAdding predicted probabilities for all genes in the full dataset...")
 data['functional_probability'] = model.predict_proba(data[['PhyloP100_median', 'ENCODE_max']])[:, 1]
 
-# Visualizations (optional, if you want to see the overall distribution)
 
-# Split the data by gene type for visualization
-functional_genes = data[data['label'] == 1]['functional_probability']
-pseudogenes = data[data['label'] == 0]['functional_probability']
+# Visualizations for Test Data Distribution
+
+# Predicted probabilities for test data
+test_functional_probs = test_probs[y_test == 1]  # Probabilities for true functional genes
+test_pseudogene_probs = test_probs[y_test == 0]  # Probabilities for true pseudogenes
 
 # Set font to Times New Roman
 plt.rcParams['font.family'] = 'DejaVu Serif'
@@ -107,10 +106,10 @@ plt.rcParams.update({'font.size': 28,  # Global font size for all text
                      'legend.fontsize': 22,  # Legend font size
                      'figure.titlesize': 28})  # Global figure title font size
 
-# Create the bar plot
+# Create the histogram for test data probabilities
 plt.figure(figsize=(10, 6))
-sns.histplot(functional_genes, bins=20, color='firebrick', alpha=0.7, label='Functional Genes')
-sns.histplot(pseudogenes, bins=20, color='cornflowerblue', alpha=0.7, label='Pseudogenes')
+sns.histplot(test_functional_probs, bins=20, color='firebrick', alpha=0.7, label='Functional Genes')
+sns.histplot(test_pseudogene_probs, bins=20, color='cornflowerblue', alpha=0.7, label='Pseudogenes')
 
 # Add titles and labels
 plt.xlabel('Probability of Being Functional')
@@ -122,21 +121,28 @@ plt.grid(axis='y', linestyle='--', alpha=0.7)
 plt.tight_layout()
 plt.show()
 
-# Scatter plot of test data probabilities
-plt.figure(figsize=(10, 6))
+# Predicted probabilities for training data
+train_probs = model.predict_proba(X_train)[:, 1]
+train_functional_probs = train_probs[y_train == 1]
+train_pseudogene_probs = train_probs[y_train == 0]
 
-# Scatter plot for test data
-plt.scatter(X_test['PhyloP100_median'], X_test['ENCODE_max'], c=test_probs, cmap='coolwarm', s=100, edgecolors='black', label='Test Genes')
+# Overlay training data distributions
+plt.figure(figsize=(10, 6))
+sns.histplot(test_functional_probs, bins=20, color='firebrick', alpha=0.7, label='Test Functional Genes')
+sns.histplot(test_pseudogene_probs, bins=20, color='cornflowerblue', alpha=0.7, label='Test Pseudogenes')
+sns.histplot(train_functional_probs, bins=20, color='lightpink', alpha=0.5, label='Train Functional Genes', linestyle='--')
+sns.histplot(train_pseudogene_probs, bins=20, color='lightblue', alpha=0.5, label='Train Pseudogenes', linestyle='--')
 
 # Add titles and labels
-plt.xlabel('PhyloP100 Median')
-plt.ylabel('ENCODE Max')
-plt.colorbar(label='Functional Probability')
-plt.grid(False)
+plt.xlabel('Probability of Being Functional')
+plt.ylabel('Frequency')
+plt.legend(title='Gene Type')
+plt.grid(axis='y', linestyle='--', alpha=0.7)
 
 # Show the plot
 plt.tight_layout()
 plt.show()
+
 
 # Scatter plot of ambiguous gene probabilities
 plt.figure(figsize=(10, 6))
