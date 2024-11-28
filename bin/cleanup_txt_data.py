@@ -3,7 +3,6 @@ import os
 import sys
 
 # Regular expression to extract chromosome, start, and end information
-# allows for X and Y chromosomes in addition to numeric chromosomes
 pattern = re.compile(r"(MT|\d+|X|Y|chr[\w\d_]+):([\d,]+)-([\d,]+)")
 
 # Path to the input file (update this path as needed)
@@ -41,6 +40,15 @@ def clean_gene_data():
                     print(f"Warning: Gene symbol not found in data segment:\n{gene_data}\n")
                     invalid_lines.append(gene_data)  # Store for invalid lines
                     continue
+
+                if input_file == "data/TRNA_data.txt":
+                    # Check if the gene symbol contains at least one hyphen
+                    if '-' not in current_gene:
+                        print(f"Gene symbol '{current_gene}' does not contain a hyphen. Current block:\n{gene_data}")
+                        user_response = input("Do you want to delete this block? (y/n): ").strip().lower()
+                        if user_response == 'y':
+                            print(f"Block for gene '{current_gene}' marked for deletion.")
+                            continue  # Skip adding this block to valid_lines
 
                 # Extract the location string
                 location_match = re.search(pattern, gene_data)
@@ -101,8 +109,8 @@ def handle_temp_data():
                     # Append the gene symbol to the list
                     gene_symbols_no_location.append(match.group(1))
         
-        print ("\nGene symbols with no location found:")
-        print (gene_symbols_no_location) 
+        print("\nGene symbols with no location found:")
+        print(gene_symbols_no_location) 
         # the printed symbols can be used to check the gene symbols locations using fetch_ncrna_data.py
     except Exception as e:
         print(f"An unexpected error occurred while handling temp data: {e}")

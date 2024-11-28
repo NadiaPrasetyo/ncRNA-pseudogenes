@@ -2002,62 +2002,6 @@ Processing TRY-GTA8-1 with Transcript ID: not found
 HGNC:34905 (0): Genomic Sequence (chr6:26,575,569-26,575,658)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr6%3A26575569-26575658
 ------
-Processing AARS1P1 with Transcript ID: not found
-HGNC:49894 (0): Genomic Sequence (chr4:132,592,083-132,592,535)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr4%3A132592083-132592535
-------
-Processing AIMP1P1 with Transcript ID: not found
-HGNC:16543 (0): Genomic Sequence (chr20:14,127,395-14,128,412)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr20%3A14127395-14128412
-------
-Processing AIMP1P2 with Transcript ID: not found
-HGNC:43693 (0): Genomic Sequence (chr1:172,885,865-172,886,257)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr1%3A172885865-172886257
-------
-Processing GARS1P1 with Transcript ID: not found
-HGNC:50480 (0): Genomic Sequence (chr17:55,550,953-55,551,649)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr17%3A55550953-55551649
-------
-Processing KARS1P1 with Transcript ID: not found
-HGNC:39207 (0): Genomic Sequence (chr13:41,925,571-41,927,523)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr13%3A41925571-41927523
-------
-Processing KARS1P2 with Transcript ID: not found
-HGNC:39208 (0): Genomic Sequence (chr13:113,130,421-113,132,039)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr13%3A113130421-113132039
-------
-Processing KARS1P3 with Transcript ID: not found
-HGNC:39209 (0): Genomic Sequence (chr16:68,002,415-68,004,443)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr16%3A68002415-68004443
-------
-Processing NARS1P1 with Transcript ID: not found
-HGNC:19933 (0): Genomic Sequence (chr14:31,286,110-31,288,363)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr14%3A31286110-31288363
-------
-Processing NARS1P2 with Transcript ID: not found
-HGNC:50481 (0): Genomic Sequence (chr8:62,110,525-62,111,149)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr8%3A62110525-62111149
-------
-Processing PRORSD1P with Transcript ID: not found
-HGNC:34379 (0): Genomic Sequence (chr2:55,282,318-55,284,471)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr2%3A55282318-55284471
-------
-Processing QTRT1P1 with Transcript ID: not found
-HGNC:39179 (0): Genomic Sequence (chrX:113,882,646-113,883,665)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=X%3A113882646-113883665
-------
-Processing RARS1P1 with Transcript ID: not found
-HGNC:49893 (0): Genomic Sequence (chr12:27,496,924-27,498,682)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr12%3A27496924-27498682
-------
-Processing CARS1P1 with Transcript ID: not found
-HGNC:50477 (0): Genomic Sequence (chr15:68,749,500-68,750,228)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr15%3A68749500-68750228
-------
-Processing CARS1P2 with Transcript ID: not found
-HGNC:50478 (0): Genomic Sequence (chr8:114,791,652-114,791,928)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr8%3A114791652-114791928
-------
 Processing TRA-AGC23-1 with Transcript ID: not found
 HGNC:35040 (0): Genomic Sequence (chr6:28,778,766-28,778,837)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr6%3A28778766-28778837
@@ -2174,42 +2118,6 @@ Processing TRL-TAG4-1 with Transcript ID: not found
 HGNC:35011 (0): Genomic Sequence (chr14:20,677,018-20,677,099)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr14%3A20677018-20677099
 ------
-Processing TRMT10BP1 with Transcript ID: ENST00000519377
-TRMT10BP1 (ENST00000519377): Genomic Sequence (8:108,652,373-108,653,315)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=8%3A108652373-108653315
-------
-Processing TRMT112P1 with Transcript ID: not found
-HGNC:44020 (0): Genomic Sequence (chr4:116,378,883-116,379,453)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr4%3A116378883-116379453
-------
-Processing TRMT112P2 with Transcript ID: not found
-HGNC:44021 (0): Genomic Sequence (chr5:80,033,170-80,033,301)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr5%3A80033170-80033301
-------
-Processing TRMT112P3 with Transcript ID: not found
-HGNC:44022 (0): Genomic Sequence (chr17:62,950,658-62,951,187)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr17%3A62950658-62951187
-------
-Processing TRMT112P4 with Transcript ID: not found
-HGNC:44023 (0): Genomic Sequence (chr9:101,356,297-101,356,843)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr9%3A101356297-101356843
-------
-Processing TRMT112P5 with Transcript ID: not found
-HGNC:44024 (0): Genomic Sequence (chr3:139,845,077-139,845,410)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr3%3A139845077-139845410
-------
-Processing TRMT112P6 with Transcript ID: not found
-HGNC:44025 (0): Genomic Sequence (chr2:26,028,032-26,028,623)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr2%3A26028032-26028623
-------
-Processing TRMT112P7 with Transcript ID: not found
-HGNC:44026 (0): Genomic Sequence (chr8:54,479,392-54,479,992)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr8%3A54479392-54479992
-------
-Processing TRMT112P8 with Transcript ID: ENST00000417397
-TRMT112P8 (ENST00000417397): Genomic Sequence (22:35,501,861-35,503,586)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=22%3A35501861-35503586
-------
 Processing TRN-GTT22-1 with Transcript ID: not found
 HGNC:35111 (0): Genomic Sequence (chr1:143,717,290-143,717,363)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr1%3A143717290-143717363
@@ -2318,62 +2226,6 @@ Processing TRY-GTA12-1 with Transcript ID: not found
 HGNC:35071 (0): Genomic Sequence (chr15:91,711,071-91,711,143)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr15%3A91711071-91711143
 ------
-Processing TSEN2P1 with Transcript ID: not found
-HGNC:43965 (0): Genomic Sequence (chr4:175,494,569-175,496,812)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr4%3A175494569-175496812
-------
-Processing TSEN15P1 with Transcript ID: not found
-HGNC:43962 (0): Genomic Sequence (chr17:17,456,400-17,457,422)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr17%3A17456400-17457422
-------
-Processing TSEN15P2 with Transcript ID: not found
-HGNC:43963 (0): Genomic Sequence (chr1:51,859,774-51,860,222)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr1%3A51859774-51860222
-------
-Processing TSEN15P3 with Transcript ID: not found
-HGNC:43964 (0): Genomic Sequence (chr7:25,265,339-25,266,289)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr7%3A25265339-25266289
-------
-Processing TYW1P1 with Transcript ID: not found
-HGNC:41905 (0): Genomic Sequence (chr2:33,117,263-33,119,105)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr2%3A33117263-33119105
-------
-Processing WARS1P1 with Transcript ID: not found
-HGNC:50482 (0): Genomic Sequence (chr11:59,255,376-59,259,499)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr11%3A59255376-59259499
-------
-Processing WARS2P1 with Transcript ID: not found
-HGNC:45116 (0): Genomic Sequence (chr10:80,940,643-80,941,206)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr10%3A80940643-80941206
-------
-Processing XPOTP1 with Transcript ID: not found
-HGNC:16586 (0): Genomic Sequence (chr20:34,213,485-34,216,092)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr20%3A34213485-34216092
-------
 Processing TRT-AGT3-1 with Transcript ID: not found
 HGNC:35003 (0): Genomic Sequence (chr6:28,726,017-28,726,090)
 UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr6%3A28726017-28726090
-------
-Processing FARSBP1 with Transcript ID: not found
-HGNC:45115 (0): Genomic Sequence (chr10:80,776,043-80,778,076)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr10%3A80776043-80778076
-------
-Processing IARS2P1 with Transcript ID: not found
-HGNC:50474 (0): Genomic Sequence (chr8:87,598,480-87,601,618)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr8%3A87598480-87601618
-------
-Processing QRSL1P1 with Transcript ID: not found
-HGNC:43667 (0): Genomic Sequence (chr1:168,449,675-168,451,314)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr1%3A168449675-168451314
-------
-Processing QRSL1P2 with Transcript ID: not found
-HGNC:43668 (0): Genomic Sequence (chr1:222,261,793-222,262,795)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr1%3A222261793-222262795
-------
-Processing QRSL1P3 with Transcript ID: not found
-HGNC:43669 (0): Genomic Sequence (chr14:35,765,810-35,767,154)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr14%3A35765810-35767154
-------
-Processing TARS2P1 with Transcript ID: not found
-HGNC:43712 (0): Genomic Sequence (chr4:135,564,893-135,567,161)
-UCSC Genome Browser link: https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=chr4%3A135564893-135567161
