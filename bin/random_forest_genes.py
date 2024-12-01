@@ -16,7 +16,14 @@ data['label'] = data['Gene_Type'].apply(lambda x: 1 if x == 'Functional' else 0)
 # You can modify this to use any criteria you have for ambiguous genes
 ambiguous_genes = ['RNU6-1189P', 'RNU6-82P', 'RNU2-2P', 'RNU1-27P', 'RNU1-28P', 'RNU5B-1', 
                    'RNU5F-1', 'RNU5B-5P', 'RNU6-1194P', 'RNU6-1334P', 'RN7SKP70', 'RN7SL471P', 
-                    'TRL-TAA5-1', 'RNU6ATAC10P','MT-TF', 'MT-TL1', 'NMTRS-TGA3-1']
+                    'TRL-TAA5-1', 'RNU6ATAC10P','MT-TF', 'MT-TL1', 'NMTRS-TGA3-1', 
+                    'TRG-CCC7-1', 'TRG-TCC2-3', 'TRG-TCC2-4', 'TRD-GTC2-4', 'TRD-GTC2-3', 'TRP-AGG5-1',
+                    'TRE-TTC15-1', 'TRK-TTT8-1', 'TRA-AGC15-1', 'TRK-TTT14-1', 'TRP-GGG1-1', 'TRV-CAC1-3', 'TRD-GTC2-5', 'TRSUP-CTA2-1', 'TRE-CTC1-3', 'TRG-TCC2-2', 
+                    'TRQ-TTG9-1', 'TRL-CAA7-1', 'TRE-CTC1-4', 'TRV-CAC1-2', 'TRSUP-CTA3-1', 'TRD-GTC2-2', 'TRG-TCC2-5', 'TRUND-NNN5-1', 'TRQ-TTG8-1', 'TRR-CCT6-2', 'TRE-CTC14-1',
+                    'TRL-CAG1-5', 'TRA-TGC10-1', 'TRL-CAG1-1', 'TRL-CAG1-4', 'TRQ-CTG1-3', 'TRL-AAG1-2', 'TRV-CAC13-1', 'TRE-CTC1-5', 'TRE-CTC1-2', 'TRS-AGA7-1', 'TRE-TTC14-1', 'TRC-GCA7-1', 'TRL-AAG1-1',
+                    'TRE-CTC13-1', 'TRL-CAG1-2', 'TRD-GTC2-1', 'TRUND-NNN1-1', 'TRK-CTT9-1', 'TRE-CTC15-1', 'TRE-CTC12-1', 'TRE-CTC4-1', 'TRU-TCA2-1', 'TRD-GTC10-1',
+                    'TRK-CTT6-1', 'TRE-CTC11-1', 'TRE-CTC9-1', 'TRE-TTC4-2', 'TRG-CCC4-1', 'TRN-GTT2-7', 'TRV-AAC1-3', 'TRN-GTT2-8', 'TRV-CAC8-1', 'TRG-GCC1-4', 
+                    'TRG-TCC4-1', 'TRL-CAG1-3', 'TRK-TTT2-1', 'TRA-AGC9-1', 'TRL-CAA5-1', 'TRK-CTT7-1', 'TRY-ATA1-1', 'TRK-CTT5-1', 'TRR-CCT8-1']
 
 # Step 1: Exclude ambiguous genes from the dataset
 data_non_ambiguous = data[~data['Gene'].isin(ambiguous_genes)]
