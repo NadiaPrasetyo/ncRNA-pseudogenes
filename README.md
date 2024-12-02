@@ -17,7 +17,7 @@ Pseudogenes derived from non-coding RNAs, particularly those related to the spli
 ## Project Structure
 
 -  Documentations
-    - [Manuscript Draft](https://docs.google.com/document/d/1e3wGPWg_hJEjmLN69j1Wue_-8xi2F0YqOShb__H43ws/edit?usp=sharing)
+    - [Manuscript](https://docs.google.com/document/d/1e3wGPWg_hJEjmLN69j1Wue_-8xi2F0YqOShb__H43ws/edit?usp=sharing)
     - [Lab Diary/ Notes](https://docs.google.com/document/d/1tBcWpbhzj_dht2hyIGH2wCKs0m5NIL1PiYrqAYb12Cg/edit?usp=sharing)
     - [Background information](https://docs.google.com/document/d/1dFvhfBuW2lBRTbdZu--Ip4hrldj980C-gZIP91_70iw/edit?usp=sharing)
 
