@@ -26,7 +26,7 @@ Pseudogenes derived from non-coding RNAs, particularly those related to the spli
   - **Comparative genomics data** from other mammals for conservation analysis.
 
 - `bin/`: Contains Python and R scripts for data processing, alignment, evolutionary analysis, and statistical tests:
-  - `fetch_ncrna_hgnc.py`: Retrieves and processes HGNC symbols found from the HGNC database, mapped onto the HGNC annotations found in UCSC database.
+  - `fetch_ncrna_hgnc.py`: Retrieves and processes HGNC symbols found from the HGNC database, mapped onto the HGNC annotations found in UCSC database (https://hgdownload.soe.ucsc.edu/gbdb/hg38/hgnc/).
   - `fetch_ncrna_data.py`: Retrieves and preprocesses HGNC symbols into chromosomal locations by mapping to the Ensembl database.
   - `fetch_conservation_data.py.`: Collects conservation data of each nucleotide position within the location range of each gene symbol (phastCons30way, phyloP100, and phyloP447).
   - `cleanup_txt_data`: Scans through temporary data files to look into no location found or no ensembl transcript IDs found cases and removes incorrect lines. Prints a list of gene symbols where the location was not found in UCSC
