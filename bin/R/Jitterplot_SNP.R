@@ -2,6 +2,7 @@
 library(ggplot2)
 library(dplyr)
 library(tidyr)
+library(scales)
 
 # Data-loading step
 data <- read.csv("../../data/snp_enrichment_genes_pseudogenes.csv")
@@ -9,10 +10,9 @@ data <- read.csv("../../data/snp_enrichment_genes_pseudogenes.csv")
 # ---------------------------------------------------------------------------
 # CONFIG - adjust these if your data differs from these assumptions
 # ---------------------------------------------------------------------------
-# Metric to normalize/plot per source. Options: "snp_density" or "enrichment"
-# (enrichment is already flank-normalized; snp_density mirrors the original
-# PhyloP100_median-style workflow most closely).
-metric_col <- "snp_density"
+# Metric to plot per source, used directly (no Z-score) since "enrichment"
+# is already normalized against the flanking control region.
+metric_col <- "enrichment"
 
 # The four SNP sources present as wide-format column suffixes
 snp_sources <- c("1000genomes", "gnomad", "pangenome", "dbsnp")
@@ -79,43 +79,14 @@ clean_data <- long_data %>%
   filter(is.finite(.data[[metric_col]]))
 
 # ---------------------------------------------------------------------------
-# Z-SCORE NORMALIZATION (same method as the original script - median/MAD of
-# the pseudogene control - now computed per Gene_group AND per source)
+# No Z-score normalization: "enrichment" is already normalized against the
+# flanking control region, so it's plotted directly.
 # ---------------------------------------------------------------------------
-control_stats <- clean_data %>%
-  filter(Gene_Type == "Pseudogene") %>%
-  group_by(Gene_group, source) %>%
-  summarise(
-    control_median = median(.data[[metric_col]], na.rm = TRUE),
-    control_mad = mad(.data[[metric_col]], constant = 1.4826, na.rm = TRUE),
-    .groups = "drop"
-  )
-
 normalized_data <- clean_data %>%
-  left_join(control_stats, by = c("Gene_group", "source")) %>%
-  group_by(Gene_group, source) %>%
   mutate(
-    control_mean_abs_dev = ifelse(
-      !is.na(control_median),
-      mean(abs(.data[[metric_col]][Gene_Type == "Pseudogene"] - control_median), na.rm = TRUE),
-      NA
-    ),
-    Z_score = case_when(
-      !is.na(control_mad) & control_mad > 1e-6 ~
-        (.data[[metric_col]] - control_median) / (1.4826 * control_mad),
-      !is.na(control_mean_abs_dev) & control_mad <= 1e-6 ~
-        (.data[[metric_col]] - control_median) / (1.2533 * control_mean_abs_dev),
-      TRUE ~ NA_real_
-    )
-  ) %>%
-  ungroup() %>%
-  mutate(
-    Gene_Type_combined = paste(Gene_group, Gene_Type, sep = ".")
+    Gene_Type_combined = paste(Gene_group, Gene_Type, sep = "."),
+    source = factor(source, levels = snp_sources)
   )
-
-# Order the facets consistently
-normalized_data <- normalized_data %>%
-  mutate(source = factor(source, levels = snp_sources))
 
 # ---------------------------------------------------------------------------
 # Common theme block, matching the original script's styling
@@ -142,6 +113,27 @@ single_source_theme <- z_theme +
   theme(axis.text.x = element_text(size = 24, angle = 25, hjust = 1))
 
 # ---------------------------------------------------------------------------
+# Shared y-axis scale per plot type, computed ACROSS all sources, so the
+# four "Major Spliceosomal" PDFs (one per source) share identical axis
+# limits/ticks and are directly comparable, and likewise for each other
+# plot type. Each helper returns a list with limits + breaks for use in
+# scale_y_continuous().
+# ---------------------------------------------------------------------------
+make_y_scale <- function(values, n_breaks = 6) {
+  values <- values[is.finite(values)]
+  rng <- range(values, na.rm = TRUE)
+  # Small padding so points at the extremes aren't drawn on the panel edge
+  pad <- diff(rng) * 0.05
+  limits <- c(rng[1] - pad, rng[2] + pad)
+  list(limits = limits, breaks = pretty(rng, n = n_breaks))
+}
+
+y_scale_1 <- make_y_scale(normalized_data$enrichment[normalized_data$Gene_group %in% combined_groups])
+y_scale_2 <- make_y_scale(normalized_data$enrichment[normalized_data$Gene_group %in% combined_groups_2])
+y_scale_3 <- make_y_scale(normalized_data$enrichment[normalized_data$Gene_group %in% remaining_ncRNAs])
+y_scale_combined <- make_y_scale(normalized_data$enrichment[normalized_data$Gene_group != "TRNA"])
+
+# ---------------------------------------------------------------------------
 # Loop over each SNP source and generate the four plots as separate PDFs
 # ---------------------------------------------------------------------------
 for (src in snp_sources) {
@@ -156,18 +148,19 @@ for (src in snp_sources) {
       Gene_Type_label = ifelse(Gene_Type == "Pseudogene", paste(Gene_group, "(P)"), paste(Gene_group, "(F)"))
     )
   
-  plot_1 <- ggplot(data_1, aes(x = Gene_Type_label, y = Z_score, color = Gene_Type_combined)) +
+  plot_1 <- ggplot(data_1, aes(x = Gene_Type_label, y = enrichment, color = Gene_Type_combined)) +
     geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +
     stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +
     scale_color_manual(values = custom_colors) +
+    scale_y_continuous(limits = y_scale_1$limits, breaks = y_scale_1$breaks) +
     labs(
-      title = paste("SNP Density Z-scores of Major Spliceosomal RNAs -", src),
+      title = paste("SNP Enrichment of Major Spliceosomal RNAs -", src),
       x = "Gene Type",
-      y = "Z-score"
+      y = "SNP Enrichment"
     ) +
     single_source_theme
   
-  ggsave(filename = paste0("../../results/SNP_Zscore_", src, "_RNU1_RNU2_RNU4_RNU5_RNU6.pdf"),
+  ggsave(filename = paste0("../../results/SNP_Enrichment_", src, "_RNU1_RNU2_RNU4_RNU5_RNU6.pdf"),
          plot = plot_1, width = 12, height = 7)
   
   # --- Plot 2: Minor spliceosomal RNAs ---
@@ -178,18 +171,19 @@ for (src in snp_sources) {
       Gene_Type_label = ifelse(Gene_Type == "Pseudogene", paste(Gene_group, "(P)"), paste(Gene_group, "(F)"))
     )
   
-  plot_2 <- ggplot(data_2, aes(x = Gene_Type_label, y = Z_score, color = Gene_Type_combined)) +
+  plot_2 <- ggplot(data_2, aes(x = Gene_Type_label, y = enrichment, color = Gene_Type_combined)) +
     geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +
     stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +
     scale_color_manual(values = custom_colors) +
+    scale_y_continuous(limits = y_scale_2$limits, breaks = y_scale_2$breaks) +
     labs(
-      title = paste("SNP Density Z-scores of Minor Spliceosomal RNAs -", src),
+      title = paste("SNP Enrichment of Minor Spliceosomal RNAs -", src),
       x = "Gene Type",
-      y = "Z-score"
+      y = "SNP Enrichment"
     ) +
     single_source_theme
   
-  ggsave(filename = paste0("../../results/SNP_Zscore_", src, "_RNU4ATAC_RNU6ATAC_RNU11_RNU12.pdf"),
+  ggsave(filename = paste0("../../results/SNP_Enrichment_", src, "_RNU4ATAC_RNU6ATAC_RNU11_RNU12.pdf"),
          plot = plot_2, width = 12, height = 7)
   
   # --- Plot 3: Remaining ncRNAs ---
@@ -199,18 +193,19 @@ for (src in snp_sources) {
       Gene_Type_label = ifelse(Gene_Type == "Pseudogene", paste(Gene_group, "(P)"), paste(Gene_group, "(F)"))
     )
   
-  plot_3 <- ggplot(data_3, aes(x = Gene_Type_label, y = Z_score, color = Gene_Type_combined)) +
+  plot_3 <- ggplot(data_3, aes(x = Gene_Type_label, y = enrichment, color = Gene_Type_combined)) +
     geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +
     stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +
     scale_color_manual(values = custom_colors) +
+    scale_y_continuous(limits = y_scale_3$limits, breaks = y_scale_3$breaks) +
     labs(
-      title = paste("SNP Density Z-scores of Other sncRNAs -", src),
+      title = paste("SNP Enrichment of Other sncRNAs -", src),
       x = "Gene Type",
-      y = "Z-score"
+      y = "SNP Enrichment"
     ) +
     single_source_theme
   
-  ggsave(filename = paste0("../../results/SNP_Zscore_", src, "_remaining_ncRNAs.pdf"),
+  ggsave(filename = paste0("../../results/SNP_Enrichment_", src, "_remaining_ncRNAs.pdf"),
          plot = plot_3, width = 12, height = 7)
   
   # --- Plot 4: Combined Functional vs Pseudogene ---
@@ -221,18 +216,19 @@ for (src in snp_sources) {
     )
   
   combined_gene_type_plot <- ggplot(combined_gene_type_data,
-                                    aes(x = Gene_Type_combined_simple, y = Z_score, color = Gene_Type_combined_simple)) +
+                                    aes(x = Gene_Type_combined_simple, y = enrichment, color = Gene_Type_combined_simple)) +
     geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +
     stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +
     scale_color_manual(values = c("Functional" = "firebrick", "Pseudogene" = "cornflowerblue")) +
+    scale_y_continuous(limits = y_scale_combined$limits, breaks = y_scale_combined$breaks) +
     labs(
-      title = paste("SNP Density Z-scores: Pseudogenes vs Functional Genes -", src),
+      title = paste("SNP Enrichment: Pseudogenes vs Functional Genes -", src),
       x = "Gene Type",
-      y = "Z-score"
+      y = "SNP Enrichment"
     ) +
     single_source_theme +
     theme(axis.text.x = element_text(size = 24, angle = 0, hjust = 0.5))
   
-  ggsave(filename = paste0("../../results/SNP_Zscore_", src, "_Pseudogene_vs_Functional.pdf"),
+  ggsave(filename = paste0("../../results/SNP_Enrichment_", src, "_Pseudogene_vs_Functional.pdf"),
          plot = combined_gene_type_plot, width = 12, height = 7)
 }
