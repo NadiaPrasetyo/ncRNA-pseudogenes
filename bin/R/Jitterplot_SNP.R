@@ -22,13 +22,13 @@ snp_sources <- c("1000genomes", "gnomad", "pangenome", "dbsnp")
 # ---------------------------------------------------------------------------
 custom_colors <- c(
   "RNU1.Functional" = "#1f77b4",
-  "RNU1.Pseudogene" = "#aec7e8",  
+  "RNU1.Pseudogene" = "#aec7e8",
   "RNU2.Functional" = "#d62728",
-  "RNU2.Pseudogene" = "#ff9896",  
+  "RNU2.Pseudogene" = "#ff9896",
   "RNU4.Functional" = "#ffc23c",
-  "RNU4.Pseudogene" = "#fff26c",  
+  "RNU4.Pseudogene" = "#fff26c",
   "RNU5.Functional" = "#2ca02c",
-  "RNU5.Pseudogene" = "#98df8a",  
+  "RNU5.Pseudogene" = "#98df8a",
   "RNU6.Functional" = "#9467bd",
   "RNU6.Pseudogene" = "#c5b0d5",
   "RNU4ATAC.Functional" = "#8c564b",
@@ -100,6 +100,7 @@ z_theme <- theme_minimal() +
     axis.text.x = element_text(size = 18, angle = 25, hjust = 1),
     axis.text.y = element_text(size = 18),
     strip.text = element_text(size = 18, face = "bold"),
+    plot.caption = element_text(size = 12, face = "italic", hjust = 0),
     text = element_text(family = "serif")
   )
 
@@ -113,25 +114,104 @@ single_source_theme <- z_theme +
   theme(axis.text.x = element_text(size = 24, angle = 25, hjust = 1))
 
 # ---------------------------------------------------------------------------
-# Shared y-axis scale per plot type, computed ACROSS all sources, so the
+# Shared y-axis view per plot type, computed ACROSS all sources, so the
 # four "Major Spliceosomal" PDFs (one per source) share identical axis
 # limits/ticks and are directly comparable, and likewise for each other
-# plot type. Each helper returns a list with limits + breaks for use in
-# scale_y_continuous().
+# plot type.
+#
+# A handful of extreme outliers (enrichment > 400 in some groups) were
+# stretching the axis so badly that the bulk of the data (mostly 0.5-2)
+# collapsed into a thin band near the bottom. Instead of using the full
+# min/max range, the axis is now "zoomed" to a quantile-based cap that
+# comfortably covers the typical values, via coord_cartesian() rather than
+# scale_y_continuous(limits = ...). This only changes what's VISIBLE -
+# every point is still included in the underlying data, jitter, and the
+# median/mean summary stats; points above the cap are simply clipped off
+# the top of the panel, and the plot caption reports how many were clipped
+# and what the true max was, so nothing is hidden silently.
+#
+# CAP_QUANTILE controls how tight the zoom is - e.g. 0.97 sets the visible
+# upper bound just above the 97th percentile of that group's data. Lower it
+# (e.g. 0.90) for an even tighter zoom, or raise it if too many points are
+# getting clipped.
 # ---------------------------------------------------------------------------
-make_y_scale <- function(values, n_breaks = 6) {
+CAP_QUANTILE <- 0.97
+
+make_y_scale <- function(values, n_breaks = 6, cap_quantile = CAP_QUANTILE) {
   values <- values[is.finite(values)]
   rng <- range(values, na.rm = TRUE)
-  # Small padding so points at the extremes aren't drawn on the panel edge
-  pad <- diff(rng) * 0.05
-  limits <- c(rng[1] - pad, rng[2] + pad)
-  list(limits = limits, breaks = pretty(rng, n = n_breaks))
+  cap <- quantile(values, cap_quantile, na.rm = TRUE)
+  # Headroom above the cap so points near it aren't drawn on the panel edge
+  upper <- cap * 1.15
+  lower <- min(0, rng[1])
+  pad <- (upper - lower) * 0.05
+  ylim <- c(lower - pad, upper)
+  
+  n_clipped <- sum(values > upper)
+  max_value <- rng[2]
+  
+  list(
+    ylim = ylim,
+    breaks = pretty(c(lower, upper), n = n_breaks),
+    n_clipped = n_clipped,
+    max_value = max_value
+  )
+}
+
+# Builds a caption describing any points clipped off the top of the panel,
+# or NULL if nothing was clipped (so labs(caption = NULL) omits it cleanly).
+clip_caption <- function(scale_info) {
+  if (scale_info$n_clipped == 0) return(NULL)
+  sprintf(
+    "%d point(s) above the axis limit not shown (max enrichment = %.1f)",
+    scale_info$n_clipped, scale_info$max_value
+  )
 }
 
 y_scale_1 <- make_y_scale(normalized_data$enrichment[normalized_data$Gene_group %in% combined_groups])
 y_scale_2 <- make_y_scale(normalized_data$enrichment[normalized_data$Gene_group %in% combined_groups_2])
 y_scale_3 <- make_y_scale(normalized_data$enrichment[normalized_data$Gene_group %in% remaining_ncRNAs])
 y_scale_combined <- make_y_scale(normalized_data$enrichment[normalized_data$Gene_group != "TRNA"])
+
+# ---------------------------------------------------------------------------
+# SUMMARY TABLE: average enrichment per source x Gene_group (Functional and
+# Pseudogene rows pooled together), plus a "pooled" row per source that
+# pools ALL Gene_groups together. Columns: source, Gene_group, n, mean,
+# median, sd. Example rows:
+#   pangenome, RNU1,   ...
+#   pangenome, pooled, ...
+# ---------------------------------------------------------------------------
+enrichment_by_group <- normalized_data %>%
+  group_by(source, Gene_group) %>%
+  summarise(
+    n = n(),
+    mean_enrichment = mean(enrichment, na.rm = TRUE),
+    median_enrichment = median(enrichment, na.rm = TRUE),
+    sd_enrichment = sd(enrichment, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+enrichment_pooled <- normalized_data %>%
+  group_by(source) %>%
+  summarise(
+    n = n(),
+    mean_enrichment = mean(enrichment, na.rm = TRUE),
+    median_enrichment = median(enrichment, na.rm = TRUE),
+    sd_enrichment = sd(enrichment, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  mutate(Gene_group = "pooled", .after = source)
+
+enrichment_summary <- bind_rows(enrichment_by_group, enrichment_pooled) %>%
+  arrange(source, Gene_group != "pooled", Gene_group)
+
+print(enrichment_summary, n = Inf)
+
+write.csv(
+  enrichment_summary,
+  file = "../../results/SNP_Enrichment_summary_by_source_group.csv",
+  row.names = FALSE
+)
 
 # ---------------------------------------------------------------------------
 # Loop over each SNP source and generate the four plots as separate PDFs
@@ -152,11 +232,13 @@ for (src in snp_sources) {
     geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +
     stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +
     scale_color_manual(values = custom_colors) +
-    scale_y_continuous(limits = y_scale_1$limits, breaks = y_scale_1$breaks) +
+    scale_y_continuous(breaks = y_scale_1$breaks) +
+    coord_cartesian(ylim = y_scale_1$ylim) +
     labs(
       title = paste("SNP Enrichment of Major Spliceosomal RNAs -", src),
       x = "Gene Type",
-      y = "SNP Enrichment"
+      y = "SNP Enrichment",
+      caption = clip_caption(y_scale_1)
     ) +
     single_source_theme
   
@@ -175,11 +257,13 @@ for (src in snp_sources) {
     geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +
     stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +
     scale_color_manual(values = custom_colors) +
-    scale_y_continuous(limits = y_scale_2$limits, breaks = y_scale_2$breaks) +
+    scale_y_continuous(breaks = y_scale_2$breaks) +
+    coord_cartesian(ylim = y_scale_2$ylim) +
     labs(
       title = paste("SNP Enrichment of Minor Spliceosomal RNAs -", src),
       x = "Gene Type",
-      y = "SNP Enrichment"
+      y = "SNP Enrichment",
+      caption = clip_caption(y_scale_2)
     ) +
     single_source_theme
   
@@ -197,11 +281,13 @@ for (src in snp_sources) {
     geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +
     stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +
     scale_color_manual(values = custom_colors) +
-    scale_y_continuous(limits = y_scale_3$limits, breaks = y_scale_3$breaks) +
+    scale_y_continuous(breaks = y_scale_3$breaks) +
+    coord_cartesian(ylim = y_scale_3$ylim) +
     labs(
       title = paste("SNP Enrichment of Other sncRNAs -", src),
       x = "Gene Type",
-      y = "SNP Enrichment"
+      y = "SNP Enrichment",
+      caption = clip_caption(y_scale_3)
     ) +
     single_source_theme
   
@@ -220,11 +306,13 @@ for (src in snp_sources) {
     geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +
     stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +
     scale_color_manual(values = c("Functional" = "firebrick", "Pseudogene" = "cornflowerblue")) +
-    scale_y_continuous(limits = y_scale_combined$limits, breaks = y_scale_combined$breaks) +
+    scale_y_continuous(breaks = y_scale_combined$breaks) +
+    coord_cartesian(ylim = y_scale_combined$ylim) +
     labs(
       title = paste("SNP Enrichment: Pseudogenes vs Functional Genes -", src),
       x = "Gene Type",
-      y = "SNP Enrichment"
+      y = "SNP Enrichment",
+      caption = clip_caption(y_scale_combined)
     ) +
     single_source_theme +
     theme(axis.text.x = element_text(size = 24, angle = 0, hjust = 0.5))
@@ -232,3 +320,59 @@ for (src in snp_sources) {
   ggsave(filename = paste0("../../results/SNP_Enrichment_", src, "_Pseudogene_vs_Functional.pdf"),
          plot = combined_gene_type_plot, width = 12, height = 7)
 }
+
+# ---------------------------------------------------------------------------
+# Plot 5: Distribution by SOURCE, pooled across all gene groups and NOT
+# split by Functional/Pseudogene - i.e. "what does the overall enrichment
+# distribution look like for 1000genomes vs gnomad vs pangenome vs dbsnp,
+# and how do their means/medians compare?"
+#
+# Each source's jittered points show the spread; a triangle marks the mean
+# and a diamond marks the median so the two can be compared directly (they
+# diverge more for sources with heavier outlier tails).
+# ---------------------------------------------------------------------------
+source_colors <- c(
+  "1000genomes" = "#1f77b4",
+  "gnomad"      = "#d62728",
+  "pangenome"   = "#2ca02c",
+  "dbsnp"       = "#9467bd"
+)
+
+pooled_by_source <- normalized_data  # all Gene_groups, Functional + Pseudogene combined
+
+source_summary_stats <- pooled_by_source %>%
+  group_by(source) %>%
+  summarise(
+    Mean = mean(enrichment, na.rm = TRUE),
+    Median = median(enrichment, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  pivot_longer(cols = c(Mean, Median), names_to = "stat_type", values_to = "value")
+
+y_scale_source <- make_y_scale(pooled_by_source$enrichment)
+
+source_distribution_plot <- ggplot(pooled_by_source, aes(x = source, y = enrichment)) +
+  geom_jitter(aes(color = source), width = 0.25, height = 0, size = 2, alpha = 0.35) +
+  geom_point(
+    data = source_summary_stats,
+    aes(x = source, y = value, shape = stat_type),
+    size = 5, color = "black", fill = "white", stroke = 1.2
+  ) +
+  scale_color_manual(values = source_colors, guide = "none") +
+  scale_shape_manual(name = "Statistic", values = c("Mean" = 24, "Median" = 23)) +
+  scale_y_continuous(breaks = y_scale_source$breaks) +
+  coord_cartesian(ylim = y_scale_source$ylim) +
+  labs(
+    title = "SNP Enrichment Distribution by Source (all gene groups pooled)",
+    x = "SNP Source",
+    y = "SNP Enrichment",
+    caption = clip_caption(y_scale_source)
+  ) +
+  z_theme +
+  theme(
+    legend.position = "right",
+    axis.text.x = element_text(size = 20, angle = 0, hjust = 0.5)
+  )
+
+ggsave(filename = "../../results/SNP_Enrichment_distribution_by_source.pdf",
+       plot = source_distribution_plot, width = 12, height = 7)
