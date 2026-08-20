@@ -5,14 +5,14 @@ library(tidyr)
 library(scales)
 
 # Data-loading step
-data <- read.csv("../../data/snp_enrichment_genes_pseudogenes.csv")
+data <- read.csv("../../data/snp_intergenic_genes_pseudogenes.csv")
 
 # ---------------------------------------------------------------------------
 # CONFIG - adjust these if your data differs from these assumptions
 # ---------------------------------------------------------------------------
 # Metric to plot per source, used directly (no Z-score) since "enrichment"
 # is already normalized against the flanking control region.
-metric_col <- "enrichment"
+metric_col <- "enrichment_intergenic"
 
 # The four SNP sources present as wide-format column suffixes
 snp_sources <- c("1000genomes", "gnomad", "pangenome", "dbsnp")
@@ -68,9 +68,9 @@ data <- data %>%
 # ---------------------------------------------------------------------------
 long_data <- data %>%
   pivot_longer(
-    cols = matches("^(snp_count|snp_density|flank_count|flank_density|enrichment)_"),
+    cols = matches("^(snp_count|snp_density|flank_count|flank_density|enrichment|enrichment_intergenic)_"),
     names_to = c(".value", "source"),
-    names_pattern = paste0("(snp_count|snp_density|flank_count|flank_density|enrichment)_(",
+    names_pattern = paste0("(snp_count|snp_density|flank_count|flank_density|enrichment|enrichment_intergenic)_(",
                            paste(snp_sources, collapse = "|"), ")")
   )
 
@@ -79,8 +79,8 @@ clean_data <- long_data %>%
   filter(is.finite(.data[[metric_col]]))
 
 # ---------------------------------------------------------------------------
-# No Z-score normalization: "enrichment" is already normalized against the
-# flanking control region, so it's plotted directly.
+# No Z-score normalization: "enrichment_intergenic" is already normalized
+# against the flanking control region, so it's plotted directly.
 # ---------------------------------------------------------------------------
 normalized_data <- clean_data %>%
   mutate(
@@ -119,10 +119,10 @@ single_source_theme <- z_theme +
 # limits/ticks and are directly comparable, and likewise for each other
 # plot type.
 #
-# A handful of extreme outliers (enrichment > 400 in some groups) were
-# stretching the axis so badly that the bulk of the data (mostly 0.5-2)
-# collapsed into a thin band near the bottom. Instead of using the full
-# min/max range, the axis is now "zoomed" to a quantile-based cap that
+# A handful of extreme outliers (enrichment_intergenic > 400 in some groups)
+# were stretching the axis so badly that the bulk of the data (mostly
+# 0.5-2) collapsed into a thin band near the bottom. Instead of using the
+# full min/max range, the axis is now "zoomed" to a quantile-based cap that
 # comfortably covers the typical values, via coord_cartesian() rather than
 # scale_y_continuous(limits = ...). This only changes what's VISIBLE -
 # every point is still included in the underlying data, jitter, and the
@@ -163,21 +163,21 @@ make_y_scale <- function(values, n_breaks = 6, cap_quantile = CAP_QUANTILE) {
 clip_caption <- function(scale_info) {
   if (scale_info$n_clipped == 0) return(NULL)
   sprintf(
-    "%d point(s) above the axis limit not shown (max enrichment = %.1f)",
+    "%d point(s) above the axis limit not shown (max enrichment_intergenic = %.1f)",
     scale_info$n_clipped, scale_info$max_value
   )
 }
 
-y_scale_1 <- make_y_scale(normalized_data$enrichment[normalized_data$Gene_group %in% combined_groups])
-y_scale_2 <- make_y_scale(normalized_data$enrichment[normalized_data$Gene_group %in% combined_groups_2])
-y_scale_3 <- make_y_scale(normalized_data$enrichment[normalized_data$Gene_group %in% remaining_ncRNAs])
-y_scale_combined <- make_y_scale(normalized_data$enrichment[normalized_data$Gene_group != "TRNA"])
+y_scale_1 <- make_y_scale(normalized_data$enrichment_intergenic[normalized_data$Gene_group %in% combined_groups])
+y_scale_2 <- make_y_scale(normalized_data$enrichment_intergenic[normalized_data$Gene_group %in% combined_groups_2])
+y_scale_3 <- make_y_scale(normalized_data$enrichment_intergenic[normalized_data$Gene_group %in% remaining_ncRNAs])
+y_scale_combined <- make_y_scale(normalized_data$enrichment_intergenic[normalized_data$Gene_group != "TRNA"])
 
 # ---------------------------------------------------------------------------
-# SUMMARY TABLE: average enrichment per source x Gene_group (Functional and
-# Pseudogene rows pooled together), plus a "pooled" row per source that
-# pools ALL Gene_groups together. Columns: source, Gene_group, n, mean,
-# median, sd. Example rows:
+# SUMMARY TABLE: average enrichment_intergenic per source x Gene_group
+# (Functional and Pseudogene rows pooled together), plus a "pooled" row per
+# source that pools ALL Gene_groups together. Columns: source, Gene_group,
+# n, mean, median, sd. Example rows:
 #   pangenome, RNU1,   ...
 #   pangenome, pooled, ...
 # ---------------------------------------------------------------------------
@@ -185,9 +185,9 @@ enrichment_by_group <- normalized_data %>%
   group_by(source, Gene_group) %>%
   summarise(
     n = n(),
-    mean_enrichment = mean(enrichment, na.rm = TRUE),
-    median_enrichment = median(enrichment, na.rm = TRUE),
-    sd_enrichment = sd(enrichment, na.rm = TRUE),
+    mean_enrichment = mean(enrichment_intergenic, na.rm = TRUE),
+    median_enrichment = median(enrichment_intergenic, na.rm = TRUE),
+    sd_enrichment = sd(enrichment_intergenic, na.rm = TRUE),
     .groups = "drop"
   )
 
@@ -195,9 +195,9 @@ enrichment_pooled <- normalized_data %>%
   group_by(source) %>%
   summarise(
     n = n(),
-    mean_enrichment = mean(enrichment, na.rm = TRUE),
-    median_enrichment = median(enrichment, na.rm = TRUE),
-    sd_enrichment = sd(enrichment, na.rm = TRUE),
+    mean_enrichment = mean(enrichment_intergenic, na.rm = TRUE),
+    median_enrichment = median(enrichment_intergenic, na.rm = TRUE),
+    sd_enrichment = sd(enrichment_intergenic, na.rm = TRUE),
     .groups = "drop"
   ) %>%
   mutate(Gene_group = "pooled", .after = source)
@@ -228,7 +228,7 @@ for (src in snp_sources) {
       Gene_Type_label = ifelse(Gene_Type == "Pseudogene", paste(Gene_group, "(P)"), paste(Gene_group, "(F)"))
     )
   
-  plot_1 <- ggplot(data_1, aes(x = Gene_Type_label, y = enrichment, color = Gene_Type_combined)) +
+  plot_1 <- ggplot(data_1, aes(x = Gene_Type_label, y = enrichment_intergenic, color = Gene_Type_combined)) +
     geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +
     stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +
     scale_color_manual(values = custom_colors) +
@@ -237,7 +237,7 @@ for (src in snp_sources) {
     labs(
       title = paste("SNP Enrichment of Major Spliceosomal RNAs -", src),
       x = "Gene Type",
-      y = "SNP Enrichment",
+      y = "SNP Enrichment (intergenic)",
       caption = clip_caption(y_scale_1)
     ) +
     single_source_theme
@@ -253,7 +253,7 @@ for (src in snp_sources) {
       Gene_Type_label = ifelse(Gene_Type == "Pseudogene", paste(Gene_group, "(P)"), paste(Gene_group, "(F)"))
     )
   
-  plot_2 <- ggplot(data_2, aes(x = Gene_Type_label, y = enrichment, color = Gene_Type_combined)) +
+  plot_2 <- ggplot(data_2, aes(x = Gene_Type_label, y = enrichment_intergenic, color = Gene_Type_combined)) +
     geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +
     stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +
     scale_color_manual(values = custom_colors) +
@@ -262,7 +262,7 @@ for (src in snp_sources) {
     labs(
       title = paste("SNP Enrichment of Minor Spliceosomal RNAs -", src),
       x = "Gene Type",
-      y = "SNP Enrichment",
+      y = "SNP Enrichment (intergenic)",
       caption = clip_caption(y_scale_2)
     ) +
     single_source_theme
@@ -277,7 +277,7 @@ for (src in snp_sources) {
       Gene_Type_label = ifelse(Gene_Type == "Pseudogene", paste(Gene_group, "(P)"), paste(Gene_group, "(F)"))
     )
   
-  plot_3 <- ggplot(data_3, aes(x = Gene_Type_label, y = enrichment, color = Gene_Type_combined)) +
+  plot_3 <- ggplot(data_3, aes(x = Gene_Type_label, y = enrichment_intergenic, color = Gene_Type_combined)) +
     geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +
     stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +
     scale_color_manual(values = custom_colors) +
@@ -286,7 +286,7 @@ for (src in snp_sources) {
     labs(
       title = paste("SNP Enrichment of Other sncRNAs -", src),
       x = "Gene Type",
-      y = "SNP Enrichment",
+      y = "SNP Enrichment (intergenic)",
       caption = clip_caption(y_scale_3)
     ) +
     single_source_theme
@@ -302,7 +302,7 @@ for (src in snp_sources) {
     )
   
   combined_gene_type_plot <- ggplot(combined_gene_type_data,
-                                    aes(x = Gene_Type_combined_simple, y = enrichment, color = Gene_Type_combined_simple)) +
+                                    aes(x = Gene_Type_combined_simple, y = enrichment_intergenic, color = Gene_Type_combined_simple)) +
     geom_jitter(width = 0.2, height = 0, size = 3, alpha = 0.7) +
     stat_summary(fun = "median", geom = "point", shape = 23, size = 3, fill = "white") +
     scale_color_manual(values = c("Functional" = "firebrick", "Pseudogene" = "cornflowerblue")) +
@@ -311,7 +311,7 @@ for (src in snp_sources) {
     labs(
       title = paste("SNP Enrichment: Pseudogenes vs Functional Genes -", src),
       x = "Gene Type",
-      y = "SNP Enrichment",
+      y = "SNP Enrichment (intergenic)",
       caption = clip_caption(y_scale_combined)
     ) +
     single_source_theme +
@@ -323,9 +323,9 @@ for (src in snp_sources) {
 
 # ---------------------------------------------------------------------------
 # Plot 5: Distribution by SOURCE, pooled across all gene groups and NOT
-# split by Functional/Pseudogene - i.e. "what does the overall enrichment
-# distribution look like for 1000genomes vs gnomad vs pangenome vs dbsnp,
-# and how do their means/medians compare?"
+# split by Functional/Pseudogene - i.e. "what does the overall
+# enrichment_intergenic distribution look like for 1000genomes vs gnomad vs
+# pangenome vs dbsnp, and how do their means/medians compare?"
 #
 # Each source's jittered points show the spread; a triangle marks the mean
 # and a diamond marks the median so the two can be compared directly (they
@@ -343,15 +343,15 @@ pooled_by_source <- normalized_data  # all Gene_groups, Functional + Pseudogene 
 source_summary_stats <- pooled_by_source %>%
   group_by(source) %>%
   summarise(
-    Mean = mean(enrichment, na.rm = TRUE),
-    Median = median(enrichment, na.rm = TRUE),
+    Mean = mean(enrichment_intergenic, na.rm = TRUE),
+    Median = median(enrichment_intergenic, na.rm = TRUE),
     .groups = "drop"
   ) %>%
   pivot_longer(cols = c(Mean, Median), names_to = "stat_type", values_to = "value")
 
-y_scale_source <- make_y_scale(pooled_by_source$enrichment)
+y_scale_source <- make_y_scale(pooled_by_source$enrichment_intergenic)
 
-source_distribution_plot <- ggplot(pooled_by_source, aes(x = source, y = enrichment)) +
+source_distribution_plot <- ggplot(pooled_by_source, aes(x = source, y = enrichment_intergenic)) +
   geom_jitter(aes(color = source), width = 0.25, height = 0, size = 2, alpha = 0.35) +
   geom_point(
     data = source_summary_stats,
@@ -365,7 +365,7 @@ source_distribution_plot <- ggplot(pooled_by_source, aes(x = source, y = enrichm
   labs(
     title = "SNP Enrichment Distribution by Source (all gene groups pooled)",
     x = "SNP Source",
-    y = "SNP Enrichment",
+    y = "SNP Enrichment (intergenic)",
     caption = clip_caption(y_scale_source)
   ) +
   z_theme +

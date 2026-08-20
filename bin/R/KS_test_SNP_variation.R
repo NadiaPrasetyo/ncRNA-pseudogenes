@@ -7,7 +7,7 @@ library(readr)
 # ---------------------------------------------------------------------------
 
 # Path to the single input CSV containing all genes / all SNP databases
-input_file <- "../../data/snp_enrichment_genes_pseudogenes.csv"
+input_file <- "../../data/snp_intergenic_genes_pseudogenes.csv"
 
 # Path for the output results CSV
 output_file <- "../../results/ks_test_snp_enrichment_results.csv"
@@ -50,7 +50,7 @@ test_results <- data.frame(SNP_Database = character(),
 # Loop through each SNP database (e.g. 1000genomes, gnomad, pangenome, dbsnp)
 for (snp_db in snp_databases) {
   
-  enrichment_col <- paste0("enrichment_", snp_db)
+  enrichment_col <- paste0("enrichment_intergenic_", snp_db)
   
   if (!enrichment_col %in% colnames(all_data)) {
     cat("Column", enrichment_col, "not found in input data, skipping SNP database", snp_db, "\n")

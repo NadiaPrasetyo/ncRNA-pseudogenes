@@ -12,6 +12,7 @@
 #   - ENCODE max expression vs phyloP median conservation
 #   - ENCODE max expression vs enrichment source
 #   - enrichment source vs phyloP median conservation
+#   - enrichment source: jittered comparison, Functional vs Pseudogene
 #   - PCA (PC1 vs PC2) of the three metrics
 #   - 3D scatter of all three metrics together
 #
@@ -24,18 +25,18 @@
 
 ## ---- 0. CONFIG --------------------------------------------------------------
 
-snp_csv_path      <- "../../data/snp_enrichment_genes_pseudogenes.csv"
+snp_csv_path      <- "../../data/snp_intergenic_genes_pseudogenes.csv"
 encode_dir        <- "../../data/ENCODE-expr_summary"      # contains *_expr.csv (Gene,Max_TPM,Max_FPKM)
 phylop_dir        <- "../../data/phyloP100_summary"         # contains *_summary_metrics.csv
 
 # Which enrichment column in snp_csv_path to use as "the" enrichment source
 # for all plots below. Must match a column name present in snp_csv_path,
 # e.g. "enrichment_dbsnp", "enrichment_gnomad", "enrichment_1000genomes", etc.
-enrichment_col    <- "enrichment_dbsnp"
+enrichment_col    <- "enrichment_intergenic_gnomad"
 
 # Human-readable label used in plot titles/axes/hover text for the column above.
 # Update this alongside enrichment_col so labels stay accurate.
-enrichment_label  <- "dbSNP Enrichment"
+enrichment_label  <- "GnomAD Enrichment (Intergenic background)"
 
 output_dir <- "gene_analysis_output"
 if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
@@ -265,6 +266,58 @@ plot_enrichment_vs_conservation <- make_scatter(
   paste0(enrichment_label, " vs phyloP Median Conservation")
 )
 
+## ---- 10b. JITTER PLOT: enrichment source, Functional vs Pseudogene -------------
+# Plotly's R "scatter" trace has no native jitter mode, so we place each
+# category at an integer x-position (1 = Functional, 2 = Pseudogene) and add
+# a small random horizontal offset per point. This keeps individual genes
+# distinguishable (and hoverable) instead of overplotting them into a single
+# vertical line, while the x-axis is still labeled by category, not by number.
+# Only enrichment_col is used here -- no ENCODE or phyloP data involved.
+
+message("Building jitter plot for enrichment source: ", enrichment_col,
+        " (\"", enrichment_label, "\") by gene category...")
+
+set.seed(42)  # reproducible jitter offsets across runs
+
+jitter_width <- 0.18
+
+plot_enrichment_jitter_df <- plot_df %>%
+  filter(is.finite(.data[[enrichment_col]])) %>%
+  mutate(
+    category = factor(category, levels = c("Functional", "Pseudogene")),
+    x_center = as.numeric(category),
+    x_jitter = x_center + runif(n(), -jitter_width, jitter_width)
+  )
+
+plot_enrichment_jitter <- plot_ly(
+  data   = plot_enrichment_jitter_df,
+  x      = ~x_jitter,
+  y      = as.formula(paste0("~", enrichment_col)),
+  color  = ~category,
+  colors = category_colors,
+  type   = "scatter",
+  mode   = "markers",
+  text   = ~paste0(
+    "Gene: ", gene_name,
+    "<br>Category: ", category,
+    "<br>", enrichment_label, ": ", round(.data[[enrichment_col]], 3)
+  ),
+  hoverinfo = "text",
+  marker = list(size = 7, opacity = 0.65, line = list(width = 0.5, color = "white"))
+) %>%
+  layout(
+    title  = paste0(enrichment_label, ": Functional vs Pseudogene (jittered)"),
+    xaxis  = list(
+      title    = "Gene category",
+      tickmode = "array",
+      tickvals = c(1, 2),
+      ticktext = c("Functional", "Pseudogene"),
+      range    = c(1 - 3 * jitter_width, 2 + 3 * jitter_width)
+    ),
+    yaxis  = list(title = enrichment_label),
+    legend = list(title = list(text = "Gene category"))
+  )
+
 ## ---- 11. PCA -------------------------------------------------------------------
 
 message("Running PCA on Max_TPM, ", enrichment_col, ", Median_Conservation...")
@@ -420,6 +473,7 @@ message("Rendering interactive plotly plots...")
 print(plot_expr_vs_conservation)
 print(plot_expr_vs_enrichment)
 print(plot_enrichment_vs_conservation)
+print(plot_enrichment_jitter)
 print(plot_pca)
 print(plot_3d)
 print(plot_multidim)
@@ -428,9 +482,9 @@ print(plot_multidim)
 # to pop open in your default browser one at a time, that happens automatically
 # via httpuv/browser when each plot is printed -- no extra step needed.
 
-message("Done. Six interactive plotly objects have been rendered (enrichment source: ",
+message("Done. Seven interactive plotly objects have been rendered (enrichment source: ",
         enrichment_col, "):")
 message("  plot_expr_vs_conservation, plot_expr_vs_enrichment, plot_enrichment_vs_conservation,")
-message("  plot_pca, plot_3d, plot_multidim")
+message("  plot_enrichment_jitter, plot_pca, plot_3d, plot_multidim")
 message("Each remains available as a variable in your R session for further tweaking,")
 message("e.g. plot_3d %>% layout(title = 'My custom title')")
