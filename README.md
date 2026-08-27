@@ -139,3 +139,18 @@ Developed by the Gardner lab - University of Otago, with contributions from Nadi
 ## License
 
 This project is licensed under the MIT License.
+
+## Literature sourced RNA Polymerase III transcripts
+
+1. Supplementary Tables S3, S5, S6, and S7
+
+    Donatella Canella, Viviane Praz, Jaime H. Reina, Pascal Cousin, and Nouria Hernandez. 2010, Defining the RNA polymerase III transcriptome: Genome-wide localization of the RNA polymerase III transcription machinery in human cells. Cold Spring Harbor Laboratory Press.
+    https://genome.cshlp.org/content/20/6/710
+
+2. Supplementary Data 1
+
+    Oler, A., Alla, R., Roberts, D. et al. Human RNA polymerase III transcriptomes and relationships to Pol II promoter chromatin and enhancer-binding factors. Nat Struct Mol Biol 17, 620–628 (2010). https://doi.org/10.1038/nsmb.1801
+
+3. Supplementary Data 2 & Supplementary Data 3
+
+    Moqtaderi, Z., Wang, J., Raha, D. et al. Genomic binding profiles of functionally distinct RNA polymerase III transcription complexes in human cells. Nat Struct Mol Biol 17, 635–640 (2010). https://doi.org/10.1038/nsmb.1794
