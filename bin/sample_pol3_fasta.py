@@ -8,7 +8,7 @@ Takes a CSV of Pol III gene annotations + sequences, groups rows by
 file per class.
 
 Expected CSV columns (header row required):
-    source,chr,start,end,name,seq,pol3_gene_type,gene_symbol,
+    source,chr,start,end,name,seq,pol3_gene_type,name,
     rna_class,derived_pol3_gene_type,derived_pol3_class,pol3_type_match
 
 Usage:
@@ -18,9 +18,9 @@ Output:
     <output_dir>/<derived_pol3_class>.fasta   (one file per class)
 
 FASTA header format:
-    >gene_symbol|chr:start-end|derived_pol3_class
+    >name|chr:start-end|derived_pol3_class
 
-    If gene_symbol is missing/NA, falls back to the `name` column.
+    If name is missing/NA, falls back to the `name` column.
 """
 
 import argparse
@@ -47,9 +47,9 @@ def sanitize_filename(name: str) -> str:
 
 
 def build_header(row: dict) -> str:
-    gene_symbol = (row.get("gene_symbol") or "").strip()
-    if not gene_symbol or gene_symbol.lower() in ("na", "n/a", "none", "nan"):
-        gene_symbol = (row.get("name") or "unknown").strip()
+    name = (row.get("name") or "").strip()
+    if not name or name.lower() in ("na", "n/a", "none", "nan"):
+        name = (row.get("name") or "unknown").strip()
 
     chrom = (row.get("chr") or "NA").strip()
     start = (row.get("start") or "NA").strip()
@@ -57,7 +57,7 @@ def build_header(row: dict) -> str:
     gene_class = (row.get("derived_pol3_class") or "NA").strip()
 
     location = f"{chrom}:{start}-{end}"
-    return f">{gene_symbol}|{location}|{gene_class}"
+    return f">{name}|{location}|{gene_class}"
 
 
 def main():
