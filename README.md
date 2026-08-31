@@ -154,3 +154,15 @@ This project is licensed under the MIT License.
 3. Supplementary Data 2 & Supplementary Data 3
 
     Moqtaderi, Z., Wang, J., Raha, D. et al. Genomic binding profiles of functionally distinct RNA polymerase III transcription complexes in human cells. Nat Struct Mol Biol 17, 635–640 (2010). https://doi.org/10.1038/nsmb.1794
+
+## External Tools Reference
+
+1. [STREME](https://meme-suite.org/meme/doc/streme.html): discovers ungapped motifs (recurring, fixed-length patterns) that are enriched in pol III transcripts.
+
+    Timothy L Bailey, STREME: accurate and versatile sequence motif discovery, Bioinformatics, Volume 37, Issue 18, September 2021, Pages 2834–2840, https://doi.org/10.1093/bioinformatics/btab203
+
+    ```bash
+    meme-5.5.9/bin/streme -p data/pol3_fasta_by_class/I.fasta -o data/pol3_fasta_by_class/I_streme_out/
+    ```
+
+2. []():
