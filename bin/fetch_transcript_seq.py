@@ -266,7 +266,7 @@ def main():
     ap.add_argument("-i", "--input_csv", default="data/literature_sourced/dedup_literature_polIII_transcripts_classified.csv",)
     ap.add_argument("-o", "--output_csv", default="data/literature_sourced/literature_polIII_transcript_seq.csv",)
     ap.add_argument("--genome-fasta", required=True,
-                     help="Local GENCODE genome FASTA (GRCh38.p14.genome.fa)")
+                     help="Local GENCODE genome FASTA (hg18 genome version)")
     ap.add_argument("--gtf", default=None,
                      help="Local GENCODE GTF, plain or .gz -- enables gene_symbol lookup")
     args = ap.parse_args()

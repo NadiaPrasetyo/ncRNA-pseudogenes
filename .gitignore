@@ -16,3 +16,4 @@ rna_expression_report_*.tsv
 GTEX-RNAseq-raw/
 EZ_editor.txt
 data/downloads/
+data/fastq/
