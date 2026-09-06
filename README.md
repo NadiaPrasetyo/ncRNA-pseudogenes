@@ -157,12 +157,18 @@ This project is licensed under the MIT License.
 
 ## External Tools Reference
 
-1. [STREME](https://meme-suite.org/meme/doc/streme.html): discovers ungapped motifs (recurring, fixed-length patterns) that are enriched in pol III transcripts.
+1.[STREME](https://meme-suite.org/meme/doc/streme.html): discovers ungapped motifs (recurring, fixed-length patterns) that are enriched in pol III transcripts.
 
     Timothy L Bailey, STREME: accurate and versatile sequence motif discovery, Bioinformatics, Volume 37, Issue 18, September 2021, Pages 2834–2840, https://doi.org/10.1093/bioinformatics/btab203
 
-    ```bash
-    meme-5.5.9/bin/streme -p data/pol3_fasta_by_class/I.fasta -o data/pol3_fasta_by_class/I_streme_out/
-    ```
+```bash
+meme-5.5.9/bin/streme -p data/pol3_fasta_by_class/I.fasta -o data/pol3_fasta_by_class/I_streme_out/
+```
 
-2. []():
+2.[MCAST](https://meme-suite.org/meme/doc/mcast.html?man_type=web): searches sequences for clusters of matches to one or more nucleotide motifs (sample output for motifs and sequences).
+
+    Timothy Bailey and William Stafford Noble, "Searching for statistically significant regulatory modules", Bioinformatics (Proceedings of the European Conference on Computational Biology), 19(Suppl. 2):ii16-ii25, 2003. [full text]
+
+```bash
+meme-5.5.9/bin/mcast -oc results/pol3_screen/I_mcast_out data/pol3_fasta_by_class/I_streme_out/streme.txt data/hgnc_gene_seq.fasta
+```

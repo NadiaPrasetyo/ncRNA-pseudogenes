@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Begin document body -->
+<mcast version="5.5.9" release="Fri Nov 21 15:33:51 2025 -0800">
+<command-line>mcast -oc results/pol3_screen/II_mcast_out data/pol3_fasta_by_class/II_streme_out/streme.txt data/hgnc_gene_seq.fasta</command-line>
+<sequence-data num-sequences="3696" num-residues="8262208" />
+<alphabet>nucleotide</alphabet>
+<motif name="1-RGTTCGARWCC" width="11" best-possible-match="GGTTCGAGTCC" best-possible-rc-match="GGACTCGAACC"/>
+<motif name="2-TAACCACTABACCA" width="14" best-possible-match="TAACCACTAGACCA" best-possible-rc-match="TGGTCTAGTGGTTA"/>
+<motif name="3-CAGTGAGCCGAGAT" width="14" best-possible-match="CAGTGAGCCGAGAT" best-possible-rc-match="ATCTCGGCTCACTG"/>
+<motif name="4-TAGAGCATKDGACTK" width="15" best-possible-match="TAGAGCATTTGACTG" best-possible-rc-match="CAGTCAAATGCTCTA"/>
+<motif name="5-CTCAGCCTCCCRAG" width="14" best-possible-match="CTCAGCCTCCCGAG" best-possible-rc-match="CTCGGGAGGCTGAG"/>
+<motif name="6-CGTCTCTACTAAAAA" width="15" best-possible-match="CGTCTCTACTAAAAA" best-possible-rc-match="TTTTTAGTAGAGACG"/>
+<motif name="7-CCATGTTGGCCAGG" width="14" best-possible-match="CCATGTTGGCCAGG" best-possible-rc-match="CCTGGCCAACATGG"/>
+<motif name="8-CCTGTAATCCCAG" width="13" best-possible-match="CCTGTAATCCCAG" best-possible-rc-match="CTGGGATTACAGG"/>
+<motif name="9-ACTCCGTCTCAAAAA" width="15" best-possible-match="ACTCCGTCTCAAAAA" best-possible-rc-match="TTTTTGAGACGGAGT"/>
+<motif name="10-AAAAATTAGCYGG" width="13" best-possible-match="AAAAATTAGCCGG" best-possible-rc-match="CCGGCTAATTTTT"/>
+<motif name="11-GGAGAATCGCTTGAA" width="15" best-possible-match="GGAGAATCGCTTGAA" best-possible-rc-match="TTCAAGCGATTCTCC"/>
+<motif name="12-AGGCTGGAGTGCAGT" width="15" best-possible-match="AGGCTGGAGTGCAGT" best-possible-rc-match="ACTGCACTCCAGCCT"/>
+<motif name="13-CMACTGAGCTAH" width="12" best-possible-match="CCACTGAGCTAT" best-possible-rc-match="ATAGCTCAGTGG"/>
+<motif name="14-CGTGAGCCACCGCG" width="14" best-possible-match="CGTGAGCCACCGCG" best-possible-rc-match="CGCGGTGGCTCACG"/>
+<motif name="15-CTCRCTCTGTCRCCC" width="15" best-possible-match="CTCGCTCTGTCGCCC" best-possible-rc-match="GGGCGACAGAGCGAG"/>
+<motif name="16-CCTGACCTCRKGW" width="13" best-possible-match="CCTGACCTCAGGT" best-possible-rc-match="ACCTGAGGTCAGG"/>
+<motif name="17-RGGGACCTCTYG" width="12" best-possible-match="GGGGACCTCTTG" best-possible-rc-match="CAAGAGGTCCCC"/>
+<motif name="18-GTGGCGCAATSG" width="12" best-possible-match="GTGGCGCAATGG" best-possible-rc-match="CCATTGCGCCAC"/>
+<motif name="19-CATAGCTGCCTTCCA" width="15" best-possible-match="CATAGCTGCCTTCCA" best-possible-rc-match="TGGAAGGCAGCTATG"/>
+<motif name="20-CAACCTCYRCCTCCY" width="15" best-possible-match="CAACCTCTACCTCCT" best-possible-rc-match="AGGAGGTAGAGGTTG"/>
+<motif name="21-AAAAAAAAAAAAGAA" width="15" best-possible-match="AAAAAAAAAAAAGAA" best-possible-rc-match="TTCTTTTTTTTTTTT"/>
+<motif name="22-CGTGGTGGCGGGCG" width="14" best-possible-match="CGTGGTGGCGGGCG" best-possible-rc-match="CGCCCGCCACCACG"/>
+<motif name="23-CTGGTCTCAAACT" width="13" best-possible-match="CTGGTCTCAAACT" best-possible-rc-match="AGTTTGAGACCAG"/>
+<motif name="24-CACTTTGGGAGGCCG" width="15" best-possible-match="CACTTTGGGAGGCCG" best-possible-rc-match="CGGCCTCCCAAAGTG"/>
+<motif name="25-GATCCRCCCGC" width="11" best-possible-match="GATCCACCCGC" best-possible-rc-match="GCGGGTGGATC"/>
+<motif name="26-GGCAACAAGAGYGAA" width="15" best-possible-match="GGCAACAAGAGCGAA" best-possible-rc-match="TTCGCTCTTGTTGCC"/>
+<background source="non-redundant database">
+<value letter="A">0.275</value>
+<value letter="C">0.225</value>
+<value letter="G">0.225</value>
+<value letter="T">0.275</value>
+</background>
+<cisml-file>cisml.xml</cisml-file>
+<mcast-parameters>
+<min-match-score>3.658</min-match-score>
+<e-thresh>10.000</e-thresh>
+<p-thresh>1.000</p-thresh>
+<q-thresh>1.000</q-thresh>
+<max-gap>50</max-gap>
+<max-total-width>-1</max-total-width>
+<cost-factor>1</cost-factor>
+<gap-open-cost>0.0732</gap-open-cost>
+<gap-extend-cost>0.0732</gap-extend-cost>
+</mcast-parameters>
+<e-value-parameters>
+<distribution>exponential</distribution>
+<status>Distribution estimated successfully.</status>
+<mu1>3.07</mu1>
+<mu2>21.2</mu2>
+<sigma2>0.417</sigma2>
+<c>1</c>
+<num-scores-used>1000</num-scores-used>
+<num-matches>22505</num-matches>
+<db-length>8.26221e+06</db-length>
+</e-value-parameters>
+</mcast>
