@@ -121,7 +121,7 @@ def fetch_sequences(genes_list, genome_file, output_file, flank_length):
                     continue
 
                 # Write to FASTA format
-                fasta_out.write(f">{gene_name} | {gene_type} | {chromosome}:{adjusted_start}-{adjusted_end}\n")
+                fasta_out.write(f">{gene_name}|{gene_type}|{chromosome}:{adjusted_start}-{adjusted_end}\n")
                 fasta_out.write(f"{sequence}\n")
 
         print(f"Sequences fetched and saved to '{output_file}' successfully.")
