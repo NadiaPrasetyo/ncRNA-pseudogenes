@@ -6,7 +6,7 @@ library(scales)
 
 # Data-loading step
 data <- read.csv("../../data/snp_intergenic_genes_pseudogenes.csv")
-sources <- "gnomad"
+sources <- c("gnomad", "1000genomes", "pangenome", "dbsnp")
 
 # Filter out chrY and chrMT genes: incomplete/non-representative coverage
 chrom_col_candidates <- c("chr", "chrom", "chromosome", "Chr", "Chrom", "Chromosome", "CHR")

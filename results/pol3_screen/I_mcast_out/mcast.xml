@@ -2,7 +2,7 @@
 <!-- Begin document body -->
 <mcast version="5.5.9" release="Fri Nov 21 15:33:51 2025 -0800">
 <command-line>mcast -oc results/pol3_screen/I_mcast_out data/pol3_fasta_by_class/I_streme_out/streme.txt data/hgnc_gene_seq.fasta</command-line>
-<sequence-data num-sequences="3696" num-residues="8262208" />
+<sequence-data num-sequences="3558" num-residues="1315102" />
 <alphabet>nucleotide</alphabet>
 <motif name="1-CCATACCACCCTGAA" width="15" best-possible-match="CCATACCACCCTGAA" best-possible-rc-match="TTCAGGGTGGTATGG"/>
 <motif name="2-GAYGAGATCGGGCRC" width="15" best-possible-match="GACGAGATCGGGCGC" best-possible-rc-match="GCGCCCGATCTCGTC"/>
@@ -36,12 +36,12 @@
 <e-value-parameters>
 <distribution>exponential</distribution>
 <status>Distribution estimated successfully.</status>
-<mu1>1.5</mu1>
-<mu2>10.3</mu2>
-<sigma2>0.00821</sigma2>
+<mu1>1.44</mu1>
+<mu2>9.97</mu2>
+<sigma2>0.191</sigma2>
 <c>1</c>
 <num-scores-used>1000</num-scores-used>
-<num-matches>18335</num-matches>
-<db-length>8.26221e+06</db-length>
+<num-matches>3239</num-matches>
+<db-length>1.3151e+06</db-length>
 </e-value-parameters>
 </mcast>

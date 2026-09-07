@@ -155,6 +155,11 @@ This project is licensed under the MIT License.
 
     Moqtaderi, Z., Wang, J., Raha, D. et al. Genomic binding profiles of functionally distinct RNA polymerase III transcription complexes in human cells. Nat Struct Mol Biol 17, 635–640 (2010). https://doi.org/10.1038/nsmb.1794
 
+## PolIII transcripts summary (deduplicated)
+Type 1 count: 783
+Type 2 count: 3213
+Type 3 count: 1202
+
 ## External Tools Reference
 
 1.[STREME](https://meme-suite.org/meme/doc/streme.html): discovers ungapped motifs (recurring, fixed-length patterns) that are enriched in pol III transcripts.
