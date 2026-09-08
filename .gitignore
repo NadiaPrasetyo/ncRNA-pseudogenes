@@ -18,3 +18,5 @@ EZ_editor.txt
 data/downloads/
 data/fastq/
 data/bam/
+data/ref_work/
+data/peaks/

@@ -1,0 +1,15 @@
+Status	data/bam/GSE20309_GSM509054_HeLa_CappedRNAseq_Rep1.Aligned.sortedByCoord.out.bam	data/bam/GSE20309_GSM509055_HeLa_TotalRNAseq.Aligned.sortedByCoord.out.bam
+Assigned	4101944	1741378
+Unassigned_Unmapped	0	0
+Unassigned_Read_Type	0	0
+Unassigned_Singleton	0	0
+Unassigned_MappingQuality	0	0
+Unassigned_Chimera	0	0
+Unassigned_FragmentLength	0	0
+Unassigned_Duplicate	0	0
+Unassigned_MultiMapping	18120200	36147917
+Unassigned_Secondary	0	0
+Unassigned_NonSplit	0	0
+Unassigned_NoFeatures	411953	587578
+Unassigned_Overlapping_Length	0	0
+Unassigned_Ambiguity	585645	297985
