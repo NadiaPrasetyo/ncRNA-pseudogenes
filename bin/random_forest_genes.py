@@ -5,7 +5,7 @@ pangenome, dbSNP) alongside conservation/annotation scores.
 
 Pipeline:
   1. Load the base conservation/annotation table (combined_gene_data.csv)
-  2. Load the SNP enrichment table (snp_enrichment_genes_pseudogenes.csv)
+  2. Load the SNP enrichment table (snp_intergenic_genes_pseudogenes.csv)
   3. Merge them on gene name -> results/combined_gene_data_with_snp.csv
   4. Train/evaluate a Random Forest using conservation + enrichment features
   5. Score ambiguous genes and the full dataset
@@ -25,26 +25,26 @@ import seaborn as sns
 # ---------------------------------------------------------------------------
 
 BASE_DATA_PATH = 'results/combined_gene_data.csv'
-SNP_ENRICHMENT_PATH = 'data/snp_enrichment_genes_pseudogenes.csv'
+SNP_ENRICHMENT_PATH = 'data/snp_intergenic_genes_pseudogenes.csv'
 MERGED_DATA_PATH = 'results/combined_gene_data_with_snp.csv'
 AMBIGUOUS_PREDICTIONS_PATH = 'results/ambiguous_gene_predictions.csv'
 
 # Conservation / annotation features from the original combined_gene_data.csv
 CONSERVATION_FEATURES = [
-    'PhastCons30_median',
+    # 'PhastCons30_median',
     'PhyloP100_median',
-    'PhyloP447_median',
-    'GTEX_max',
+    # 'PhyloP447_median',
+    # 'GTEX_max',
     'ENCODE_max',
 ]
 
 # SNP enrichment features pulled in from snp_enrichment_genes_pseudogenes.csv
 # (enrichment = flank-normalized SNP density relative to gene-body density)
 ENRICHMENT_FEATURES = [
-    'enrichment_1000genomes',
-    'enrichment_gnomad',
-    'enrichment_pangenome',
-    'enrichment_dbsnp',
+    # 'enrichment_intergenic_1000genomes',
+    'enrichment_intergenic_gnomad',
+    # 'enrichment_intergenic_pangenome',
+    'enrichment_intergenic_dbsnp',
 ]
 
 # Features to use for training the Random Forest:
@@ -52,7 +52,7 @@ ENRICHMENT_FEATURES = [
 FEATURES = [
     'PhyloP100_median',
     'ENCODE_max',
-    'enrichment_dbsnp',
+    'enrichment_intergenic_dbsnp',
 ]
 
 # List of ambiguous genes (assuming you have them defined)
@@ -82,11 +82,8 @@ snp_data = pd.read_csv(SNP_ENRICHMENT_PATH)
 # clobber columns that already exist in the base table (e.g. gene_group).
 snp_cols_to_merge = ['gene_name'] + [
     c for c in snp_data.columns
-    if c.startswith('snp_count_')
-    or c.startswith('snp_density_')
-    or c.startswith('flank_count_')
-    or c.startswith('flank_density_')
-    or c.startswith('enrichment_')
+    if c.startswith('snp_density_')
+    or c.startswith('enrichment_intergenic_')
 ]
 snp_data_subset = snp_data[snp_cols_to_merge]
 
@@ -99,12 +96,12 @@ data = base_data.merge(
     how='left'
 ).drop(columns=['gene_name'])
 
-n_unmatched = data['enrichment_1000genomes'].isna().sum()
-if n_unmatched:
-    print(f"Warning: {n_unmatched} genes had no matching SNP enrichment data. "
-          f"Filling missing enrichment values with 0.")
-    for col in snp_cols_to_merge[1:]:
-        data[col] = data[col].fillna(0)
+# n_unmatched = data['enrichment_intergenic_1000genomes'].isna().sum()
+# if n_unmatched:
+#     print(f"Warning: {n_unmatched} genes had no matching SNP enrichment data. "
+#           f"Filling missing enrichment values with 0.")
+#     for col in snp_cols_to_merge[1:]:
+#         data[col] = data[col].fillna(0)
 
 data.to_csv(MERGED_DATA_PATH, index=False)
 print(f"Saved merged dataset with SNP enrichment features to {MERGED_DATA_PATH}")
@@ -256,8 +253,8 @@ plt.show()
 # as the two axes to visualize how enrichment separates predicted classes.
 plt.figure(figsize=(10, 6))
 plt.scatter(
-    ambiguous_data_plot['enrichment_gnomad'],
-    ambiguous_data_plot['enrichment_dbsnp'],
+    ambiguous_data_plot['enrichment_intergenic_gnomad'],
+    ambiguous_data_plot['enrichment_intergenic_dbsnp'],
     c=ambiguous_data_plot['functional_probability'],
     cmap='coolwarm', s=100, edgecolors='black'
 )

@@ -21,3 +21,4 @@ data/bam/
 data/ref_work/
 data/peaks/
 data/counts/gene_counts.tsv
+bin/test.py
