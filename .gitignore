@@ -22,3 +22,4 @@ data/ref_work/
 data/peaks/
 data/counts/gene_counts.tsv
 bin/test.py
+data/merged_regions_seq.csv

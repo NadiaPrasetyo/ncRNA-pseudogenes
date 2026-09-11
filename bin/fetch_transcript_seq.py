@@ -272,7 +272,7 @@ def main():
     args = ap.parse_args()
 
     df = pd.read_csv(args.input_csv)
-    required = {"source", "chr", "start", "end", "name", "seq"}
+    required = {"chr", "start", "end", "name", "seq"}
     missing = required - set(df.columns)
     if missing:
         sys.exit(f"Input CSV is missing required columns: {missing}")
