@@ -1,0 +1,21 @@
+# snp_enrichment_category_vs_polIII_status
+Chi-square           : 602.5520143413656
+P-value              : 3.02257815702428e-121
+Degrees of freedom   : 12
+Critical value (0.05): 21.02606981748307
+Significant at 0.05  : True
+
+# gene_type_vs_polIII_status
+Chi-square           : 1381.6240617876545
+P-value              : 2.3072469618768172e-295
+Degrees of freedom   : 6
+Critical value (0.05): 12.591587243743977
+Significant at 0.05  : True
+
+# snp_enrichment_category_vs_gene_type
+Chi-square           : 1025.6634306025408
+P-value              : 1.9055304788497468e-223
+Degrees of freedom   : 2
+Critical value (0.05): 5.991464547107979
+Significant at 0.05  : True
+

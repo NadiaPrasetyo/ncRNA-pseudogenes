@@ -1,0 +1,16 @@
+# Contingency table: snp_enrichment_category (rows) vs observed_polIII_motif (columns)
+snp_enrichment_category,type1,type2,type3,type1_and_type2,type1_and_type3,type2_and_type3,type1_and_type2_and_type3,no_polIII_motif
+low,0,31,301,0,2,153,137,240
+medium,1,41,619,0,1,423,358,284
+high,1,223,149,0,1,98,131,259
+
+# Contingency table: gene_type (rows) vs observed_polIII_motif (columns)
+gene_type,type1,type2,type3,type1_and_type2,type1_and_type3,type2_and_type3,type1_and_type2_and_type3,no_polIII_motif
+functional,0,229,0,0,0,18,31,256
+pseudogene,2,66,1069,0,4,656,595,534
+
+# Contingency table: snp_enrichment_category (rows) vs gene_type (columns)
+snp_enrichment_category,functional,pseudogene
+low,78,786
+medium,31,1696
+high,424,438
