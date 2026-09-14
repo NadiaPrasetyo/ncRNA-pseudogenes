@@ -1,0 +1,9 @@
+polIII_motif_status,low,medium,high
+type1,0,1,1
+type2,31,41,223
+type3,301,619,149
+type1_and_type2,0,0,0
+type1_and_type3,2,1,1
+type2_and_type3,153,423,98
+type1_and_type2_and_type3,137,358,131
+no_polIII_motif,240,284,259
