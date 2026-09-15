@@ -1,0 +1,278 @@
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(scales)
+
+# Data-loading step
+data <- read.csv("../../data/snp_intergenic_genes_pseudogenes.csv")
+sources <- c("gnomad", "1000genomes", "pangenome", "dbsnp")
+
+# Filter out chrY and chrMT genes: incomplete/non-representative coverage
+chrom_col_candidates <- c("chr", "chrom", "chromosome", "Chr", "Chrom", "Chromosome", "CHR")
+chrom_col <- intersect(chrom_col_candidates, names(data))
+
+if (length(chrom_col) == 0) {
+  stop("Could not find a chromosome column to filter on. Columns present: ",
+       paste(names(data), collapse = ", "))
+}
+chrom_col <- chrom_col[1]
+
+n_before <- nrow(data)
+excluded_chroms <- data %>% filter(grepl("^(chr)?(Y|MT|M)$", .data[[chrom_col]], ignore.case = TRUE))
+data <- data %>% filter(!grepl("^(chr)?(Y|MT|M)$", .data[[chrom_col]], ignore.case = TRUE))
+
+message(sprintf("Filtered out %d of %d rows on chrY/chrMT (column: '%s'); %d rows remain.",
+                nrow(excluded_chroms), n_before, chrom_col, nrow(data)))
+
+# ---------------------------------------------------------------------------
+# CONFIG
+# ---------------------------------------------------------------------------
+# NOTE: no Z-score here. "enrichment_intergenic" is already normalized
+# against its own flanking control region, so it's plotted directly on the
+# x-axis (log-scaled) rather than converted to a Z-score first.
+metric_col  <- "enrichment_intergenic"
+snp_sources <- c("1000genomes", "gnomad", "pangenome", "dbsnp")
+
+# ---------------------------------------------------------------------------
+# Vibrant (Functional) / pastel (Pseudogene) color scheme, same convention
+# used in the PhyloP100 and ENCODE forest plots.
+# ---------------------------------------------------------------------------
+base_colors <- c(
+  "RNU1"      = "#1f77b4",
+  "RNU2"      = "#d62728",
+  "RNU4"      = "#e8a800",
+  "RNU5"      = "#2ca02c",
+  "RNU6"      = "#9467bd",
+  "RNU4ATAC"  = "#8c564b",
+  "RNU6ATAC"  = "#e377c2",
+  "RNU11"     = "#555555",
+  "RNU12"     = "#8c8d00",
+  "VTRNA"     = "#17becf",
+  "RNY"       = "#e0507a",
+  "TRNA"      = "#7f5aa2",
+  "RN7SL"     = "#f4a300",
+  "RNU7"      = "#6a3fbf",
+  "RN7SK"     = "#3b8f6b"
+)
+
+make_pastel <- function(hex, amount = 0.6) {
+  rgb_val <- grDevices::col2rgb(hex)
+  pastel_val <- rgb_val + (255 - rgb_val) * amount
+  grDevices::rgb(pastel_val[1, ], pastel_val[2, ], pastel_val[3, ], maxColorValue = 255)
+}
+
+pastel_colors <- setNames(make_pastel(base_colors), names(base_colors))
+
+custom_colors <- c(
+  setNames(base_colors, paste0(names(base_colors), ".Functional")),
+  setNames(pastel_colors, paste0(names(pastel_colors), ".Pseudogene"))
+)
+
+# ---------------------------------------------------------------------------
+# Standardize key columns
+# ---------------------------------------------------------------------------
+data <- data %>%
+  mutate(
+    Gene_group = gene_group,
+    Gene_Type = ifelse(tolower(gene_type) == "pseudogene", "Pseudogene", "Functional")
+  )
+
+# ---------------------------------------------------------------------------
+# Reshape from wide (one set of columns per source) to long format
+# ---------------------------------------------------------------------------
+long_data <- data %>%
+  pivot_longer(
+    cols = matches("^(snp_count|snp_density|flank_count|flank_density|enrichment|enrichment_intergenic)_"),
+    names_to = c(".value", "source"),
+    names_pattern = paste0("(snp_count|snp_density|flank_count|flank_density|enrichment|enrichment_intergenic)_(",
+                           paste(snp_sources, collapse = "|"), ")")
+  )
+
+# Keep zero/negative enrichment values (real data points) - they're handled
+# at plot time via a pseudo-log x-axis, which stays defined through zero.
+clean_data <- long_data %>%
+  filter(is.finite(.data[[metric_col]]))
+
+normalized_data <- clean_data %>%
+  mutate(
+    Gene_Type_combined = paste(Gene_group, Gene_Type, sep = "."),
+    source = factor(source, levels = snp_sources)
+  ) %>%
+  filter(source %in% sources) %>%
+  mutate(source = factor(source, levels = sources))
+
+# ---------------------------------------------------------------------------
+# Same gene-group ordering used in the PhyloP100/ENCODE forest plots
+# ---------------------------------------------------------------------------
+combined_groups   <- c("RNU1", "RNU2", "RNU4", "RNU5", "RNU6")
+combined_groups_2 <- c("RNU4ATAC", "RNU6ATAC", "RNU11", "RNU12")
+remaining_ncRNAs  <- setdiff(unique(normalized_data$Gene_group), c(combined_groups, combined_groups_2))
+
+gene_group_order <- c(combined_groups, combined_groups_2, remaining_ncRNAs)
+
+normalized_data <- normalized_data %>%
+  filter(Gene_group %in% gene_group_order) %>%
+  mutate(
+    Gene_group = factor(Gene_group, levels = gene_group_order),
+    Gene_Type  = factor(Gene_Type, levels = c("Functional", "Pseudogene")),
+    Gene_Type_combined = paste(Gene_group, Gene_Type, sep = ".")
+  )
+
+group_levels_rev <- rev(gene_group_order)   # first group ends up at the top of the plot
+normalized_data <- normalized_data %>%
+  mutate(
+    Gene_group_f = factor(Gene_group, levels = group_levels_rev),
+    y_num    = as.numeric(Gene_group_f),
+    y_offset = ifelse(Gene_Type == "Functional", 0.15, -0.15),
+    y_pos    = y_num + y_offset
+  )
+
+# ---------------------------------------------------------------------------
+# Outlier definition (no Z-score available here, so we fall back to the
+# standard boxplot rule): within each Gene_group x Gene_Type x source, a
+# point is an outlier if it falls beyond 1.5x the IQR from the nearest
+# quartile. These, plus any thin (n<=2) groups, are the only individual
+# points drawn on top of the violins - solid = functional, hollow =
+# pseudogene, matching the convention from the other forest plots.
+# ---------------------------------------------------------------------------
+iqr_bounds <- normalized_data %>%
+  group_by(source, Gene_Type_combined) %>%
+  summarise(
+    q1  = quantile(.data[[metric_col]], 0.25, na.rm = TRUE),
+    q3  = quantile(.data[[metric_col]], 0.75, na.rm = TRUE),
+    iqr = q3 - q1,
+    .groups = "drop"
+  ) %>%
+  mutate(
+    lower_bound = q1 - 1.5 * iqr,
+    upper_bound = q3 + 1.5 * iqr
+  )
+
+normalized_data <- normalized_data %>%
+  left_join(iqr_bounds, by = c("source", "Gene_Type_combined")) %>%
+  mutate(
+    is_outlier = .data[[metric_col]] < lower_bound | .data[[metric_col]] > upper_bound
+  )
+
+# Precompute one median enrichment value per source x Gene_group x
+# Gene_Type, placed at the same fixed y_offset used for that type's dodge.
+median_data <- normalized_data %>%
+  group_by(source, Gene_group, Gene_Type, Gene_Type_combined) %>%
+  summarize(
+    Median_val = median(.data[[metric_col]], na.rm = TRUE),
+    y_pos = first(y_num) + ifelse(first(Gene_Type) == "Functional", 0.15, -0.15),
+    .groups = "drop"
+  )
+
+# Groups with too few points (1-2) per source to draw a meaningful violin
+group_counts <- normalized_data %>%
+  count(source, Gene_Type_combined, name = "n_points")
+
+thin_lookup <- group_counts %>% filter(n_points <= 2)
+
+z_theme <- theme_minimal() +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(face = "bold", size = 20),
+    plot.subtitle = element_text(size = 12),
+    axis.title.x = element_text(size = 18),
+    axis.text.x = element_text(size = 14),
+    axis.text.y = element_text(size = 13),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    text = element_text(family = "serif")
+  )
+
+n_rows <- length(gene_group_order)
+all_outliers <- list()
+
+x_breaks <- c(0, 1, 2, 3, 4, 5)
+
+# ---------------------------------------------------------------------------
+# One long forest-style plot per SNP source
+# ---------------------------------------------------------------------------
+for (src in sources) {
+  
+  src_data <- normalized_data %>% filter(source == src)
+  
+  thin_groups_src <- thin_lookup %>% filter(source == src) %>% pull(Gene_Type_combined)
+  
+  violin_data <- src_data %>% filter(!(Gene_Type_combined %in% thin_groups_src) & !is_outlier)
+  thin_data   <- src_data %>% filter(Gene_Type_combined %in% thin_groups_src)
+  outlier_points <- src_data %>% filter(!(Gene_Type_combined %in% thin_groups_src) & is_outlier)
+  
+  all_outliers[[src]] <- outlier_points
+  
+  median_data_src <- median_data %>% filter(source == src)
+  
+  forest_plot <- ggplot() +
+    geom_vline(xintercept = 1, linetype = "solid", color = "grey40", linewidth = 0.4) +  # 1 = no enrichment/depletion
+    geom_vline(xintercept = 0, linetype = "dotted", color = "grey60", linewidth = 0.4) +
+    geom_violin(
+      data = violin_data,
+      aes(x = .data[[metric_col]], y = y_pos, group = Gene_Type_combined,
+          fill = Gene_Type_combined, color = Gene_Type_combined),
+      orientation = "y",
+      scale = "width",
+      width = 0.28,
+      alpha = 0.55,
+      trim = TRUE,
+      linewidth = 0.4
+    ) +
+    geom_jitter(
+      data = thin_data,
+      aes(x = .data[[metric_col]], y = y_pos, color = Gene_Type_combined, shape = Gene_Type),
+      height = 0.06, width = 0, size = 2.8, alpha = 0.9, stroke = 0.8
+    ) +
+    geom_jitter(
+      data = outlier_points,
+      aes(x = .data[[metric_col]], y = y_pos, color = Gene_Type_combined, shape = Gene_Type),
+      height = 0.06, width = 0, size = 2.8, alpha = 0.9, stroke = 0.8
+    ) +
+    geom_point(
+      data = median_data_src,
+      aes(x = Median_val, y = y_pos),
+      shape = 23, size = 3, fill = "white", color = "black"
+    ) +
+    scale_shape_manual(values = c("Functional" = 16, "Pseudogene" = 1)) +  # solid vs hollow
+    scale_color_manual(values = custom_colors) +
+    scale_fill_manual(values = custom_colors) +
+    scale_x_continuous(
+      breaks = x_breaks,
+      labels = x_breaks
+    ) +
+    scale_y_continuous(
+      breaks = seq_along(group_levels_rev),
+      labels = group_levels_rev,
+      expand = expansion(add = 0.6)
+    ) +
+    labs(
+      title = paste0("SNP Enrichment (intergenic) of Functional Genes vs Pseudogenes \u2014 ", src),
+      #subtitle = "Vibrant = functional, pastel = pseudogene; points shown are IQR outliers or groups with n\u22642; solid vline at 1 = no enrichment/depletion",
+      x = "SNP Enrichment (intergenic)",
+      y = NULL
+    ) +
+    z_theme
+  
+  ggsave(
+    filename = paste0("../../results/SNP_Enrichment_forest_plot_", src, ".pdf"),
+    plot = forest_plot,
+    width = 10,
+    height = max(7, n_rows * 0.7)
+  )
+}
+
+# ---------------------------------------------------------------------------
+# Export all outliers (across all sources) to a single CSV
+# ---------------------------------------------------------------------------
+outliers_df <- bind_rows(all_outliers) %>%
+  select(-lower_bound, -upper_bound) %>%
+  arrange(source, Gene_group, Gene_Type, desc(.data[[metric_col]]))
+
+write.csv(
+  outliers_df,
+  file = "../../results/SNP_Enrichment_outliers.csv",
+  row.names = FALSE
+)
