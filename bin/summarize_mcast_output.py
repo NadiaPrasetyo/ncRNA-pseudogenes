@@ -114,7 +114,7 @@ def extract_mcast_hits(xml_file, motif_names):
 # <matched-element start="17456573" stop="17456587" pvalue="8.5343e-05">
 # <sequence>GATGAAATTAGGCTG</sequence>
 
-    summary_df = pd.DataFrame(columns=["sequence_name", "cluster_id", "score", "p-value"] + motif_names)
+    summary_df = pd.DataFrame(columns=["sequence_name", "cluster_id", "score", "p-value", "motif_counts", "unique_motifs"])
     # for each motif, we will create a column in the DataFrame to store the number of hits for that motif in each sequence
     
     with open(xml_file, "r") as f:
@@ -122,7 +122,8 @@ def extract_mcast_hits(xml_file, motif_names):
         current_cluster = None
         current_score = None
         current_pvalue = None
-        current_hits = {motif: 0 for motif in motif_names}
+        motif_counts = 0
+        unique_motifs = set()
 
         for line in f:
             line = line.strip()
@@ -144,10 +145,12 @@ def extract_mcast_hits(xml_file, motif_names):
                         "cluster_id": current_cluster,
                         "score": current_score,
                         "p-value": current_pvalue,
-                        **current_hits,
+                        "motif_counts": motif_counts,
+                        "unique_motifs": sorted(unique_motifs),
                     }
                     # Reset hits for the new sequence
-                    current_hits = {motif: 0 for motif in motif_names}
+                motif_counts = 0
+                unique_motifs = set()
             
             # the seq name is in: # <mem:match cluster-id="cluster-1870" seq-name="RN7SL690P|pseudogene|chr20" start="20316756" stop="20317040" evalue="2.6285e-08" qvalue="1.0999e-08">CCTGTAATCCCAGCTACTCGGGAGGCTGAGGCATGATAATCGCTTGAACCCAGGAGGCAGAGTTTGCAGTGAGCCAAGATCGTGCCACTGCACTCCAGCCTGGATGACAGAGTGAGACTCTGTCTGAAAAAAACCAAGGCAGACAGAGTCTCACTCTGTCATCCAGGCTGGAGTGCAGTGGCACGATCTTGGCTCACTGCAACCTCTGCCTCCTGGGTTCAAGCGATTATCATGCCTCAGCTTCCCGAGTAGCTGGGATTACAGGCTTGAGCCAGCATGCCCGGC
             elif line.startswith("<mem:match"):
@@ -162,9 +165,8 @@ def extract_mcast_hits(xml_file, motif_names):
             elif line.startswith("<pattern"):
                 motif_name_start = line.find('name="') + len('name="')
                 motif_name_end = line.find('"', motif_name_start)
-                current_motif = line[motif_name_start:motif_name_end]
-                if current_motif in current_hits:
-                    current_hits[current_motif] += 1
+                motif_counts += 1
+                unique_motifs.add(line[motif_name_start:motif_name_end])
 
         # After the loop, make sure to save the last sequence's data
         if current_seq_name is not None:
@@ -173,7 +175,8 @@ def extract_mcast_hits(xml_file, motif_names):
                 "cluster_id": current_cluster,
                 "score": current_score,
                 "p-value": current_pvalue,
-                **current_hits,
+                "motif_counts": motif_counts,
+                "unique_motifs": sorted(unique_motifs)
             }
 
         return summary_df
@@ -214,7 +217,15 @@ def summarize_types(mcast_input_dir, gene_names_file):
 
     # Combine the three classes into a single summary dataframe: 
     # for each gene_name in gene_names_file, we will create a true or false to having any hits in each class
-    summary_df = pd.DataFrame(columns=["gene_name", "expected_promoter", "contains_type1_promoter", "contains_type2_promoter", "contains_type3_promoter"])
+    summary_df = pd.DataFrame(columns=[
+        "gene_name", "expected_promoter", "contains_type1_promoter",
+        "contains_type2_promoter", "contains_type3_promoter",
+        "type1_cluster_id", "type1_score", "type1_motif_counts",
+        "type1_unique_motifs", "type2_cluster_id", "type2_score",
+        "type2_motif_counts", "type2_unique_motifs", "type3_cluster_id",
+        "type3_score", "type3_motif_counts", "type3_unique_motifs",
+        "total_motif_count"
+    ])
 
     # gene_names_file may contain additional comma-separated annotations. Use
     # only the Gene column, and handle exports that quote the complete row.
@@ -236,12 +247,52 @@ def summarize_types(mcast_input_dir, gene_names_file):
         contains_type2_promoter = any(gene_name in seq_name for seq_name in classII_hits["sequence_name"]) #if the gene_name is in any of the sequence names in the classII_hits dataframe, then it contains a type2 promoter
         contains_type3_promoter = any(gene_name in seq_name for seq_name in classIII_hits["sequence_name"]) #if the gene_name is in any of the sequence names in the classIII_hits dataframe, then it contains a type3 promoter
 
+        # Keep hit details separate by promoter class. A gene can have
+        # multiple hits, so values are retained as semicolon-separated strings.
+        class_hits = (classI_hits, classII_hits, classIII_hits)
+        hit_details = {}
+        total_motif_count = 0
+        for class_number, hits in enumerate(class_hits, start=1):
+            matching_hits = hits[
+                hits["sequence_name"].astype(str).str.contains(gene_name, regex=False)
+            ]
+            prefix = f"type{class_number}_"
+            if matching_hits.empty:
+                for output_column in ("cluster_id", "score", "motif_counts", "unique_motifs"):
+                    hit_details[prefix + output_column] = ""
+                continue
+
+            # Combine all hits for this promoter type, including hits from
+            # multiple clusters: sum motif counts, average scores, and
+            # de-duplicate the motif names.
+            clusters = matching_hits["cluster_id"].dropna().astype(str)
+            scores = pd.to_numeric(matching_hits["score"], errors="coerce").dropna()
+            motif_counts = pd.to_numeric(
+                matching_hits["motif_counts"], errors="coerce"
+            ).fillna(0)
+            motif_count = int(motif_counts.sum())
+
+            unique_motifs = set()
+            for motif_list in matching_hits["unique_motifs"]:
+                if isinstance(motif_list, (list, tuple, set)):
+                    unique_motifs.update(str(motif) for motif in motif_list)
+                elif motif_list is not None and not pd.isna(motif_list):
+                    unique_motifs.add(str(motif_list))
+
+            hit_details[prefix + "cluster_id"] = ";".join(dict.fromkeys(clusters))
+            hit_details[prefix + "score"] = scores.mean() if not scores.empty else ""
+            hit_details[prefix + "motif_counts"] = motif_count
+            hit_details[prefix + "unique_motifs"] = sorted(unique_motifs)
+            total_motif_count += motif_count
+
         summary_df.loc[len(summary_df)] = {
             "gene_name": gene_name,
             "expected_promoter": expected_promoter(gene_name),
             "contains_type1_promoter": contains_type1_promoter,
             "contains_type2_promoter": contains_type2_promoter,
-            "contains_type3_promoter": contains_type3_promoter
+            "contains_type3_promoter": contains_type3_promoter,
+            **hit_details,
+            "total_motif_count": total_motif_count,
         }
 
     return summary_df
