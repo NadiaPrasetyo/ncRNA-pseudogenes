@@ -25,7 +25,8 @@ base_colors <- c(
   "TRNA"      = "#7f5aa2",
   "RN7SL"     = "#f4a300",
   "RNU7"      = "#6a3fbf",
-  "RN7SK"     = "#3b8f6b"
+  "RN7SK"     = "#3b8f6b",
+  "Pooled"    = "#000000"   # NEW: distinct near-black for the pooled summary row
 )
 
 make_pastel <- function(hex, amount = 0.6) {
@@ -49,6 +50,7 @@ clean_data <- data %>%
 # POOLED Z-SCORE: use ALL pseudogenes (across every Gene_group) as a single
 # global "negative control" distribution, rather than a separate
 # median/MAD per Gene_group. Same logic as the PhyloP100 forest plot.
+# (Unchanged.)
 # -----------------------------------------------------------------------
 global_control_median <- median(
   clean_data$ENCODE_max[clean_data$Gene_Type == "Pseudogene"],
@@ -77,14 +79,24 @@ if (!is.na(global_control_mad) && global_control_mad > 1e-6) {
 
 # -----------------------------------------------------------------------
 # Keep the SAME ordering of Gene_groups used in the PhyloP100 forest plot.
+# A "Pooled" pseudo-group is appended LAST so it renders at the BOTTOM of
+# the forest plot.
 # -----------------------------------------------------------------------
 combined_groups   <- c("RNU1", "RNU2", "RNU4", "RNU5", "RNU6")
 combined_groups_2 <- c("RNU4ATAC", "RNU6ATAC", "RNU11", "RNU12")
 remaining_ncRNAs  <- setdiff(unique(normalized_data$Gene_group), c(combined_groups, combined_groups_2))
 
-gene_group_order <- c(combined_groups, combined_groups_2, remaining_ncRNAs)
+gene_group_order <- c(combined_groups, combined_groups_2, remaining_ncRNAs, "Pooled")
 
-normalized_data <- normalized_data %>%
+# NEW: build the "Pooled" rows by duplicating every existing row (all
+# Gene_groups) with Gene_group relabeled to "Pooled". This reuses the
+# SAME Z_score values already computed above -- nothing is recalculated
+# or rescaled -- it just lets the Functional/Pseudogene violins be drawn
+# once more using every point across the whole dataset.
+pooled_data <- normalized_data %>%
+  mutate(Gene_group = "Pooled")
+
+normalized_data <- bind_rows(normalized_data, pooled_data) %>%
   filter(Gene_group %in% gene_group_order) %>%
   mutate(
     Gene_group = factor(Gene_group, levels = gene_group_order),
@@ -136,23 +148,43 @@ thin_data   <- normalized_data %>% filter(Gene_Type_combined %in% thin_groups)
 #    - Functional genes with Z < 0 -> "functional_outlier"
 #    These outliers (plus any thin groups) are the only individual points
 #    drawn on top of the violins. Solid = functional, hollow = pseudogene.
+#    NOTE: the "Pooled" pseudo-group is excluded from the outlier export
+#    since its points are duplicates of the per-group rows above it and
+#    would otherwise double-count every outlier.
 # -----------------------------------------------------------------------
 pseudogene_outliers <- normalized_data %>%
-  filter(Gene_Type == "Pseudogene", Z_score > 2) %>%
+  filter(Gene_Type == "Pseudogene", Z_score > 2, Gene_group != "Pooled") %>%
   mutate(Outlier_category = ifelse(Z_score > 3, "extreme", "significant"))
 
 functional_outliers <- normalized_data %>%
-  filter(Gene_Type == "Functional", Z_score < 0) %>%
+  filter(Gene_Type == "Functional", Z_score < 0, Gene_group != "Pooled") %>%
   mutate(Outlier_category = "functional_outlier")
 
 outlier_points <- bind_rows(pseudogene_outliers, functional_outliers) %>%
   arrange(Gene_group, Gene_Type, desc(Z_score))
+
+# For the Pooled row itself, jitter is still drawn (below) using the
+# ordinary thin/outlier logic per Gene_Type_combined, so it visually
+# matches all the other rows -- but the outlier CSV above stays specific
+# to individual gene groups.
+pooled_jitter <- normalized_data %>%
+  filter(
+    Gene_group == "Pooled",
+    Gene_Type_combined %in% c(
+      thin_groups,
+      unique(bind_rows(
+        normalized_data %>% filter(Gene_Type == "Pseudogene", Z_score > 2, Gene_group == "Pooled"),
+        normalized_data %>% filter(Gene_Type == "Functional", Z_score < 0, Gene_group == "Pooled")
+      )$Gene_Type_combined)
+    )
+  )
 
 # -----------------------------------------------------------------------
 # Log-scaled x-axis: Z-scores can be negative (and are often clustered
 # near zero for pseudogenes), so a plain log10 scale would drop/NaN those
 # values. Use a pseudo-log transform instead - it behaves like log10 for
 # large |Z| but stays linear (and defined) near zero, including negatives.
+# (Unchanged.)
 # -----------------------------------------------------------------------
 z_breaks <- c(-10, -3, -1, 0, 1, 2, 3, 10, 100, 1000, 10000, 100000)
 
@@ -160,6 +192,8 @@ forest_plot <- ggplot() +
   geom_vline(xintercept = 0, linetype = "solid", color = "grey40", linewidth = 0.4) +
   geom_vline(xintercept = 2, linetype = "dashed", color = "grey60", linewidth = 0.4) +
   geom_vline(xintercept = 3, linetype = "dotted", color = "grey60", linewidth = 0.4) +
+  # Separator line between the per-group rows and the Pooled summary row
+  geom_hline(yintercept = 1.5, linetype = "dashed", color = "grey70", linewidth = 0.4) +
   geom_violin(
     data = violin_data,
     aes(x = Z_score, y = y_pos, group = Gene_Type_combined,
@@ -181,10 +215,15 @@ forest_plot <- ggplot() +
     aes(x = Z_score, y = y_pos, color = Gene_Type_combined, shape = Gene_Type),
     height = 0.06, width = 0, size = 2.8, alpha = 0.9, stroke = 0.8
   ) +
+  geom_jitter(
+    data = pooled_jitter,
+    aes(x = Z_score, y = y_pos, color = Gene_Type_combined, shape = Gene_Type),
+    height = 0.06, width = 0, size = 2.8, alpha = 0.9, stroke = 0.8
+  ) +
   geom_point(
     data = median_data,
     aes(x = Median_Z, y = y_pos),
-    shape = 23, size = 3, fill = "white", color = "black"
+    shape = 23, size = 2, fill = "white", color = "black"
   ) +
   scale_shape_manual(values = c("Functional" = 16, "Pseudogene" = 1)) +  # solid vs hollow
   scale_color_manual(values = custom_colors) +
@@ -220,7 +259,8 @@ forest_plot <- ggplot() +
     text = element_text(family = "serif")
   )
 
-# Save the single long forest-style plot
+# Save the single long forest-style plot. +1 row to account for the added
+# "Pooled" row.
 n_rows <- length(gene_group_order)
 ggsave(
   filename = "../../results/ENCODE_Z_scores_all_groups_forest_plot.pdf",
@@ -229,7 +269,8 @@ ggsave(
   height = max(7, n_rows * 0.7)
 )
 
-# Export the outlier set used in the plot to CSV
+# Export the outlier set used in the plot to CSV (per-group only,
+# "Pooled" excluded to avoid duplicate rows -- see note above)
 write.csv(
   outlier_points,
   file = "../../results/ENCODE_Z_score_outliers.csv",

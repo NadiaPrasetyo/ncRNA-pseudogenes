@@ -53,7 +53,8 @@ base_colors <- c(
   "TRNA"      = "#7f5aa2",
   "RN7SL"     = "#f4a300",
   "RNU7"      = "#6a3fbf",
-  "RN7SK"     = "#3b8f6b"
+  "RN7SK"     = "#3b8f6b",
+  "Pooled"    = "#000000"   # NEW: distinct near-black for the pooled summary row
 )
 
 make_pastel <- function(hex, amount = 0.6) {
@@ -103,15 +104,29 @@ normalized_data <- clean_data %>%
   mutate(source = factor(source, levels = sources))
 
 # ---------------------------------------------------------------------------
-# Same gene-group ordering used in the PhyloP100/ENCODE forest plots
+# Same gene-group ordering used in the PhyloP100/ENCODE forest plots. A
+# "Pooled" pseudo-group is appended LAST so it renders at the BOTTOM of
+# each forest plot.
 # ---------------------------------------------------------------------------
 combined_groups   <- c("RNU1", "RNU2", "RNU4", "RNU5", "RNU6")
 combined_groups_2 <- c("RNU4ATAC", "RNU6ATAC", "RNU11", "RNU12")
 remaining_ncRNAs  <- setdiff(unique(normalized_data$Gene_group), c(combined_groups, combined_groups_2))
 
-gene_group_order <- c(combined_groups, combined_groups_2, remaining_ncRNAs)
+gene_group_order <- c(combined_groups, combined_groups_2, remaining_ncRNAs, "Pooled")
 
-normalized_data <- normalized_data %>%
+# NEW: build the "Pooled" rows by duplicating every existing row (all
+# Gene_groups, all sources) with Gene_group relabeled to "Pooled". This
+# reuses the SAME enrichment_intergenic values already in the data --
+# nothing is recalculated or rescaled -- it just lets each per-source
+# forest plot draw one more Functional/Pseudogene comparison pooling
+# every gene group together. Since downstream steps (IQR outlier bounds,
+# medians, thin-group detection) all group by source x Gene_Type_combined,
+# "Pooled" is treated as its own group and gets its own IQR/median
+# computed from every pooled point, same as any other group.
+pooled_data <- normalized_data %>%
+  mutate(Gene_group = "Pooled")
+
+normalized_data <- bind_rows(normalized_data, pooled_data) %>%
   filter(Gene_group %in% gene_group_order) %>%
   mutate(
     Gene_group = factor(Gene_group, levels = gene_group_order),
@@ -210,6 +225,8 @@ for (src in sources) {
   forest_plot <- ggplot() +
     geom_vline(xintercept = 1, linetype = "solid", color = "grey40", linewidth = 0.4) +  # 1 = no enrichment/depletion
     geom_vline(xintercept = 0, linetype = "dotted", color = "grey60", linewidth = 0.4) +
+    # Separator line between the per-group rows and the Pooled summary row
+    geom_hline(yintercept = 1.5, linetype = "dashed", color = "grey70", linewidth = 0.4) +
     geom_violin(
       data = violin_data,
       aes(x = .data[[metric_col]], y = y_pos, group = Gene_Type_combined,
@@ -234,7 +251,7 @@ for (src in sources) {
     geom_point(
       data = median_data_src,
       aes(x = Median_val, y = y_pos),
-      shape = 23, size = 3, fill = "white", color = "black"
+      shape = 23, size = 2, fill = "white", color = "black"
     ) +
     scale_shape_manual(values = c("Functional" = 16, "Pseudogene" = 1)) +  # solid vs hollow
     scale_color_manual(values = custom_colors) +
@@ -265,9 +282,12 @@ for (src in sources) {
 }
 
 # ---------------------------------------------------------------------------
-# Export all outliers (across all sources) to a single CSV
+# Export all outliers (across all sources) to a single CSV. The "Pooled"
+# pseudo-group is excluded here since its points are duplicates of the
+# per-group rows above it and would otherwise double-count every outlier.
 # ---------------------------------------------------------------------------
 outliers_df <- bind_rows(all_outliers) %>%
+  filter(Gene_group != "Pooled") %>%
   select(-lower_bound, -upper_bound) %>%
   arrange(source, Gene_group, Gene_Type, desc(.data[[metric_col]]))
 
