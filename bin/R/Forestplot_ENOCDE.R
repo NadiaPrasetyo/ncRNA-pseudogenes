@@ -170,13 +170,8 @@ outlier_points <- bind_rows(pseudogene_outliers, functional_outliers) %>%
 pooled_jitter <- normalized_data %>%
   filter(
     Gene_group == "Pooled",
-    Gene_Type_combined %in% c(
-      thin_groups,
-      unique(bind_rows(
-        normalized_data %>% filter(Gene_Type == "Pseudogene", Z_score > 2, Gene_group == "Pooled"),
-        normalized_data %>% filter(Gene_Type == "Functional", Z_score < 0, Gene_group == "Pooled")
-      )$Gene_Type_combined)
-    )
+    (Gene_Type == "Pseudogene" & Z_score > 2) |
+      (Gene_Type == "Functional" & Z_score > 100)
   )
 
 # -----------------------------------------------------------------------
@@ -218,7 +213,7 @@ forest_plot <- ggplot() +
   geom_jitter(
     data = pooled_jitter,
     aes(x = Z_score, y = y_pos, color = Gene_Type_combined, shape = Gene_Type),
-    height = 0.06, width = 0, size = 2.8, alpha = 0.9, stroke = 0.8
+    height = 0.06, width = 0, size = 2.8, alpha = 0.8, stroke = 0.8
   ) +
   geom_point(
     data = median_data,

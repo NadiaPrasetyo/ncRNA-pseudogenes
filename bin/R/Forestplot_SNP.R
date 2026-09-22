@@ -5,25 +5,8 @@ library(tidyr)
 library(scales)
 
 # Data-loading step
-data <- read.csv("../../data/snp_intergenic_genes_pseudogenes.csv")
+data <- read.csv("../../results/combined_gene_data_with_snp.csv")
 sources <- c("gnomad", "1000genomes", "pangenome", "dbsnp")
-
-# Filter out chrY and chrMT genes: incomplete/non-representative coverage
-chrom_col_candidates <- c("chr", "chrom", "chromosome", "Chr", "Chrom", "Chromosome", "CHR")
-chrom_col <- intersect(chrom_col_candidates, names(data))
-
-if (length(chrom_col) == 0) {
-  stop("Could not find a chromosome column to filter on. Columns present: ",
-       paste(names(data), collapse = ", "))
-}
-chrom_col <- chrom_col[1]
-
-n_before <- nrow(data)
-excluded_chroms <- data %>% filter(grepl("^(chr)?(Y|MT|M)$", .data[[chrom_col]], ignore.case = TRUE))
-data <- data %>% filter(!grepl("^(chr)?(Y|MT|M)$", .data[[chrom_col]], ignore.case = TRUE))
-
-message(sprintf("Filtered out %d of %d rows on chrY/chrMT (column: '%s'); %d rows remain.",
-                nrow(excluded_chroms), n_before, chrom_col, nrow(data)))
 
 # ---------------------------------------------------------------------------
 # CONFIG
@@ -73,20 +56,27 @@ custom_colors <- c(
 # ---------------------------------------------------------------------------
 # Standardize key columns
 # ---------------------------------------------------------------------------
+# UPDATED: the new CSV already provides "Gene_Type" and "Gene_group" in
+# title case (rather than lowercase "gene_type"/"gene_group"), so there's
+# no separate Gene_group alias to create anymore - just normalize the
+# Functional/Pseudogene labels in place.
 data <- data %>%
   mutate(
-    Gene_group = gene_group,
-    Gene_Type = ifelse(tolower(gene_type) == "pseudogene", "Pseudogene", "Functional")
+    Gene_Type = ifelse(tolower(Gene_Type) == "pseudogene", "Pseudogene", "Functional")
   )
 
 # ---------------------------------------------------------------------------
 # Reshape from wide (one set of columns per source) to long format
 # ---------------------------------------------------------------------------
+# UPDATED: the new CSV only carries "snp_density_*" and
+# "enrichment_intergenic_*" per source (no snp_count/flank_count/
+# flank_density/plain "enrichment" columns), so the pivot only needs to
+# match those two value prefixes.
 long_data <- data %>%
   pivot_longer(
-    cols = matches("^(snp_count|snp_density|flank_count|flank_density|enrichment|enrichment_intergenic)_"),
+    cols = matches("^(snp_density|enrichment_intergenic)_"),
     names_to = c(".value", "source"),
-    names_pattern = paste0("(snp_count|snp_density|flank_count|flank_density|enrichment|enrichment_intergenic)_(",
+    names_pattern = paste0("(snp_density|enrichment_intergenic)_(",
                            paste(snp_sources, collapse = "|"), ")")
   )
 
@@ -222,6 +212,11 @@ for (src in sources) {
   
   median_data_src <- median_data %>% filter(source == src)
   
+  if (src == "dbsnp"){
+    src <- "dbSNP155"
+    print("changing dbsnp to dbSNP155")
+  }
+  
   forest_plot <- ggplot() +
     geom_vline(xintercept = 1, linetype = "solid", color = "grey40", linewidth = 0.4) +  # 1 = no enrichment/depletion
     geom_vline(xintercept = 0, linetype = "dotted", color = "grey60", linewidth = 0.4) +
@@ -266,9 +261,9 @@ for (src in sources) {
       expand = expansion(add = 0.6)
     ) +
     labs(
-      title = paste0("SNP Enrichment (intergenic) of Functional Genes vs Pseudogenes \u2014 ", src),
+      title = paste0("SNP Enrichment (", src, ") of Functional Genes vs Pseudogenes"),
       #subtitle = "Vibrant = functional, pastel = pseudogene; points shown are IQR outliers or groups with n\u22642; solid vline at 1 = no enrichment/depletion",
-      x = "SNP Enrichment (intergenic)",
+      x = "SNP Enrichment",
       y = NULL
     ) +
     z_theme
@@ -282,17 +277,18 @@ for (src in sources) {
 }
 
 # ---------------------------------------------------------------------------
-# Export all outliers (across all sources) to a single CSV. The "Pooled"
+# Export outliers to a single CSV, restricted to dbSNP only. The "Pooled"
 # pseudo-group is excluded here since its points are duplicates of the
 # per-group rows above it and would otherwise double-count every outlier.
 # ---------------------------------------------------------------------------
 outliers_df <- bind_rows(all_outliers) %>%
+  filter(source == "dbsnp") %>%
   filter(Gene_group != "Pooled") %>%
   select(-lower_bound, -upper_bound) %>%
-  arrange(source, Gene_group, Gene_Type, desc(.data[[metric_col]]))
+  arrange(Gene_group, Gene_Type, desc(.data[[metric_col]]))
 
 write.csv(
   outliers_df,
-  file = "../../results/SNP_Enrichment_outliers.csv",
+  file = "../../results/SNP_Enrichment_outliers_dbsnp.csv",
   row.names = FALSE
 )

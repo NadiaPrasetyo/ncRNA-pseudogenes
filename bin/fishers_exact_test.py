@@ -39,8 +39,9 @@ def process_and_count_input_file(input_file):
     # Create a new column 'has_polIII_motif' based on the presence of any polIII motif
     df['has_polIII_motif'] = df[['contains_type1_promoter', 'contains_type2_promoter', 'contains_type3_promoter']].any(axis=1)
     # Create a new column 'high_SNP_enrichment' based on the enrichment_intergenic_dbsnp value
-    # get the top 75% of enrichment_intergenic_dbsnp values
+    # Use the 75th percentile as the cutoff for the top 25% of values.
     threshold = df['enrichment_intergenic_dbsnp'].quantile(0.75)
+    print(f"Threshold: {threshold}")
     df['high_SNP_enrichment'] = df['enrichment_intergenic_dbsnp'] > threshold
     return df
 

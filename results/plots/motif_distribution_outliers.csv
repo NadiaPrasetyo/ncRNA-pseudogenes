@@ -1,0 +1,1777 @@
+gene_name,promoter_type,gene_type,metric,value
+RNU1-1,Type 1,Functional,Motif count,4
+RNU1-1,Type 2,Functional,Motif count,85
+RNU1-1,Type 3,Functional,Motif count,51
+RNU1-100P,Type 1,Pseudogene,Motif count,1
+RNU1-148P,Type 1,Pseudogene,Motif count,3
+RNU1-3,Type 3,Functional,Motif count,10
+RNU1-4,Type 3,Functional,Motif count,5
+RNU1-51P,Type 1,Pseudogene,Motif count,3
+RNU1-55P,Type 1,Pseudogene,Motif count,1
+RNU1-62P,Type 1,Pseudogene,Motif count,4
+RNU1-77P,Type 1,Pseudogene,Motif count,1
+RNU2-1,Type 1,Functional,Motif count,4
+RNU2-1,Type 2,Functional,Motif count,42
+RNU2-1,Type 3,Functional,Motif count,34
+RNU2-14P,Type 1,Pseudogene,Motif count,1
+RNU2-18P,Type 1,Pseudogene,Motif count,3
+RNU2-22P,Type 1,Pseudogene,Motif count,5
+RNU2-24P,Type 1,Pseudogene,Motif count,4
+RNU2-26P,Type 1,Pseudogene,Motif count,3
+RNU2-2,Type 1,Functional,Motif count,12
+RNU2-2,Type 2,Functional,Motif count,27
+RNU2-2,Type 3,Functional,Motif count,24
+RNU2-30P,Type 1,Pseudogene,Motif count,8
+RNU2-36P,Type 1,Pseudogene,Motif count,5
+RNU2-4P,Type 1,Pseudogene,Motif count,7
+RNU2-57P,Type 1,Pseudogene,Motif count,3
+RNU2-58P,Type 1,Pseudogene,Motif count,5
+RNU2-61P,Type 1,Pseudogene,Motif count,5
+RNU2-65P,Type 1,Pseudogene,Motif count,6
+RNU2-69P,Type 1,Pseudogene,Motif count,2
+RNU2-6P,Type 1,Pseudogene,Motif count,2
+RNU4-1,Type 1,Functional,Motif count,2
+RNU4-1,Type 2,Functional,Motif count,18
+RNU4-1,Type 3,Functional,Motif count,16
+RNU4-14P,Type 1,Pseudogene,Motif count,2
+RNU4-2,Type 1,Functional,Motif count,4
+RNU4-2,Type 2,Functional,Motif count,25
+RNU4-2,Type 3,Functional,Motif count,22
+RNU4-21P,Type 1,Pseudogene,Motif count,2
+RNU4-28P,Type 1,Pseudogene,Motif count,2
+RNU4-30P,Type 1,Pseudogene,Motif count,1
+RNU4-34P,Type 1,Pseudogene,Motif count,2
+RNU4-39P,Type 1,Pseudogene,Motif count,4
+RNU4-47P,Type 1,Pseudogene,Motif count,2
+RNU4-52P,Type 1,Pseudogene,Motif count,2
+RNU4-68P,Type 1,Pseudogene,Motif count,5
+RNU4-86P,Type 1,Pseudogene,Motif count,4
+RNU4-90P,Type 1,Pseudogene,Motif count,2
+RNU5A-3P,Type 1,Pseudogene,Motif count,1
+RNU5E-1,Type 3,Functional,Motif count,7
+RNU5E-2P,Type 1,Pseudogene,Motif count,1
+RNU5E-5P,Type 1,Pseudogene,Motif count,2
+RNU5F-4P,Type 1,Pseudogene,Motif count,2
+RNU6-1,Type 1,Functional,Motif count,148
+RNU6-1,Type 2,Functional,Motif count,832
+RNU6-1,Type 3,Functional,Motif count,4362
+RNU6-1003P,Type 1,Pseudogene,Motif count,2
+RNU6-1007P,Type 1,Pseudogene,Motif count,2
+RNU6-1010P,Type 1,Pseudogene,Motif count,3
+RNU6-1020P,Type 1,Pseudogene,Motif count,1
+RNU6-1022P,Type 1,Pseudogene,Motif count,4
+RNU6-1028P,Type 1,Pseudogene,Motif count,2
+RNU6-1041P,Type 1,Pseudogene,Motif count,1
+RNU6-1056P,Type 1,Pseudogene,Motif count,2
+RNU6-1057P,Type 1,Pseudogene,Motif count,2
+RNU6-1069P,Type 1,Pseudogene,Motif count,3
+RNU6-106P,Type 1,Pseudogene,Motif count,3
+RNU6-1083P,Type 1,Pseudogene,Motif count,8
+RNU6-1085P,Type 1,Pseudogene,Motif count,2
+RNU6-1088P,Type 1,Pseudogene,Motif count,4
+RNU6-1091P,Type 1,Pseudogene,Motif count,3
+RNU6-1092P,Type 1,Pseudogene,Motif count,1
+RNU6-1093P,Type 1,Pseudogene,Motif count,2
+RNU6-1095P,Type 1,Pseudogene,Motif count,3
+RNU6-10P,Type 1,Pseudogene,Motif count,3
+RNU6-1101P,Type 1,Pseudogene,Motif count,4
+RNU6-1106P,Type 1,Pseudogene,Motif count,4
+RNU6-1114P,Type 1,Pseudogene,Motif count,1
+RNU6-1121P,Type 1,Pseudogene,Motif count,2
+RNU6-1122P,Type 1,Pseudogene,Motif count,1
+RNU6-1133P,Type 1,Pseudogene,Motif count,3
+RNU6-1138P,Type 1,Pseudogene,Motif count,2
+RNU6-1139P,Type 1,Pseudogene,Motif count,1
+RNU6-1151P,Type 1,Pseudogene,Motif count,4
+RNU6-1155P,Type 1,Pseudogene,Motif count,3
+RNU6-1162P,Type 1,Pseudogene,Motif count,1
+RNU6-1169P,Type 1,Pseudogene,Motif count,2
+RNU6-1178P,Type 1,Pseudogene,Motif count,3
+RNU6-1196P,Type 1,Pseudogene,Motif count,2
+RNU6-1201P,Type 1,Pseudogene,Motif count,1
+RNU6-1205P,Type 1,Pseudogene,Motif count,3
+RNU6-1213P,Type 1,Pseudogene,Motif count,2
+RNU6-1223P,Type 1,Pseudogene,Motif count,2
+RNU6-1238P,Type 1,Pseudogene,Motif count,4
+RNU6-1242P,Type 1,Pseudogene,Motif count,1
+RNU6-1245P,Type 1,Pseudogene,Motif count,1
+RNU6-1255P,Type 1,Pseudogene,Motif count,4
+RNU6-1266P,Type 1,Pseudogene,Motif count,1
+RNU6-1273P,Type 1,Pseudogene,Motif count,3
+RNU6-1274P,Type 1,Pseudogene,Motif count,2
+RNU6-1298P,Type 1,Pseudogene,Motif count,4
+RNU6-1304P,Type 1,Pseudogene,Motif count,2
+RNU6-1306P,Type 1,Pseudogene,Motif count,2
+RNU6-1315P,Type 1,Pseudogene,Motif count,4
+RNU6-1322P,Type 1,Pseudogene,Motif count,4
+RNU6-1328P,Type 1,Pseudogene,Motif count,1
+RNU6-132P,Type 1,Pseudogene,Motif count,2
+RNU6-1335P,Type 1,Pseudogene,Motif count,2
+RNU6-136P,Type 1,Pseudogene,Motif count,2
+RNU6-143P,Type 1,Pseudogene,Motif count,2
+RNU6-169P,Type 1,Pseudogene,Motif count,2
+RNU6-178P,Type 1,Pseudogene,Motif count,3
+RNU6-179P,Type 1,Pseudogene,Motif count,3
+RNU6-181P,Type 1,Pseudogene,Motif count,3
+RNU6-192P,Type 1,Pseudogene,Motif count,3
+RNU6-194P,Type 1,Pseudogene,Motif count,1
+RNU6-2,Type 1,Functional,Motif count,39
+RNU6-2,Type 2,Functional,Motif count,168
+RNU6-2,Type 3,Functional,Motif count,1070
+RNU6-206P,Type 1,Pseudogene,Motif count,4
+RNU6-20P,Type 1,Pseudogene,Motif count,4
+RNU6-210P,Type 1,Pseudogene,Motif count,3
+RNU6-216P,Type 1,Pseudogene,Motif count,1
+RNU6-218P,Type 1,Pseudogene,Motif count,2
+RNU6-222P,Type 1,Pseudogene,Motif count,2
+RNU6-225P,Type 1,Pseudogene,Motif count,1
+RNU6-229P,Type 1,Pseudogene,Motif count,3
+RNU6-232P,Type 1,Pseudogene,Motif count,4
+RNU6-233P,Type 1,Pseudogene,Motif count,7
+RNU6-23P,Type 1,Pseudogene,Motif count,2
+RNU6-245P,Type 1,Pseudogene,Motif count,3
+RNU6-264P,Type 1,Pseudogene,Motif count,3
+RNU6-318P,Type 1,Pseudogene,Motif count,3
+RNU6-31P,Type 1,Pseudogene,Motif count,3
+RNU6-333P,Type 1,Pseudogene,Motif count,5
+RNU6-369P,Type 1,Pseudogene,Motif count,1
+RNU6-379P,Type 1,Pseudogene,Motif count,2
+RNU6-37P,Type 1,Pseudogene,Motif count,3
+RNU6-405P,Type 1,Pseudogene,Motif count,2
+RNU6-406P,Type 1,Pseudogene,Motif count,1
+RNU6-41P,Type 1,Pseudogene,Motif count,3
+RNU6-421P,Type 1,Pseudogene,Motif count,2
+RNU6-430P,Type 1,Pseudogene,Motif count,2
+RNU6-450P,Type 1,Pseudogene,Motif count,4
+RNU6-451P,Type 1,Pseudogene,Motif count,5
+RNU6-454P,Type 1,Pseudogene,Motif count,1
+RNU6-467P,Type 1,Pseudogene,Motif count,2
+RNU6-492P,Type 1,Pseudogene,Motif count,2
+RNU6-501P,Type 1,Pseudogene,Motif count,1
+RNU6-502P,Type 1,Pseudogene,Motif count,2
+RNU6-509P,Type 1,Pseudogene,Motif count,3
+RNU6-516P,Type 1,Pseudogene,Motif count,3
+RNU6-517P,Type 1,Pseudogene,Motif count,3
+RNU6-518P,Type 1,Pseudogene,Motif count,3
+RNU6-519P,Type 1,Pseudogene,Motif count,3
+RNU6-529P,Type 1,Pseudogene,Motif count,1
+RNU6-543P,Type 1,Pseudogene,Motif count,1
+RNU6-547P,Type 1,Pseudogene,Motif count,3
+RNU6-549P,Type 1,Pseudogene,Motif count,1
+RNU6-559P,Type 1,Pseudogene,Motif count,2
+RNU6-563P,Type 1,Pseudogene,Motif count,1
+RNU6-584P,Type 1,Pseudogene,Motif count,4
+RNU6-592P,Type 1,Pseudogene,Motif count,3
+RNU6-597P,Type 1,Pseudogene,Motif count,1
+RNU6-600P,Type 1,Pseudogene,Motif count,4
+RNU6-611P,Type 1,Pseudogene,Motif count,2
+RNU6-633P,Type 1,Pseudogene,Motif count,4
+RNU6-642P,Type 1,Pseudogene,Motif count,1
+RNU6-657P,Type 1,Pseudogene,Motif count,1
+RNU6-65P,Type 1,Pseudogene,Motif count,2
+RNU6-660P,Type 1,Pseudogene,Motif count,5
+RNU6-689P,Type 1,Pseudogene,Motif count,1
+RNU6-7,Type 1,Functional,Motif count,39
+RNU6-7,Type 2,Functional,Motif count,169
+RNU6-7,Type 3,Functional,Motif count,1045
+RNU6-715P,Type 1,Pseudogene,Motif count,2
+RNU6-717P,Type 1,Pseudogene,Motif count,4
+RNU6-728P,Type 1,Pseudogene,Motif count,4
+RNU6-737P,Type 1,Pseudogene,Motif count,3
+RNU6-751P,Type 1,Pseudogene,Motif count,1
+RNU6-752P,Type 1,Pseudogene,Motif count,4
+RNU6-756P,Type 1,Pseudogene,Motif count,2
+RNU6-759P,Type 1,Pseudogene,Motif count,3
+RNU6-775P,Type 1,Pseudogene,Motif count,2
+RNU6-776P,Type 1,Pseudogene,Motif count,5
+RNU6-783P,Type 1,Pseudogene,Motif count,2
+RNU6-78P,Type 1,Pseudogene,Motif count,2
+RNU6-790P,Type 1,Pseudogene,Motif count,3
+RNU6-794P,Type 1,Pseudogene,Motif count,2
+RNU6-8,Type 1,Functional,Motif count,22
+RNU6-8,Type 2,Functional,Motif count,145
+RNU6-8,Type 3,Functional,Motif count,1063
+RNU6-807P,Type 1,Pseudogene,Motif count,4
+RNU6-84P,Type 1,Pseudogene,Motif count,1
+RNU6-850P,Type 1,Pseudogene,Motif count,4
+RNU6-854P,Type 1,Pseudogene,Motif count,3
+RNU6-866P,Type 1,Pseudogene,Motif count,5
+RNU6-877P,Type 1,Pseudogene,Motif count,2
+RNU6-87P,Type 1,Pseudogene,Motif count,2
+RNU6-899P,Type 1,Pseudogene,Motif count,1
+RNU6-9,Type 1,Functional,Motif count,39
+RNU6-9,Type 2,Functional,Motif count,207
+RNU6-9,Type 3,Functional,Motif count,1060
+RNU6-911P,Type 1,Pseudogene,Motif count,5
+RNU6-917P,Type 1,Pseudogene,Motif count,1
+RNU6-923P,Type 1,Pseudogene,Motif count,3
+RNU6-925P,Type 1,Pseudogene,Motif count,2
+RNU6-927P,Type 1,Pseudogene,Motif count,5
+RNU6-930P,Type 1,Pseudogene,Motif count,1
+RNU6-942P,Type 1,Pseudogene,Motif count,1
+RNU6-947P,Type 1,Pseudogene,Motif count,4
+RNU6-950P,Type 1,Pseudogene,Motif count,6
+RNU6-969P,Type 1,Pseudogene,Motif count,3
+RNU6-975P,Type 1,Pseudogene,Motif count,3
+RNU6-993P,Type 1,Pseudogene,Motif count,5
+RNU4ATAC,Type 1,Functional,Motif count,1
+RNU4ATAC,Type 2,Functional,Motif count,16
+RNU4ATAC,Type 3,Functional,Motif count,22
+RNU4ATAC5P,Type 1,Pseudogene,Motif count,1
+RNU6ATAC,Type 1,Functional,Motif count,24
+RNU6ATAC,Type 2,Functional,Motif count,115
+RNU6ATAC,Type 3,Functional,Motif count,118
+RNU6ATAC17P,Type 1,Pseudogene,Motif count,3
+RNU6ATAC20P,Type 1,Pseudogene,Motif count,4
+RNU6ATAC26P,Type 1,Pseudogene,Motif count,3
+RNU6ATAC28P,Type 1,Pseudogene,Motif count,4
+RNU6ATAC29P,Type 1,Pseudogene,Motif count,1
+RNU6ATAC37P,Type 1,Pseudogene,Motif count,3
+RNU6ATAC39P,Type 1,Pseudogene,Motif count,5
+RNU6ATAC41P,Type 1,Pseudogene,Motif count,1
+RNU11,Type 3,Functional,Motif count,20
+RNU12,Type 3,Functional,Motif count,14
+RNY1,Type 1,Functional,Motif count,7
+RNY1,Type 2,Functional,Motif count,35
+RNY1,Type 3,Functional,Motif count,154
+RNY1P1,Type 2,Pseudogene,Motif count,23
+RNY1P1,Type 3,Pseudogene,Motif count,76
+RNY1P7,Type 1,Pseudogene,Motif count,7
+RNY3,Type 1,Functional,Motif count,10
+RNY3,Type 2,Functional,Motif count,28
+RNY3,Type 3,Functional,Motif count,183
+RNY3P1,Type 1,Pseudogene,Motif count,10
+RNY3P1,Type 3,Pseudogene,Motif count,89
+RNY3P14,Type 1,Pseudogene,Motif count,9
+RNY4,Type 1,Functional,Motif count,8
+RNY4,Type 2,Functional,Motif count,107
+RNY4,Type 3,Functional,Motif count,294
+RNY4P1,Type 2,Pseudogene,Motif count,27
+RNY4P1,Type 3,Pseudogene,Motif count,70
+RNY4P2,Type 1,Pseudogene,Motif count,4
+RNY4P2,Type 2,Pseudogene,Motif count,24
+RNY4P2,Type 3,Pseudogene,Motif count,93
+RNY4P21,Type 1,Pseudogene,Motif count,4
+RNY4P3,Type 1,Pseudogene,Motif count,4
+RNY4P3,Type 2,Pseudogene,Motif count,31
+RNY4P3,Type 3,Pseudogene,Motif count,65
+RNY4P36,Type 1,Pseudogene,Motif count,2
+RNY5,Type 2,Functional,Motif count,32
+RNY5,Type 3,Functional,Motif count,47
+TRC-GCA12-1,Type 1,Functional,Motif count,2
+TRC-GCA12-1,Type 3,Functional,Motif count,6
+TRC-GCA2-1,Type 1,Functional,Motif count,2
+TRC-GCA2-1,Type 3,Functional,Motif count,11
+TRE-CTC14-1,Type 3,Functional,Motif count,10
+TRE-CTC9-1,Type 3,Functional,Motif count,11
+TRF-GAA1-3,Type 3,Functional,Motif count,4
+TRG-CCC3-1,Type 1,Functional,Motif count,9
+TRG-CCC3-1,Type 3,Functional,Motif count,14
+TRG-TCC1-1,Type 1,Functional,Motif count,2
+TRG-TCC1-1,Type 3,Functional,Motif count,7
+TRK-TTT1-1,Type 1,Functional,Motif count,1
+TRK-TTT1-1,Type 3,Functional,Motif count,3
+TRK-TTT8-1,Type 1,Functional,Motif count,4
+TRK-TTT8-1,Type 3,Functional,Motif count,5
+TRL-CAA3-1,Type 3,Functional,Motif count,9
+TRN-GTT22-1,Type 1,Pseudogene,Motif count,2
+TRN-GTT23-1,Type 1,Pseudogene,Motif count,4
+TRP-AGG1-1,Type 3,Functional,Motif count,10
+TRP-TGG3-4,Type 3,Functional,Motif count,8
+TRP-TGG3-5,Type 3,Functional,Motif count,8
+TRQ-CTG1-1,Type 3,Functional,Motif count,8
+TRQ-TTG4-1,Type 1,Functional,Motif count,2
+TRQ-TTG4-1,Type 3,Functional,Motif count,5
+TRR-ACG2-2,Type 1,Functional,Motif count,3
+TRR-ACG2-2,Type 3,Functional,Motif count,4
+TRS-CGA4-1,Type 3,Functional,Motif count,7
+TRT-CGT5-1,Type 3,Functional,Motif count,6
+TRU-TCA2-1,Type 1,Functional,Motif count,4
+TRU-TCA2-1,Type 3,Functional,Motif count,12
+TRV-AAC1-1,Type 3,Functional,Motif count,3
+TRV-AAC2-1,Type 1,Functional,Motif count,2
+TRV-AAC2-1,Type 3,Functional,Motif count,4
+TRV-AAC5-1,Type 1,Functional,Motif count,1
+TRV-AAC5-1,Type 3,Functional,Motif count,5
+TRV-TAC3-1,Type 3,Functional,Motif count,10
+TRY-ATA1-1,Type 1,Functional,Motif count,5
+TRY-ATA1-1,Type 3,Functional,Motif count,6
+RN7SL1,Type 1,Functional,Motif count,215
+RN7SL1,Type 2,Functional,Motif count,1182
+RN7SL1,Type 3,Functional,Motif count,1470
+RN7SL100P,Type 1,Pseudogene,Motif count,3
+RN7SL100P,Type 2,Pseudogene,Motif count,23
+RN7SL108P,Type 1,Pseudogene,Motif count,1
+RN7SL110P,Type 1,Pseudogene,Motif count,2
+RN7SL113P,Type 1,Pseudogene,Motif count,4
+RN7SL118P,Type 1,Pseudogene,Motif count,3
+RN7SL11P,Type 1,Pseudogene,Motif count,2
+RN7SL121P,Type 1,Pseudogene,Motif count,9
+RN7SL121P,Type 2,Pseudogene,Motif count,27
+RN7SL123P,Type 1,Pseudogene,Motif count,7
+RN7SL123P,Type 2,Pseudogene,Motif count,28
+RN7SL126P,Type 1,Pseudogene,Motif count,6
+RN7SL126P,Type 2,Pseudogene,Motif count,22
+RN7SL128P,Type 1,Pseudogene,Motif count,4
+RN7SL131P,Type 1,Pseudogene,Motif count,4
+RN7SL131P,Type 2,Pseudogene,Motif count,22
+RN7SL132P,Type 1,Pseudogene,Motif count,4
+RN7SL134P,Type 1,Pseudogene,Motif count,7
+RN7SL134P,Type 2,Pseudogene,Motif count,28
+RN7SL134P,Type 3,Pseudogene,Motif count,27
+RN7SL135P,Type 1,Pseudogene,Motif count,4
+RN7SL140P,Type 1,Pseudogene,Motif count,3
+RN7SL143P,Type 1,Pseudogene,Motif count,5
+RN7SL146P,Type 1,Pseudogene,Motif count,9
+RN7SL147P,Type 1,Pseudogene,Motif count,5
+RN7SL148P,Type 1,Pseudogene,Motif count,2
+RN7SL150P,Type 1,Pseudogene,Motif count,5
+RN7SL151P,Type 1,Pseudogene,Motif count,7
+RN7SL153P,Type 1,Pseudogene,Motif count,3
+RN7SL154P,Type 1,Pseudogene,Motif count,9
+RN7SL154P,Type 2,Pseudogene,Motif count,27
+RN7SL155P,Type 1,Pseudogene,Motif count,9
+RN7SL155P,Type 2,Pseudogene,Motif count,26
+RN7SL156P,Type 1,Pseudogene,Motif count,5
+RN7SL159P,Type 1,Pseudogene,Motif count,6
+RN7SL15P,Type 1,Pseudogene,Motif count,3
+RN7SL162P,Type 1,Pseudogene,Motif count,2
+RN7SL163P,Type 1,Pseudogene,Motif count,3
+RN7SL163P,Type 2,Pseudogene,Motif count,26
+RN7SL163P,Type 3,Pseudogene,Motif count,28
+RN7SL167P,Type 1,Pseudogene,Motif count,7
+RN7SL168P,Type 1,Pseudogene,Motif count,2
+RN7SL170P,Type 1,Pseudogene,Motif count,7
+RN7SL172P,Type 1,Pseudogene,Motif count,1
+RN7SL173P,Type 1,Pseudogene,Motif count,4
+RN7SL176P,Type 1,Pseudogene,Motif count,4
+RN7SL178P,Type 1,Pseudogene,Motif count,4
+RN7SL181P,Type 1,Pseudogene,Motif count,8
+RN7SL182P,Type 1,Pseudogene,Motif count,2
+RN7SL186P,Type 1,Pseudogene,Motif count,2
+RN7SL187P,Type 1,Pseudogene,Motif count,4
+RN7SL18P,Type 1,Pseudogene,Motif count,5
+RN7SL190P,Type 1,Pseudogene,Motif count,8
+RN7SL190P,Type 2,Pseudogene,Motif count,26
+RN7SL197P,Type 1,Pseudogene,Motif count,6
+RN7SL198P,Type 1,Pseudogene,Motif count,10
+RN7SL198P,Type 2,Pseudogene,Motif count,25
+RN7SL19P,Type 1,Pseudogene,Motif count,2
+RN7SL2,Type 1,Functional,Motif count,206
+RN7SL2,Type 2,Functional,Motif count,1065
+RN7SL2,Type 3,Functional,Motif count,1357
+RN7SL202P,Type 1,Pseudogene,Motif count,12
+RN7SL202P,Type 2,Pseudogene,Motif count,26
+RN7SL203P,Type 1,Pseudogene,Motif count,2
+RN7SL204P,Type 1,Pseudogene,Motif count,10
+RN7SL204P,Type 2,Pseudogene,Motif count,25
+RN7SL205P,Type 1,Pseudogene,Motif count,4
+RN7SL208P,Type 1,Pseudogene,Motif count,1
+RN7SL210P,Type 1,Pseudogene,Motif count,2
+RN7SL213P,Type 1,Pseudogene,Motif count,5
+RN7SL217P,Type 1,Pseudogene,Motif count,11
+RN7SL222P,Type 1,Pseudogene,Motif count,3
+RN7SL225P,Type 1,Pseudogene,Motif count,2
+RN7SL229P,Type 1,Pseudogene,Motif count,5
+RN7SL22P,Type 1,Pseudogene,Motif count,2
+RN7SL230P,Type 1,Pseudogene,Motif count,1
+RN7SL234P,Type 1,Pseudogene,Motif count,6
+RN7SL237P,Type 1,Pseudogene,Motif count,5
+RN7SL239P,Type 1,Pseudogene,Motif count,4
+RN7SL248P,Type 1,Pseudogene,Motif count,9
+RN7SL250P,Type 1,Pseudogene,Motif count,3
+RN7SL251P,Type 1,Pseudogene,Motif count,4
+RN7SL253P,Type 1,Pseudogene,Motif count,3
+RN7SL254P,Type 1,Pseudogene,Motif count,7
+RN7SL255P,Type 1,Pseudogene,Motif count,4
+RN7SL25P,Type 1,Pseudogene,Motif count,13
+RN7SL25P,Type 2,Pseudogene,Motif count,22
+RN7SL260P,Type 1,Pseudogene,Motif count,5
+RN7SL261P,Type 1,Pseudogene,Motif count,2
+RN7SL262P,Type 1,Pseudogene,Motif count,3
+RN7SL263P,Type 1,Pseudogene,Motif count,3
+RN7SL267P,Type 1,Pseudogene,Motif count,5
+RN7SL269P,Type 1,Pseudogene,Motif count,7
+RN7SL26P,Type 1,Pseudogene,Motif count,7
+RN7SL26P,Type 2,Pseudogene,Motif count,23
+RN7SL271P,Type 1,Pseudogene,Motif count,1
+RN7SL272P,Type 1,Pseudogene,Motif count,9
+RN7SL274P,Type 1,Pseudogene,Motif count,7
+RN7SL274P,Type 2,Pseudogene,Motif count,24
+RN7SL274P,Type 3,Pseudogene,Motif count,27
+RN7SL275P,Type 1,Pseudogene,Motif count,6
+RN7SL275P,Type 2,Pseudogene,Motif count,27
+RN7SL275P,Type 3,Pseudogene,Motif count,28
+RN7SL278P,Type 1,Pseudogene,Motif count,3
+RN7SL279P,Type 1,Pseudogene,Motif count,11
+RN7SL279P,Type 2,Pseudogene,Motif count,22
+RN7SL280P,Type 1,Pseudogene,Motif count,7
+RN7SL282P,Type 1,Pseudogene,Motif count,3
+RN7SL28P,Type 1,Pseudogene,Motif count,1
+RN7SL290P,Type 1,Pseudogene,Motif count,2
+RN7SL299P,Type 1,Pseudogene,Motif count,2
+RN7SL3,Type 1,Functional,Motif count,210
+RN7SL3,Type 2,Functional,Motif count,1276
+RN7SL3,Type 3,Functional,Motif count,1579
+RN7SL300P,Type 1,Pseudogene,Motif count,5
+RN7SL303P,Type 1,Pseudogene,Motif count,1
+RN7SL304P,Type 1,Pseudogene,Motif count,4
+RN7SL305P,Type 1,Pseudogene,Motif count,1
+RN7SL30P,Type 1,Pseudogene,Motif count,5
+RN7SL310P,Type 1,Pseudogene,Motif count,10
+RN7SL311P,Type 1,Pseudogene,Motif count,2
+RN7SL313P,Type 1,Pseudogene,Motif count,2
+RN7SL317P,Type 1,Pseudogene,Motif count,12
+RN7SL318P,Type 1,Pseudogene,Motif count,4
+RN7SL320P,Type 1,Pseudogene,Motif count,3
+RN7SL321P,Type 1,Pseudogene,Motif count,2
+RN7SL323P,Type 1,Pseudogene,Motif count,6
+RN7SL323P,Type 2,Pseudogene,Motif count,21
+RN7SL326P,Type 1,Pseudogene,Motif count,4
+RN7SL328P,Type 1,Pseudogene,Motif count,5
+RN7SL32P,Type 1,Pseudogene,Motif count,12
+RN7SL32P,Type 2,Pseudogene,Motif count,27
+RN7SL32P,Type 3,Pseudogene,Motif count,29
+RN7SL334P,Type 1,Pseudogene,Motif count,4
+RN7SL339P,Type 1,Pseudogene,Motif count,6
+RN7SL339P,Type 2,Pseudogene,Motif count,28
+RN7SL339P,Type 3,Pseudogene,Motif count,28
+RN7SL33P,Type 1,Pseudogene,Motif count,8
+RN7SL340P,Type 1,Pseudogene,Motif count,1
+RN7SL341P,Type 1,Pseudogene,Motif count,3
+RN7SL342P,Type 1,Pseudogene,Motif count,1
+RN7SL343P,Type 1,Pseudogene,Motif count,1
+RN7SL344P,Type 1,Pseudogene,Motif count,8
+RN7SL353P,Type 1,Pseudogene,Motif count,4
+RN7SL353P,Type 2,Pseudogene,Motif count,25
+RN7SL353P,Type 3,Pseudogene,Motif count,27
+RN7SL354P,Type 1,Pseudogene,Motif count,5
+RN7SL356P,Type 1,Pseudogene,Motif count,7
+RN7SL356P,Type 2,Pseudogene,Motif count,25
+RN7SL359P,Type 1,Pseudogene,Motif count,4
+RN7SL35P,Type 1,Pseudogene,Motif count,4
+RN7SL361P,Type 1,Pseudogene,Motif count,4
+RN7SL363P,Type 1,Pseudogene,Motif count,3
+RN7SL364P,Type 1,Pseudogene,Motif count,1
+RN7SL368P,Type 1,Pseudogene,Motif count,4
+RN7SL369P,Type 1,Pseudogene,Motif count,1
+RN7SL36P,Type 1,Pseudogene,Motif count,4
+RN7SL371P,Type 1,Pseudogene,Motif count,9
+RN7SL371P,Type 2,Pseudogene,Motif count,27
+RN7SL376P,Type 2,Pseudogene,Motif count,25
+RN7SL377P,Type 1,Pseudogene,Motif count,9
+RN7SL377P,Type 2,Pseudogene,Motif count,25
+RN7SL382P,Type 1,Pseudogene,Motif count,3
+RN7SL385P,Type 1,Pseudogene,Motif count,2
+RN7SL386P,Type 1,Pseudogene,Motif count,2
+RN7SL387P,Type 1,Pseudogene,Motif count,9
+RN7SL387P,Type 2,Pseudogene,Motif count,24
+RN7SL388P,Type 1,Pseudogene,Motif count,5
+RN7SL38P,Type 1,Pseudogene,Motif count,8
+RN7SL391P,Type 1,Pseudogene,Motif count,4
+RN7SL391P,Type 2,Pseudogene,Motif count,28
+RN7SL391P,Type 3,Pseudogene,Motif count,29
+RN7SL392P,Type 1,Pseudogene,Motif count,4
+RN7SL39P,Type 1,Pseudogene,Motif count,1
+RN7SL400P,Type 1,Pseudogene,Motif count,4
+RN7SL401P,Type 1,Pseudogene,Motif count,6
+RN7SL403P,Type 1,Pseudogene,Motif count,4
+RN7SL405P,Type 1,Pseudogene,Motif count,6
+RN7SL405P,Type 2,Pseudogene,Motif count,23
+RN7SL408P,Type 1,Pseudogene,Motif count,2
+RN7SL411P,Type 1,Pseudogene,Motif count,4
+RN7SL418P,Type 1,Pseudogene,Motif count,7
+RN7SL419P,Type 1,Pseudogene,Motif count,4
+RN7SL420P,Type 1,Pseudogene,Motif count,4
+RN7SL422P,Type 1,Pseudogene,Motif count,1
+RN7SL423P,Type 1,Pseudogene,Motif count,3
+RN7SL424P,Type 1,Pseudogene,Motif count,6
+RN7SL431P,Type 1,Pseudogene,Motif count,1
+RN7SL432P,Type 1,Pseudogene,Motif count,5
+RN7SL438P,Type 1,Pseudogene,Motif count,8
+RN7SL43P,Type 1,Pseudogene,Motif count,5
+RN7SL440P,Type 1,Pseudogene,Motif count,2
+RN7SL440P,Type 2,Pseudogene,Motif count,28
+RN7SL440P,Type 3,Pseudogene,Motif count,29
+RN7SL445P,Type 1,Pseudogene,Motif count,1
+RN7SL44P,Type 1,Pseudogene,Motif count,6
+RN7SL451P,Type 1,Pseudogene,Motif count,4
+RN7SL453P,Type 1,Pseudogene,Motif count,9
+RN7SL453P,Type 2,Pseudogene,Motif count,21
+RN7SL455P,Type 1,Pseudogene,Motif count,8
+RN7SL455P,Type 2,Pseudogene,Motif count,23
+RN7SL45P,Type 1,Pseudogene,Motif count,2
+RN7SL460P,Type 1,Pseudogene,Motif count,12
+RN7SL460P,Type 2,Pseudogene,Motif count,26
+RN7SL461P,Type 1,Pseudogene,Motif count,3
+RN7SL462P,Type 1,Pseudogene,Motif count,1
+RN7SL468P,Type 1,Pseudogene,Motif count,2
+RN7SL470P,Type 1,Pseudogene,Motif count,10
+RN7SL470P,Type 2,Pseudogene,Motif count,24
+RN7SL470P,Type 3,Pseudogene,Motif count,27
+RN7SL471P,Type 1,Pseudogene,Motif count,8
+RN7SL473P,Type 1,Pseudogene,Motif count,3
+RN7SL474P,Type 1,Pseudogene,Motif count,10
+RN7SL474P,Type 2,Pseudogene,Motif count,27
+RN7SL474P,Type 3,Pseudogene,Motif count,27
+RN7SL475P,Type 1,Pseudogene,Motif count,8
+RN7SL478P,Type 1,Pseudogene,Motif count,10
+RN7SL479P,Type 1,Pseudogene,Motif count,3
+RN7SL47P,Type 1,Pseudogene,Motif count,5
+RN7SL480P,Type 1,Pseudogene,Motif count,3
+RN7SL481P,Type 1,Pseudogene,Motif count,5
+RN7SL482P,Type 1,Pseudogene,Motif count,4
+RN7SL483P,Type 1,Pseudogene,Motif count,2
+RN7SL487P,Type 2,Pseudogene,Motif count,21
+RN7SL488P,Type 1,Pseudogene,Motif count,9
+RN7SL488P,Type 2,Pseudogene,Motif count,27
+RN7SL488P,Type 3,Pseudogene,Motif count,28
+RN7SL48P,Type 1,Pseudogene,Motif count,13
+RN7SL48P,Type 2,Pseudogene,Motif count,25
+RN7SL491P,Type 1,Pseudogene,Motif count,2
+RN7SL491P,Type 2,Pseudogene,Motif count,27
+RN7SL491P,Type 3,Pseudogene,Motif count,28
+RN7SL492P,Type 1,Pseudogene,Motif count,7
+RN7SL492P,Type 2,Pseudogene,Motif count,21
+RN7SL493P,Type 1,Pseudogene,Motif count,4
+RN7SL496P,Type 1,Pseudogene,Motif count,2
+RN7SL497P,Type 1,Pseudogene,Motif count,2
+RN7SL499P,Type 1,Pseudogene,Motif count,4
+RN7SL4P,Type 1,Pseudogene,Motif count,4
+RN7SL503P,Type 1,Pseudogene,Motif count,2
+RN7SL504P,Type 1,Pseudogene,Motif count,5
+RN7SL505P,Type 1,Pseudogene,Motif count,9
+RN7SL507P,Type 1,Pseudogene,Motif count,10
+RN7SL509P,Type 1,Pseudogene,Motif count,2
+RN7SL510P,Type 1,Pseudogene,Motif count,10
+RN7SL510P,Type 2,Pseudogene,Motif count,26
+RN7SL510P,Type 3,Pseudogene,Motif count,28
+RN7SL516P,Type 1,Pseudogene,Motif count,2
+RN7SL517P,Type 1,Pseudogene,Motif count,4
+RN7SL519P,Type 1,Pseudogene,Motif count,6
+RN7SL520P,Type 1,Pseudogene,Motif count,4
+RN7SL523P,Type 1,Pseudogene,Motif count,10
+RN7SL524P,Type 1,Pseudogene,Motif count,6
+RN7SL524P,Type 2,Pseudogene,Motif count,28
+RN7SL524P,Type 3,Pseudogene,Motif count,30
+RN7SL525P,Type 1,Pseudogene,Motif count,8
+RN7SL525P,Type 2,Pseudogene,Motif count,28
+RN7SL525P,Type 3,Pseudogene,Motif count,29
+RN7SL526P,Type 1,Pseudogene,Motif count,8
+RN7SL52P,Type 1,Pseudogene,Motif count,4
+RN7SL530P,Type 1,Pseudogene,Motif count,5
+RN7SL531P,Type 1,Pseudogene,Motif count,10
+RN7SL535P,Type 1,Pseudogene,Motif count,3
+RN7SL542P,Type 1,Pseudogene,Motif count,2
+RN7SL543P,Type 1,Pseudogene,Motif count,3
+RN7SL546P,Type 1,Pseudogene,Motif count,2
+RN7SL551P,Type 1,Pseudogene,Motif count,7
+RN7SL552P,Type 1,Pseudogene,Motif count,2
+RN7SL553P,Type 1,Pseudogene,Motif count,6
+RN7SL555P,Type 1,Pseudogene,Motif count,8
+RN7SL556P,Type 1,Pseudogene,Motif count,3
+RN7SL557P,Type 1,Pseudogene,Motif count,9
+RN7SL559P,Type 1,Pseudogene,Motif count,4
+RN7SL560P,Type 1,Pseudogene,Motif count,2
+RN7SL560P,Type 2,Pseudogene,Motif count,22
+RN7SL561P,Type 1,Pseudogene,Motif count,1
+RN7SL563P,Type 1,Pseudogene,Motif count,7
+RN7SL565P,Type 1,Pseudogene,Motif count,4
+RN7SL567P,Type 1,Pseudogene,Motif count,1
+RN7SL568P,Type 1,Pseudogene,Motif count,4
+RN7SL574P,Type 1,Pseudogene,Motif count,4
+RN7SL577P,Type 1,Pseudogene,Motif count,4
+RN7SL57P,Type 1,Pseudogene,Motif count,2
+RN7SL581P,Type 1,Pseudogene,Motif count,3
+RN7SL582P,Type 1,Pseudogene,Motif count,4
+RN7SL584P,Type 1,Pseudogene,Motif count,5
+RN7SL586P,Type 1,Pseudogene,Motif count,6
+RN7SL587P,Type 1,Pseudogene,Motif count,2
+RN7SL589P,Type 1,Pseudogene,Motif count,3
+RN7SL592P,Type 1,Pseudogene,Motif count,12
+RN7SL596P,Type 1,Pseudogene,Motif count,2
+RN7SL596P,Type 2,Pseudogene,Motif count,26
+RN7SL596P,Type 3,Pseudogene,Motif count,28
+RN7SL600P,Type 1,Pseudogene,Motif count,10
+RN7SL601P,Type 1,Pseudogene,Motif count,3
+RN7SL602P,Type 1,Pseudogene,Motif count,7
+RN7SL602P,Type 2,Pseudogene,Motif count,27
+RN7SL602P,Type 3,Pseudogene,Motif count,30
+RN7SL604P,Type 1,Pseudogene,Motif count,1
+RN7SL605P,Type 1,Pseudogene,Motif count,8
+RN7SL607P,Type 1,Pseudogene,Motif count,1
+RN7SL60P,Type 1,Pseudogene,Motif count,5
+RN7SL610P,Type 1,Pseudogene,Motif count,8
+RN7SL610P,Type 2,Pseudogene,Motif count,22
+RN7SL612P,Type 1,Pseudogene,Motif count,4
+RN7SL614P,Type 1,Pseudogene,Motif count,4
+RN7SL617P,Type 1,Pseudogene,Motif count,4
+RN7SL619P,Type 1,Pseudogene,Motif count,7
+RN7SL619P,Type 2,Pseudogene,Motif count,26
+RN7SL622P,Type 1,Pseudogene,Motif count,4
+RN7SL622P,Type 2,Pseudogene,Motif count,27
+RN7SL622P,Type 3,Pseudogene,Motif count,27
+RN7SL624P,Type 1,Pseudogene,Motif count,3
+RN7SL624P,Type 2,Pseudogene,Motif count,27
+RN7SL624P,Type 3,Pseudogene,Motif count,28
+RN7SL625P,Type 1,Pseudogene,Motif count,7
+RN7SL627P,Type 1,Pseudogene,Motif count,3
+RN7SL62P,Type 1,Pseudogene,Motif count,4
+RN7SL633P,Type 1,Pseudogene,Motif count,5
+RN7SL634P,Type 1,Pseudogene,Motif count,4
+RN7SL635P,Type 1,Pseudogene,Motif count,4
+RN7SL636P,Type 1,Pseudogene,Motif count,4
+RN7SL640P,Type 1,Pseudogene,Motif count,1
+RN7SL643P,Type 1,Pseudogene,Motif count,2
+RN7SL644P,Type 1,Pseudogene,Motif count,3
+RN7SL644P,Type 2,Pseudogene,Motif count,27
+RN7SL644P,Type 3,Pseudogene,Motif count,28
+RN7SL645P,Type 1,Pseudogene,Motif count,2
+RN7SL648P,Type 1,Pseudogene,Motif count,3
+RN7SL649P,Type 1,Pseudogene,Motif count,2
+RN7SL650P,Type 1,Pseudogene,Motif count,5
+RN7SL650P,Type 2,Pseudogene,Motif count,21
+RN7SL658P,Type 1,Pseudogene,Motif count,4
+RN7SL659P,Type 1,Pseudogene,Motif count,3
+RN7SL663P,Type 1,Pseudogene,Motif count,8
+RN7SL664P,Type 1,Pseudogene,Motif count,5
+RN7SL666P,Type 1,Pseudogene,Motif count,2
+RN7SL667P,Type 1,Pseudogene,Motif count,9
+RN7SL667P,Type 2,Pseudogene,Motif count,25
+RN7SL667P,Type 3,Pseudogene,Motif count,28
+RN7SL668P,Type 1,Pseudogene,Motif count,4
+RN7SL66P,Type 1,Pseudogene,Motif count,6
+RN7SL66P,Type 2,Pseudogene,Motif count,26
+RN7SL66P,Type 3,Pseudogene,Motif count,28
+RN7SL670P,Type 1,Pseudogene,Motif count,7
+RN7SL670P,Type 2,Pseudogene,Motif count,24
+RN7SL672P,Type 1,Pseudogene,Motif count,3
+RN7SL676P,Type 1,Pseudogene,Motif count,12
+RN7SL676P,Type 2,Pseudogene,Motif count,22
+RN7SL679P,Type 1,Pseudogene,Motif count,3
+RN7SL683P,Type 1,Pseudogene,Motif count,4
+RN7SL685P,Type 1,Pseudogene,Motif count,3
+RN7SL687P,Type 1,Pseudogene,Motif count,4
+RN7SL68P,Type 1,Pseudogene,Motif count,7
+RN7SL690P,Type 1,Pseudogene,Motif count,10
+RN7SL691P,Type 1,Pseudogene,Motif count,9
+RN7SL693P,Type 1,Pseudogene,Motif count,2
+RN7SL693P,Type 2,Pseudogene,Motif count,27
+RN7SL693P,Type 3,Pseudogene,Motif count,28
+RN7SL69P,Type 1,Pseudogene,Motif count,7
+RN7SL704P,Type 1,Pseudogene,Motif count,3
+RN7SL709P,Type 1,Pseudogene,Motif count,8
+RN7SL712P,Type 1,Pseudogene,Motif count,1
+RN7SL714P,Type 1,Pseudogene,Motif count,2
+RN7SL716P,Type 1,Pseudogene,Motif count,7
+RN7SL716P,Type 2,Pseudogene,Motif count,24
+RN7SL716P,Type 3,Pseudogene,Motif count,27
+RN7SL717P,Type 1,Pseudogene,Motif count,3
+RN7SL718P,Type 1,Pseudogene,Motif count,12
+RN7SL718P,Type 2,Pseudogene,Motif count,28
+RN7SL718P,Type 3,Pseudogene,Motif count,30
+RN7SL720P,Type 1,Pseudogene,Motif count,2
+RN7SL722P,Type 1,Pseudogene,Motif count,4
+RN7SL724P,Type 1,Pseudogene,Motif count,8
+RN7SL726P,Type 1,Pseudogene,Motif count,2
+RN7SL727P,Type 1,Pseudogene,Motif count,3
+RN7SL728P,Type 1,Pseudogene,Motif count,3
+RN7SL733P,Type 1,Pseudogene,Motif count,7
+RN7SL735P,Type 1,Pseudogene,Motif count,3
+RN7SL738P,Type 1,Pseudogene,Motif count,4
+RN7SL73P,Type 1,Pseudogene,Motif count,14
+RN7SL73P,Type 2,Pseudogene,Motif count,24
+RN7SL740P,Type 1,Pseudogene,Motif count,6
+RN7SL740P,Type 2,Pseudogene,Motif count,22
+RN7SL741P,Type 1,Pseudogene,Motif count,6
+RN7SL744P,Type 1,Pseudogene,Motif count,8
+RN7SL744P,Type 2,Pseudogene,Motif count,26
+RN7SL744P,Type 3,Pseudogene,Motif count,29
+RN7SL745P,Type 1,Pseudogene,Motif count,5
+RN7SL745P,Type 2,Pseudogene,Motif count,21
+RN7SL748P,Type 1,Pseudogene,Motif count,9
+RN7SL74P,Type 1,Pseudogene,Motif count,4
+RN7SL750P,Type 1,Pseudogene,Motif count,7
+RN7SL750P,Type 2,Pseudogene,Motif count,23
+RN7SL756P,Type 1,Pseudogene,Motif count,2
+RN7SL757P,Type 1,Pseudogene,Motif count,3
+RN7SL75P,Type 1,Pseudogene,Motif count,2
+RN7SL762P,Type 1,Pseudogene,Motif count,4
+RN7SL764P,Type 1,Pseudogene,Motif count,6
+RN7SL769P,Type 1,Pseudogene,Motif count,6
+RN7SL771P,Type 1,Pseudogene,Motif count,4
+RN7SL774P,Type 1,Pseudogene,Motif count,8
+RN7SL774P,Type 2,Pseudogene,Motif count,28
+RN7SL774P,Type 3,Pseudogene,Motif count,28
+RN7SL775P,Type 1,Pseudogene,Motif count,9
+RN7SL782P,Type 1,Pseudogene,Motif count,6
+RN7SL784P,Type 1,Pseudogene,Motif count,6
+RN7SL784P,Type 2,Pseudogene,Motif count,31
+RN7SL784P,Type 3,Pseudogene,Motif count,31
+RN7SL785P,Type 1,Pseudogene,Motif count,8
+RN7SL786P,Type 1,Pseudogene,Motif count,7
+RN7SL787P,Type 1,Pseudogene,Motif count,4
+RN7SL788P,Type 1,Pseudogene,Motif count,3
+RN7SL789P,Type 1,Pseudogene,Motif count,6
+RN7SL790P,Type 1,Pseudogene,Motif count,8
+RN7SL794P,Type 1,Pseudogene,Motif count,3
+RN7SL795P,Type 1,Pseudogene,Motif count,3
+RN7SL797P,Type 1,Pseudogene,Motif count,3
+RN7SL798P,Type 1,Pseudogene,Motif count,7
+RN7SL79P,Type 1,Pseudogene,Motif count,4
+RN7SL800P,Type 1,Pseudogene,Motif count,4
+RN7SL802P,Type 1,Pseudogene,Motif count,1
+RN7SL803P,Type 1,Pseudogene,Motif count,6
+RN7SL804P,Type 1,Pseudogene,Motif count,2
+RN7SL809P,Type 1,Pseudogene,Motif count,2
+RN7SL811P,Type 1,Pseudogene,Motif count,4
+RN7SL811P,Type 2,Pseudogene,Motif count,28
+RN7SL811P,Type 3,Pseudogene,Motif count,27
+RN7SL813P,Type 1,Pseudogene,Motif count,4
+RN7SL814P,Type 1,Pseudogene,Motif count,2
+RN7SL815P,Type 1,Pseudogene,Motif count,2
+RN7SL819P,Type 1,Pseudogene,Motif count,4
+RN7SL819P,Type 2,Pseudogene,Motif count,21
+RN7SL820P,Type 1,Pseudogene,Motif count,6
+RN7SL823P,Type 1,Pseudogene,Motif count,4
+RN7SL824P,Type 1,Pseudogene,Motif count,3
+RN7SL825P,Type 1,Pseudogene,Motif count,3
+RN7SL827P,Type 1,Pseudogene,Motif count,2
+RN7SL828P,Type 1,Pseudogene,Motif count,6
+RN7SL831P,Type 1,Pseudogene,Motif count,5
+RN7SL832P,Type 1,Pseudogene,Motif count,13
+RN7SL832P,Type 2,Pseudogene,Motif count,44
+RN7SL832P,Type 3,Pseudogene,Motif count,55
+RN7SL833P,Type 1,Pseudogene,Motif count,4
+RN7SL835P,Type 1,Pseudogene,Motif count,11
+RN7SL835P,Type 2,Pseudogene,Motif count,27
+RN7SL836P,Type 1,Pseudogene,Motif count,5
+RN7SL836P,Type 2,Pseudogene,Motif count,21
+RN7SL845P,Type 1,Pseudogene,Motif count,4
+RN7SL846P,Type 1,Pseudogene,Motif count,7
+RN7SL847P,Type 1,Pseudogene,Motif count,13
+RN7SL847P,Type 2,Pseudogene,Motif count,26
+RN7SL850P,Type 1,Pseudogene,Motif count,4
+RN7SL850P,Type 2,Pseudogene,Motif count,27
+RN7SL850P,Type 3,Pseudogene,Motif count,29
+RN7SL851P,Type 1,Pseudogene,Motif count,4
+RN7SL854P,Type 1,Pseudogene,Motif count,5
+RN7SL856P,Type 1,Pseudogene,Motif count,4
+RN7SL863P,Type 1,Pseudogene,Motif count,2
+RN7SL865P,Type 1,Pseudogene,Motif count,7
+RN7SL870P,Type 1,Pseudogene,Motif count,2
+RN7SL88P,Type 1,Pseudogene,Motif count,1
+RN7SL91P,Type 1,Pseudogene,Motif count,4
+RN7SL92P,Type 1,Pseudogene,Motif count,13
+RN7SL92P,Type 2,Pseudogene,Motif count,28
+RN7SL96P,Type 1,Pseudogene,Motif count,13
+RN7SL96P,Type 2,Pseudogene,Motif count,28
+RN7SL97P,Type 1,Pseudogene,Motif count,5
+RN7SL98P,Type 1,Pseudogene,Motif count,2
+RNU7-1,Type 1,Functional,Motif count,23
+RNU7-1,Type 2,Functional,Motif count,177
+RNU7-1,Type 3,Functional,Motif count,172
+RNU7-115P,Type 1,Pseudogene,Motif count,5
+RNU7-126P,Type 1,Pseudogene,Motif count,2
+RNU7-12P,Type 1,Pseudogene,Motif count,2
+RNU7-138P,Type 1,Pseudogene,Motif count,2
+RNU7-149P,Type 1,Pseudogene,Motif count,3
+RNU7-170P,Type 1,Pseudogene,Motif count,2
+RNU7-176P,Type 1,Pseudogene,Motif count,2
+RNU7-179P,Type 1,Pseudogene,Motif count,3
+RNU7-193P,Type 1,Pseudogene,Motif count,2
+RNU7-33P,Type 1,Pseudogene,Motif count,2
+RNU7-56P,Type 1,Pseudogene,Motif count,2
+RNU7-72P,Type 1,Pseudogene,Motif count,2
+RN7SK,Type 1,Functional,Motif count,97
+RN7SK,Type 2,Functional,Motif count,431
+RN7SK,Type 3,Functional,Motif count,3187
+RN7SKP1,Type 1,Pseudogene,Motif count,20
+RN7SKP1,Type 2,Pseudogene,Motif count,113
+RN7SKP1,Type 3,Pseudogene,Motif count,1223
+RN7SKP10,Type 3,Pseudogene,Motif count,115
+RN7SKP11,Type 1,Pseudogene,Motif count,2
+RN7SKP11,Type 3,Pseudogene,Motif count,121
+RN7SKP117,Type 1,Pseudogene,Motif count,2
+RN7SKP12,Type 1,Pseudogene,Motif count,7
+RN7SKP12,Type 3,Pseudogene,Motif count,113
+RN7SKP123,Type 1,Pseudogene,Motif count,7
+RN7SKP13,Type 3,Pseudogene,Motif count,82
+RN7SKP14,Type 3,Pseudogene,Motif count,140
+RN7SKP15,Type 1,Pseudogene,Motif count,4
+RN7SKP15,Type 3,Pseudogene,Motif count,119
+RN7SKP150,Type 1,Pseudogene,Motif count,4
+RN7SKP16,Type 3,Pseudogene,Motif count,131
+RN7SKP17,Type 1,Pseudogene,Motif count,7
+RN7SKP17,Type 2,Pseudogene,Motif count,30
+RN7SKP17,Type 3,Pseudogene,Motif count,144
+RN7SKP177,Type 1,Pseudogene,Motif count,5
+RN7SKP178,Type 1,Pseudogene,Motif count,2
+RN7SKP18,Type 3,Pseudogene,Motif count,123
+RN7SKP19,Type 3,Pseudogene,Motif count,121
+RN7SKP2,Type 1,Pseudogene,Motif count,57
+RN7SKP2,Type 2,Pseudogene,Motif count,212
+RN7SKP2,Type 3,Pseudogene,Motif count,1172
+RN7SKP20,Type 1,Pseudogene,Motif count,2
+RN7SKP20,Type 3,Pseudogene,Motif count,116
+RN7SKP21,Type 3,Pseudogene,Motif count,103
+RN7SKP22,Type 1,Pseudogene,Motif count,9
+RN7SKP22,Type 2,Pseudogene,Motif count,29
+RN7SKP22,Type 3,Pseudogene,Motif count,133
+RN7SKP224,Type 1,Pseudogene,Motif count,6
+RN7SKP23,Type 1,Pseudogene,Motif count,27
+RN7SKP23,Type 2,Pseudogene,Motif count,73
+RN7SKP23,Type 3,Pseudogene,Motif count,170
+RN7SKP24,Type 3,Pseudogene,Motif count,92
+RN7SKP25,Type 1,Pseudogene,Motif count,5
+RN7SKP25,Type 3,Pseudogene,Motif count,124
+RN7SKP259,Type 1,Pseudogene,Motif count,5
+RN7SKP26,Type 1,Pseudogene,Motif count,7
+RN7SKP26,Type 2,Pseudogene,Motif count,26
+RN7SKP26,Type 3,Pseudogene,Motif count,126
+RN7SKP264,Type 1,Pseudogene,Motif count,3
+RN7SKP269,Type 1,Pseudogene,Motif count,4
+RN7SKP27,Type 1,Pseudogene,Motif count,4
+RN7SKP27,Type 2,Pseudogene,Motif count,21
+RN7SKP27,Type 3,Pseudogene,Motif count,99
+RN7SKP271,Type 1,Pseudogene,Motif count,4
+RN7SKP28,Type 1,Pseudogene,Motif count,1
+RN7SKP28,Type 3,Pseudogene,Motif count,102
+RN7SKP286,Type 1,Pseudogene,Motif count,1
+RN7SKP29,Type 1,Pseudogene,Motif count,2
+RN7SKP29,Type 3,Pseudogene,Motif count,107
+RN7SKP290,Type 1,Pseudogene,Motif count,2
+RN7SKP3,Type 1,Pseudogene,Motif count,4
+RN7SKP3,Type 3,Pseudogene,Motif count,107
+RN7SKP4,Type 1,Pseudogene,Motif count,5
+RN7SKP4,Type 3,Pseudogene,Motif count,74
+RN7SKP5,Type 3,Pseudogene,Motif count,110
+RN7SKP6,Type 2,Pseudogene,Motif count,22
+RN7SKP6,Type 3,Pseudogene,Motif count,116
+RN7SKP7,Type 1,Pseudogene,Motif count,6
+RN7SKP7,Type 2,Pseudogene,Motif count,21
+RN7SKP7,Type 3,Pseudogene,Motif count,150
+RN7SKP71,Type 1,Pseudogene,Motif count,4
+RN7SKP78,Type 1,Pseudogene,Motif count,2
+RN7SKP8,Type 3,Pseudogene,Motif count,107
+RN7SKP9,Type 1,Pseudogene,Motif count,5
+RN7SKP9,Type 3,Pseudogene,Motif count,117
+RN7SKP98,Type 1,Pseudogene,Motif count,5
+RNU1-1,Type 1,Functional,Score,14.5138
+RNU1-1,Type 3,Functional,Score,43.2523
+RNU1-100P,Type 1,Pseudogene,Score,15.3409
+RNU1-134P,Type 2,Pseudogene,Score,108.527
+RNU1-148P,Type 1,Pseudogene,Score,13.6867
+RNU1-3,Type 3,Functional,Score,34.881100000000004
+RNU1-4,Type 3,Functional,Score,48.3256
+RNU1-51P,Type 1,Pseudogene,Score,17.3685
+RNU1-55P,Type 1,Pseudogene,Score,13.6867
+RNU1-62P,Type 1,Pseudogene,Score,13.6867
+RNU1-77P,Type 1,Pseudogene,Score,13.7069
+RNU2-1,Type 1,Functional,Score,15.5818
+RNU2-1,Type 3,Functional,Score,59.43615
+RNU2-14P,Type 1,Pseudogene,Score,15.826
+RNU2-18P,Type 1,Pseudogene,Score,15.3376
+RNU2-18P,Type 2,Pseudogene,Score,132.275
+RNU2-22P,Type 1,Pseudogene,Score,28.9618
+RNU2-24P,Type 1,Pseudogene,Score,20.3609
+RNU2-24P,Type 2,Pseudogene,Score,129.906
+RNU2-26P,Type 1,Pseudogene,Score,21.9996
+RNU2-2,Type 1,Functional,Score,23.7741
+RNU2-2,Type 2,Functional,Score,87.44003333333332
+RNU2-2,Type 3,Functional,Score,71.09866666666666
+RNU2-30P,Type 1,Pseudogene,Score,21.42035
+RNU2-30P,Type 2,Pseudogene,Score,175.84
+RNU2-30P,Type 3,Pseudogene,Score,144.007
+RNU2-36P,Type 1,Pseudogene,Score,21.9996
+RNU2-36P,Type 2,Pseudogene,Score,164.18
+RNU2-4P,Type 1,Pseudogene,Score,14.9212
+RNU2-57P,Type 1,Pseudogene,Score,20.8878
+RNU2-58P,Type 1,Pseudogene,Score,29.3119
+RNU2-61P,Type 1,Pseudogene,Score,13.7069
+RNU2-65P,Type 1,Pseudogene,Score,25.1734
+RNU2-65P,Type 2,Pseudogene,Score,149.847
+RNU2-69P,Type 1,Pseudogene,Score,14.4768
+RNU2-6P,Type 1,Pseudogene,Score,16.3118
+RNU4-1,Type 1,Functional,Score,14.4446
+RNU4-1,Type 3,Functional,Score,45.36875
+RNU4-14P,Type 1,Pseudogene,Score,14.4446
+RNU4-2,Type 1,Functional,Score,13.972633333333334
+RNU4-2,Type 3,Functional,Score,62.269875000000006
+RNU4-21P,Type 1,Pseudogene,Score,13.6867
+RNU4-28P,Type 1,Pseudogene,Score,14.1156
+RNU4-30P,Type 1,Pseudogene,Score,14.7803
+RNU4-34P,Type 1,Pseudogene,Score,15.8989
+RNU4-39P,Type 1,Pseudogene,Score,23.0879
+RNU4-39P,Type 2,Pseudogene,Score,128.046
+RNU4-47P,Type 1,Pseudogene,Score,18.2679
+RNU4-52P,Type 1,Pseudogene,Score,15.2353
+RNU4-68P,Type 1,Pseudogene,Score,16.89415
+RNU4-86P,Type 1,Pseudogene,Score,24.1954
+RNU4-90P,Type 1,Pseudogene,Score,15.7882
+RNU5A-3P,Type 1,Pseudogene,Score,13.6867
+RNU5E-1,Type 3,Functional,Score,43.6938
+RNU5E-2P,Type 1,Pseudogene,Score,13.6867
+RNU5E-5P,Type 1,Pseudogene,Score,15.6264
+RNU5F-4P,Type 1,Pseudogene,Score,17.6745
+RNU6-1,Type 1,Functional,Score,17.359496721311476
+RNU6-1,Type 3,Functional,Score,67.71495507246378
+RNU6-1003P,Type 1,Pseudogene,Score,16.567
+RNU6-1007P,Type 1,Pseudogene,Score,21.0468
+RNU6-1010P,Type 1,Pseudogene,Score,22.6926
+RNU6-1020P,Type 1,Pseudogene,Score,15.6264
+RNU6-1022P,Type 1,Pseudogene,Score,14.6877
+RNU6-1028P,Type 1,Pseudogene,Score,14.8965
+RNU6-1041P,Type 1,Pseudogene,Score,15.5326
+RNU6-1056P,Type 1,Pseudogene,Score,16.2584
+RNU6-1057P,Type 1,Pseudogene,Score,14.8965
+RNU6-1069P,Type 1,Pseudogene,Score,18.5236
+RNU6-106P,Type 1,Pseudogene,Score,15.4617
+RNU6-106P,Type 3,Pseudogene,Score,138.309
+RNU6-1083P,Type 1,Pseudogene,Score,17.5356
+RNU6-1083P,Type 3,Pseudogene,Score,155.942
+RNU6-1085P,Type 1,Pseudogene,Score,17.3435
+RNU6-1088P,Type 1,Pseudogene,Score,13.6867
+RNU6-1091P,Type 1,Pseudogene,Score,22.4286
+RNU6-1092P,Type 1,Pseudogene,Score,13.6867
+RNU6-1093P,Type 1,Pseudogene,Score,14.0532
+RNU6-1095P,Type 1,Pseudogene,Score,15.7244
+RNU6-10P,Type 1,Pseudogene,Score,19.0497
+RNU6-1101P,Type 1,Pseudogene,Score,22.1248
+RNU6-1106P,Type 1,Pseudogene,Score,22.7726
+RNU6-1114P,Type 1,Pseudogene,Score,13.7445
+RNU6-1121P,Type 1,Pseudogene,Score,20.442
+RNU6-1122P,Type 1,Pseudogene,Score,13.95
+RNU6-1133P,Type 1,Pseudogene,Score,16.4605
+RNU6-1138P,Type 1,Pseudogene,Score,17.3685
+RNU6-1139P,Type 1,Pseudogene,Score,13.6867
+RNU6-1151P,Type 1,Pseudogene,Score,17.026
+RNU6-1155P,Type 1,Pseudogene,Score,14.3443
+RNU6-1162P,Type 1,Pseudogene,Score,13.6867
+RNU6-1169P,Type 1,Pseudogene,Score,17.3685
+RNU6-1178P,Type 1,Pseudogene,Score,23.8055
+RNU6-1187P,Type 3,Pseudogene,Score,146.334
+RNU6-1196P,Type 1,Pseudogene,Score,16.7583
+RNU6-1201P,Type 1,Pseudogene,Score,15.7485
+RNU6-1205P,Type 1,Pseudogene,Score,19.9203
+RNU6-1213P,Type 1,Pseudogene,Score,14.8965
+RNU6-1223P,Type 1,Pseudogene,Score,13.6867
+RNU6-1238P,Type 1,Pseudogene,Score,15.6264
+RNU6-1242P,Type 1,Pseudogene,Score,13.6867
+RNU6-1245P,Type 1,Pseudogene,Score,13.9709
+RNU6-1255P,Type 1,Pseudogene,Score,29.8987
+RNU6-1266P,Type 1,Pseudogene,Score,13.6867
+RNU6-1273P,Type 1,Pseudogene,Score,14.8965
+RNU6-1274P,Type 1,Pseudogene,Score,19.4608
+RNU6-1298P,Type 1,Pseudogene,Score,25.907
+RNU6-1304P,Type 1,Pseudogene,Score,13.6867
+RNU6-1304P,Type 3,Pseudogene,Score,152.492
+RNU6-1306P,Type 1,Pseudogene,Score,15.613
+RNU6-1315P,Type 1,Pseudogene,Score,18.8227
+RNU6-1322P,Type 1,Pseudogene,Score,15.2095
+RNU6-1322P,Type 2,Pseudogene,Score,121.293
+RNU6-1328P,Type 1,Pseudogene,Score,13.6867
+RNU6-132P,Type 1,Pseudogene,Score,19.7204
+RNU6-1335P,Type 1,Pseudogene,Score,17.3685
+RNU6-136P,Type 1,Pseudogene,Score,17.0328
+RNU6-140P,Type 3,Pseudogene,Score,143.309
+RNU6-143P,Type 1,Pseudogene,Score,18.2104
+RNU6-169P,Type 1,Pseudogene,Score,25.8514
+RNU6-178P,Type 1,Pseudogene,Score,20.681
+RNU6-179P,Type 1,Pseudogene,Score,14.9593
+RNU6-181P,Type 1,Pseudogene,Score,22.409
+RNU6-192P,Type 1,Pseudogene,Score,22.6807
+RNU6-194P,Type 1,Pseudogene,Score,13.6867
+RNU6-2,Type 1,Functional,Score,18.45623571428572
+RNU6-2,Type 3,Functional,Score,67.76587692307693
+RNU6-206P,Type 1,Pseudogene,Score,24.0956
+RNU6-20P,Type 1,Pseudogene,Score,16.5167
+RNU6-20P,Type 3,Pseudogene,Score,138.959
+RNU6-210P,Type 1,Pseudogene,Score,14.9957
+RNU6-216P,Type 1,Pseudogene,Score,13.6867
+RNU6-218P,Type 1,Pseudogene,Score,19.1992
+RNU6-222P,Type 1,Pseudogene,Score,17.3685
+RNU6-222P,Type 3,Pseudogene,Score,138.742
+RNU6-225P,Type 1,Pseudogene,Score,13.6867
+RNU6-229P,Type 1,Pseudogene,Score,15.8496
+RNU6-232P,Type 1,Pseudogene,Score,22.2599
+RNU6-233P,Type 1,Pseudogene,Score,21.5153
+RNU6-233P,Type 2,Pseudogene,Score,134.635
+RNU6-233P,Type 3,Pseudogene,Score,197.308
+RNU6-23P,Type 1,Pseudogene,Score,14.0414
+RNU6-23P,Type 3,Pseudogene,Score,138.182
+RNU6-245P,Type 1,Pseudogene,Score,21.4345
+RNU6-264P,Type 1,Pseudogene,Score,22.2222
+RNU6-318P,Type 1,Pseudogene,Score,18.5803
+RNU6-31P,Type 1,Pseudogene,Score,16.2129
+RNU6-31P,Type 3,Pseudogene,Score,146.452
+RNU6-333P,Type 1,Pseudogene,Score,16.3624
+RNU6-369P,Type 1,Pseudogene,Score,13.6867
+RNU6-379P,Type 1,Pseudogene,Score,14.0637
+RNU6-37P,Type 1,Pseudogene,Score,13.6867
+RNU6-37P,Type 3,Pseudogene,Score,146.571
+RNU6-405P,Type 1,Pseudogene,Score,17.742
+RNU6-406P,Type 1,Pseudogene,Score,13.6867
+RNU6-41P,Type 1,Pseudogene,Score,17.3685
+RNU6-41P,Type 3,Pseudogene,Score,139.629
+RNU6-421P,Type 1,Pseudogene,Score,16.3907
+RNU6-430P,Type 1,Pseudogene,Score,16.9089
+RNU6-434P,Type 3,Pseudogene,Score,146.309
+RNU6-450P,Type 1,Pseudogene,Score,18.4584
+RNU6-451P,Type 1,Pseudogene,Score,37.7171
+RNU6-454P,Type 1,Pseudogene,Score,13.6867
+RNU6-467P,Type 1,Pseudogene,Score,18.1737
+RNU6-492P,Type 1,Pseudogene,Score,19.8273
+RNU6-501P,Type 1,Pseudogene,Score,14.0836
+RNU6-502P,Type 1,Pseudogene,Score,16.645
+RNU6-509P,Type 1,Pseudogene,Score,16.4019
+RNU6-516P,Type 1,Pseudogene,Score,19.1329
+RNU6-517P,Type 1,Pseudogene,Score,15.4875
+RNU6-518P,Type 1,Pseudogene,Score,16.8913
+RNU6-519P,Type 1,Pseudogene,Score,14.0562
+RNU6-529P,Type 1,Pseudogene,Score,14.3804
+RNU6-529P,Type 3,Pseudogene,Score,146.655
+RNU6-543P,Type 1,Pseudogene,Score,14.2243
+RNU6-547P,Type 1,Pseudogene,Score,22.5953
+RNU6-549P,Type 1,Pseudogene,Score,13.6867
+RNU6-557P,Type 3,Pseudogene,Score,139.209
+RNU6-558P,Type 3,Pseudogene,Score,150.137
+RNU6-559P,Type 1,Pseudogene,Score,21.3758
+RNU6-563P,Type 1,Pseudogene,Score,15.0056
+RNU6-584P,Type 1,Pseudogene,Score,21.9754
+RNU6-592P,Type 1,Pseudogene,Score,22.553
+RNU6-597P,Type 1,Pseudogene,Score,13.6867
+RNU6-600P,Type 1,Pseudogene,Score,27.2352
+RNU6-600P,Type 3,Pseudogene,Score,147.404
+RNU6-611P,Type 1,Pseudogene,Score,17.3685
+RNU6-633P,Type 1,Pseudogene,Score,23.4662
+RNU6-642P,Type 1,Pseudogene,Score,17.1555
+RNU6-657P,Type 1,Pseudogene,Score,15.3069
+RNU6-65P,Type 1,Pseudogene,Score,18.6913
+RNU6-660P,Type 1,Pseudogene,Score,14.77655
+RNU6-689P,Type 1,Pseudogene,Score,13.6867
+RNU6-7,Type 1,Functional,Score,17.33391333333333
+RNU6-7,Type 3,Functional,Score,65.62258627450981
+RNU6-715P,Type 1,Pseudogene,Score,13.6867
+RNU6-717P,Type 1,Pseudogene,Score,18.5496
+RNU6-728P,Type 1,Pseudogene,Score,21.9492
+RNU6-737P,Type 1,Pseudogene,Score,15.3998
+RNU6-751P,Type 1,Pseudogene,Score,16.0215
+RNU6-752P,Type 1,Pseudogene,Score,14.6432
+RNU6-756P,Type 1,Pseudogene,Score,17.7967
+RNU6-759P,Type 1,Pseudogene,Score,18.5803
+RNU6-761P,Type 3,Pseudogene,Score,146.456
+RNU6-775P,Type 1,Pseudogene,Score,16.0044
+RNU6-776P,Type 1,Pseudogene,Score,18.2378
+RNU6-783P,Type 1,Pseudogene,Score,13.6867
+RNU6-78P,Type 1,Pseudogene,Score,13.0567
+RNU6-790P,Type 1,Pseudogene,Score,25.7633
+RNU6-794P,Type 1,Pseudogene,Score,18.395
+RNU6-8,Type 1,Functional,Score,17.799155555555554
+RNU6-8,Type 3,Functional,Score,64.63254742268042
+RNU6-807P,Type 1,Pseudogene,Score,14.5796
+RNU6-84P,Type 1,Pseudogene,Score,14.5645
+RNU6-850P,Type 1,Pseudogene,Score,16.645
+RNU6-854P,Type 1,Pseudogene,Score,29.3433
+RNU6-866P,Type 1,Pseudogene,Score,16.30155
+RNU6-866P,Type 3,Pseudogene,Score,167.975
+RNU6-877P,Type 1,Pseudogene,Score,15.4809
+RNU6-87P,Type 1,Pseudogene,Score,23.2893
+RNU6-899P,Type 1,Pseudogene,Score,13.6867
+RNU6-9,Type 1,Functional,Score,17.43218
+RNU6-9,Type 3,Functional,Score,64.45319504950494
+RNU6-911P,Type 1,Pseudogene,Score,20.24925
+RNU6-911P,Type 3,Pseudogene,Score,141.624
+RNU6-917P,Type 1,Pseudogene,Score,14.2997
+RNU6-923P,Type 1,Pseudogene,Score,14.3838
+RNU6-925P,Type 1,Pseudogene,Score,16.9221
+RNU6-927P,Type 1,Pseudogene,Score,16.9318
+RNU6-930P,Type 1,Pseudogene,Score,14.8965
+RNU6-942P,Type 1,Pseudogene,Score,15.4617
+RNU6-947P,Type 1,Pseudogene,Score,16.6506
+RNU6-949P,Type 3,Pseudogene,Score,150.97
+RNU6-950P,Type 1,Pseudogene,Score,19.930300000000003
+RNU6-950P,Type 3,Pseudogene,Score,174.055
+RNU6-969P,Type 1,Pseudogene,Score,17.9661
+RNU6-975P,Type 1,Pseudogene,Score,19.311
+RNU6-993P,Type 1,Pseudogene,Score,17.3685
+RNU4ATAC,Type 1,Functional,Score,14.6603
+RNU4ATAC,Type 3,Functional,Score,44.07366666666667
+RNU4ATAC5P,Type 1,Pseudogene,Score,14.6603
+RNU6ATAC,Type 1,Functional,Score,16.648455555555557
+RNU6ATAC,Type 3,Functional,Score,48.9447625
+RNU6ATAC17P,Type 1,Pseudogene,Score,15.39655
+RNU6ATAC20P,Type 1,Pseudogene,Score,15.9351
+RNU6ATAC26P,Type 1,Pseudogene,Score,23.013
+RNU6ATAC28P,Type 1,Pseudogene,Score,17.834
+RNU6ATAC29P,Type 1,Pseudogene,Score,14.8418
+RNU6ATAC37P,Type 1,Pseudogene,Score,15.5743
+RNU6ATAC39P,Type 1,Pseudogene,Score,18.1581
+RNU6ATAC41P,Type 1,Pseudogene,Score,13.6867
+RNU11,Type 3,Functional,Score,38.4334
+RNU12,Type 3,Functional,Score,66.2536
+RNY1,Type 1,Functional,Score,20.12995
+RNY1,Type 3,Functional,Score,51.72170666666667
+RNY1P7,Type 1,Pseudogene,Score,20.12995
+RNY3,Type 1,Functional,Score,23.70195
+RNY3,Type 3,Functional,Score,60.07101764705882
+RNY3P1,Type 1,Pseudogene,Score,23.70195
+RNY3P14,Type 1,Pseudogene,Score,33.7172
+RNY4,Type 1,Functional,Score,21.42016666666667
+RNY4,Type 3,Functional,Score,48.35132413793104
+RNY4P2,Type 1,Pseudogene,Score,26.7553
+RNY4P21,Type 1,Pseudogene,Score,26.7553
+RNY4P3,Type 1,Pseudogene,Score,18.7526
+RNY4P36,Type 1,Pseudogene,Score,20.3609
+RNY5,Type 3,Functional,Score,51.9154
+TRC-GCA12-1,Type 1,Functional,Score,16.1416
+TRC-GCA12-1,Type 2,Functional,Score,101.292
+TRC-GCA12-1,Type 3,Functional,Score,79.2756
+TRC-GCA2-1,Type 1,Functional,Score,21.5237
+TRC-GCA2-1,Type 2,Functional,Score,122.32
+TRC-GCA2-1,Type 3,Functional,Score,57.6479
+TRE-CTC14-1,Type 3,Functional,Score,36.6709
+TRE-CTC9-1,Type 3,Functional,Score,44.8746
+TRF-GAA1-3,Type 3,Functional,Score,34.4755
+TRG-CCC3-1,Type 1,Functional,Score,19.2117
+TRG-CCC3-1,Type 2,Functional,Score,114.01
+TRG-CCC3-1,Type 3,Functional,Score,89.146
+TRG-TCC1-1,Type 1,Functional,Score,13.9058
+TRG-TCC1-1,Type 3,Functional,Score,29.3514
+TRG-TCC5-1,Type 2,Pseudogene,Score,136.531
+TRG-TCC6-1,Type 2,Pseudogene,Score,138.309
+TRK-TTT1-1,Type 1,Functional,Score,14.151
+TRK-TTT1-1,Type 2,Functional,Score,84.0861
+TRK-TTT1-1,Type 3,Functional,Score,36.338
+TRK-TTT10-1,Type 2,Pseudogene,Score,108.666
+TRK-TTT8-1,Type 1,Functional,Score,20.8913
+TRK-TTT8-1,Type 2,Functional,Score,87.1975
+TRK-TTT8-1,Type 3,Functional,Score,58.0999
+TRL-CAA3-1,Type 3,Functional,Score,25.5672
+TRN-GTT22-1,Type 1,Pseudogene,Score,17.5434
+TRN-GTT23-1,Type 1,Pseudogene,Score,20.7384
+TRN-GTT23-1,Type 2,Pseudogene,Score,120.625
+TRP-AGG1-1,Type 3,Functional,Score,43.475
+TRP-TGG3-4,Type 3,Functional,Score,32.5659
+TRP-TGG3-5,Type 3,Functional,Score,44.2401
+TRQ-CTG1-1,Type 3,Functional,Score,31.8932
+TRQ-TTG4-1,Type 1,Functional,Score,14.6233
+TRQ-TTG4-1,Type 2,Functional,Score,85.3285
+TRQ-TTG4-1,Type 3,Functional,Score,46.522
+TRR-ACG2-2,Type 1,Functional,Score,13.6867
+TRR-ACG2-2,Type 3,Functional,Score,33.8031
+TRS-CGA4-1,Type 3,Functional,Score,52.8569
+TRT-CGT5-1,Type 3,Functional,Score,31.485
+TRU-TCA2-1,Type 1,Functional,Score,19.4185
+TRU-TCA2-1,Type 2,Functional,Score,118.977
+TRU-TCA2-1,Type 3,Functional,Score,103.161
+TRV-AAC1-1,Type 3,Functional,Score,31.0576
+TRV-AAC2-1,Type 1,Functional,Score,18.8221
+TRV-AAC2-1,Type 2,Functional,Score,84.2155
+TRV-AAC2-1,Type 3,Functional,Score,48.8071
+TRV-AAC5-1,Type 1,Functional,Score,14.1428
+TRV-AAC5-1,Type 3,Functional,Score,39.5076
+TRV-TAC3-1,Type 2,Functional,Score,110.286
+TRV-TAC3-1,Type 3,Functional,Score,59.1644
+TRY-ATA1-1,Type 1,Functional,Score,17.0711
+TRY-ATA1-1,Type 3,Functional,Score,39.4138
+RN7SL1,Type 1,Functional,Score,19.435964814814813
+RN7SL1,Type 3,Functional,Score,88.5905479591837
+RN7SL100P,Type 1,Pseudogene,Score,15.826
+RN7SL100P,Type 2,Pseudogene,Score,186.594
+RN7SL100P,Type 3,Pseudogene,Score,188.404
+RN7SL108P,Type 1,Pseudogene,Score,13.6867
+RN7SL110P,Type 1,Pseudogene,Score,16.0431
+RN7SL113P,Type 1,Pseudogene,Score,19.2117
+RN7SL118P,Type 1,Pseudogene,Score,15.743
+RN7SL11P,Type 1,Pseudogene,Score,19.1017
+RN7SL121P,Type 1,Pseudogene,Score,24.65595
+RN7SL121P,Type 2,Pseudogene,Score,344.674
+RN7SL121P,Type 3,Pseudogene,Score,269.124
+RN7SL123P,Type 1,Pseudogene,Score,31.5442
+RN7SL123P,Type 2,Pseudogene,Score,296.764
+RN7SL123P,Type 3,Pseudogene,Score,268.64
+RN7SL126P,Type 1,Pseudogene,Score,25.9335
+RN7SL126P,Type 2,Pseudogene,Score,165.833
+RN7SL126P,Type 3,Pseudogene,Score,165.687
+RN7SL128P,Type 1,Pseudogene,Score,15.6618
+RN7SL131P,Type 1,Pseudogene,Score,22.371
+RN7SL131P,Type 2,Pseudogene,Score,266.849
+RN7SL131P,Type 3,Pseudogene,Score,213.481
+RN7SL132P,Type 1,Pseudogene,Score,18.6636
+RN7SL134P,Type 1,Pseudogene,Score,20.968400000000003
+RN7SL134P,Type 2,Pseudogene,Score,324.715
+RN7SL134P,Type 3,Pseudogene,Score,331.056
+RN7SL135P,Type 1,Pseudogene,Score,18.722
+RN7SL140P,Type 1,Pseudogene,Score,28.2581
+RN7SL140P,Type 2,Pseudogene,Score,127.212
+RN7SL143P,Type 1,Pseudogene,Score,20.7065
+RN7SL146P,Type 1,Pseudogene,Score,25.8822
+RN7SL147P,Type 1,Pseudogene,Score,14.8965
+RN7SL148P,Type 1,Pseudogene,Score,16.2521
+RN7SL150P,Type 1,Pseudogene,Score,21.877
+RN7SL151P,Type 1,Pseudogene,Score,20.9137
+RN7SL153P,Type 1,Pseudogene,Score,17.3685
+RN7SL154P,Type 1,Pseudogene,Score,21.27095
+RN7SL154P,Type 2,Pseudogene,Score,304.397
+RN7SL154P,Type 3,Pseudogene,Score,241.111
+RN7SL155P,Type 1,Pseudogene,Score,26.2504
+RN7SL155P,Type 2,Pseudogene,Score,339.248
+RN7SL155P,Type 3,Pseudogene,Score,225.189
+RN7SL156P,Type 1,Pseudogene,Score,28.9072
+RN7SL159P,Type 1,Pseudogene,Score,15.6186
+RN7SL15P,Type 1,Pseudogene,Score,15.5245
+RN7SL162P,Type 1,Pseudogene,Score,15.826
+RN7SL163P,Type 1,Pseudogene,Score,15.5644
+RN7SL163P,Type 2,Pseudogene,Score,254.506
+RN7SL163P,Type 3,Pseudogene,Score,277.488
+RN7SL167P,Type 1,Pseudogene,Score,16.216
+RN7SL168P,Type 1,Pseudogene,Score,13.6867
+RN7SL170P,Type 1,Pseudogene,Score,19.7159
+RN7SL172P,Type 1,Pseudogene,Score,14.8965
+RN7SL173P,Type 1,Pseudogene,Score,17.6062
+RN7SL176P,Type 1,Pseudogene,Score,15.062
+RN7SL178P,Type 1,Pseudogene,Score,15.5618
+RN7SL181P,Type 1,Pseudogene,Score,27.7394
+RN7SL181P,Type 2,Pseudogene,Score,126.1
+RN7SL182P,Type 1,Pseudogene,Score,15.3239
+RN7SL186P,Type 1,Pseudogene,Score,14.3904
+RN7SL186P,Type 2,Pseudogene,Score,123.726
+RN7SL187P,Type 1,Pseudogene,Score,17.148
+RN7SL18P,Type 1,Pseudogene,Score,13.2749
+RN7SL190P,Type 1,Pseudogene,Score,20.78855
+RN7SL190P,Type 2,Pseudogene,Score,302.447
+RN7SL190P,Type 3,Pseudogene,Score,285.148
+RN7SL197P,Type 1,Pseudogene,Score,13.5944
+RN7SL198P,Type 1,Pseudogene,Score,25.30855
+RN7SL198P,Type 2,Pseudogene,Score,249.594
+RN7SL198P,Type 3,Pseudogene,Score,213.605
+RN7SL19P,Type 1,Pseudogene,Score,16.837
+RN7SL2,Type 1,Functional,Score,19.367111538461536
+RN7SL2,Type 3,Functional,Score,77.66457659574468
+RN7SL202P,Type 1,Pseudogene,Score,22.95975
+RN7SL202P,Type 2,Pseudogene,Score,307.165
+RN7SL202P,Type 3,Pseudogene,Score,266.608
+RN7SL203P,Type 1,Pseudogene,Score,14.3794
+RN7SL204P,Type 1,Pseudogene,Score,30.6326
+RN7SL204P,Type 2,Pseudogene,Score,190.972
+RN7SL204P,Type 3,Pseudogene,Score,221.414
+RN7SL205P,Type 1,Pseudogene,Score,18.2042
+RN7SL208P,Type 1,Pseudogene,Score,13.6867
+RN7SL210P,Type 1,Pseudogene,Score,14.8142
+RN7SL213P,Type 1,Pseudogene,Score,17.36405
+RN7SL217P,Type 1,Pseudogene,Score,32.2983
+RN7SL217P,Type 2,Pseudogene,Score,107.89
+RN7SL222P,Type 1,Pseudogene,Score,13.6867
+RN7SL225P,Type 1,Pseudogene,Score,15.0554
+RN7SL229P,Type 1,Pseudogene,Score,18.2679
+RN7SL22P,Type 1,Pseudogene,Score,20.3609
+RN7SL230P,Type 1,Pseudogene,Score,13.6867
+RN7SL234P,Type 1,Pseudogene,Score,24.7657
+RN7SL234P,Type 3,Pseudogene,Score,140.507
+RN7SL237P,Type 1,Pseudogene,Score,16.7868
+RN7SL239P,Type 1,Pseudogene,Score,17.3685
+RN7SL248P,Type 1,Pseudogene,Score,20.6416
+RN7SL248P,Type 2,Pseudogene,Score,140.199
+RN7SL250P,Type 1,Pseudogene,Score,13.6867
+RN7SL250P,Type 3,Pseudogene,Score,141.499
+RN7SL251P,Type 1,Pseudogene,Score,15.7365
+RN7SL253P,Type 1,Pseudogene,Score,16.3049
+RN7SL254P,Type 1,Pseudogene,Score,17.9922
+RN7SL255P,Type 1,Pseudogene,Score,22.4487
+RN7SL25P,Type 1,Pseudogene,Score,20.85645
+RN7SL25P,Type 2,Pseudogene,Score,234.267
+RN7SL25P,Type 3,Pseudogene,Score,201.128
+RN7SL260P,Type 1,Pseudogene,Score,15.9738
+RN7SL261P,Type 1,Pseudogene,Score,14.5171
+RN7SL262P,Type 1,Pseudogene,Score,19.1037
+RN7SL263P,Type 1,Pseudogene,Score,15.1256
+RN7SL267P,Type 1,Pseudogene,Score,15.6264
+RN7SL269P,Type 1,Pseudogene,Score,15.2367
+RN7SL26P,Type 1,Pseudogene,Score,26.1023
+RN7SL26P,Type 2,Pseudogene,Score,128.627
+RN7SL271P,Type 1,Pseudogene,Score,13.7756
+RN7SL272P,Type 1,Pseudogene,Score,22.77545
+RN7SL274P,Type 1,Pseudogene,Score,22.27615
+RN7SL274P,Type 2,Pseudogene,Score,298.959
+RN7SL274P,Type 3,Pseudogene,Score,271.447
+RN7SL275P,Type 1,Pseudogene,Score,16.18555
+RN7SL275P,Type 2,Pseudogene,Score,171.608
+RN7SL275P,Type 3,Pseudogene,Score,297.749
+RN7SL278P,Type 1,Pseudogene,Score,14.993
+RN7SL279P,Type 1,Pseudogene,Score,31.2174
+RN7SL279P,Type 2,Pseudogene,Score,241.451
+RN7SL279P,Type 3,Pseudogene,Score,198.481
+RN7SL280P,Type 1,Pseudogene,Score,26.5006
+RN7SL282P,Type 1,Pseudogene,Score,21.0826
+RN7SL284P,Type 2,Pseudogene,Score,137.161
+RN7SL28P,Type 1,Pseudogene,Score,14.401
+RN7SL290P,Type 1,Pseudogene,Score,19.4078
+RN7SL299P,Type 1,Pseudogene,Score,16.3013
+RN7SL3,Type 1,Functional,Score,18.42644482758621
+RN7SL3,Type 3,Functional,Score,84.41780175438596
+RN7SL300P,Type 1,Pseudogene,Score,17.2848
+RN7SL303P,Type 1,Pseudogene,Score,14.0247
+RN7SL304P,Type 1,Pseudogene,Score,16.8967
+RN7SL305P,Type 1,Pseudogene,Score,13.941
+RN7SL30P,Type 1,Pseudogene,Score,22.6348
+RN7SL310P,Type 1,Pseudogene,Score,15.1495
+RN7SL311P,Type 1,Pseudogene,Score,13.6867
+RN7SL313P,Type 1,Pseudogene,Score,14.6047
+RN7SL317P,Type 1,Pseudogene,Score,19.18655
+RN7SL318P,Type 1,Pseudogene,Score,16.837
+RN7SL320P,Type 1,Pseudogene,Score,15.5077
+RN7SL321P,Type 1,Pseudogene,Score,13.5244
+RN7SL321P,Type 2,Pseudogene,Score,107.731
+RN7SL323P,Type 1,Pseudogene,Score,17.5865
+RN7SL326P,Type 1,Pseudogene,Score,18.4021
+RN7SL328P,Type 1,Pseudogene,Score,18.2358
+RN7SL32P,Type 1,Pseudogene,Score,26.60185
+RN7SL32P,Type 2,Pseudogene,Score,314.254
+RN7SL32P,Type 3,Pseudogene,Score,284.275
+RN7SL334P,Type 1,Pseudogene,Score,27.7293
+RN7SL339P,Type 1,Pseudogene,Score,21.0914
+RN7SL339P,Type 2,Pseudogene,Score,359.228
+RN7SL339P,Type 3,Pseudogene,Score,290.437
+RN7SL33P,Type 1,Pseudogene,Score,17.438
+RN7SL33P,Type 3,Pseudogene,Score,161.858
+RN7SL340P,Type 1,Pseudogene,Score,14.6047
+RN7SL341P,Type 1,Pseudogene,Score,20.9951
+RN7SL342P,Type 1,Pseudogene,Score,14.3016
+RN7SL343P,Type 1,Pseudogene,Score,13.6867
+RN7SL344P,Type 1,Pseudogene,Score,15.41895
+RN7SL353P,Type 1,Pseudogene,Score,25.9704
+RN7SL353P,Type 2,Pseudogene,Score,296.714
+RN7SL353P,Type 3,Pseudogene,Score,292.396
+RN7SL354P,Type 1,Pseudogene,Score,23.6631
+RN7SL356P,Type 1,Pseudogene,Score,34.1078
+RN7SL356P,Type 2,Pseudogene,Score,218.625
+RN7SL356P,Type 3,Pseudogene,Score,257.286
+RN7SL359P,Type 1,Pseudogene,Score,16.5424
+RN7SL35P,Type 1,Pseudogene,Score,17.2928
+RN7SL361P,Type 1,Pseudogene,Score,13.9709
+RN7SL363P,Type 1,Pseudogene,Score,16.9426
+RN7SL363P,Type 3,Pseudogene,Score,158.513
+RN7SL364P,Type 1,Pseudogene,Score,13.6665
+RN7SL368P,Type 1,Pseudogene,Score,21.8249
+RN7SL369P,Type 1,Pseudogene,Score,13.6867
+RN7SL36P,Type 1,Pseudogene,Score,18.9544
+RN7SL371P,Type 1,Pseudogene,Score,29.5587
+RN7SL371P,Type 2,Pseudogene,Score,298.755
+RN7SL371P,Type 3,Pseudogene,Score,266.324
+RN7SL372P,Type 2,Pseudogene,Score,113.733
+RN7SL376P,Type 2,Pseudogene,Score,306.568
+RN7SL376P,Type 3,Pseudogene,Score,250.857
+RN7SL377P,Type 1,Pseudogene,Score,15.64455
+RN7SL377P,Type 2,Pseudogene,Score,224.86
+RN7SL377P,Type 3,Pseudogene,Score,202.925
+RN7SL382P,Type 1,Pseudogene,Score,15.0217
+RN7SL385P,Type 1,Pseudogene,Score,13.6867
+RN7SL386P,Type 1,Pseudogene,Score,13.3383
+RN7SL386P,Type 2,Pseudogene,Score,123.879
+RN7SL387P,Type 1,Pseudogene,Score,20.52655
+RN7SL387P,Type 2,Pseudogene,Score,255.257
+RN7SL387P,Type 3,Pseudogene,Score,236.97
+RN7SL388P,Type 1,Pseudogene,Score,18.5696
+RN7SL38P,Type 1,Pseudogene,Score,19.2217
+RN7SL391P,Type 1,Pseudogene,Score,27.2165
+RN7SL391P,Type 2,Pseudogene,Score,338.804
+RN7SL391P,Type 3,Pseudogene,Score,308.313
+RN7SL392P,Type 1,Pseudogene,Score,18.46755
+RN7SL39P,Type 1,Pseudogene,Score,14.1279
+RN7SL400P,Type 1,Pseudogene,Score,20.3609
+RN7SL401P,Type 1,Pseudogene,Score,15.1331
+RN7SL403P,Type 1,Pseudogene,Score,18.5803
+RN7SL403P,Type 2,Pseudogene,Score,200.058
+RN7SL403P,Type 3,Pseudogene,Score,164.597
+RN7SL405P,Type 1,Pseudogene,Score,25.2553
+RN7SL405P,Type 2,Pseudogene,Score,213.691
+RN7SL405P,Type 3,Pseudogene,Score,202.299
+RN7SL408P,Type 1,Pseudogene,Score,15.2098
+RN7SL411P,Type 1,Pseudogene,Score,17.6847
+RN7SL416P,Type 2,Pseudogene,Score,114.037
+RN7SL418P,Type 1,Pseudogene,Score,15.97415
+RN7SL419P,Type 1,Pseudogene,Score,13.6867
+RN7SL420P,Type 1,Pseudogene,Score,24.788
+RN7SL422P,Type 1,Pseudogene,Score,13.6867
+RN7SL423P,Type 1,Pseudogene,Score,13.6867
+RN7SL424P,Type 1,Pseudogene,Score,15.9258
+RN7SL431P,Type 1,Pseudogene,Score,13.6867
+RN7SL432P,Type 1,Pseudogene,Score,20.8842
+RN7SL438P,Type 1,Pseudogene,Score,28.0331
+RN7SL43P,Type 1,Pseudogene,Score,22.409
+RN7SL440P,Type 1,Pseudogene,Score,17.1977
+RN7SL440P,Type 2,Pseudogene,Score,270.271
+RN7SL440P,Type 3,Pseudogene,Score,297.895
+RN7SL445P,Type 1,Pseudogene,Score,13.6867
+RN7SL449P,Type 2,Pseudogene,Score,110.088
+RN7SL44P,Type 1,Pseudogene,Score,21.6698
+RN7SL451P,Type 1,Pseudogene,Score,17.3685
+RN7SL453P,Type 1,Pseudogene,Score,20.7384
+RN7SL453P,Type 2,Pseudogene,Score,140.659
+RN7SL455P,Type 1,Pseudogene,Score,42.7104
+RN7SL455P,Type 2,Pseudogene,Score,267.039
+RN7SL455P,Type 3,Pseudogene,Score,242.799
+RN7SL45P,Type 1,Pseudogene,Score,14.9294
+RN7SL460P,Type 1,Pseudogene,Score,25.5644
+RN7SL460P,Type 2,Pseudogene,Score,267.471
+RN7SL460P,Type 3,Pseudogene,Score,229.738
+RN7SL461P,Type 1,Pseudogene,Score,13.6867
+RN7SL462P,Type 1,Pseudogene,Score,13.7034
+RN7SL468P,Type 1,Pseudogene,Score,14.9008
+RN7SL470P,Type 1,Pseudogene,Score,23.9438
+RN7SL470P,Type 2,Pseudogene,Score,292.989
+RN7SL470P,Type 3,Pseudogene,Score,277.799
+RN7SL471P,Type 1,Pseudogene,Score,20.7384
+RN7SL473P,Type 1,Pseudogene,Score,14.0302
+RN7SL474P,Type 1,Pseudogene,Score,21.61045
+RN7SL474P,Type 2,Pseudogene,Score,321.214
+RN7SL474P,Type 3,Pseudogene,Score,264.289
+RN7SL475P,Type 1,Pseudogene,Score,25.6332
+RN7SL478P,Type 1,Pseudogene,Score,17.43245
+RN7SL479P,Type 1,Pseudogene,Score,15.2769
+RN7SL47P,Type 1,Pseudogene,Score,15.501449999999998
+RN7SL480P,Type 1,Pseudogene,Score,13.5941
+RN7SL481P,Type 1,Pseudogene,Score,16.9037
+RN7SL482P,Type 1,Pseudogene,Score,15.5618
+RN7SL483P,Type 1,Pseudogene,Score,13.6867
+RN7SL483P,Type 3,Pseudogene,Score,143.488
+RN7SL487P,Type 3,Pseudogene,Score,137.853
+RN7SL488P,Type 1,Pseudogene,Score,24.4542
+RN7SL488P,Type 2,Pseudogene,Score,341.297
+RN7SL488P,Type 3,Pseudogene,Score,303.743
+RN7SL48P,Type 1,Pseudogene,Score,19.7233
+RN7SL48P,Type 2,Pseudogene,Score,231.422
+RN7SL48P,Type 3,Pseudogene,Score,209.258
+RN7SL491P,Type 1,Pseudogene,Score,15.0762
+RN7SL491P,Type 2,Pseudogene,Score,286.701
+RN7SL491P,Type 3,Pseudogene,Score,250.73
+RN7SL492P,Type 1,Pseudogene,Score,30.3445
+RN7SL493P,Type 1,Pseudogene,Score,13.6867
+RN7SL496P,Type 1,Pseudogene,Score,14.6233
+RN7SL497P,Type 1,Pseudogene,Score,14.2734
+RN7SL499P,Type 1,Pseudogene,Score,13.6867
+RN7SL4P,Type 1,Pseudogene,Score,16.7759
+RN7SL503P,Type 1,Pseudogene,Score,14.8965
+RN7SL503P,Type 2,Pseudogene,Score,118.287
+RN7SL504P,Type 1,Pseudogene,Score,20.3609
+RN7SL505P,Type 1,Pseudogene,Score,24.3606
+RN7SL507P,Type 1,Pseudogene,Score,40.8233
+RN7SL509P,Type 1,Pseudogene,Score,13.6867
+RN7SL510P,Type 1,Pseudogene,Score,21.3252
+RN7SL510P,Type 2,Pseudogene,Score,263.021
+RN7SL510P,Type 3,Pseudogene,Score,291.503
+RN7SL516P,Type 1,Pseudogene,Score,13.6867
+RN7SL517P,Type 1,Pseudogene,Score,16.5424
+RN7SL519P,Type 1,Pseudogene,Score,18.5803
+RN7SL520P,Type 1,Pseudogene,Score,20.4288
+RN7SL523P,Type 1,Pseudogene,Score,18.96515
+RN7SL524P,Type 1,Pseudogene,Score,14.53725
+RN7SL524P,Type 2,Pseudogene,Score,357.918
+RN7SL524P,Type 3,Pseudogene,Score,366.015
+RN7SL525P,Type 1,Pseudogene,Score,20.90385
+RN7SL525P,Type 2,Pseudogene,Score,336.104
+RN7SL525P,Type 3,Pseudogene,Score,279.58
+RN7SL526P,Type 1,Pseudogene,Score,26.8896
+RN7SL52P,Type 1,Pseudogene,Score,17.135
+RN7SL530P,Type 1,Pseudogene,Score,16.2427
+RN7SL531P,Type 1,Pseudogene,Score,25.71475
+RN7SL531P,Type 2,Pseudogene,Score,210.341
+RN7SL531P,Type 3,Pseudogene,Score,203.859
+RN7SL535P,Type 1,Pseudogene,Score,17.3685
+RN7SL542P,Type 1,Pseudogene,Score,15.3362
+RN7SL543P,Type 1,Pseudogene,Score,15.0899
+RN7SL546P,Type 1,Pseudogene,Score,13.6867
+RN7SL551P,Type 1,Pseudogene,Score,19.4167
+RN7SL552P,Type 1,Pseudogene,Score,14.4543
+RN7SL553P,Type 1,Pseudogene,Score,16.2163
+RN7SL555P,Type 1,Pseudogene,Score,24.0562
+RN7SL556P,Type 1,Pseudogene,Score,15.9718
+RN7SL557P,Type 1,Pseudogene,Score,22.5164
+RN7SL557P,Type 2,Pseudogene,Score,140.605
+RN7SL559P,Type 1,Pseudogene,Score,14.2031
+RN7SL560P,Type 1,Pseudogene,Score,16.7226
+RN7SL560P,Type 2,Pseudogene,Score,109.44855
+RN7SL560P,Type 3,Pseudogene,Score,317.787
+RN7SL561P,Type 1,Pseudogene,Score,13.6867
+RN7SL563P,Type 1,Pseudogene,Score,15.8028
+RN7SL565P,Type 1,Pseudogene,Score,16.6864
+RN7SL567P,Type 1,Pseudogene,Score,13.6867
+RN7SL568P,Type 1,Pseudogene,Score,13.6867
+RN7SL574P,Type 1,Pseudogene,Score,15.2796
+RN7SL577P,Type 1,Pseudogene,Score,20.1791
+RN7SL57P,Type 1,Pseudogene,Score,16.4755
+RN7SL580P,Type 2,Pseudogene,Score,120.363
+RN7SL581P,Type 1,Pseudogene,Score,19.1003
+RN7SL582P,Type 1,Pseudogene,Score,13.6867
+RN7SL584P,Type 1,Pseudogene,Score,27.4687
+RN7SL586P,Type 1,Pseudogene,Score,28.2419
+RN7SL587P,Type 1,Pseudogene,Score,15.3409
+RN7SL589P,Type 1,Pseudogene,Score,13.6867
+RN7SL592P,Type 1,Pseudogene,Score,48.4475
+RN7SL592P,Type 2,Pseudogene,Score,171.065
+RN7SL592P,Type 3,Pseudogene,Score,138.194
+RN7SL596P,Type 1,Pseudogene,Score,15.9646
+RN7SL596P,Type 2,Pseudogene,Score,286.514
+RN7SL596P,Type 3,Pseudogene,Score,277.216
+RN7SL600P,Type 1,Pseudogene,Score,16.87915
+RN7SL600P,Type 2,Pseudogene,Score,135.356
+RN7SL601P,Type 1,Pseudogene,Score,16.399
+RN7SL602P,Type 1,Pseudogene,Score,21.73375
+RN7SL602P,Type 2,Pseudogene,Score,344.766
+RN7SL602P,Type 3,Pseudogene,Score,317.91
+RN7SL604P,Type 1,Pseudogene,Score,13.6867
+RN7SL605P,Type 1,Pseudogene,Score,39.2007
+RN7SL605P,Type 2,Pseudogene,Score,200.487
+RN7SL605P,Type 3,Pseudogene,Score,200.376
+RN7SL607P,Type 1,Pseudogene,Score,13.0873
+RN7SL60P,Type 1,Pseudogene,Score,19.2117
+RN7SL610P,Type 1,Pseudogene,Score,25.8307
+RN7SL610P,Type 3,Pseudogene,Score,168.117
+RN7SL612P,Type 1,Pseudogene,Score,20.0911
+RN7SL614P,Type 1,Pseudogene,Score,18.2272
+RN7SL617P,Type 1,Pseudogene,Score,16.837
+RN7SL619P,Type 1,Pseudogene,Score,33.5334
+RN7SL619P,Type 2,Pseudogene,Score,294.736
+RN7SL619P,Type 3,Pseudogene,Score,224.078
+RN7SL622P,Type 1,Pseudogene,Score,22.7518
+RN7SL622P,Type 2,Pseudogene,Score,289.628
+RN7SL622P,Type 3,Pseudogene,Score,281.826
+RN7SL624P,Type 1,Pseudogene,Score,16.8615
+RN7SL624P,Type 2,Pseudogene,Score,289.884
+RN7SL624P,Type 3,Pseudogene,Score,277.587
+RN7SL625P,Type 1,Pseudogene,Score,26.7047
+RN7SL627P,Type 1,Pseudogene,Score,14.1767
+RN7SL62P,Type 1,Pseudogene,Score,13.6867
+RN7SL633P,Type 1,Pseudogene,Score,23.2941
+RN7SL634P,Type 1,Pseudogene,Score,22.1813
+RN7SL634P,Type 2,Pseudogene,Score,112.53
+RN7SL635P,Type 1,Pseudogene,Score,20.5278
+RN7SL636P,Type 1,Pseudogene,Score,20.7384
+RN7SL640P,Type 1,Pseudogene,Score,13.6867
+RN7SL643P,Type 1,Pseudogene,Score,14.1365
+RN7SL644P,Type 1,Pseudogene,Score,14.8283
+RN7SL644P,Type 2,Pseudogene,Score,328.755
+RN7SL644P,Type 3,Pseudogene,Score,280.202
+RN7SL645P,Type 1,Pseudogene,Score,14.9221
+RN7SL648P,Type 1,Pseudogene,Score,14.1172
+RN7SL649P,Type 1,Pseudogene,Score,15.3862
+RN7SL650P,Type 1,Pseudogene,Score,20.7384
+RN7SL650P,Type 2,Pseudogene,Score,133.346
+RN7SL652P,Type 3,Pseudogene,Score,176.224
+RN7SL658P,Type 1,Pseudogene,Score,18.8259
+RN7SL659P,Type 1,Pseudogene,Score,14.8965
+RN7SL663P,Type 1,Pseudogene,Score,19.0493
+RN7SL663P,Type 2,Pseudogene,Score,140.81
+RN7SL664P,Type 1,Pseudogene,Score,16.6331
+RN7SL664P,Type 2,Pseudogene,Score,144.149
+RN7SL666P,Type 1,Pseudogene,Score,14.4667
+RN7SL667P,Type 1,Pseudogene,Score,23.13525
+RN7SL667P,Type 2,Pseudogene,Score,305.637
+RN7SL667P,Type 3,Pseudogene,Score,239.602
+RN7SL668P,Type 1,Pseudogene,Score,22.8804
+RN7SL66P,Type 1,Pseudogene,Score,21.8069
+RN7SL66P,Type 2,Pseudogene,Score,287.459
+RN7SL66P,Type 3,Pseudogene,Score,275.869
+RN7SL670P,Type 1,Pseudogene,Score,29.2344
+RN7SL670P,Type 2,Pseudogene,Score,280.594
+RN7SL670P,Type 3,Pseudogene,Score,245.056
+RN7SL672P,Type 1,Pseudogene,Score,19.9678
+RN7SL676P,Type 1,Pseudogene,Score,39.8024
+RN7SL676P,Type 2,Pseudogene,Score,181.133
+RN7SL676P,Type 3,Pseudogene,Score,163.05
+RN7SL679P,Type 1,Pseudogene,Score,17.3685
+RN7SL683P,Type 1,Pseudogene,Score,20.3654
+RN7SL685P,Type 1,Pseudogene,Score,19.7943
+RN7SL687P,Type 1,Pseudogene,Score,14.1559
+RN7SL68P,Type 1,Pseudogene,Score,15.643
+RN7SL690P,Type 1,Pseudogene,Score,50.6701
+RN7SL690P,Type 2,Pseudogene,Score,206.24
+RN7SL690P,Type 3,Pseudogene,Score,196.044
+RN7SL691P,Type 1,Pseudogene,Score,22.8936
+RN7SL693P,Type 1,Pseudogene,Score,18.7473
+RN7SL693P,Type 2,Pseudogene,Score,317.821
+RN7SL693P,Type 3,Pseudogene,Score,275.134
+RN7SL69P,Type 1,Pseudogene,Score,15.28815
+RN7SL704P,Type 1,Pseudogene,Score,15.9717
+RN7SL709P,Type 1,Pseudogene,Score,16.63045
+RN7SL711P,Type 3,Pseudogene,Score,144.11
+RN7SL712P,Type 1,Pseudogene,Score,13.6867
+RN7SL714P,Type 1,Pseudogene,Score,14.8965
+RN7SL716P,Type 1,Pseudogene,Score,26.6103
+RN7SL716P,Type 2,Pseudogene,Score,253.22
+RN7SL716P,Type 3,Pseudogene,Score,212.888
+RN7SL717P,Type 1,Pseudogene,Score,14.8965
+RN7SL718P,Type 1,Pseudogene,Score,26.02315
+RN7SL718P,Type 2,Pseudogene,Score,334.556
+RN7SL718P,Type 3,Pseudogene,Score,314.326
+RN7SL720P,Type 1,Pseudogene,Score,15.2521
+RN7SL720P,Type 2,Pseudogene,Score,131.8
+RN7SL722P,Type 1,Pseudogene,Score,16.645
+RN7SL724P,Type 1,Pseudogene,Score,22.7195
+RN7SL726P,Type 1,Pseudogene,Score,19.2117
+RN7SL727P,Type 1,Pseudogene,Score,19.4294
+RN7SL728P,Type 1,Pseudogene,Score,20.997
+RN7SL733P,Type 1,Pseudogene,Score,20.0257
+RN7SL733P,Type 2,Pseudogene,Score,129.148
+RN7SL735P,Type 1,Pseudogene,Score,13.6867
+RN7SL738P,Type 1,Pseudogene,Score,14.0134
+RN7SL73P,Type 1,Pseudogene,Score,42.7591
+RN7SL73P,Type 2,Pseudogene,Score,209.707
+RN7SL73P,Type 3,Pseudogene,Score,206.106
+RN7SL740P,Type 1,Pseudogene,Score,33.1839
+RN7SL740P,Type 2,Pseudogene,Score,166.99
+RN7SL741P,Type 1,Pseudogene,Score,30.4608
+RN7SL744P,Type 1,Pseudogene,Score,17.311
+RN7SL744P,Type 2,Pseudogene,Score,307.623
+RN7SL744P,Type 3,Pseudogene,Score,263.949
+RN7SL745P,Type 1,Pseudogene,Score,17.5106
+RN7SL748P,Type 1,Pseudogene,Score,35.0294
+RN7SL74P,Type 1,Pseudogene,Score,14.3634
+RN7SL750P,Type 1,Pseudogene,Score,31.6443
+RN7SL750P,Type 2,Pseudogene,Score,246.565
+RN7SL750P,Type 3,Pseudogene,Score,204.635
+RN7SL756P,Type 1,Pseudogene,Score,15.4875
+RN7SL757P,Type 1,Pseudogene,Score,16.6266
+RN7SL75P,Type 1,Pseudogene,Score,17.2104
+RN7SL762P,Type 1,Pseudogene,Score,18.5803
+RN7SL764P,Type 1,Pseudogene,Score,31.506
+RN7SL764P,Type 2,Pseudogene,Score,135.183
+RN7SL769P,Type 1,Pseudogene,Score,21.7671
+RN7SL769P,Type 3,Pseudogene,Score,143.538
+RN7SL771P,Type 1,Pseudogene,Score,22.618
+RN7SL774P,Type 1,Pseudogene,Score,22.9145
+RN7SL774P,Type 2,Pseudogene,Score,315.377
+RN7SL774P,Type 3,Pseudogene,Score,337.292
+RN7SL775P,Type 1,Pseudogene,Score,25.0496
+RN7SL775P,Type 2,Pseudogene,Score,149.889
+RN7SL775P,Type 3,Pseudogene,Score,147.132
+RN7SL782P,Type 1,Pseudogene,Score,13.6867
+RN7SL784P,Type 1,Pseudogene,Score,17.773049999999998
+RN7SL784P,Type 2,Pseudogene,Score,334.386
+RN7SL784P,Type 3,Pseudogene,Score,317.318
+RN7SL785P,Type 1,Pseudogene,Score,27.40995
+RN7SL785P,Type 2,Pseudogene,Score,162.215
+RN7SL785P,Type 3,Pseudogene,Score,151.582
+RN7SL786P,Type 1,Pseudogene,Score,26.0932
+RN7SL787P,Type 1,Pseudogene,Score,16.7057
+RN7SL788P,Type 1,Pseudogene,Score,15.6264
+RN7SL789P,Type 1,Pseudogene,Score,30.1408
+RN7SL789P,Type 3,Pseudogene,Score,155.935
+RN7SL790P,Type 1,Pseudogene,Score,18.63635
+RN7SL794P,Type 1,Pseudogene,Score,15.6264
+RN7SL795P,Type 1,Pseudogene,Score,18.9158
+RN7SL797P,Type 1,Pseudogene,Score,14.9164
+RN7SL798P,Type 1,Pseudogene,Score,18.3644
+RN7SL79P,Type 1,Pseudogene,Score,14.9944
+RN7SL79P,Type 2,Pseudogene,Score,123.472
+RN7SL800P,Type 1,Pseudogene,Score,15.5014
+RN7SL802P,Type 1,Pseudogene,Score,13.6867
+RN7SL803P,Type 1,Pseudogene,Score,19.3673
+RN7SL804P,Type 1,Pseudogene,Score,15.3409
+RN7SL809P,Type 1,Pseudogene,Score,15.0748
+RN7SL811P,Type 1,Pseudogene,Score,16.95465
+RN7SL811P,Type 2,Pseudogene,Score,344.031
+RN7SL811P,Type 3,Pseudogene,Score,318.352
+RN7SL813P,Type 1,Pseudogene,Score,15.3409
+RN7SL814P,Type 1,Pseudogene,Score,15.2469
+RN7SL815P,Type 1,Pseudogene,Score,16.9549
+RN7SL819P,Type 1,Pseudogene,Score,26.0254
+RN7SL819P,Type 2,Pseudogene,Score,262.278
+RN7SL819P,Type 3,Pseudogene,Score,250.847
+RN7SL820P,Type 1,Pseudogene,Score,14.26105
+RN7SL823P,Type 1,Pseudogene,Score,14.13935
+RN7SL824P,Type 1,Pseudogene,Score,15.6936
+RN7SL825P,Type 1,Pseudogene,Score,13.7125
+RN7SL827P,Type 1,Pseudogene,Score,13.6867
+RN7SL828P,Type 1,Pseudogene,Score,17.499850000000002
+RN7SL828P,Type 2,Pseudogene,Score,106.348
+RN7SL831P,Type 1,Pseudogene,Score,14.2967
+RN7SL832P,Type 1,Pseudogene,Score,23.9696
+RN7SL833P,Type 1,Pseudogene,Score,13.6867
+RN7SL835P,Type 1,Pseudogene,Score,18.95405
+RN7SL835P,Type 2,Pseudogene,Score,287.417
+RN7SL835P,Type 3,Pseudogene,Score,233.508
+RN7SL836P,Type 1,Pseudogene,Score,19.4956
+RN7SL836P,Type 2,Pseudogene,Score,115.553
+RN7SL842P,Type 2,Pseudogene,Score,114.785
+RN7SL845P,Type 1,Pseudogene,Score,17.1258
+RN7SL846P,Type 1,Pseudogene,Score,18.5649
+RN7SL847P,Type 1,Pseudogene,Score,25.9625
+RN7SL847P,Type 2,Pseudogene,Score,303.994
+RN7SL847P,Type 3,Pseudogene,Score,224.825
+RN7SL850P,Type 1,Pseudogene,Score,23.7186
+RN7SL850P,Type 2,Pseudogene,Score,284.014
+RN7SL850P,Type 3,Pseudogene,Score,256.849
+RN7SL851P,Type 1,Pseudogene,Score,13.96145
+RN7SL851P,Type 2,Pseudogene,Score,109.886
+RN7SL854P,Type 1,Pseudogene,Score,18.2679
+RN7SL856P,Type 1,Pseudogene,Score,20.5207
+RN7SL863P,Type 1,Pseudogene,Score,15.865
+RN7SL865P,Type 1,Pseudogene,Score,22.184
+RN7SL870P,Type 1,Pseudogene,Score,16.7759
+RN7SL88P,Type 1,Pseudogene,Score,13.6867
+RN7SL88P,Type 2,Pseudogene,Score,117.313
+RN7SL91P,Type 1,Pseudogene,Score,15.7422
+RN7SL92P,Type 1,Pseudogene,Score,24.75895
+RN7SL92P,Type 2,Pseudogene,Score,221.654
+RN7SL92P,Type 3,Pseudogene,Score,173.354
+RN7SL96P,Type 1,Pseudogene,Score,29.3211
+RN7SL96P,Type 2,Pseudogene,Score,336.981
+RN7SL96P,Type 3,Pseudogene,Score,306.944
+RN7SL97P,Type 1,Pseudogene,Score,19.5045
+RN7SL98P,Type 1,Pseudogene,Score,16.4161
+RNU7-1,Type 1,Functional,Score,18.4191
+RNU7-1,Type 3,Functional,Score,50.51136190476191
+RNU7-115P,Type 1,Pseudogene,Score,20.9585
+RNU7-126P,Type 1,Pseudogene,Score,21.9996
+RNU7-12P,Type 1,Pseudogene,Score,15.4171
+RNU7-138P,Type 1,Pseudogene,Score,15.9336
+RNU7-149P,Type 1,Pseudogene,Score,15.3369
+RNU7-15P,Type 2,Pseudogene,Score,129.921
+RNU7-170P,Type 1,Pseudogene,Score,16.5928
+RNU7-176P,Type 1,Pseudogene,Score,14.4875
+RNU7-179P,Type 1,Pseudogene,Score,24.6418
+RNU7-193P,Type 1,Pseudogene,Score,20.4041
+RNU7-33P,Type 1,Pseudogene,Score,20.8306
+RNU7-56P,Type 1,Pseudogene,Score,19.9903
+RNU7-72P,Type 1,Pseudogene,Score,20.7384
+RN7SK,Type 1,Functional,Score,19.814644
+RN7SK,Type 3,Functional,Score,63.394179518072285
+RN7SKP1,Type 1,Pseudogene,Score,19.338716666666667
+RN7SKP11,Type 1,Pseudogene,Score,20.8513
+RN7SKP117,Type 1,Pseudogene,Score,20.8513
+RN7SKP12,Type 1,Pseudogene,Score,17.1726
+RN7SKP123,Type 1,Pseudogene,Score,17.1726
+RN7SKP15,Type 1,Pseudogene,Score,18.7209
+RN7SKP150,Type 1,Pseudogene,Score,18.7209
+RN7SKP17,Type 1,Pseudogene,Score,21.057450000000003
+RN7SKP177,Type 1,Pseudogene,Score,23.5346
+RN7SKP178,Type 1,Pseudogene,Score,18.5803
+RN7SKP193,Type 3,Pseudogene,Score,151.444
+RN7SKP2,Type 1,Pseudogene,Score,20.643421428571433
+RN7SKP20,Type 1,Pseudogene,Score,17.3685
+RN7SKP22,Type 1,Pseudogene,Score,21.6606
+RN7SKP224,Type 1,Pseudogene,Score,25.9082
+RN7SKP224,Type 2,Pseudogene,Score,135.218
+RN7SKP224,Type 3,Pseudogene,Score,170.636
+RN7SKP23,Type 1,Pseudogene,Score,21.62006
+RN7SKP23,Type 2,Pseudogene,Score,168.6043
+RN7SKP25,Type 1,Pseudogene,Score,21.4804
+RN7SKP259,Type 1,Pseudogene,Score,21.4804
+RN7SKP26,Type 1,Pseudogene,Score,19.25445
+RN7SKP264,Type 1,Pseudogene,Score,19.2117
+RN7SKP269,Type 1,Pseudogene,Score,19.2972
+RN7SKP27,Type 1,Pseudogene,Score,29.0221
+RN7SKP271,Type 1,Pseudogene,Score,29.0221
+RN7SKP28,Type 1,Pseudogene,Score,14.8095
+RN7SKP286,Type 1,Pseudogene,Score,14.8095
+RN7SKP29,Type 1,Pseudogene,Score,16.397
+RN7SKP290,Type 1,Pseudogene,Score,16.397
+RN7SKP3,Type 1,Pseudogene,Score,16.5424
+RN7SKP4,Type 1,Pseudogene,Score,13.4238
+RN7SKP7,Type 1,Pseudogene,Score,17.354
+RN7SKP71,Type 1,Pseudogene,Score,17.3685
+RN7SKP78,Type 1,Pseudogene,Score,17.3395
+RN7SKP9,Type 1,Pseudogene,Score,25.6517
+RN7SKP98,Type 1,Pseudogene,Score,25.6517

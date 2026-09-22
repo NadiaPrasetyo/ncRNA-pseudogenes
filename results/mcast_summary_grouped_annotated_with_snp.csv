@@ -138,7 +138,7 @@
 "RNU2-27P","",False,False,False,"RNU2","pseudogene","pseudogene",1.2230381245444182
 "RNU2-28P","",False,False,False,"RNU2","pseudogene","pseudogene",1.249699061439249
 "RNU2-29P","",False,False,False,"RNU2","pseudogene","pseudogene",1.2129432066910355
-"RNU2-2P","",False,False,False,"RNU2","pseudogene","pseudogene",""
+"RNU2-2","",True,True,True,"RNU2","RNA, small nuclear","functional",4.9828238062590815
 "RNU2-30P","",True,True,True,"RNU2","pseudogene","pseudogene",1.3056148830242968
 "RNU2-31P","",False,False,False,"RNU2","pseudogene","pseudogene",1.0756423041154524
 "RNU2-32P","",False,True,False,"RNU2","pseudogene","pseudogene",0.9820163705766074

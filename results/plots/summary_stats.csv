@@ -1,13 +1,13 @@
-gene_type,promoter_type,mean_value,sd_value,n,metric
-functional,Type 1,2.1289719626168226,17.749616281898692,535,Mean motif count
-functional,Type 2,14.521495327102803,97.97706204463566,535,Mean motif count
-functional,Type 3,32.78130841121495,272.9770312225259,535,Mean motif count
-pseudogene,Type 1,0.87435809654228,2.370111365326895,2921,Mean motif count
-pseudogene,Type 2,4.750770284149264,7.886232167319834,2921,Mean motif count
-pseudogene,Type 3,11.872988702499145,33.53848677985348,2921,Mean motif count
-functional,Type 1,1.0140327141325312,4.1415622551153195,535,Mean score
-functional,Type 2,18.528094662235915,21.61007856621599,535,Mean score
-functional,Type 3,4.805906132883566,16.034325128802173,535,Mean score
-pseudogene,Type 1,3.849695788461225,7.9352271807893136,2921,Mean score
-pseudogene,Type 2,27.758623781224287,48.879651374987475,2921,Mean score
-pseudogene,Type 3,56.601496918720485,46.83508435322592,2921,Mean score
+gene_type,promoter_type,metric,mean_value,sd_value,n,Type_combined
+Functional,Type 1,Motif count,2.1514018691588785,17.754502327578674,535,Type 1.Functional
+Functional,Type 1,Score,1.0584702842259892,4.256607813762124,535,Type 1.Functional
+Functional,Type 2,Motif count,14.57196261682243,97.97652187080955,535,Type 2.Functional
+Functional,Type 2,Score,18.69153397687766,21.799515015873833,535,Type 2.Functional
+Functional,Type 3,Motif count,32.82616822429907,272.9736060063573,535,Type 3.Functional
+Functional,Type 3,Score,4.93880083693341,16.28706442538827,535,Type 3.Functional
+Pseudogene,Type 1,Motif count,0.87435809654228,2.370111365326895,2921,Type 1.Pseudogene
+Pseudogene,Type 1,Score,3.849695788461225,7.9352271807893136,2921,Type 1.Pseudogene
+Pseudogene,Type 2,Motif count,4.750770284149264,7.886232167319834,2921,Type 2.Pseudogene
+Pseudogene,Type 2,Score,27.758623781224287,48.879651374987475,2921,Type 2.Pseudogene
+Pseudogene,Type 3,Motif count,11.872988702499145,33.53848677985348,2921,Type 3.Pseudogene
+Pseudogene,Type 3,Score,56.601496918720485,46.83508435322592,2921,Type 3.Pseudogene
