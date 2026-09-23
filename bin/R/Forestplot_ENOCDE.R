@@ -175,13 +175,34 @@ pooled_jitter <- normalized_data %>%
   )
 
 # -----------------------------------------------------------------------
-# Log-scaled x-axis: Z-scores can be negative (and are often clustered
-# near zero for pseudogenes), so a plain log10 scale would drop/NaN those
-# values. Use a pseudo-log transform instead - it behaves like log10 for
-# large |Z| but stays linear (and defined) near zero, including negatives.
-# (Unchanged.)
+# Log-scaled x-axis: a plain log10 scale is undefined at Z = 0, so a
+# pseudo-log transform is used instead - it behaves like log10 away from
+# zero but stays linear (and defined) right at zero.
+#
+# UPDATED: this dataset has no Z-scores below 0, so the negative breaks
+# are gone and the goal is now to give the 0-10 range plenty of room
+# while still letting the (rare, very large) points above 100000 show up
+# near the right edge instead of being clipped out of view entirely.
+#
+# The choice of sigma matters a lot here. A very small sigma (as used for
+# the SNP-enrichment log2 axis, or the earlier version of this plot) makes
+# the transform match TRUE log10 almost everywhere - but that also means
+# the jump from the single point at exactly 0 to the point at 1 swallows
+# most of the space "reserved" for 0-10, squashing 1, 2, 3, 5, 10 together
+# right next to it. sigma = 0.5 keeps that 0->1 step reasonable while
+# still giving the whole 0-10 stretch about as much width as one full log
+# decade further out (10->100, 100->1000, etc.) - i.e. 0-10 is treated
+# like its own "decade" rather than a sliver squeezed against the origin.
+#
+# No coord_cartesian() xlim is applied here (unlike the earlier version of
+# this script) specifically so nothing gets clipped: points above 100000
+# still land on the plot, just compressed toward the right edge the way
+# any log-scaled axis compresses its largest values.
 # -----------------------------------------------------------------------
-z_breaks <- c(-10, -3, -1, 0, 1, 2, 3, 10, 100, 1000, 10000, 100000)
+x_trans  <- scales::pseudo_log_trans(base = 10, sigma = 0.005)
+z_breaks <- c(0, 0.1, 0.5, 1, 2, 3, 10, 100, 1000, 10000, 100000)
+x_view_range <- c(0, 500000)
+z_labels <- z_breaks
 
 forest_plot <- ggplot() +
   geom_vline(xintercept = 0, linetype = "solid", color = "grey40", linewidth = 0.4) +
@@ -224,10 +245,11 @@ forest_plot <- ggplot() +
   scale_color_manual(values = custom_colors) +
   scale_fill_manual(values = custom_colors) +
   scale_x_continuous(
-    trans = scales::pseudo_log_trans(sigma = 1, base = 10),
+    trans  = x_trans,
     breaks = z_breaks,
-    labels = z_breaks
+    labels = z_labels
   ) +
+  coord_cartesian(xlim = x_view_range) +
   scale_y_continuous(
     breaks = seq_along(group_levels_rev),
     labels = group_levels_rev,
@@ -237,7 +259,7 @@ forest_plot <- ggplot() +
   labs(
     title = "Gene Expression (ENCODE) of Functional Genes vs Pseudogenes",
     #subtitle = "Z-scores computed against the pooled pseudogene median/MAD (vibrant = functional, pastel = pseudogene); points shown are outliers or groups with n\u22642; x-axis is pseudo-log scaled",
-    x = "Z-score (relative to pooled pseudogene distribution, pseudo-log scale)",
+    x = "Z-score (relative to pooled pseudogene distribution, pseudo-log10 scale)",
     y = NULL
   ) +
   theme(

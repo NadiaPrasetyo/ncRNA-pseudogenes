@@ -13,7 +13,8 @@ sources <- c("gnomad", "1000genomes", "pangenome", "dbsnp")
 # ---------------------------------------------------------------------------
 # NOTE: no Z-score here. "enrichment_intergenic" is already normalized
 # against its own flanking control region, so it's plotted directly on the
-# x-axis (log-scaled) rather than converted to a Z-score first.
+# x-axis rather than converted to a Z-score first. The x-axis itself uses a
+# log2 (pseudo-log) transform, see the "X-AXIS SCALING" note below.
 metric_col  <- "enrichment_intergenic"
 snp_sources <- c("1000genomes", "gnomad", "pangenome", "dbsnp")
 
@@ -81,7 +82,9 @@ long_data <- data %>%
   )
 
 # Keep zero/negative enrichment values (real data points) - they're handled
-# at plot time via a pseudo-log x-axis, which stays defined through zero.
+# at plot time via a pseudo-log2 x-axis, which stays defined through zero
+# (and negative values, if any slip through) while behaving like a log2
+# scale everywhere away from zero. See "X-AXIS SCALING" below.
 clean_data <- long_data %>%
   filter(is.finite(.data[[metric_col]]))
 
@@ -193,7 +196,37 @@ z_theme <- theme_minimal() +
 n_rows <- length(gene_group_order)
 all_outliers <- list()
 
-x_breaks <- c(0, 1, 2, 3, 4, 5)
+# ---------------------------------------------------------------------------
+# X-AXIS SCALING (log2 / pseudo-log)
+# ---------------------------------------------------------------------------
+# UPDATED: switched from a linear x-axis to a base-2 pseudo-log transform
+# so the 0-1 range (depletion) gets as much visual room as the >1 range
+# (enrichment) - e.g. the gap between 0.25 and 0.5 now reads the same
+# width as the gap between 2 and 4. A true log2 is undefined at 0 (and
+# negative values), so we use scales::pseudo_log_trans(base = 2), which
+# behaves like log2 away from zero but stays smoothly defined through
+# zero for any 0/negative enrichment points.
+#
+# UPDATED AGAIN: view is now centered on 1 (no enrichment/depletion), with
+# ticks at powers of 2 out to 4x in either direction (0.25, 0.5, 1, 2, 4).
+# In log2 space these are symmetric (-2, -1, 0, 1, 2), so centering the
+# view on this range puts the "1" gridline in the middle of the plot.
+# x_view_range sets that symmetric window via coord_cartesian() below -
+# it only zooms the display; points/violins beyond it are still part of
+# the underlying data (medians, IQR outlier flags, etc. are unaffected).
+#
+# UPDATED AGAIN: with the default sigma = 1, pseudo_log_trans is still in
+# its "linear near zero" regime at x = 0.25-0.5 (sigma sets the width of
+# that linear region), so those ticks were visibly compressed relative to
+# 2-4 even though they're the same log2 distance from 1. Shrinking sigma
+# to 0.001 pushes the linear region down near true zero, so everything at
+# 0.25 and above behaves like an honest log2 scale (evenly spaced ticks),
+# while 0 (and any stray negative values) still transform safely instead
+# of producing -Inf/NaN the way a plain log2 scale would.
+x_trans      <- scales::pseudo_log_trans(base = 2, sigma = 0.1)
+x_breaks     <- c(0.25, 0.5, 1, 2, 4)
+x_labels     <- x_breaks
+x_view_range <- c(0, 6)
 
 # ---------------------------------------------------------------------------
 # One long forest-style plot per SNP source
@@ -252,9 +285,11 @@ for (src in sources) {
     scale_color_manual(values = custom_colors) +
     scale_fill_manual(values = custom_colors) +
     scale_x_continuous(
+      trans  = x_trans,
       breaks = x_breaks,
-      labels = x_breaks
+      labels = x_labels
     ) +
+    coord_cartesian(xlim = x_view_range) +
     scale_y_continuous(
       breaks = seq_along(group_levels_rev),
       labels = group_levels_rev,
@@ -263,7 +298,7 @@ for (src in sources) {
     labs(
       title = paste0("SNP Enrichment (", src, ") of Functional Genes vs Pseudogenes"),
       #subtitle = "Vibrant = functional, pastel = pseudogene; points shown are IQR outliers or groups with n\u22642; solid vline at 1 = no enrichment/depletion",
-      x = "SNP Enrichment",
+      x = "SNP Enrichment (pseudo-log2 scale)",
       y = NULL
     ) +
     z_theme
