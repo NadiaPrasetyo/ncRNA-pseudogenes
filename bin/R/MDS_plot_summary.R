@@ -153,6 +153,11 @@ make_plot <- function(embed_df, x_col, y_col, title, subtitle, out_path,
                       shape_col = "Gene_Type",
                       shape_values = c("Functional" = 16, "Pseudogene" = 5),
                       shape_name = "Gene Type") {
+  # Sort so higher functional_probability points are drawn last (on top),
+  # since those are the ones we want to highlight when points overlap.
+  embed_df <- embed_df %>% arrange(functional_probability)
+  
+  
   p <- ggplot(embed_df, aes(x = .data[[x_col]], y = .data[[y_col]])) +
     geom_point(
       aes(shape = .data[[shape_col]], color = functional_probability),
@@ -179,48 +184,6 @@ make_plot <- function(embed_df, x_col, y_col, title, subtitle, out_path,
     )
   
   ggsave(out_path, plot = p, width = 9, height = 7, dpi = 300)
-  message(sprintf("Saved plot to: %s", out_path))
-  
-  coords_out <- sub("\\.[^.]+$", "_coordinates.csv", out_path)
-  write_csv(embed_df, coords_out)
-  message(sprintf("Saved coordinates to: %s", coords_out))
-  
-  invisible(p)
-}
-
-# 1D strip/jitter plot: originally used for LDA when it was fit on the
-# binary Gene_Type (which only yields a single discriminant axis). LDA is
-# now fit on a 4-group label (see Method 2 below), which gives 2+ axes and
-# uses make_plot() instead -- this function is no longer called anywhere,
-# kept here only in case you want a 1D axis view again in the future.
-make_strip_plot <- function(embed_df, group_col, value_col, title, subtitle, out_path) {
-  p <- ggplot(embed_df, aes(x = .data[[group_col]], y = .data[[value_col]])) +
-    geom_jitter(
-      aes(shape = Gene_Type, color = functional_probability),
-      width = 0.15, height = 0,
-      size = 3, stroke = 1.2, alpha = 0.8
-    ) +
-    scale_shape_manual(
-      values = c("Functional" = 16, "Pseudogene" = 5),  # solid circle vs open diamond
-      name = "Gene Type"
-    ) +
-    scale_color_gradient(
-      name = "Functional\nProbability",
-      low = "#1f77b4", high = "#d62728",
-      limits = c(0, 1)
-    ) +
-    guides(
-      shape = guide_legend(override.aes = list(color = "black", alpha = 1))
-    ) +
-    labs(title = title, subtitle = subtitle, x = group_col, y = value_col) +
-    theme_minimal(base_size = 13) +
-    theme(
-      plot.title = element_text(face = "bold"),
-      legend.key = element_rect(fill = "white"),
-      panel.grid.minor = element_blank()
-    )
-  
-  ggsave(out_path, plot = p, width = 7, height = 7, dpi = 300)
   message(sprintf("Saved plot to: %s", out_path))
   
   coords_out <- sub("\\.[^.]+$", "_coordinates.csv", out_path)
