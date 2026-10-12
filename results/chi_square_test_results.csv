@@ -1,0 +1,4 @@
+Test,Chi-square,P-value,Degrees_of_freedom,Critical_value_0.05,Significant_at_0.05
+snp_enrichment_category_vs_polIII_status,599.5883376698586,2.868918348527902e-124,8,15.50731305586545,True
+gene_type_vs_polIII_status,1375.6525916083167,1.3150581046754515e-296,4,9.487729036781154,True
+snp_enrichment_category_vs_gene_type,1027.8323978775427,6.442147143311347e-224,2,5.991464547107979,True

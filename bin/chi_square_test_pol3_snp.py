@@ -13,6 +13,25 @@ degrees of freedom, and the Chi-square critical value at alpha = 0.05
 (so the statistic can be compared against the critical value directly,
 in addition to using the p-value).
 
+NOTE ON EXCLUDED CATEGORIES
+----------------------------
+`observed_polIII_motif` is a mutually-exclusive label built from the
+three contains_typeN_promoter booleans (a gene is only labelled
+'type1' if type1 is present AND type2/type3 are both absent, etc.).
+In this dataset, a type1 motif almost never occurs on its own: it is
+present in 633 genes total, but 627 of those also carry both type2 and
+type3, leaving only a handful of genes in the 'type1', 'type1_and_type2'
+and 'type1_and_type3' buckets. Those three categories have observed
+(and expected) cell counts well below 5 in the contingency tables,
+which violates the standard assumption behind the Chi-square test of
+independence (expected frequency >= 5 in every cell). They are
+therefore dropped from `observed_polIII_motif` before the two tests
+that use it (SNP enrichment vs PolIII status, and gene_type vs PolIII
+status); genes falling into those categories are excluded from those
+two tests entirely. This does not affect the third test
+(SNP enrichment category vs gene_type), which does not use
+`observed_polIII_motif`.
+
 All three contingency tables are written into a single CSV file, each
 preceded by a '#' comment line identifying which table it is.
 All three test summaries are written into a single results file
@@ -24,6 +43,11 @@ import os
 import argparse
 import pandas as pd
 from scipy import stats
+
+# PolIII motif categories excluded from the Chi-square tests because their
+# observed/expected cell counts are too small (< 5) for the test's
+# assumptions to hold. See module docstring for details.
+EXCLUDED_POLIII_CATEGORIES = ['type1', 'type1_and_type2', 'type1_and_type3']
 
 
 def categorize_snp_enrichment(df):
@@ -82,6 +106,23 @@ def process_and_count_input_file(input_file):
     return df
 
 
+def drop_sparse_polIII_categories(df, excluded_categories=EXCLUDED_POLIII_CATEGORIES):
+    """
+    Remove rows whose observed_polIII_motif falls into one of the sparse,
+    low-frequency categories listed in `excluded_categories` (see module
+    docstring). Returns a filtered copy of df, and prints how many rows
+    were dropped per category so the exclusion is visible in the log.
+    """
+    counts = df['observed_polIII_motif'].value_counts()
+    for cat in excluded_categories:
+        n = int(counts.get(cat, 0))
+        print(f"Excluding '{cat}' from PolIII-motif tests: {n} gene(s) removed "
+              f"(expected cell count < 5).")
+    filtered = df[~df['observed_polIII_motif'].isin(excluded_categories)].copy()
+    print(f"Rows remaining for PolIII-motif tests: {len(filtered)} / {len(df)}")
+    return filtered
+
+
 def setup_contingency_table(df, row_col, col_col, row_order=None, col_order=None):
     """
     Build a contingency table (crosstab) of counts between two categorical
@@ -113,6 +154,10 @@ def perform_chi_square_test(contingency_table, alpha=0.05):
     test while the complete table (with the empty rows/columns) is still
     kept for reporting purposes.
 
+    A warning is printed if any expected cell frequency in the tested
+    table is below 5, since this violates the standard assumption behind
+    the Chi-square test of independence.
+
     Returns a dict with the Chi-square statistic, p-value, degrees of
     freedom, and the Chi-square critical value at the given alpha
     (default 0.05).
@@ -128,6 +173,14 @@ def perform_chi_square_test(contingency_table, alpha=0.05):
         )
 
     chi2, p_value, dof, expected = stats.chi2_contingency(test_table)
+
+    if (expected < 5).any():
+        print(
+            f"WARNING: {int((expected < 5).sum())} expected cell frequency(ies) "
+            f"below 5 (min expected = {expected.min():.2f}). Chi-square "
+            f"assumptions may be violated for this table."
+        )
+
     critical_value = stats.chi2.ppf(1 - alpha, dof)
     significant = chi2 > critical_value
 
@@ -191,7 +244,7 @@ def main():
                     "PolIII motif status, (2) gene_type vs PolIII motif status, and "
                     "(3) SNP enrichment category vs gene_type."
     )
-    parser.add_argument('-i', '--input_file', help='Path to the input CSV file.', required=True)
+    parser.add_argument('input_file', help='Path to the input CSV file.')
     parser.add_argument('-o', '--output_file', default='results/chi_square_test_results.csv',
                          help='Path to the output file for the summary of results (Chi-square, '
                               'P-value, degrees of freedom, critical value).')
@@ -206,9 +259,13 @@ def main():
     # Process the input file and derive the categorical columns needed
     df = process_and_count_input_file(args.input_file)
 
+    # 'type1', 'type1_and_type2' and 'type1_and_type3' are dropped from the
+    # PolIII-motif tests: they have too few genes to give expected cell
+    # counts >= 5 (see EXCLUDED_POLIII_CATEGORIES / module docstring).
+    df_polIII = drop_sparse_polIII_categories(df)
+
     promoter_order = [
-        'type1', 'type2', 'type3',
-        'type1_and_type2', 'type1_and_type3',
+        'type2', 'type3',
         'type2_and_type3', 'type1_and_type2_and_type3',
         'no_polIII_motif'
     ]
@@ -216,19 +273,21 @@ def main():
 
     # --- Test 1: SNP enrichment category vs PolIII motif status ---
     table1 = setup_contingency_table(
-        df, 'snp_enrichment_category', 'observed_polIII_motif',
+        df_polIII, 'snp_enrichment_category', 'observed_polIII_motif',
         row_order=snp_order, col_order=promoter_order
     )
     results1 = perform_chi_square_test(table1, alpha=args.alpha)
 
     # --- Test 2: gene_type vs PolIII motif status ---
     table2 = setup_contingency_table(
-        df, 'gene_type', 'observed_polIII_motif',
+        df_polIII, 'gene_type', 'observed_polIII_motif',
         row_order=None, col_order=promoter_order
     )
     results2 = perform_chi_square_test(table2, alpha=args.alpha)
 
     # --- Test 3: SNP enrichment category vs gene_type ---
+    # Uses the full dataset: gene_type is unrelated to the sparse
+    # PolIII-motif categories, so no rows need to be excluded here.
     table3 = setup_contingency_table(
         df, 'snp_enrichment_category', 'gene_type',
         row_order=snp_order, col_order=None
@@ -238,9 +297,11 @@ def main():
     # Save all three contingency tables into a single CSV, each labeled with a '#' comment
     write_contingency_tables_csv(
         [
-            ("Contingency table: snp_enrichment_category (rows) vs observed_polIII_motif (columns)",
+            ("Contingency table: snp_enrichment_category (rows) vs observed_polIII_motif (columns) "
+             "[type1, type1_and_type2, type1_and_type3 excluded: expected cell count < 5]",
              'snp_enrichment_category', table1),
-            ("Contingency table: gene_type (rows) vs observed_polIII_motif (columns)",
+            ("Contingency table: gene_type (rows) vs observed_polIII_motif (columns) "
+             "[type1, type1_and_type2, type1_and_type3 excluded: expected cell count < 5]",
              'gene_type', table2),
             ("Contingency table: snp_enrichment_category (rows) vs gene_type (columns)",
              'snp_enrichment_category', table3),
