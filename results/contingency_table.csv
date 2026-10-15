@@ -1,3 +1,3 @@
-polIII_motif_status,not_high_SNP_enrichment,high_SNP_enrichment
-no_polIII_motif,531,259
-has_polIII_motif,2067,603
+polIII_motif_status,high_SNP_enrichment,not_high_SNP_enrichment
+has_polIII_motif,313,2355
+no_polIII_motif,189,591
