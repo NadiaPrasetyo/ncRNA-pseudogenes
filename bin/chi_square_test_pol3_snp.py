@@ -13,6 +13,17 @@ degrees of freedom, and the Chi-square critical value at alpha = 0.05
 (so the statistic can be compared against the critical value directly,
 in addition to using the p-value).
 
+SNP ENRICHMENT CATEGORIES (FDR-BASED)
+-------------------------------------
+SNP enrichment is categorised as 'high' or 'not_high' using the same
+empirical-null FDR approach as fishers_exact_test.py (a port of the R
+function fdr_threshold()): pseudogenes form the null distribution, each
+functional gene gets an empirical p-value
+(1 + #null >= value) / (n_null + 1), the p-values are Benjamini-Hochberg
+adjusted, and the threshold is the smallest enrichment value with
+q <= FDR (default 0.05). Every gene (functional and pseudogene) with
+enrichment >= threshold is labelled 'high'; all others are 'not_high'.
+
 NOTE ON EXCLUDED CATEGORIES
 ----------------------------
 `observed_polIII_motif` is a mutually-exclusive label built from the
@@ -41,6 +52,7 @@ Author: Nadia Prasetyo
 """
 import os
 import argparse
+import numpy as np
 import pandas as pd
 from scipy import stats
 
@@ -50,18 +62,72 @@ from scipy import stats
 EXCLUDED_POLIII_CATEGORIES = ['type1', 'type1_and_type2', 'type1_and_type3']
 
 
-def categorize_snp_enrichment(df):
-    # Create a new column to divide SNP enrichment into high, medium, and low
-    # categories based on quantiles.
-    quantiles = df['enrichment_intergenic_dbsnp'].quantile([0.25, 0.75])
-    low_threshold = quantiles[0.25]   # snp enrichment values below this threshold are considered low
-    high_threshold = quantiles[0.75]  # snp enrichment values above this threshold are considered high
-    # snp enrichment in between these thresholds is considered medium
-    df['snp_enrichment_category'] = pd.cut(
-        df['enrichment_intergenic_dbsnp'],
-        bins=[-float('inf'), low_threshold, high_threshold, float('inf')],
-        labels=['low', 'medium', 'high']
-    )
+def bh_adjust(p):
+    """Benjamini-Hochberg adjustment (equivalent to R's p.adjust(method = "BH"))."""
+    p = np.asarray(p, dtype=float)
+    n = len(p)
+    if n == 0:
+        return p
+    order = np.argsort(p)
+    ranked = p[order] * n / np.arange(1, n + 1)
+    # enforce monotonicity from the largest p-value downwards
+    ranked = np.minimum.accumulate(ranked[::-1])[::-1]
+    q = np.empty(n)
+    q[order] = np.minimum(ranked, 1.0)
+    return q
+
+
+def fdr_threshold(x, cls, null_label="Pseudogene", func_label="Functional", fdr=0.05):
+    """Python port of the R fdr_threshold() function."""
+    x = pd.Series(x).reset_index(drop=True)
+    cls = pd.Series(cls).reset_index(drop=True)
+
+    null = x[(cls == null_label) & x.notna()].to_numpy()
+    func = (x.notna() & (cls == func_label)).to_numpy()
+
+    p = np.full(len(x), np.nan)
+    q = np.full(len(x), np.nan)
+    p[func] = [(1 + np.sum(null >= v)) / (len(null) + 1) for v in x[func]]
+    q[func] = bh_adjust(p[func])
+
+    sig = ~np.isnan(q) & (q <= fdr)
+    threshold = x[sig].min() if sig.any() else np.nan
+    return {
+        "p": p, "q": q, "sig": sig, "func": func,
+        "threshold": threshold,
+        "n_null": len(null), "n_func": int(func.sum()),
+    }
+
+
+def categorize_snp_enrichment(df, class_column, null_label, func_label, fdr):
+    """
+    Create 'snp_enrichment_category' ('high' / 'not_high') using the
+    pseudogene-null FDR threshold. Genes with missing enrichment get NaN
+    and are left out of the contingency tables.
+    """
+    res = fdr_threshold(df['enrichment_intergenic_dbsnp'], df[class_column],
+                        null_label=null_label, func_label=func_label, fdr=fdr)
+    print(f"FDR = {fdr}: n_null ({null_label}) = {res['n_null']}, "
+          f"n_func ({func_label}) = {res['n_func']}, "
+          f"n_sig = {int(res['sig'].sum())}, threshold = {res['threshold']}")
+
+    if res['n_func'] == 0:
+        raise SystemExit(f"No rows with {class_column} == '{func_label}'. "
+                         f"Check --class_column / --functional_label.")
+    if np.isnan(res['threshold']):
+        raise SystemExit("No functional genes pass the FDR threshold; "
+                         "cannot define high SNP enrichment.")
+
+    enrichment = df['enrichment_intergenic_dbsnp']
+    n_missing = int(enrichment.isna().sum())
+    if n_missing:
+        print(f"{n_missing} rows have missing enrichment_intergenic_dbsnp and "
+              f"are excluded from tests that use SNP enrichment category.")
+
+    category = pd.Series(np.where(enrichment >= res['threshold'], 'high', 'not_high'),
+                         index=df.index)
+    category[enrichment.isna()] = np.nan
+    df['snp_enrichment_category'] = category
     return df
 
 
@@ -90,7 +156,7 @@ def determine_polIII_motif(row):
         return 'no_polIII_motif'
 
 
-def process_and_count_input_file(input_file):
+def process_and_count_input_file(input_file, class_column, null_label, func_label, fdr):
     # Read the input CSV file into a DataFrame
     # input csv has the following columns: "gene_name","expected_promoter",
     # "contains_type1_promoter","contains_type2_promoter","contains_type3_promoter",
@@ -101,8 +167,8 @@ def process_and_count_input_file(input_file):
     # create a new column of category: observed_polIII_motif
     df['observed_polIII_motif'] = df.apply(determine_polIII_motif, axis=1)
 
-    # Create a new column 'snp_enrichment_category' based on the enrichment_intergenic_dbsnp value
-    df = categorize_snp_enrichment(df)
+    # Create a new column 'snp_enrichment_category' using the FDR threshold
+    df = categorize_snp_enrichment(df, class_column, null_label, func_label, fdr)
     return df
 
 
@@ -203,7 +269,7 @@ def write_contingency_tables_csv(tables, output_path):
     Write a list of (title, index_label, dataframe) contingency tables into
     a single CSV file, each preceded by a '#' comment line naming the table.
     """
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    os.makedirs(os.path.dirname(output_path) or '.', exist_ok=True)
     with open(output_path, 'w', newline='') as f:
         for i, (title, index_label, table) in enumerate(tables):
             f.write(f"# {title}\n")
@@ -218,7 +284,7 @@ def write_results_summary(results, output_path, output_format):
     Write the summary of all Chi-square test results (Chi-square, p-value,
     degrees of freedom, and 0.05 critical value) to a CSV or txt file.
     """
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    os.makedirs(os.path.dirname(output_path) or '.', exist_ok=True)
     results_df = pd.DataFrame([
         {'Test': name, **stats_dict} for name, stats_dict in results.items()
     ])
@@ -254,10 +320,19 @@ def main():
                          help="Format for the results summary file: 'csv' (default) or 'txt'.")
     parser.add_argument('-a', '--alpha', type=float, default=0.05,
                          help='Significance level used for the critical value (default: 0.05).')
+    parser.add_argument('--fdr', type=float, default=0.05,
+                         help='FDR level for the high-SNP-enrichment threshold (default: 0.05).')
+    parser.add_argument('--class_column', default='gene_type',
+                         help='Column that distinguishes pseudogenes (null) from functional genes.')
+    parser.add_argument('--null_label', default='Pseudogene',
+                         help='Value in class_column for the null (pseudogene) set.')
+    parser.add_argument('--functional_label', default='Functional',
+                         help='Value in class_column for functional genes.')
     args = parser.parse_args()
 
     # Process the input file and derive the categorical columns needed
-    df = process_and_count_input_file(args.input_file)
+    df = process_and_count_input_file(args.input_file, args.class_column,
+                                      args.null_label, args.functional_label, args.fdr)
 
     # 'type1', 'type1_and_type2' and 'type1_and_type3' are dropped from the
     # PolIII-motif tests: they have too few genes to give expected cell
@@ -269,7 +344,7 @@ def main():
         'type2_and_type3', 'type1_and_type2_and_type3',
         'no_polIII_motif'
     ]
-    snp_order = ['low', 'medium', 'high']
+    snp_order = ['high', 'not_high']
 
     # --- Test 1: SNP enrichment category vs PolIII motif status ---
     table1 = setup_contingency_table(
