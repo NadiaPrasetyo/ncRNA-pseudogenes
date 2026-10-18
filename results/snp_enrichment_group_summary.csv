@@ -1,0 +1,9 @@
+Functional group,ncRNA families,RNA Polymerase,F(n),P(n),Functional ncRNA with Excess SNPs
+Major spliceosome (Pol II),"U1, U2, U4, U5",Pol II,"13 (4, 2, 2, 5)","301 (114, 69, 89, 29)","11 (2, 2, 2, 5)"
+Major spliceosome (Pol III),U6,Pol III,5,1276,5
+Minor spliceosome (Pol II),"U11, U12, U4ATAC, U5",Pol II,"8 (1, 1, 1, 5)","52 (5, 1, 17, 29)","8 (1, 1, 1, 5)"
+Minor spliceosome (Pol III),U6ATAC,Pol III,1,41,1
+Translation,tRNA,Pol III,500,56,367
+RNP / RNA surveillance?,"VTRNA, Y RNA","Pol II, Pol III","8 (4, 4)","77 (2, 75)","8 (4, 4)"
+Specialised RNA processing / targeting,"7SL, U7","Pol III, Pol II","4 (3, 1)","852 (684, 168)","3 (2, 1)"
+Transcription regulation,7SK,Pol III,1,293,1
