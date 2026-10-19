@@ -54,6 +54,9 @@ MERGED_DATA_PATH = 'results/combined_gene_data_with_snp_promoters.csv'
 AMBIGUOUS_PREDICTIONS_PATH = 'results/ambiguous_gene_predictions.csv'
 FAMILY_METRICS_PATH = 'results/rf_family_wise_metrics.csv'
 
+FEATURE_IMPORTANCE_PATH = 'results/rf_feature_importance.csv'
+FEATURE_IMPORTANCE_PER_FAMILY_PATH = 'results/rf_feature_importance_per_family.csv'
+
 # Where dropped duplicate rows are written out for review
 DUPLICATES_DIR = 'results/duplicates'
 
@@ -90,8 +93,8 @@ RF_PARAMS = dict(n_estimators=100, random_state=42, n_jobs=-1)
 #   'isotype'   -> cap per amino acid           (e.g. Ala, Gly, ...)
 #   'anticodon' -> cap per amino acid+anticodon (e.g. Ala-AGC, Ala-CGC, ...)
 TRNA_GROUP_LABEL = 'TRNA'        # value of Gene_group for tRNAs
-TRNA_CAP_LEVEL = 'anticodon'     # 'isotype' or 'anticodon'
-TRNA_MAX_PER_GROUP = 2           # genes kept per group, per class
+TRNA_CAP_LEVEL = 'isotype'     # 'isotype' or 'anticodon'
+TRNA_MAX_PER_GROUP = 3           # genes kept per group, per class
 TRNA_CAP_PSEUDOGENES = True      # also cap tRNA pseudogenes (keeps classes balanced)
 TRNA_SAMPLE_SEED = 42
 
@@ -430,6 +433,7 @@ print(f"  tRNAs: {int((tp['family'].str.upper() == TRNA_GROUP_LABEL.upper()).sum
 print("\nRunning leave-one-family-out training/prediction...")
 data['functional_probability'] = np.nan
 importances_per_family = []
+fitted_families = []
 skipped_families = []
 
 for fam in family_sizes.index:
@@ -447,6 +451,7 @@ for fam in family_sizes.index:
     data.loc[in_fam, 'functional_probability'] = model_f.predict_proba(
         data.loc[in_fam, FEATURES])[:, 1]
     importances_per_family.append(model_f.feature_importances_)
+    fitted_families.append(fam)
 
 if skipped_families:
     print("\nWarning: these families were NOT predicted (too little training "
@@ -458,10 +463,36 @@ n_scored = data['functional_probability'].notna().sum()
 print(f"Scored {n_scored} / {len(data)} genes out-of-family.")
 
 # Mean feature importance across all family-held-out models
-importances = pd.Series(np.mean(importances_per_family, axis=0),
-                        index=FEATURES).sort_values(ascending=False)
-print("\nFeature Importances (mean across leave-one-family-out models):")
-print(importances)
+# Feature importance summary across all leave-one-family-out models.
+# Each fitted model contributes one importance vector; SD is the spread across
+# those models (ddof=1) and SE = SD / sqrt(n_models).
+imp_matrix = np.array(importances_per_family)          # (n_models, n_features)
+n_models = imp_matrix.shape[0]
+imp_sd = imp_matrix.std(axis=0, ddof=1) if n_models > 1 else np.zeros(len(FEATURES))
+imp_se = imp_sd / np.sqrt(n_models)
+
+importance_df = (pd.DataFrame({
+                    'feature': FEATURES,
+                    'importance_mean': imp_matrix.mean(axis=0),
+                    'importance_sd': imp_sd,
+                    'importance_se': imp_se,
+                    'n_models': n_models,
+                 })
+                 .sort_values('importance_mean', ascending=False)
+                 .reset_index(drop=True))
+
+os.makedirs(os.path.dirname(FEATURE_IMPORTANCE_PATH), exist_ok=True)
+importance_df.to_csv(FEATURE_IMPORTANCE_PATH, index=False)
+
+# Raw per-model importances (one row per held-out family) for full transparency
+(pd.DataFrame(imp_matrix, columns=FEATURES)
+   .assign(held_out_family=fitted_families)
+   [['held_out_family'] + FEATURES]
+   .to_csv(FEATURE_IMPORTANCE_PER_FAMILY_PATH, index=False))
+
+print(f"\nFeature Importances (mean ± SD / SE across {n_models} "
+      f"leave-one-family-out models; saved to {FEATURE_IMPORTANCE_PATH}):")
+print(importance_df.to_string(index=False))
 
 # ---------------------------------------------------------------------------
 # Step 3: Evaluate out-of-family performance on labeled, non-ambiguous genes
@@ -541,118 +572,3 @@ print(f"\nSaved {MERGED_DATA_PATH} ({len(data)} unique genes) with family "
 full_model = RandomForestClassifier(**RF_PARAMS)
 full_model.fit(data.loc[train_pool_mask, FEATURES], data.loc[train_pool_mask, 'label'])
 insample_probs = full_model.predict_proba(data.loc[eval_df.index, FEATURES])[:, 1]
-
-# ---------------------------------------------------------------------------
-# Visualizations
-# ---------------------------------------------------------------------------
-
-oof_functional_probs = eval_df.loc[eval_df['label'] == 1, 'functional_probability']
-oof_pseudogene_probs = eval_df.loc[eval_df['label'] == 0, 'functional_probability']
-ins_functional_probs = insample_probs[(eval_df['label'] == 1).values]
-ins_pseudogene_probs = insample_probs[(eval_df['label'] == 0).values]
-
-plt.rcParams['font.family'] = 'DejaVu Serif'
-plt.rcParams.update({'font.size': 28,
-                     'axes.labelsize': 28,
-                     'xtick.labelsize': 28,
-                     'ytick.labelsize': 28,
-                     'legend.fontsize': 22,
-                     'figure.titlesize': 28})
-
-os.makedirs(PLOTS_DIR, exist_ok=True)
-pdf = PdfPages(PLOTS_PDF_PATH)
-
-
-def save_plot(filename):
-    """Save the current figure as a PNG in PLOTS_DIR and append it to the
-    combined PDF, then close the figure."""
-    png_path = os.path.join(PLOTS_DIR, filename)
-    plt.savefig(png_path, dpi=300)
-    pdf.savefig()
-    plt.close()
-    print(f"Saved plot: {png_path}")
-
-
-# --- Out-of-family probability distribution (labeled genes) ---
-plt.figure(figsize=(10, 6))
-sns.histplot(oof_functional_probs, bins=20, color='firebrick', alpha=0.7, label='Functional Genes')
-sns.histplot(oof_pseudogene_probs, bins=20, color='cornflowerblue', alpha=0.7, label='Pseudogenes')
-plt.xlabel('Probability of Being Functional')
-plt.ylabel('Frequency')
-plt.legend(title='Gene Type')
-plt.grid(axis='y', linestyle='--', alpha=0.7)
-plt.tight_layout()
-save_plot('01_out_of_family_probability_distribution.png')
-
-# --- Out-of-family vs in-sample overlay ---
-plt.figure(figsize=(10, 6))
-sns.histplot(oof_functional_probs, bins=20, color='firebrick', alpha=0.7, label='Out-of-family Functional')
-sns.histplot(oof_pseudogene_probs, bins=20, color='cornflowerblue', alpha=0.7, label='Out-of-family Pseudogenes')
-sns.histplot(ins_functional_probs, bins=20, color='lightpink', alpha=0.5, label='In-sample Functional', linestyle='--')
-sns.histplot(ins_pseudogene_probs, bins=20, color='lightblue', alpha=0.5, label='In-sample Pseudogenes', linestyle='--')
-plt.xlabel('Probability of Being Functional')
-plt.ylabel('Frequency')
-plt.legend(title='Gene Type')
-plt.grid(axis='y', linestyle='--', alpha=0.7)
-plt.tight_layout()
-save_plot('02_out_of_family_vs_insample_distribution.png')
-
-# --- Conservation scatter, colored by out-of-family functional probability ---
-ambiguous_data_plot = data[data['is_ambiguous'] & data['functional_probability'].notna()]
-
-plt.figure(figsize=(10, 6))
-plt.scatter(ambiguous_data_plot['PhyloP100_median'], ambiguous_data_plot['ENCODE_max'],
-            c=ambiguous_data_plot['functional_probability'], cmap='coolwarm', s=100, edgecolors='black')
-plt.xlabel('PhyloP100 Median')
-plt.ylabel('ENCODE Max')
-plt.colorbar(label='Functional Probability')
-plt.grid(False)
-plt.tight_layout()
-save_plot('03_conservation_scatter.png')
-
-# --- SNP enrichment scatter, colored by functional probability ---
-plt.figure(figsize=(10, 6))
-plt.scatter(
-    ambiguous_data_plot['enrichment_intergenic_dbsnp'],
-    ambiguous_data_plot['PhyloP100_median'],
-    c=ambiguous_data_plot['functional_probability'],
-    cmap='coolwarm', s=100, edgecolors='black'
-)
-plt.xlabel('dbSNP SNP Enrichment')
-plt.ylabel('PhyloP100 Median')
-plt.colorbar(label='Functional Probability')
-plt.grid(False)
-plt.tight_layout()
-save_plot('04_snp_enrichment_scatter.png')
-
-# --- Promoter motif scatter, colored by functional probability ---
-# Total motif score (sum of type1/2/3 scores) vs. total motif count,
-# to visualize how promoter motif strength/abundance separates predicted classes.
-ambiguous_data_plot = ambiguous_data_plot.copy()
-ambiguous_data_plot['total_motif_score'] = (
-    ambiguous_data_plot['type1_score']
-    + ambiguous_data_plot['type2_score']
-    + ambiguous_data_plot['type3_score']
-)
-ambiguous_data_plot['total_motif_counts'] = (
-    ambiguous_data_plot['type1_motif_counts']
-    + ambiguous_data_plot['type2_motif_counts']
-    + ambiguous_data_plot['type3_motif_counts']
-)
-
-plt.figure(figsize=(10, 6))
-plt.scatter(
-    ambiguous_data_plot['total_motif_score'],
-    ambiguous_data_plot['total_motif_counts'],
-    c=ambiguous_data_plot['functional_probability'],
-    cmap='coolwarm', s=100, edgecolors='black'
-)
-plt.xlabel('Total Promoter Motif Score (Type 1+2+3)')
-plt.ylabel('Total Promoter Motif Count (Type 1+2+3)')
-plt.colorbar(label='Functional Probability')
-plt.grid(False)
-plt.tight_layout()
-save_plot('05_promoter_motif_scatter.png')
-
-pdf.close()
-print(f"\nAll plots saved to {PLOTS_DIR}/ and combined into {PLOTS_PDF_PATH}")

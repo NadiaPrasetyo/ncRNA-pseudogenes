@@ -192,9 +192,11 @@ make_snp_panel_data <- function(data, src) {
   thr <- calc_fdr_threshold((long_data$val - np$center) / np$scale, "two.sided")
   thr$value_thr <- np$center + c(thr$z_lo, thr$z_hi) * np$scale   # c(lower, upper)
   
-  beyond <- function(v) {
-    (!is.na(thr$value_thr[1]) & v <= thr$value_thr[1]) |
-      (!is.na(thr$value_thr[2]) & v >= thr$value_thr[2])
+  above_upper <- function(v) {
+    !is.na(thr$value_thr[2]) & v >= thr$value_thr[2]
+  }
+  below_lower <- function(v) {
+    !is.na(thr$value_thr[1]) & v <= thr$value_thr[1]
   }
   
   nd <- add_pooled_layout(long_data) %>%
@@ -206,7 +208,15 @@ make_snp_panel_data <- function(data, src) {
     ) %>%
     ungroup() %>%
     select(-q1, -q3) %>%
-    mutate(flagged = Gene_Type == "Pseudogene" & beyond(val))
+    mutate(
+      flagged = below_lower(val) | (Gene_Type == "Pseudogene" & above_upper(val)),
+      Outlier_Reason = case_when(
+        Gene_Type == "Pseudogene" & above_upper(val) ~ "Pseudogene above upper FDR threshold",
+        Gene_Type == "Pseudogene" & below_lower(val) ~ "Pseudogene below lower FDR threshold",
+        Gene_Type == "Functional" & below_lower(val) ~ "Functional below lower FDR threshold",
+        TRUE ~ NA_character_
+      )
+    )
   
   thin <- thin_group_names(nd)
   
@@ -215,9 +225,10 @@ make_snp_panel_data <- function(data, src) {
     points   = nd %>% filter(Gene_Type_combined %in% thin | is_outlier | flagged),
     medians  = make_medians(nd),
     outliers = nd %>% filter(flagged, Gene_group != "Pooled") %>%
-      arrange(Gene_group, val),
+      arrange(Gene_group, Gene_Type, val),
     thr      = thr
   )
+
 }
 
 #----------------------------------------------------------------------------

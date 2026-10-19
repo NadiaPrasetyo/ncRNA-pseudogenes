@@ -86,7 +86,7 @@ LABEL_BOX_PADDING   <- 0.4   # gap between neighbouring labels (back to the orig
 LABEL_GENES <- c(
   "RNU6ATAC3P", "RN7SKP70", "RNU5E-6P", "RNU5A-8P", "RNU6-1334P", "RNU11-3P",
   "RNU6-1194P", "RNU11-6P", "RNU4ATAC15P", "RNU12-2P",
-  "RNU1-28P", "RNU1-27P", "VTRNA2-1", "RN7SKP1", "RNU5F-1", "VTRNA1-1",
+  "RNU1-28P", "RNU1-27P", "VTRNA2-1", "RN7SKP1", "VTRNA1-1",
   "RN7SL3", "VTRNA1-3", "RNU1-4", "RNU1-3"
 )
 
